@@ -1,0 +1,469 @@
+"Approval As screen.'autoLayout_Sidebar_ver1.0'":
+    OnHidden: |
+        =ClearCollect(
+            colIDUser,
+            getEmail.id
+        );
+    OnVisible: =
+
+    ScreenContainer4 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer4 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =65
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =2
+
+            Image3_3 As image:
+                Height: =50
+                Image: ='Pizza_Hut_logo.svg'
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =50
+                ZIndex: =1
+
+            Container5_3 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                Height: =65
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =80
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =2
+
+                Container6_3 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =65
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Image4_3 As image:
+                        Height: =75
+                        Image: ='Power-Apps-Logo'
+                        LayoutMinHeight: =50
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =50
+                        ZIndex: =1
+
+                    Container7_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =65
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =200
+                        ZIndex: =2
+
+                        lbl_UserName As label:
+                            FontWeight: =FontWeight.Semibold
+                            Height: =20
+                            Size: =14
+                            Text: =getEmail.username
+                            ZIndex: =1
+
+                        Container8_3 As groupContainer.horizontalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =30
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =20
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =3
+
+                            lbl_dept As label:
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                Size: =11
+                                Text: =getEmail.department
+                                Width: =50
+                                ZIndex: =1
+
+                            Label9_3 As label:
+                                Align: =Align.Center
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                Size: =11
+                                Text: ="-"
+                                Width: =20
+                                ZIndex: =2
+
+                            lbl_Role As label:
+                                AlignInContainer: =AlignInContainer.Center
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                Size: =11
+                                Text: =getEmail.role_name
+                                Width: =70
+                                ZIndex: =3
+
+                        lbl_Position As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            FillPortions: =1
+                            FontWeight: =FontWeight.Lighter
+                            Height: =20
+                            Italic: =true
+                            LayoutMinHeight: =20
+                            Size: =10
+                            Text: =getEmail.position
+                            ZIndex: =4
+
+        BottomContainer4 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(245, 245, 245, 1)
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =16
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            ZIndex: =3
+
+            SidebarContainer4 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =180
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =4
+
+                Button5_20 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    OnSelect: =Navigate(Home,ScreenTransition.Cover)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="Home"
+                    ZIndex: =1
+
+                Button5_21 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    OnSelect: =Navigate(Approval,ScreenTransition.Cover)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="Approval"
+                    ZIndex: =2
+
+                Button5_22 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="Audit"
+                    ZIndex: =3
+
+                Button5_23 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    OnSelect: |-
+                        =ClearCollect(
+                            colApprover,
+                            GroupBy(
+                                ApprovalTest,
+                                "Title",
+                                "LevelApprover"
+                            )
+                        );
+                        Navigate(
+                            Setting,
+                            ScreenTransition.Cover
+                        )
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="Setting"
+                    ZIndex: =4
+
+                Button5_24 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    OnSelect: =Navigate(Login,ScreenTransition.Cover)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="Log Out"
+                    ZIndex: =5
+
+            MainContainer4 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =7
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =5
+
+                Container11_1 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =2
+
+                    Container12_1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        Label11_10 As label:
+                            FontWeight: =FontWeight.Bold
+                            Text: =""
+                            Width: =60
+                            ZIndex: =1
+
+                        Label11_4 As label:
+                            FontWeight: =FontWeight.Bold
+                            Text: ="Title"
+                            Width: =250
+                            ZIndex: =2
+
+                        Label11_6 As label:
+                            FontWeight: =FontWeight.Bold
+                            Text: ="Description"
+                            Width: =250
+                            ZIndex: =3
+
+                        Label11_7 As label:
+                            FontWeight: =FontWeight.Bold
+                            Text: ="Created Date"
+                            ZIndex: =4
+
+                        Label11_11 As label:
+                            FontWeight: =FontWeight.Bold
+                            Text: ="Created By"
+                            ZIndex: =5
+
+                        Label11_8 As label:
+                            FontWeight: =FontWeight.Bold
+                            Text: ="Status"
+                            ZIndex: =6
+
+                        Label11_9 As label:
+                            Text: =""
+                            Width: =100
+                            ZIndex: =8
+
+                    Gallery7_1 As gallery.galleryVertical:
+                        DelayItemLoading: =true
+                        Items: =SortByColumns(colApproverList1,"Created Date",SortOrder.Descending)
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateSize: =60
+                        ZIndex: =1
+
+                        Label14_1 As label:
+                            OnSelect: =Select(Parent)
+                            Text: =ThisItem.Description
+                            Width: =230
+                            X: =303
+                            Y: =10
+                            ZIndex: =1
+
+                        Label15_1 As label:
+                            OnSelect: =Select(Parent)
+                            Text: =ThisItem.Title
+                            Width: =230
+                            X: =56
+                            Y: =10
+                            ZIndex: =2
+
+                        Label16_1 As label:
+                            OnSelect: =Select(Parent)
+                            Text: =""
+                            Width: =100
+                            X: =1003
+                            Y: =10
+                            ZIndex: =3
+
+                        icon_EyeApproval As icon.View:
+                            Height: =20
+                            Icon: =Icon.View
+                            OnSelect: |-
+                                =Set(
+                                    varIDItem,
+                                    ThisItem.IDReq
+                                );
+                                Navigate(
+                                    Detail_Req_Approval,
+                                    ScreenTransition.Cover
+                                )
+                            Width: =24
+                            X: =20
+                            Y: =20
+                            ZIndex: =4
+
+                        Label16_2 As label:
+                            Height: =50
+                            OnSelect: =Select(Parent)
+                            Text: =ThisItem.'Created Date'
+                            Width: =130
+                            X: =563
+                            Y: =5
+                            ZIndex: =5
+
+                        Label16_3 As label:
+                            Height: =50
+                            OnSelect: =Select(Parent)
+                            Text: =ThisItem.User
+                            Width: =130
+                            X: =711
+                            Y: =5
+                            ZIndex: =6
+
+                        Group2 As group:
+                            Height: =5
+                            Width: =5
+                            X: =40
+                            Y: =40
+                            ZIndex: =9
+
+                            Rectangle1 As rectangle:
+                                DisplayMode: =DisplayMode.View
+                                Fill: |-
+                                    =If(
+                                        ThisItem.Status = "Pending",
+                                        RGBA(
+                                            255,
+                                            235,
+                                            192,
+                                            1
+                                        ),
+                                        RGBA(
+                                            237,
+                                            237,
+                                            237,
+                                            1
+                                        )
+                                    )
+                                FocusedBorderThickness: =0
+                                Height: =50
+                                OnSelect: =Select(Parent)
+                                Width: =130
+                                X: =861
+                                Y: =5
+                                ZIndex: =7
+
+                            Label16_4 As label:
+                                Align: =Align.Center
+                                Height: =50
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.Status
+                                Width: =130
+                                X: =861
+                                Y: =5
+                                ZIndex: =8
+

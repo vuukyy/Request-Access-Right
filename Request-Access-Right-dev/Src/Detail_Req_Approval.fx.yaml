@@ -1,0 +1,879 @@
+"Detail_Req_Approval As screen.'autoLayout_Sidebar_ver1.0'":
+
+    ScreenContainer3_2 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer3_4 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =80
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =1
+
+            Image3_5 As image:
+                Height: =75
+                Image: ='Pizza_Hut_logo.svg'
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =75
+                ZIndex: =1
+
+            Container5_5 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                Height: =80
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =80
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =2
+
+                Container6_5 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =75
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Image4_5 As image:
+                        Height: =75
+                        Image: ='Power-Apps-Logo'
+                        LayoutMinHeight: =75
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =75
+                        ZIndex: =1
+
+                    Container7_5 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =75
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =200
+                        ZIndex: =2
+
+                        Label3_6 As label:
+                            FontWeight: =FontWeight.Semibold
+                            Height: =20
+                            Size: =14
+                            Text: =getEmail.username
+                            ZIndex: =1
+
+                        Container8_5 As groupContainer.horizontalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =30
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =20
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =3
+
+                            Label4_6 As label:
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                Size: =11
+                                Text: =getEmail.department
+                                Width: =50
+                                ZIndex: =1
+
+                            Label9_5 As label:
+                                Align: =Align.Center
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                Size: =11
+                                Text: ="-"
+                                Width: =20
+                                ZIndex: =2
+
+                            Label8_5 As label:
+                                AlignInContainer: =AlignInContainer.Center
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                Size: =11
+                                Text: =getEmail.role_name
+                                Width: =70
+                                ZIndex: =3
+
+                        Label5_5 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            FillPortions: =1
+                            FontWeight: =FontWeight.Lighter
+                            Height: =20
+                            Italic: =true
+                            LayoutMinHeight: =20
+                            Size: =10
+                            Text: =getEmail.position
+                            ZIndex: =4
+
+            Container10_5 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =80
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =64
+                ZIndex: =3
+
+                Icon1_5 As icon.Export:
+                    Icon: =Icon.Export
+                    OnSelect: =Navigate(Login,ScreenTransition.Cover)
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    ZIndex: =1
+
+        Container21 As groupContainer.horizontalAutoLayoutContainer:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =30
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =2
+
+            Label10 As label:
+                OnSelect: =Back(ScreenTransition.CoverRight)
+                Size: =14
+                Text: ="Approval"
+                Underline: =true
+                Width: =90
+                ZIndex: =1
+
+            Label12 As label:
+                Align: =Align.Center
+                Size: =14
+                Text: ="/"
+                Width: =20
+                ZIndex: =2
+
+            Label13 As label:
+                Size: =14
+                Text: ="Approval Detail"
+                ZIndex: =3
+
+        BottomContainer3_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(245, 245, 245, 1)
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =16
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            ZIndex: =3
+
+            MainContainer3_2 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =7
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =1
+
+                Container13_2 As groupContainer.horizontalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    HeaderContainer3_5 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =0
+                        Height: =80
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =20
+                        PaddingLeft: =20
+                        PaddingRight: =20
+                        PaddingTop: =20
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
+                        ZIndex: =1
+
+                        Label7_2 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            FillPortions: =1
+                            FontWeight: =FontWeight.Bold
+                            Size: =25
+                            Text: ="Approval Request"
+                            ZIndex: =1
+
+                    Container17_2 As groupContainer.verticalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =2
+
+                        Container20 As groupContainer.verticalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            FormViewer4 As formViewer:
+                                DataSource: =colApproverList1
+                                Item: =Gallery7_1.Selected
+                                LayoutMinHeight: =250
+                                LayoutMinWidth: =400
+                                NumberOfColumns: =2
+                                ZIndex: =1
+
+                                DataCard21 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                    Label41 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="User"
+                                        ZIndex: =1
+
+                                    TextInput22 As text:
+                                        Default: =ThisItem.User
+                                        DisplayMode: =DisplayMode.View
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard2 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.Title
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Visible: =true
+                                    Width: =497
+                                    WidthFit: =true
+                                    X: =1
+                                    Y: =0
+                                    ZIndex: =1
+
+                                    Label25 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Title"
+                                        ZIndex: =1
+
+                                    TextInput6 As text:
+                                        Default: =ThisItem.Title
+                                        DisplayMode: =DisplayMode.View
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard3 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.Description
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    WidthFit: =true
+                                    X: =0
+                                    Y: =1
+                                    ZIndex: =1
+
+                                    Label26 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Description"
+                                        ZIndex: =1
+
+                                    TextInput7 As text:
+                                        Default: =ThisItem.Description
+                                        DisplayMode: =DisplayMode.View
+                                        Mode: =TextMode.MultiLine
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard4 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.Type
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    WidthFit: =true
+                                    X: =1
+                                    Y: =1
+                                    ZIndex: =1
+
+                                    Label27 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Request Type"
+                                        ZIndex: =1
+
+                                    TextInput8 As text:
+                                        Default: =ThisItem.Type
+                                        DisplayMode: =DisplayMode.View
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard5 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.Permission
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =0
+                                    Y: =2
+                                    ZIndex: =1
+
+                                    Label28 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Request Permission"
+                                        Width: =200
+                                        ZIndex: =1
+
+                                    TextInput9 As text:
+                                        Default: =ThisItem.Permission
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard6 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.Reason
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =80
+                                    Width: =497
+                                    X: =1
+                                    Y: =2
+                                    ZIndex: =1
+
+                                    Label29 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Request Reason"
+                                        ZIndex: =1
+
+                                    TextInput10 As text:
+                                        Default: =ThisItem.Reason
+                                        DisplayMode: =DisplayMode.View
+                                        Mode: =TextMode.MultiLine
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard7 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.Attachment
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =80
+                                    Width: =497
+                                    X: =0
+                                    Y: =3
+                                    ZIndex: =1
+
+                                    Label30 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Attachment"
+                                        ZIndex: =1
+
+                                    TextInput11 As text:
+                                        Default: =ThisItem.Attachment
+                                        DisplayMode: =DisplayMode.View
+                                        Mode: =TextMode.MultiLine
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard8 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.Status
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =1
+                                    Y: =3
+                                    ZIndex: =1
+
+                                    Label31 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Status"
+                                        ZIndex: =1
+
+                                    TextInput12 As text:
+                                        Default: =ThisItem.Status
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard9 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Created Date'
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =0
+                                    Y: =4
+                                    ZIndex: =1
+
+                                    Label32 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Created Date"
+                                        ZIndex: =1
+
+                                    TextInput13 As text:
+                                        Default: =ThisItem.'Created Date'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard10 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Updated Date'
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =1
+                                    Y: =4
+                                    ZIndex: =1
+
+                                    Label33 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Updated Date"
+                                        ZIndex: =1
+
+                                    TextInput14 As text:
+                                        Default: =ThisItem.'Updated Date'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard11 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Approver 1'
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =0
+                                    Y: =5
+                                    ZIndex: =1
+
+                                    Label34 As label:
+                                        DisplayMode: =DisplayMode.View
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Approver 1"
+                                        ZIndex: =1
+
+                                    TextInput15 As text:
+                                        Default: =ThisItem.'Approver 1'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard12 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Approver Date 1'
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =1
+                                    Y: =5
+                                    ZIndex: =1
+
+                                    Label35 As label:
+                                        DisplayMode: =DisplayMode.View
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Approved Date"
+                                        ZIndex: =1
+
+                                    TextInput16 As text:
+                                        Default: =ThisItem.'Approver Date 1'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard13 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Approver Date 2'
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =0
+                                    Y: =6
+                                    ZIndex: =1
+
+                                    Label36 As label:
+                                        DisplayMode: =DisplayMode.View
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Approver 2"
+                                        ZIndex: =1
+
+                                    TextInput17 As text:
+                                        Default: =ThisItem.'Approver 2'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard14 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Approver Date 2'
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =1
+                                    Y: =6
+                                    ZIndex: =1
+
+                                    Label37 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Approved Date"
+                                        ZIndex: =1
+
+                                    TextInput18 As text:
+                                        Default: =ThisItem.'Approver Date 2'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard15 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Rejected By'
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =0
+                                    Y: =7
+                                    ZIndex: =1
+
+                                    Label38 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Rejected By"
+                                        ZIndex: =1
+
+                                    TextInput19 As text:
+                                        Default: =ThisItem.'Rejected By'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard16 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Rejected Date'
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =1
+                                    Y: =7
+                                    ZIndex: =1
+
+                                    Label39 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Rejected Date"
+                                        ZIndex: =1
+
+                                    TextInput20 As text:
+                                        Default: =ThisItem.'Rejected Date'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+                                DataCard17 As typedDataCard.blankCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: =ThisItem.'Rejected Reason'
+                                    DisplayMode: =DisplayMode.Edit
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =90
+                                    Width: =497
+                                    X: =0
+                                    Y: =8
+                                    ZIndex: =1
+
+                                    Label40 As label:
+                                        FontWeight: =FontWeight.Semibold
+                                        Text: ="Rejected Reason"
+                                        ZIndex: =1
+
+                                    TextInput21 As text:
+                                        Default: =ThisItem.'Rejected Reason'
+                                        DisplayMode: =DisplayMode.View
+                                        Width: =380
+                                        Y: =40
+                                        ZIndex: =2
+
+            SidebarContainer3_2 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =300
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =2
+
+                Container22 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =3
+
+                    Label18 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="* Reason rejected"
+                        Width: =200
+                        ZIndex: =1
+
+                    txtReasonReject As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Default: =""
+                        FillPortions: =1
+                        Height: =200
+                        HintText: ="Enter your reason "
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        LayoutMinHeight: =20
+                        LayoutMinWidth: =230
+                        Mode: =TextMode.MultiLine
+                        ZIndex: =2
+
+                    Rectangle4 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =10
+                        ZIndex: =3
+
+                    Label19 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Comment"
+                        ZIndex: =4
+
+                    txtComment As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Default: =""
+                        FillPortions: =1
+                        Height: =200
+                        HintText: ="Enter your comment"
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        LayoutMinWidth: =230
+                        Mode: =TextMode.MultiLine
+                        Width: =230
+                        ZIndex: =5
+
+                Container15_2 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =80
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =4
+
+                    btn_Approve As button:
+                        BorderColor: =
+                        BorderThickness: =0
+                        FontWeight: =FontWeight.Normal
+                        Height: =50
+                        OnSelect: |-
+                            =ApproveRequest.Run(
+                                varIDItem,
+                                getEmail.email,
+                                getEmail.id
+                            );
+                            LoadData(
+                                colApproverList1,
+                                "Saveitemstokeep",
+                                false
+                            );
+                            Back(ScreenTransition.Fade)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =13
+                        Text: ="Approve"
+                        Width: =100
+                        X: =977
+                        Y: =10
+                        ZIndex: =1
+
+                    Container18 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =20
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =150
+                        ZIndex: =2
+
+                        btn_Reject As button:
+                            BorderThickness: =0
+                            Fill: =RGBA(164, 38, 44, 1)
+                            FontWeight: =FontWeight.Normal
+                            Height: =50
+                            OnSelect: |-
+                                =RejectRequest.Run(
+                                    getEmail.email,
+                                    getEmail.id,
+                                    varIDItem,
+                                    txtReasonReject
+                                );
+                                LoadData(
+                                    colApproverList1,
+                                    "Saveitemstokeep",
+                                    true
+                                );
+                                Back(ScreenTransition.Fade);
+                                Reset(txtReasonReject);
+                                Reset(txtComment)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =13
+                            Text: ="Reject"
+                            Width: =100
+                            ZIndex: =1
+

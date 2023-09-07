@@ -1,0 +1,169 @@
+Login As screen:
+    OnVisible: =
+
+    Container1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =768
+        LayoutMode: =LayoutMode.Auto
+        Width: =1366
+        ZIndex: =1
+
+        Image2 As image:
+            AlignInContainer: =AlignInContainer.Stretch
+            Image: ='ultimate-safaris-namibia-6NVr_r5uosU-unsplash'
+            ImagePosition: =ImagePosition.Fill
+            Width: =650
+            ZIndex: =1
+
+        Container2 As groupContainer.verticalAutoLayoutContainer:
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Label1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Size: =25
+                Text: ="Welcome Hutter !"
+                ZIndex: =1
+
+            Container3 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =2
+
+                Container4 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =80
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Label2 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Email"
+                        Width: =100
+                        ZIndex: =1
+
+                    txtEmail As text:
+                        AccessibleLabel: ="Textbox Email"
+                        Default: =""
+                        HintText: ="Enter your email"
+                        ZIndex: =2
+
+                Container4_1 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =80
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =2
+
+                    Label2_1 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Password"
+                        Width: =100
+                        ZIndex: =1
+
+                    txtPass As text:
+                        AccessibleLabel: ="Textbox Password"
+                        Default: =""
+                        HintText: ="Enter your password"
+                        Mode: =TextMode.Password
+                        ZIndex: =2
+
+            btnLogin As button:
+                AlignInContainer: =AlignInContainer.Center
+                Height: =50
+                OnSelect: |
+                    =Set(
+                        getEmail,
+                        Login.Run(
+                            txtEmail.Text,
+                            txtPass.Text
+                        )
+                    );
+                    Set(
+                        varApprover,
+                        RequestListapproval.Run(
+                            getEmail.email,
+                            getEmail.id
+                        ).approver
+                    );
+                    If(
+                        varApprover = "",
+                        "No data access!",
+                        ClearCollect(
+                            colApproverList1,
+                            ForAll(
+                                Table(
+                                    ParseJSON(
+                                        RequestListapproval.Run(
+                                            getEmail.email,
+                                            getEmail.id
+                                        ).result
+                                    )
+                                ),
+                                {
+                                    IDReq: Value(Value.'ID Request'),
+                                    ID: Value(Value.'ID User'),
+                                    User: Text(Value.Email),
+                                    Title: Text(Value.Title),
+                                    Description: Text(Value.Description),
+                                    Type: Text(Value.ReqType),
+                                    Permission: Text(Value.ReqPer),
+                                    Reason: Text(Value.ReqReason),
+                                    Attachment: Text(Value.Attachment),
+                                    Status: Text(Value.Status),
+                                    'Created Date': DateValue(Value.'Created Date'),
+                                    'Updated Date': Text(Value.'Updated Date'),
+                                    'Approver 1': Text(Value.'Approver 1'),
+                                    'Approver Date 1': DateValue(Value.'Approver Date 1'),
+                                    'Approver 2': Text(Value.'Approver 2'),
+                                    'Approver Date 2': DateValue(Value.'Approver Date 2'),
+                                    'Rejected By': Text(Value.'Rejected By'),
+                                    'Rejected Date': DateValue(Value.'Rejected Date'),
+                                    'Rejected Reason': Text(Value.'Rejected Reason')
+                                }
+                            )
+                        )
+                    );
+                    Navigate(
+                        Home,
+                        ScreenTransition.Cover
+                    );
+                    Reset(txtEmail);
+                    Reset(txtPass);
+                Text: ="Login"
+                ZIndex: =3
+

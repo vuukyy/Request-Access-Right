@@ -1,0 +1,50 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2023-08-21T17:00:01.8070000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Tệp đính kèm",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Tên tệp với phần mở rộng",
+      "{FullPath}": "Đường dẫn đầy đủ",
+      "{HasAttachments}": "Có tệp đính kèm",
+      "{Identifier}": "Mã định danh",
+      "{IsFolder}": "Là_thư_mực",
+      "{Link}": "Liên kết đến mục",
+      "{ModerationComment}": "Chú thích liên quan đến trạng thái phê duyệt nội dung của mục danh sách này",
+      "{ModerationStatus}": "Trạng thái phê duyệt nội dung",
+      "{Name}": "Tên",
+      "{Path}": "Đường dẫn thư mục",
+      "{Thumbnail}": "Hình thu nhỏ",
+      "{TriggerWindowEndToken}": "Kích hoạt Cửa sổ Kết thúc Mã thông báo",
+      "{TriggerWindowStartToken}": "Kích hoạt Cửa sổ Bắt đầu Mã thông báo",
+      "{VersionNumber}": "Số phiên bản",
+      "Author": "Người Tạo",
+      "Author#Claims": "Người Tạo Claims",
+      "ComplianceAssetId": "Id Tài sản Tuân thủ",
+      "Created": "Đã tạo",
+      "Editor": "Người Sửa đổi",
+      "Editor#Claims": "Người Sửa đổi Claims",
+      "ID": "ID",
+      "IDGroup": "IDGroup",
+      "IDGroup#Id": "IDGroup Id",
+      "IDUser": "IDUser",
+      "IDUser#Id": "IDUser Id",
+      "IDUser_x003a__x0020_UserName": "IDUser: UserName",
+      "IDUser_x003a__x0020_UserName#Id": "IDUser: UserName Id",
+      "Modified": "Đã sửa đổi",
+      "OData__ColorTag": "Thẻ màu",
+      "Title": "Tiêu đề"
+    },
+    "DatasetName": "https://pizzavietnam.sharepoint.com/sites/TESTSITE",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "UserGroupTest",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
