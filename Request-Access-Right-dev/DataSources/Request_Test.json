@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2023-08-21T17:00:01.8070000Z",
+      "LastChangedTimeString": "2023-09-06T17:34:59.4950000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -40,6 +40,7 @@
       "Approver5#Claims": "Approver 5 Claims",
       "Author": "Người Tạo",
       "Author#Claims": "Người Tạo Claims",
+      "Comment": "Comment",
       "ComplianceAssetId": "Id Tài sản Tuân thủ",
       "Created": "Đã tạo",
       "Description": "Description",

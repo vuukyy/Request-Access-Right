@@ -447,7 +447,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "80\r\n",
+                "InvariantScript": "80\n",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -1712,12 +1712,12 @@
         "VariantName": "galleryVertical"
       }
     ],
-    "LastModifiedTimestamp": "638296788501864113",
+    "LastModifiedTimestamp": "638296793931106673",
     "Name": "cmp_SideBar",
     "Rules": [
       {
         "Category": "Data",
-        "InvariantScript": "Table(\r\n    {Value: \"Item 1\", Icon: Icon.AddDocument, Screen: App.ActiveScreen},\r\n    {Value: \"Item 2\", Icon: Icon.History, Screen: App.ActiveScreen},\r\n    {Value: \"Item 3\", Icon: Icon.History, Screen: App.ActiveScreen}\r\n )",
+        "InvariantScript": "Table(\n    {Value: \"Item 1\", Icon: Icon.AddDocument, Screen: App.ActiveScreen},\n    {Value: \"Item 2\", Icon: Icon.History, Screen: App.ActiveScreen},\n    {Value: \"Item 3\", Icon: Icon.History, Screen: App.ActiveScreen}\n )",
         "Property": "Items",
         "RuleProviderType": "System"
       },
@@ -1862,7 +1862,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638296788501864113",
+  "LastModifiedTimestamp": "638296793931106673",
   "Name": "adb63a9411484b188e3bfe1570e10aa4",
   "OverridableProperties": {},
   "SourceLibraryId": "846629a0-d373-48d1-ba53-3bdee80a0b7b",
