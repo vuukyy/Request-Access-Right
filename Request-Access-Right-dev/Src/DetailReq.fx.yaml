@@ -472,7 +472,7 @@
                     "'Đã tạo_DataCard2' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Created"
-                        Default: =ThisItem.'Đã tạo'
+                        Default: =ThisItem.Created
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -576,7 +576,7 @@
                     "'Đã sửa đổi_DataCard2' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Modified"
-                        Default: =ThisItem.'Đã sửa đổi'
+                        Default: =ThisItem.Modified
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Modified")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -613,7 +613,7 @@
                     "'Tiêu đề_DataCard8' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.'Tiêu đề'
+                        Default: =ThisItem.Title
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
