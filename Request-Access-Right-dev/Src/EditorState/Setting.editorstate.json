@@ -3892,7 +3892,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container5_6",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5203,7 +5203,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image3_6",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7742,7 +7742,8 @@
         "PaddingTop",
         "PaddingRight",
         "PaddingBottom",
-        "PaddingLeft"
+        "PaddingLeft",
+        "OnSelect"
       ],
       "DynamicProperties": [
         {
@@ -7792,7 +7793,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label43",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7988,6 +7989,11 @@
         {
           "Category": "Design",
           "PropertyName": "PaddingLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -8440,7 +8446,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label44",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
