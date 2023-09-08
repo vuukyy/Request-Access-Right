@@ -81,14 +81,14 @@
                         Width: =75
                         ZIndex: =1
 
-                    Container7_7 As groupContainer.verticalAutoLayoutContainer:
+                    Container7_3 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =75
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         PaddingTop: =5
@@ -102,15 +102,19 @@
                         Label3_7 As label:
                             FontWeight: =FontWeight.Semibold
                             Height: =20
-                            Size: =14
-                            Text: =getEmail.username
+                            Size: =12
+                            Text: |-
+                                =With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.User)
+                                )
                             ZIndex: =1
 
-                        Container8_7 As groupContainer.horizontalAutoLayoutContainer:
+                        Container8_3 As groupContainer.horizontalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =30
+                            Height: =20
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =20
@@ -124,65 +128,14 @@
                             Label4_7 As label:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =20
-                                Size: =11
-                                Text: =getEmail.department
+                                Size: =10
+                                Text: |-
+                                    =With(
+                                        {obj: ParseJSON(getEmail.result)},
+                                        Text(obj.Dept)
+                                    )
                                 Width: =50
                                 ZIndex: =1
-
-                            Label9_7 As label:
-                                Align: =Align.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: ="-"
-                                Width: =20
-                                ZIndex: =2
-
-                            Label8_6 As label:
-                                AlignInContainer: =AlignInContainer.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: =getEmail.role_name
-                                Width: =70
-                                ZIndex: =3
-
-                        Label5_6 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            FillPortions: =1
-                            FontWeight: =FontWeight.Lighter
-                            Height: =20
-                            Italic: =true
-                            LayoutMinHeight: =20
-                            Size: =10
-                            Text: =getEmail.position
-                            ZIndex: =4
-
-            Container10_7 As groupContainer.horizontalAutoLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
-                BorderColor: =RGBA(0, 0, 0, 0)
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                LayoutAlignItems: =LayoutAlignItems.Center
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =80
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Width: =64
-                ZIndex: =3
-
-                Icon1_7 As icon.Export:
-                    Icon: =Icon.Export
-                    OnSelect: =Navigate(Login,ScreenTransition.Cover)
-                    PaddingBottom: =20
-                    PaddingLeft: =20
-                    PaddingRight: =20
-                    PaddingTop: =20
-                    ZIndex: =1
 
         Container21_1 As groupContainer.horizontalAutoLayoutContainer:
             BorderColor: =RGBA(0, 0, 0, 0)

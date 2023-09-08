@@ -94,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 154,
+    "BindingErrorCount": 122,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -138,6 +138,8 @@
     "Request Type",
     "Edit ReqType",
     "Manage Roles",
+    "Mange Group Roles",
+    "Manage Users",
     "SetApprover",
     "NewReq",
     "DetailReq",
