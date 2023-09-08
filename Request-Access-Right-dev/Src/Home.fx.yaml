@@ -84,7 +84,7 @@
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =65
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         PaddingTop: =5
@@ -98,15 +98,19 @@
                         Label3 As label:
                             FontWeight: =FontWeight.Semibold
                             Height: =20
-                            Size: =14
-                            Text: =getEmail.username
+                            Size: =12
+                            Text: |-
+                                =With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.User)
+                                )
                             ZIndex: =1
 
                         Container8 As groupContainer.horizontalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =30
+                            Height: =20
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =20
@@ -120,39 +124,14 @@
                             Label4 As label:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =20
-                                Size: =11
-                                Text: =getEmail.department
+                                Size: =10
+                                Text: |-
+                                    =With(
+                                        {obj: ParseJSON(getEmail.result)},
+                                        Text(obj.Dept)
+                                    )
                                 Width: =50
                                 ZIndex: =1
-
-                            Label9 As label:
-                                Align: =Align.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: ="-"
-                                Width: =20
-                                ZIndex: =2
-
-                            Label8 As label:
-                                AlignInContainer: =AlignInContainer.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: =getEmail.role_name
-                                Width: =70
-                                ZIndex: =3
-
-                        Label5 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            FillPortions: =1
-                            FontWeight: =FontWeight.Lighter
-                            Height: =20
-                            Italic: =true
-                            LayoutMinHeight: =20
-                            Size: =10
-                            Text: =getEmail.position
-                            ZIndex: =4
 
         BottomContainer1 As groupContainer.horizontalAutoLayoutContainer:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -212,6 +191,15 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Approval"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isApprover)
+                            ) = "True",
+                            true,
+                            false
+                        )
                     ZIndex: =2
 
                 Button5_12 As button:
@@ -313,14 +301,6 @@
                                 NewReq,
                                 ScreenTransition.Fade
                             );
-                            Set(
-                                varIDUser,
-                                getEmail.id
-                            );
-                            Set(
-                                varEmailUser,
-                                getEmail.email
-                            )
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
@@ -391,7 +371,7 @@
                             =SortByColumns(
                                 Filter(
                                     Request_Test,
-                                    ThisRecord.IDUser.Value = getEmail.id
+                                    ThisRecord.'Người Tạo'.Email = With({obj:ParseJSON(getEmail.result)},Text(obj.Email))
                                 ),
                                 "Created",
                                 SortOrder.Descending

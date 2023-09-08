@@ -16,6 +16,44 @@
     "dependents": [],
     "id": "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098"
   },
+  "20f7372a-76ff-4b32-b484-3e4123ea1e6a": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "bf754817-acdc-44b9-ba22-24b4040d6070": {
+          "value": "shared_office365users"
+        },
+        "workflowEntityId": {
+          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365users": {
+          "value": "bf754817-acdc-44b9-ba22-24b4040d6070"
+        },
+        "workflowEntityId": {
+          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Login2"
+    ],
+    "dependencies": {
+      "shared_office365users": "bf754817-acdc-44b9-ba22-24b4040d6070"
+    },
+    "dependents": [],
+    "id": "20f7372a-76ff-4b32-b484-3e4123ea1e6a"
+  },
   "3701849e-97b7-4aef-93c9-7cf99f01646c": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -225,6 +263,20 @@
       "fd5289da-6e80-418c-ac47-262f41b0428e"
     ],
     "id": "aa162321-87b3-4021-8048-3d725214b6b6"
+  },
+  "bf754817-acdc-44b9-ba22-24b4040d6070": {
+    "connectionRef": {
+      "displayName": "Người dùng Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/master/1.0.1653.3400/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "20f7372a-76ff-4b32-b484-3e4123ea1e6a"
+    ],
+    "id": "bf754817-acdc-44b9-ba22-24b4040d6070"
   },
   "dfd1825c-6d2a-469b-a838-dd8608ace607": {
     "connectionRef": {

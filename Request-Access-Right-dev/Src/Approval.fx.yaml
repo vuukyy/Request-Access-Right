@@ -357,7 +357,7 @@
 
                     Gallery7_1 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =SortByColumns(colApproverList1,"Created Date",SortOrder.Descending)
+                        Items: =Request_Test
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -367,7 +367,7 @@
 
                         Label14_1 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.Description
+                            Text: =ThisItem.ReqDescription
                             Width: =230
                             X: =303
                             Y: =10
@@ -375,7 +375,7 @@
 
                         Label15_1 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.Title
+                            Text: =ThisItem.'Tiêu đề'
                             Width: =230
                             X: =56
                             Y: =10
@@ -395,7 +395,7 @@
                             OnSelect: |-
                                 =Set(
                                     varIDItem,
-                                    ThisItem.IDReq
+                                    ThisItem.IDReqType
                                 );
                                 Navigate(
                                     Detail_Req_Approval,
@@ -409,7 +409,7 @@
                         Label16_2 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Created Date'
+                            Text: =ThisItem.'Đã tạo'
                             Width: =130
                             X: =563
                             Y: =5
@@ -418,7 +418,7 @@
                         Label16_3 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.User
+                            Text: =ThisItem.'Người Tạo'.DisplayName
                             Width: =130
                             X: =711
                             Y: =5
@@ -435,7 +435,7 @@
                                 DisplayMode: =DisplayMode.View
                                 Fill: |-
                                     =If(
-                                        ThisItem.Status = "Pending",
+                                        ThisItem.Status.Value = "Created",
                                         RGBA(
                                             255,
                                             235,
@@ -461,7 +461,7 @@
                                 Align: =Align.Center
                                 Height: =50
                                 OnSelect: =Select(Parent)
-                                Text: =ThisItem.Status
+                                Text: =ThisItem.Status.Value
                                 Width: =130
                                 X: =861
                                 Y: =5
