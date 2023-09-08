@@ -777,7 +777,8 @@
                 Button3 As button:
                     BorderThickness: =0
                     Height: =50
-                    OnSelect: =SubmitForm([@'Edit Form Request']);
+                    OnSelect: |
+                        =SubmitForm([@'Edit Form Request']);
                     RadiusBottomLeft: =5
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5

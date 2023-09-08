@@ -323,7 +323,7 @@
                                 "'Tiêu đề_DataCard5' As typedDataCard.textualEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.'Tiêu đề'
+                                    Default: =ThisItem.Title
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -523,8 +523,7 @@
                                 "'IDUser: UserName_DataCard2' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="IDUser_x003a__x0020_UserName"
-                                    Default: |-
-                                        =ThisItem.'IDUser: UserName'
+                                    Default: =ThisItem.IDUser_x003a__x0020_UserName
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser_x003a__x0020_UserName")
                                     Fill: =RGBA(0, 0, 0, 0)
