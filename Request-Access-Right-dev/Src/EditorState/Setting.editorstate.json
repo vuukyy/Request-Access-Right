@@ -7742,8 +7742,7 @@
         "PaddingTop",
         "PaddingRight",
         "PaddingBottom",
-        "PaddingLeft",
-        "OnSelect"
+        "PaddingLeft"
       ],
       "DynamicProperties": [
         {
@@ -7793,7 +7792,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label43",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7989,11 +7988,6 @@
         {
           "Category": "Design",
           "PropertyName": "PaddingLeft",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Behavior",
-          "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -8446,7 +8440,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label44",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
