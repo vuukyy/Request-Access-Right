@@ -44,7 +44,7 @@
       "enablerpawarecomponentdependency": true,
       "enablerulespanel": false,
       "enableruntimepolicies": true,
-      "enablesaveloadcleardataonweb": true,
+      "enablesaveloadcleardataonweb": false,
       "enableupdateifdelegation": false,
       "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,

@@ -106,33 +106,6 @@
                                 )
                             ZIndex: =1
 
-                        Container8_13 As groupContainer.horizontalAutoLayoutContainer:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            DropShadow: =DropShadow.None
-                            FillPortions: =0
-                            Height: =20
-                            LayoutAlignItems: =LayoutAlignItems.Center
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =20
-                            LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            ZIndex: =3
-
-                            Label4_14 As label:
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =10
-                                Text: |-
-                                    =With(
-                                        {obj: ParseJSON(getEmail.result)},
-                                        Text(obj.Dept)
-                                    )
-                                Width: =50
-                                ZIndex: =1
-
         "'Breadcrum Group Roles' As groupContainer.horizontalAutoLayoutContainer":
             BorderColor: =RGBA(0, 0, 0, 0)
             DropShadow: =DropShadow.None

@@ -95,44 +95,6 @@
                         Width: =200
                         ZIndex: =2
 
-                        Label3_11 As label:
-                            FontWeight: =FontWeight.Semibold
-                            Height: =20
-                            Size: =12
-                            Text: |-
-                                =With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.User)
-                                )
-                            ZIndex: =1
-
-                        Container8_7 As groupContainer.horizontalAutoLayoutContainer:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            DropShadow: =DropShadow.None
-                            FillPortions: =0
-                            Height: =20
-                            LayoutAlignItems: =LayoutAlignItems.Center
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =20
-                            LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            ZIndex: =3
-
-                            Label4_10 As label:
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =10
-                                Text: |-
-                                    =With(
-                                        {obj: ParseJSON(getEmail.result)},
-                                        Text(obj.Dept)
-                                    )
-                                Width: =50
-                                ZIndex: =1
-
         "'Breadcrum ReqProcess' As groupContainer.horizontalAutoLayoutContainer":
             BorderColor: =RGBA(0, 0, 0, 0)
             DropShadow: =DropShadow.None
@@ -326,7 +288,7 @@
                                     PaddingLeft: =0
                                     PaddingRight: =0
                                     PaddingTop: =0
-                                    Text: =ThisItem.'Tiêu đề'
+                                    Text: =ThisItem.Title
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
                                     X: =16
@@ -359,7 +321,7 @@
                                     PaddingRight: =0
                                     PaddingTop: =0
                                     Size: =10
-                                    Text: =Text(ThisItem.'Đã tạo', "dd/mm/yyyy")
+                                    Text: =Text(ThisItem.Created, "dd/mm/yyyy")
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title4.Width
                                     X: =Title4.X
@@ -421,7 +383,7 @@
                                 "'Đã tạo_DataCard1_1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Created"
-                                    Default: =ThisItem.'Đã tạo'
+                                    Default: =ThisItem.Created
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Created")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -458,7 +420,7 @@
                                 "'Đã sửa đổi_DataCard1_1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Modified"
-                                    Default: =ThisItem.'Đã sửa đổi'
+                                    Default: =ThisItem.Modified
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Modified")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -495,7 +457,7 @@
                                 "'Tiêu đề_DataCard6_1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.'Tiêu đề'
+                                    Default: =ThisItem.Title
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -635,14 +597,14 @@
                                 "'Approver 1_DataCard2_1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Approver1"
-                                    Default: =ThisItem.'Approver 1'
+                                    Default: =ThisItem.Approver1
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Approver1")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
                                     Update: =DataCardValue44_1.Selected
-                                    Visible: =If(IsBlank(ThisItem.'Approver 1'),false,true)
+                                    Visible: =If(IsBlank(ThisItem.Approver1),false,true)
                                     Width: =465
                                     X: =1
                                     Y: =1
@@ -664,7 +626,7 @@
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
                                         IsSearchable: =false
-                                        Items: =Choices([@ReqProcessTest].'Approver 1')
+                                        Items: =Choices([@ReqProcessTest].Approver1)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
                                         SearchItems: =[]
