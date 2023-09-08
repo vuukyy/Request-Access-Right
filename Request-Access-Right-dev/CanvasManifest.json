@@ -44,7 +44,7 @@
       "enablerpawarecomponentdependency": true,
       "enablerulespanel": false,
       "enableruntimepolicies": true,
-      "enablesaveloadcleardataonweb": false,
+      "enablesaveloadcleardataonweb": true,
       "enableupdateifdelegation": false,
       "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
@@ -94,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 9,
+    "BindingErrorCount": 160,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",

@@ -90,6 +90,38 @@
     "dependents": [],
     "id": "44307f3b-3875-4645-a663-5aae40d256c5"
   },
+  "54474a27-b7f6-440b-9489-b9049fe58bde": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Login2"
+    ],
+    "dependencies": {
+      "shared_office365users": "9db3a87e-5619-4129-a84d-22725bd00d58"
+    },
+    "dependents": [],
+    "id": "54474a27-b7f6-440b-9489-b9049fe58bde"
+  },
   "6d604169-44a4-4adf-88a9-30db8d78d970": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -135,6 +167,20 @@
     },
     "dependents": [],
     "id": "6d604169-44a4-4adf-88a9-30db8d78d970"
+  },
+  "9db3a87e-5619-4129-a84d-22725bd00d58": {
+    "connectionRef": {
+      "displayName": "Người dùng Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/master/1.0.1653.3400/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "54474a27-b7f6-440b-9489-b9049fe58bde"
+    ],
+    "id": "9db3a87e-5619-4129-a84d-22725bd00d58"
   },
   "aa162321-87b3-4021-8048-3d725214b6b6": {
     "connectionRef": {

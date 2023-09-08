@@ -109,55 +109,16 @@ Login As screen:
                 OnSelect: |
                     =Set(
                         getEmail,
-                        Login.Run(
-                            txtEmail.Text,
-                            txtPass.Text
+                        Login2.Run(
+                            txtEmail.Text
                         )
                     );
                     Set(
                         varApprover,
                         RequestListapproval.Run(
-                            getEmail.email,
-                            getEmail.id
+                            ParseJSON(getEmail.result),
+                            getEmail.message_1
                         ).approver
-                    );
-                    If(
-                        varApprover = "",
-                        "No data access!",
-                        ClearCollect(
-                            colApproverList1,
-                            ForAll(
-                                Table(
-                                    ParseJSON(
-                                        RequestListapproval.Run(
-                                            getEmail.email,
-                                            getEmail.id
-                                        ).result
-                                    )
-                                ),
-                                {
-                                    IDReq: Value(Value.'ID Request'),
-                                    ID: Value(Value.'ID User'),
-                                    User: Text(Value.Email),
-                                    Title: Text(Value.Title),
-                                    Description: Text(Value.Description),
-                                    Type: Text(Value.ReqType),
-                                    Permission: Text(Value.ReqPer),
-                                    Reason: Text(Value.ReqReason),
-                                    Attachment: Text(Value.Attachment),
-                                    Status: Text(Value.Status),
-                                    'Created Date': DateValue(Value.'Created Date'),
-                                    'Updated Date': Text(Value.'Updated Date'),
-                                    'Approver 1': Text(Value.'Approver 1'),
-                                    'Approver Date 1': DateValue(Value.'Approver Date 1'),
-                                    'Approver 2': Text(Value.'Approver 2'),
-                                    'Approver Date 2': DateValue(Value.'Approver Date 2'),
-                                    'Rejected By': Text(Value.'Rejected By'),
-                                    'Rejected Date': DateValue(Value.'Rejected Date'),
-                                    'Rejected Reason': Text(Value.'Rejected Reason')
-                                }
-                            )
-                        )
                     );
                     Navigate(
                         Home,
