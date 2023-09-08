@@ -133,29 +133,6 @@
                                 Width: =50
                                 ZIndex: =1
 
-                            Label8 As label:
-                                Align: =Align.Center
-                                Height: =20
-                                Size: =10
-                                Text: ="-"
-                                Width: =10
-                                ZIndex: =2
-
-                            Label5 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                FillPortions: =1
-                                FontWeight: =FontWeight.Lighter
-                                Height: =20
-                                Italic: =true
-                                LayoutMinHeight: =10
-                                Size: =10
-                                Text: |-
-                                    =With(
-                                        {obj: ParseJSON(getEmail.result)},
-                                        Text(obj.Title)
-                                    )
-                                ZIndex: =3
-
         BottomContainer1 As groupContainer.horizontalAutoLayoutContainer:
             BorderColor: =RGBA(0, 0, 0, 0)
             DropShadow: =DropShadow.None
@@ -214,6 +191,15 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Approval"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isApprover)
+                            ) = "True",
+                            true,
+                            false
+                        )
                     ZIndex: =2
 
                 Button5_12 As button:
@@ -315,14 +301,6 @@
                                 NewReq,
                                 ScreenTransition.Fade
                             );
-                            Set(
-                                varIDUser,
-                                getEmail.id
-                            );
-                            Set(
-                                varEmailUser,
-                                getEmail.email
-                            )
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
@@ -393,7 +371,7 @@
                             =SortByColumns(
                                 Filter(
                                     Request_Test,
-                                    ThisRecord.IDUser.Value = getEmail.id
+                                    ThisRecord.'Người Tạo'.Email = With({obj:ParseJSON(getEmail.result)},Text(obj.Email))
                                 ),
                                 "Created",
                                 SortOrder.Descending
