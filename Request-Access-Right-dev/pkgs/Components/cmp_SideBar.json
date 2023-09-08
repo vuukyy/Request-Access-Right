@@ -139,7 +139,7 @@
             "NameMapSourceSchema": "?"
           }
         ],
-        "ControlUniqueId": "5",
+        "ControlUniqueId": "11",
         "Children": [
           {
             "AllowAccessToGlobals": true,
@@ -154,7 +154,7 @@
                 "NameMapSourceSchema": "?"
               }
             ],
-            "ControlUniqueId": "6",
+            "ControlUniqueId": "12",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -279,7 +279,7 @@
                 "NameMapSourceSchema": "?"
               }
             ],
-            "ControlUniqueId": "7",
+            "ControlUniqueId": "13",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -651,7 +651,7 @@
               "PaddingBottom",
               "PaddingLeft"
             ],
-            "ControlUniqueId": "8",
+            "ControlUniqueId": "14",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -989,7 +989,7 @@
               "PaddingBottom",
               "PaddingLeft"
             ],
-            "ControlUniqueId": "9",
+            "ControlUniqueId": "15",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -1346,7 +1346,7 @@
                 "NameMapSourceSchema": "?"
               }
             ],
-            "ControlUniqueId": "10",
+            "ControlUniqueId": "16",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -1712,7 +1712,7 @@
         "VariantName": "galleryVertical"
       }
     ],
-    "LastModifiedTimestamp": "638296793931106673",
+    "LastModifiedTimestamp": "638297343739298213",
     "Name": "cmp_SideBar",
     "Rules": [
       {
@@ -1862,7 +1862,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638296793931106673",
+  "LastModifiedTimestamp": "638297343739298213",
   "Name": "adb63a9411484b188e3bfe1570e10aa4",
   "OverridableProperties": {},
   "SourceLibraryId": "846629a0-d373-48d1-ba53-3bdee80a0b7b",

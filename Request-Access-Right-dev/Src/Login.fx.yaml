@@ -165,6 +165,10 @@ Login As screen:
                     );
                     Reset(txtEmail);
                     Reset(txtPass);
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
                 Text: ="Login"
                 ZIndex: =3
 
