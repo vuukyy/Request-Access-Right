@@ -371,7 +371,7 @@
                             =SortByColumns(
                                 Filter(
                                     Request_Test,
-                                    ThisRecord.'Created By'.Email = With({obj:ParseJSON(getEmail.result)},Text(obj.Email))
+                                    ThisRecord.'Người Tạo'.Email = With({obj:ParseJSON(getEmail.result)},Text(obj.Email))
                                 ),
                                 "Created",
                                 SortOrder.Descending
@@ -394,7 +394,7 @@
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.Title
+                            Text: =ThisItem.'Tiêu đề'
                             Width: =430
                             X: =56
                             Y: =10

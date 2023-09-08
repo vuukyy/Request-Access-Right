@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2023-08-21T17:00:01.8070000Z",
+      "LastChangedTimeString": "2023-09-06T17:34:59.4950000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -32,10 +32,12 @@
       "ID": "ID",
       "IDGroup": "IDGroup",
       "IDGroup#Id": "IDGroup Id",
+      "IDGroup_x003a__x0020_ID": "IDGroup: ID",
+      "IDGroup_x003a__x0020_ID#Id": "IDGroup: ID Id",
       "IDUser": "IDUser",
       "IDUser#Id": "IDUser Id",
-      "IDUser_x003a__x0020_UserName": "IDUser: UserName",
-      "IDUser_x003a__x0020_UserName#Id": "IDUser: UserName Id",
+      "IDUser_x003a__x0020_ID": "IDUser: ID",
+      "IDUser_x003a__x0020_ID#Id": "IDUser: ID Id",
       "Modified": "Đã sửa đổi",
       "OData__ColorTag": "Thẻ màu",
       "Title": "Tiêu đề"
