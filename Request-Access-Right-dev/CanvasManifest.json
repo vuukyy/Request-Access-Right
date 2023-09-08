@@ -125,7 +125,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "en-US"
+    "UserLocale": "vi-VN"
   },
   "ScreenOrder": [
     "Login",
@@ -138,6 +138,9 @@
     "Request Type",
     "Edit ReqType",
     "Manage Roles",
+    "Mange Group Roles",
+    "Manage Users",
+    "Edit Manage Users",
     "SetApprover",
     "NewReq",
     "DetailReq",

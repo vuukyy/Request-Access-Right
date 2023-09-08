@@ -84,7 +84,7 @@
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =65
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         PaddingTop: =5
@@ -98,15 +98,19 @@
                         Label3_4 As label:
                             FontWeight: =FontWeight.Semibold
                             Height: =20
-                            Size: =14
-                            Text: =getEmail.username
+                            Size: =12
+                            Text: |-
+                                =With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.User)
+                                )
                             ZIndex: =1
 
                         Container8_6 As groupContainer.horizontalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =30
+                            Height: =20
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =20
@@ -120,39 +124,14 @@
                             Label4_4 As label:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =20
-                                Size: =11
-                                Text: =getEmail.department
+                                Size: =10
+                                Text: |-
+                                    =With(
+                                        {obj: ParseJSON(getEmail.result)},
+                                        Text(obj.Dept)
+                                    )
                                 Width: =50
                                 ZIndex: =1
-
-                            Label9_6 As label:
-                                Align: =Align.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: ="-"
-                                Width: =20
-                                ZIndex: =2
-
-                            Label8_3 As label:
-                                AlignInContainer: =AlignInContainer.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: =getEmail.role_name
-                                Width: =70
-                                ZIndex: =3
-
-                        Label5_3 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            FillPortions: =1
-                            FontWeight: =FontWeight.Lighter
-                            Height: =20
-                            Italic: =true
-                            LayoutMinHeight: =20
-                            Size: =10
-                            Text: =getEmail.position
-                            ZIndex: =4
 
         BottomContainer1_1 As groupContainer.horizontalAutoLayoutContainer:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -361,7 +340,7 @@
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =150
+                            Height: =250
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -384,8 +363,9 @@
                             Container35 As groupContainer.verticalAutoLayoutContainer:
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 DropShadow: =DropShadow.None
+                                FillPortions: =0
                                 LayoutDirection: =LayoutDirection.Vertical
-                                LayoutMinHeight: =30
+                                LayoutMinHeight: =50
                                 LayoutMinWidth: =250
                                 LayoutMode: =LayoutMode.Auto
                                 PaddingLeft: =20
@@ -395,15 +375,33 @@
                                 RadiusTopRight: =0
                                 ZIndex: =2
 
-                                Label43 As label:
+                                Label43_1 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =RGBA(128, 128, 128, 1)
-                                    Text: ="Manage Roles"
+                                    OnSelect: |-
+                                        =Navigate(
+                                            'Manage Roles',
+                                            ScreenTransition.Cover
+                                        )
+                                    Text: ="Manage Group Roles"
                                     ZIndex: =1
 
+                                Label43 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    Color: =RGBA(128, 128, 128, 1)
+                                    OnSelect: |-
+                                        =Navigate(
+                                            'Manage Roles',
+                                            ScreenTransition.Cover
+                                        )
+                                    Text: ="Manage Roles"
+                                    ZIndex: =2
+
                                 Label44 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =RGBA(128, 128, 128, 1)
                                     Text: ="Manage Users"
-                                    ZIndex: =2
+                                    ZIndex: =3
 
                         Label42_1 As label:
                             Color: =RGBA(128, 128, 128, 1)

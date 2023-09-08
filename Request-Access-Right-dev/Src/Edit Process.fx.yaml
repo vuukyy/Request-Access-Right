@@ -84,7 +84,7 @@
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =65
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         PaddingTop: =5
@@ -98,15 +98,19 @@
                         Label3_10 As label:
                             FontWeight: =FontWeight.Semibold
                             Height: =20
-                            Size: =14
-                            Text: =getEmail.username
+                            Size: =12
+                            Text: |-
+                                =With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.User)
+                                )
                             ZIndex: =1
 
                         Container8_9 As groupContainer.horizontalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =30
+                            Height: =20
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =20
@@ -120,39 +124,14 @@
                             Label4_9 As label:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =20
-                                Size: =11
-                                Text: =getEmail.department
+                                Size: =10
+                                Text: |-
+                                    =With(
+                                        {obj: ParseJSON(getEmail.result)},
+                                        Text(obj.Dept)
+                                    )
                                 Width: =50
                                 ZIndex: =1
-
-                            Label9_9 As label:
-                                Align: =Align.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: ="-"
-                                Width: =20
-                                ZIndex: =2
-
-                            Label8_8 As label:
-                                AlignInContainer: =AlignInContainer.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: =getEmail.role_name
-                                Width: =70
-                                ZIndex: =3
-
-                        Label5_8 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            FillPortions: =1
-                            FontWeight: =FontWeight.Lighter
-                            Height: =20
-                            Italic: =true
-                            LayoutMinHeight: =20
-                            Size: =10
-                            Text: =getEmail.position
-                            ZIndex: =4
 
         "'Breadcrum ReqProcess_1' As groupContainer.horizontalAutoLayoutContainer":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -499,7 +478,7 @@
                                 "'Tiêu đề_DataCard3_1' As typedDataCard.textualEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.Title
+                                    Default: =ThisItem.'Tiêu đề'
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -637,7 +616,7 @@
                                 "'Approver 1_DataCard1_1' As typedDataCard.comboBoxEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Approver1"
-                                    Default: =ThisItem.Approver1
+                                    Default: =ThisItem.'Approver 1'
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Approver1")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -664,10 +643,10 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@ReqProcessTest].Approver1)
+                                        Items: =Choices([@ReqProcessTest].'Approver 1')
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
-                                        SearchItems: =Choices(ReqProcessTest.Approver1,DataCardValue12_1.SearchText)
+                                        SearchItems: =Choices(ReqProcessTest.'Approver 1',DataCardValue12_1.SearchText)
                                         SelectMultiple: =false
                                         Template: =ListItemTemplate.Person
                                         Tooltip: =Parent.DisplayName

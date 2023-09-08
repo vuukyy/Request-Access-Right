@@ -76,14 +76,14 @@
                         Width: =50
                         ZIndex: =1
 
-                    Container7_13 As groupContainer.verticalAutoLayoutContainer:
+                    Container7_11 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =65
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         PaddingTop: =5
@@ -93,65 +93,6 @@
                         RadiusTopRight: =0
                         Width: =200
                         ZIndex: =2
-
-                        Label3_14 As label:
-                            FontWeight: =FontWeight.Semibold
-                            Height: =20
-                            Size: =14
-                            Text: =getEmail.username
-                            ZIndex: =1
-
-                        Container8_13 As groupContainer.horizontalAutoLayoutContainer:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            DropShadow: =DropShadow.None
-                            FillPortions: =0
-                            Height: =30
-                            LayoutAlignItems: =LayoutAlignItems.Center
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =20
-                            LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            ZIndex: =3
-
-                            Label4_13 As label:
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: =getEmail.department
-                                Width: =50
-                                ZIndex: =1
-
-                            Label9_13 As label:
-                                Align: =Align.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: ="-"
-                                Width: =20
-                                ZIndex: =2
-
-                            Label8_12 As label:
-                                AlignInContainer: =AlignInContainer.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: =getEmail.role_name
-                                Width: =70
-                                ZIndex: =3
-
-                        Label5_12 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            FillPortions: =1
-                            FontWeight: =FontWeight.Lighter
-                            Height: =20
-                            Italic: =true
-                            LayoutMinHeight: =20
-                            Size: =10
-                            Text: =getEmail.position
-                            ZIndex: =4
 
         "'Breadcrum ReqType_2' As groupContainer.horizontalAutoLayoutContainer":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -416,7 +357,7 @@
                             "'Tiêu đề_DataCard4' As typedDataCard.textualEditCard":
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="Title"
-                                Default: =ThisItem.Title
+                                Default: =ThisItem.'Tiêu đề'
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@ReqTypeTest],DataSourceInfo.DisplayName,"Title")
                                 Fill: =RGBA(0, 0, 0, 0)
