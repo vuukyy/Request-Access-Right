@@ -102,7 +102,7 @@ Approval_screen As screen:
 
             Label15_2 As label:
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.Title
+                Text: =ThisItem.'Tiêu đề'
                 Width: =186
                 X: =56
                 Y: =10

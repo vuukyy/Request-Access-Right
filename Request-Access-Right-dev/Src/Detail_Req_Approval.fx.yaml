@@ -343,7 +343,7 @@
 
                                 DataCard2 As typedDataCard.blankCard:
                                     BorderStyle: =BorderStyle.Solid
-                                    DataField: =ThisItem.Title
+                                    DataField: =ThisItem.'Tiêu đề'
                                     DisplayMode: =DisplayMode.View
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =90
@@ -360,7 +360,7 @@
                                         ZIndex: =1
 
                                     TextInput6 As text:
-                                        Default: =ThisItem.Title
+                                        Default: =ThisItem.'Tiêu đề'
                                         DisplayMode: =DisplayMode.View
                                         Y: =40
                                         ZIndex: =2
