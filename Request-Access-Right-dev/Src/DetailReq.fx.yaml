@@ -342,7 +342,7 @@
                     "'Tệp đính kèm_DataCard3' As typedDataCard.attachmentsViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="{Attachments}"
-                        Default: =ThisItem.Attachments
+                        Default: =ThisItem.'Tệp đính kèm'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"{Attachments}")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -405,7 +405,7 @@
                     "'Người Tạo_DataCard1' As typedDataCard.comboBoxViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Author"
-                        Default: =ThisItem.'Created By'
+                        Default: =ThisItem.'Người Tạo'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Author")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -433,7 +433,7 @@
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
                             IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Created By')
+                            Items: =Choices([@Request_Test].'Người Tạo')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
                             SearchItems: =[]
@@ -472,7 +472,7 @@
                     "'Đã tạo_DataCard2' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Created"
-                        Default: =ThisItem.Created
+                        Default: =ThisItem.'Đã tạo'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -509,7 +509,7 @@
                     "'Người Sửa đổi_DataCard1' As typedDataCard.comboBoxViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Editor"
-                        Default: =ThisItem.'Modified By'
+                        Default: =ThisItem.'Người Sửa đổi'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Editor")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -537,7 +537,7 @@
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
                             IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Modified By')
+                            Items: =Choices([@Request_Test].'Người Sửa đổi')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
                             SearchItems: =[]
@@ -576,7 +576,7 @@
                     "'Đã sửa đổi_DataCard2' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Modified"
-                        Default: =ThisItem.Modified
+                        Default: =ThisItem.'Đã sửa đổi'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Modified")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -613,7 +613,7 @@
                     "'Tiêu đề_DataCard8' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.Title
+                        Default: =ThisItem.'Tiêu đề'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
