@@ -294,7 +294,6 @@
                             "Gallery4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                                 BorderColor: =Color.Transparent
                                 DelayItemLoading: =true
-                                DisplayMode: =DisplayMode.View
                                 FocusedBorderThickness: =0
                                 Items: =RoleTest
                                 Layout: =Layout.Vertical
@@ -304,11 +303,11 @@
                                 ShowScrollbar: =false
                                 TemplateFill: =Color.Transparent
                                 TemplatePadding: =0
-                                TemplateSize: =120
+                                TemplateSize: =100
                                 ZIndex: =2
 
                                 Title7 As label:
-                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Bold)
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                                     Height: =Self.Size * 1.8
                                     OnSelect: =Select(Parent)
                                     PaddingBottom: =0
@@ -319,8 +318,8 @@
                                     Text: =ThisItem.RoleName
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
-                                    X: =15
-                                    Y: =27
+                                    X: =32
+                                    Y: =36
                                     ZIndex: =1
 
                                 Separator7 As rectangle:
@@ -348,14 +347,17 @@
                             DelayItemLoading: =true
                             Items: =PermissionTest
                             Layout: =Layout.Vertical
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
+                            Selectable: =false
                             ShowScrollbar: =false
                             TemplatePadding: =0
                             TemplateSize: =200
                             ZIndex: =1
 
                             Title10 As label:
-                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Bold)
                                 Height: =Self.Size * 1.8
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
@@ -372,7 +374,7 @@
                             "Gallery8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                                 DelayItemLoading: =true
                                 Height: =140
-                                Items: =Filter(PerActionTest,IDPer.Id=ThisItem.ID)
+                                Items: =Filter(PerActionTest, IDPer.Id = ThisItem.ID)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 ShowScrollbar: =false
@@ -384,14 +386,46 @@
 
                                 Checkbox3 As checkbox:
                                     CheckboxSize: =30
+                                    CheckmarkFill: |-
+                                        =If(
+                                            ThisItem.IDPer.Id = LookUp(
+                                                AddColumns(
+                                                    RolePermissionTest,
+                                                    "IDRolePer",
+                                                    IDPer.Id
+                                                ),
+                                                IDRole.Id = Gallery4.Selected.ID
+                                            ).IDRolePer,
+                                            RGBA(
+                                                0,
+                                                0,
+                                                0,
+                                                1
+                                            ),
+                                            RGBA(
+                                                255,
+                                                255,
+                                                255,
+                                                255
+                                            )
+                                        )
                                     Default: =ThisItem.CheckAction
+                                    FocusedBorderThickness: =0
                                     Height: =30
                                     OnSelect: =Select(Parent)
                                     Text: =""
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =30
-                                    X: =56
+                                    X: =68
                                     ZIndex: =2
+
+                                Label8 As label:
+                                    Height: =30
+                                    OnSelect: =Select(Parent)
+                                    Text: |-
+                                        =ThisItem.'IDAction: ActionCode'.Value
+                                    X: =98
+                                    ZIndex: =3
 
                             Icon3 As icon.ChevronDown:
                                 Height: =15
