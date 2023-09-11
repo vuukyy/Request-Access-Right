@@ -841,7 +841,8 @@
                         {Status: {Value: "Approver 1 approved"}},
                         {'Approved Date 1': Now()}
                     )
-                )
+                );
+                Navigate(Approval_screen)
                     
             Text: ="Approval"
             ZIndex: =1
@@ -963,8 +964,8 @@
                                     If(
                                         !IsBlank(
                                             LookUp(
-                                                'ReqProcessTest',
-                                                User().Email = Approver2.Email
+                                                ReqProcessTest,
+                                                User().Email = 'Approver 2'.Email
                                             )
                                         ),
                                         Patch(
@@ -992,6 +993,7 @@
                                 ); 
                             );
                             Reset(TextInput1);
+                            Navigate(Approval_screen)
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
                         PaddingRight: =5.21
