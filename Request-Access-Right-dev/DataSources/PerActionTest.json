@@ -33,8 +33,12 @@
       "ID": "ID",
       "IDAction": "IDAction",
       "IDAction#Id": "IDAction Id",
+      "IDAction_x003a__x0020_ActionCode": "IDAction: ActionCode",
+      "IDAction_x003a__x0020_ActionCode#Id": "IDAction: ActionCode Id",
       "IDPer": "IDPer",
       "IDPer#Id": "IDPer Id",
+      "IDPer_x003a__x0020_PerName": "IDPer: PerName",
+      "IDPer_x003a__x0020_PerName#Id": "IDPer: PerName Id",
       "Modified": "Đã sửa đổi",
       "OData__ColorTag": "Thẻ màu",
       "Title": "Tiêu đề"

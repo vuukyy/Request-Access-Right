@@ -109,9 +109,15 @@ Login As screen:
                 OnSelect: |
                     =Set(
                         getEmail,
-                        Login2.Run(
-                            txtEmail.Text
-                        )
+                        Login2.Run(txtEmail.Text)
+                    );
+                    If(
+                        txtPass.Text = "admin123",
+                        Navigate(
+                            Home,
+                            ScreenTransition.Cover
+                        ),
+                        Notify("Incorrect password!",NotificationType.Error,1000)
                     );
                     Set(
                         varApprover,
@@ -119,10 +125,6 @@ Login As screen:
                             ParseJSON(getEmail.result),
                             getEmail.message_1
                         ).approver
-                    );
-                    Navigate(
-                        Home,
-                        ScreenTransition.Cover
                     );
                     Reset(txtEmail);
                     Reset(txtPass);
