@@ -102,7 +102,7 @@
         Attachments_DataCard1 As typedDataCard.attachmentsViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.'Tệp đính kèm'
+            Default: =ThisItem.Attachments
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
@@ -166,7 +166,7 @@
         Created_DataCard2 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Created"
-            Default: =ThisItem.'Đã tạo'
+            Default: =ThisItem.Created
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
             Fill: =RGBA(0, 0, 0, 0)
@@ -203,7 +203,7 @@
         Title_DataCard1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
-            Default: =ThisItem.'Tiêu đề'
+            Default: =ThisItem.Title
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
@@ -832,7 +832,7 @@
                     !IsBlank(
                         LookUp(
                             ReqProcessTest,
-                            User().Email = 'Approver 1'.Email
+                            User().Email = Approver1.Email
                         )
                     ),
                     Patch(
@@ -930,24 +930,71 @@
                         Height: =50
                         OnSelect: |-
                             =If(
-                                !IsBlank(
-                                    LookUp(
-                                        ReqProcessTest,
-                                        User().Email = 'Approver 1'.Email
-                                    )
+                                Len(TextInput1.Text) = 0,
+                                Notify(
+                                    "Please enter the reason for the reject",
+                                    NotificationType.Error
                                 ),
-                                Patch(
-                                    Request_Test,
-                                    LookUp(
-                                        Request_Test,
-                                        ID=gal_Request_1.Selected.ID
+                                If(
+                                    !IsBlank(
+                                        LookUp(
+                                            ReqProcessTest,
+                                            User().Email = Approver1.Email
+                                        )
                                     ),
-                                    {Status: {Value: "Rejected"}},
-                                    {'Rejected Date': Now()}
-                                    //{'Rejected By': User().FullName}
-                                )
-                            )
+                                    Patch(
+                                        Request_Test,
+                                        LookUp(
+                                            Request_Test,
+                                            ID = gal_Request_1.Selected.ID
+                                        ),
+                                        {Status: {Value: "Rejected"}},
+                                        {'Rejected Date': Now()},
+                                        {Comment: "Approver 1 Comment: " & TextInput1.Text},
+                                        {
+                                            'Rejected By': {
+                                                '@odata.type': User().Email,
+                                                Claims: User().Email,
+                                                Department: "",
+                                                DisplayName: User().FullName,
+                                                Email: User().Email,
+                                                JobTitle: "",
+                                                Picture: ""
+                                            }
+                                        }
+                                    ),
+                                    If(
+                                        !IsBlank(
+                                            LookUp(
+                                                'ReqProcessTest',
+                                                User().Email = Approver2.Email
+                                            )
+                                        ),
+                                        Patch(
+                                            Request_Test,
+                                            LookUp(
+                                                Request_Test,
+                                                ID = gal_Request_1.Selected.ID
+                                            ),
+                                            {Status: {Value: "Rejected"}},
+                                            {'Rejected Date': Now()},
+                                            {Comment: "Approver 2 Comment: " & TextInput1.Text},
+                                            {
+                                                'Rejected By': {
+                                                    '@odata.type': User().Email,
+                                                    Claims: User().Email,
+                                                    Department: "",
+                                                    DisplayName: User().FullName,
+                                                    Email: User().Email,
+                                                    JobTitle: "",
+                                                    Picture: ""
+                                                }
+                                            }
+                                        )
+                                    )
+                                );
                                 
+                            )
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
                         PaddingRight: =5.21
