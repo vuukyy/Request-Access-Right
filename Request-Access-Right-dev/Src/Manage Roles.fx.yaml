@@ -347,6 +347,8 @@
                             DelayItemLoading: =true
                             Items: =PermissionTest
                             Layout: =Layout.Vertical
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
                             Selectable: =false
                             ShowScrollbar: =false

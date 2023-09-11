@@ -1712,7 +1712,7 @@
         "VariantName": "galleryVertical"
       }
     ],
-    "LastModifiedTimestamp": "638300110558315030",
+    "LastModifiedTimestamp": "638300268805548687",
     "Name": "cmp_SideBar",
     "Rules": [
       {
@@ -1862,7 +1862,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638300110558315030",
+  "LastModifiedTimestamp": "638300268805548687",
   "Name": "adb63a9411484b188e3bfe1570e10aa4",
   "OverridableProperties": {},
   "SourceLibraryId": "846629a0-d373-48d1-ba53-3bdee80a0b7b",
