@@ -32,12 +32,8 @@
       "ID": "ID",
       "IDPer": "IDPer",
       "IDPer#Id": "IDPer Id",
-      "IDPer_x003a__x0020_PerName": "IDPer: PerName",
-      "IDPer_x003a__x0020_PerName#Id": "IDPer: PerName Id",
       "IDRole": "IDRole",
       "IDRole#Id": "IDRole Id",
-      "IDRole_x003a__x0020_RoleName": "IDRole: RoleName",
-      "IDRole_x003a__x0020_RoleName#Id": "IDRole: RoleName Id",
       "Modified": "Đã sửa đổi",
       "OData__ColorTag": "Thẻ màu",
       "Title": "Tiêu đề"

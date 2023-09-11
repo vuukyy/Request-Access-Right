@@ -326,7 +326,7 @@
                     "'Tiêu đề_DataCard7' As typedDataCard.textualEditCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.'Tiêu đề'
+                        Default: =ThisItem.Title
                         DisplayMode: =Parent.DisplayMode
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -670,7 +670,7 @@
                     "'Tệp đính kèm_DataCard2' As typedDataCard.attachmentsEditCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="{Attachments}"
-                        Default: =ThisItem.'Tệp đính kèm'
+                        Default: =ThisItem.Attachments
                         DisplayMode: =Parent.DisplayMode
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"{Attachments}")
                         Fill: =RGBA(0, 0, 0, 0)
