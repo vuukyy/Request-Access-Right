@@ -701,7 +701,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Checkbox3",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4187,7 +4187,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "ShowScrollbar"
+        "ShowScrollbar",
+        "Selectable"
       ],
       "DynamicProperties": [
         {
@@ -4269,6 +4270,11 @@
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "Selectable",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Data",
           "PropertyName": "Items",
@@ -7700,7 +7706,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label8",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
