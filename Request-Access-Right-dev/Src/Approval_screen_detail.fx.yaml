@@ -48,6 +48,7 @@
 
             DataCardKey51 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -113,6 +114,7 @@
 
             DataCardKey52 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -163,7 +165,7 @@
         Created_DataCard2 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Created"
-            Default: =ThisItem.'Đã tạo'
+            Default: =ThisItem.Created
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
             Fill: =RGBA(0, 0, 0, 0)
@@ -176,6 +178,7 @@
 
             DataCardKey55 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -200,7 +203,7 @@
         Title_DataCard1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
-            Default: =ThisItem.'Tiêu đề'
+            Default: =ThisItem.Title
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
@@ -213,6 +216,7 @@
 
             DataCardKey13 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -250,6 +254,7 @@
 
             DataCardKey31 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -288,6 +293,7 @@
 
             DataCardKey32 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -353,6 +359,7 @@
 
             DataCardKey29 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -417,6 +424,7 @@
 
             DataCardKey34 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -455,6 +463,7 @@
 
             DataCardKey26 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -520,6 +529,7 @@
 
             DataCardKey38 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -585,6 +595,7 @@
 
             DataCardKey39 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -623,6 +634,7 @@
 
             DataCardKey40 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -688,6 +700,7 @@
 
             DataCardKey41 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -726,6 +739,7 @@
 
             DataCardKey48 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -791,6 +805,7 @@
 
             DataCardKey49 As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -836,13 +851,30 @@
                         Request_Test,
                         LookUp(
                             Request_Test,
-                            ID=gal_Request_1.Selected.ID
+                            ID = gal_Request_1.Selected.ID
                         ),
                         {Status: {Value: "Approver 1 approved"}},
                         {'Approved Date 1': Now()}
+                    ),
+                    If(
+                        !IsBlank(
+                            LookUp(
+                                ReqProcessTest,
+                                User().Email = Approver2.Email
+                            )
+                        ),
+                        Patch(
+                            Request_Test,
+                            LookUp(
+                                Request_Test,
+                                ID = gal_Request_1.Selected.ID
+                            ),
+                            {Status: {Value: "Approver 2 approved"}},
+                            {'Approved Date 2': Now()}
+                        )
                     )
-                )
-                    
+                );
+                Navigate(Approval_screen)
             Text: ="Approval"
             ZIndex: =1
 
@@ -959,12 +991,13 @@
                                                 Picture: ""
                                             }
                                         }
-                                    ),
+                                    );
+                                    Navigate(Approval_screen),
                                     If(
                                         !IsBlank(
                                             LookUp(
                                                 ReqProcessTest,
-                                                User().Email = Approver2.Email
+                                                User().Email = 'Approver 2'.Email
                                             )
                                         ),
                                         Patch(
@@ -987,7 +1020,8 @@
                                                     Picture: ""
                                                 }
                                             }
-                                        )
+                                        );
+                                        Navigate(Approval_screen)
                                     )
                                 ); 
                             );

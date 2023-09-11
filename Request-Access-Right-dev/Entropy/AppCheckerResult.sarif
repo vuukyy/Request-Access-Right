@@ -13569,7 +13569,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 27,
+                  "charOffset": 26,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -13609,7 +13609,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 31,
+                  "charOffset": 29,
                   "snippet": {
                     "text": "="
                   }
@@ -18128,36 +18128,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Manage Roles'.ScreenContainer7.MainContainer7.Container36.Container38.Container39.Gallery6.Gallery8.Checkbox3.FocusedBorderThickness"
-                }
-              ],
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Manage Roles",
-                "type": "'Manage Roles'.ScreenContainer7.MainContainer7.Container36.Container38.Container39.Gallery6.Gallery8.Checkbox3"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Manage Roles'.ScreenContainer7.MainContainer7.Container36.Container38.Container39.Gallery6.Gallery8.Checkbox3.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
         },
         {
           "locations": [
