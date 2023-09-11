@@ -404,6 +404,14 @@
                                     X: =68
                                     ZIndex: =2
 
+                                Label8 As label:
+                                    Height: =30
+                                    OnSelect: =Select(Parent)
+                                    Text: |-
+                                        =ThisItem.'IDAction: ActionCode'.Value
+                                    X: =98
+                                    ZIndex: =3
+
                             Title10 As label:
                                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Bold)
                                 Height: =Self.Size * 1.8
