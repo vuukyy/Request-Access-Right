@@ -82,6 +82,22 @@ Approval_screen As screen:
                         ),
                         "Created",
                         SortOrder.Descending
+                    ),
+                    If(
+                        !IsBlank(
+                            LookUp(
+                                ReqProcessTest,
+                                User().Email = Approver2.Email
+                            )
+                        ),
+                        SortByColumns(
+                            Filter(
+                                Request_Test,
+                                Status.Value = "Approver 1 approved"
+                            ),
+                            "Created",
+                            SortOrder.Descending
+                        )
                     )
                 )
             Layout: =Layout.Vertical
@@ -102,7 +118,7 @@ Approval_screen As screen:
 
             Label15_2 As label:
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.'Tiêu đề'
+                Text: =ThisItem.Title
                 Width: =186
                 X: =56
                 Y: =10

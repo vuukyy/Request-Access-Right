@@ -163,7 +163,7 @@
         Created_DataCard2 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Created"
-            Default: =ThisItem.'Đã tạo'
+            Default: =ThisItem.Created
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
             Fill: =RGBA(0, 0, 0, 0)
@@ -200,7 +200,7 @@
         Title_DataCard1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
-            Default: =ThisItem.'Tiêu đề'
+            Default: =ThisItem.Title
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
@@ -836,14 +836,30 @@
                         Request_Test,
                         LookUp(
                             Request_Test,
-                            ID=gal_Request_1.Selected.ID
+                            ID = gal_Request_1.Selected.ID
                         ),
                         {Status: {Value: "Approver 1 approved"}},
                         {'Approved Date 1': Now()}
+                    ),
+                    If(
+                        !IsBlank(
+                            LookUp(
+                                ReqProcessTest,
+                                User().Email = Approver2.Email
+                            )
+                        ),
+                        Patch(
+                            Request_Test,
+                            LookUp(
+                                Request_Test,
+                                ID = gal_Request_1.Selected.ID
+                            ),
+                            {Status: {Value: "Approver 2 approved"}},
+                            {'Approved Date 2': Now()}
+                        )
                     )
                 );
                 Navigate(Approval_screen)
-                    
             Text: ="Approval"
             ZIndex: =1
 
