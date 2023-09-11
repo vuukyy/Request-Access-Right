@@ -323,72 +323,12 @@
                                     Y: =27
                                     ZIndex: =1
 
-                                "Gallery8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                                    DelayItemLoading: =true
-                                    Height: =51
-                                    Items: |-
-                                        =Filter(
-                                            PermissionTest,
-                                            ID = LookUp(
-                                                AddColumns(
-                                                    RolePermissionTest,
-                                                    "IDPermission",
-                                                    IDPer.Id
-                                                ),
-                                                IDRole.Id = ThisItem.ID
-                                            ).IDPermission
-                                        )
-                                    Layout: =Layout.Vertical
-                                    LoadingSpinner: =LoadingSpinner.Data
-                                    ShowScrollbar: =false
-                                    TemplatePadding: =0
-                                    TemplateSize: =50
-                                    Width: =300
-                                    Y: =55
-                                    ZIndex: =1
-
-                                    Title12 As label:
-                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                        Height: =Self.Size * 1.8
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =ThisItem.PerName
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =Parent.TemplateWidth - 86
-                                        X: =19
-                                        Y: =12
-                                        ZIndex: =1
-
-                                    Separator10 As rectangle:
-                                        Height: =8
-                                        OnSelect: =Select(Parent)
-                                        Width: =Parent.TemplateWidth
-                                        Y: =Parent.TemplateHeight - Self.Height
-                                        ZIndex: =3
-
-                                    Rectangle21 As rectangle:
-                                        Height: =Parent.TemplateHeight - Separator10.Height
-                                        OnSelect: =Select(Parent)
-                                        Visible: =ThisItem.IsSelected
-                                        Width: =4
-                                        ZIndex: =4
-
                                 Separator7 As rectangle:
                                     Height: =8
                                     OnSelect: =Select(Parent)
                                     Width: =Parent.TemplateWidth
                                     Y: =Parent.TemplateHeight - Self.Height
                                     ZIndex: =3
-
-                                Rectangle17 As rectangle:
-                                    Height: =14
-                                    OnSelect: =Select(Parent)
-                                    X: =50
-                                    Y: =106
-                                    ZIndex: =4
 
                     Container39 As groupContainer.horizontalAutoLayoutContainer:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -404,97 +344,75 @@
                         RadiusTopRight: =0
                         ZIndex: =2
 
-                        Gallery6 As gallery.galleryHorizontal:
+                        "Gallery6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                             DelayItemLoading: =true
-                            Height: =80
-                            Items: =ActionTest
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =320
+                            Items: =PermissionTest
+                            Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
-                            TemplateSize: =120
-                            ZIndex: =2
+                            ShowScrollbar: =false
+                            TemplatePadding: =0
+                            TemplateSize: =200
+                            ZIndex: =1
 
-                            Label45 As label:
-                                Align: =Align.Center
-                                FontWeight: =FontWeight.Bold
-                                Size: =14
-                                Text: =ThisItem.ActionCode
-                                Width: =100
-                                X: =10
-                                Y: =5
+                            "Gallery8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                DelayItemLoading: =true
+                                Height: =140
+                                Items: =Filter(PerActionTest,IDPer.Id=ThisItem.ID)
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                ShowScrollbar: =false
+                                TemplatePadding: =0
+                                TemplateSize: =30
+                                Width: =1034
+                                Y: =60
                                 ZIndex: =1
 
-                            Container40 As groupContainer.verticalAutoLayoutContainer:
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                DropShadow: =DropShadow.None
-                                Height: =519
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutDirection: =LayoutDirection.Vertical
-                                LayoutMode: =LayoutMode.Auto
-                                RadiusBottomLeft: =0
-                                RadiusBottomRight: =0
-                                RadiusTopLeft: =0
-                                RadiusTopRight: =0
-                                Width: =120
-                                ZIndex: =2
+                                Title12 As label:
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 2.1
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: |-
+                                        =ThisItem.'IDAction: ActionCode'.Value
+                                    Width: =Parent.TemplateWidth - 200
+                                    X: =86
+                                    ZIndex: =1
 
-                                Gallery7 As gallery.galleryVertical:
-                                    AlignInContainer: =AlignInContainer.SetByContainer
-                                    DelayItemLoading: =true
-                                    Height: =470
-                                    Items: |-
-                                        =Filter(
-                                            PerActionTest,
-                                            IDPer.Id = LookUp(
-                                                AddColumns(
-                                                    PermissionTest,
-                                                    "IDPermissionAct",
-                                                    ID
-                                                ),IDAction.Id=ThisItem.ID
-                                            ).IDPermissionAct
-                                        )
-                                    Layout: =Layout.Vertical
-                                    LayoutMinHeight: =200
-                                    LayoutMinWidth: =120
-                                    LoadingSpinner: =LoadingSpinner.Data
-                                    ShowScrollbar: =false
-                                    TemplateSize: =130
+                                Checkbox3 As checkbox:
+                                    CheckboxSize: =30
+                                    Default: =ThisItem.CheckAction
+                                    Height: =30
+                                    OnSelect: =Select(Parent)
+                                    Text: =""
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =30
+                                    X: =56
                                     ZIndex: =2
 
-                                    Checkbox1 As checkbox:
-                                        Default: =true
-                                        Height: =40
-                                        OnSelect: =Select(Parent)
-                                        Text: =ThisItem.CheckAction
-                                        Width: =40
-                                        X: =36
-                                        Y: =52
-                                        ZIndex: =1
+                            Title10 As label:
+                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                Height: =Self.Size * 1.8
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =ThisItem.PerName
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Parent.TemplateWidth - 86
+                                X: =74
+                                Y: =27
+                                ZIndex: =1
 
-                                    Checkbox1_1 As checkbox:
-                                        Default: =true
-                                        Height: =120
-                                        OnSelect: =Select(Parent)
-                                        Text: =ThisItem.CheckAction
-                                        Width: =40
-                                        X: =144
-                                        ZIndex: =2
-
-                                    Checkbox1_2 As checkbox:
-                                        Default: =true
-                                        Height: =120
-                                        OnSelect: =Select(Parent)
-                                        Text: =ThisItem.CheckAction
-                                        Width: =40
-                                        X: =270
-                                        ZIndex: =3
-
-                                    Checkbox1_3 As checkbox:
-                                        Default: =true
-                                        Height: =120
-                                        OnSelect: =Select(Parent)
-                                        Text: =ThisItem.CheckAction
-                                        Width: =40
-                                        X: =405
-                                        ZIndex: =4
+                            Icon3 As icon.ChevronDown:
+                                Height: =15
+                                Icon: =Icon.ChevronDown
+                                OnSelect: =Select(Parent)
+                                Width: =15
+                                X: =46
+                                Y: =32
+                                ZIndex: =2
 
