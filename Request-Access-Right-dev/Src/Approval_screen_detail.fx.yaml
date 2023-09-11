@@ -991,7 +991,8 @@
                                                 Picture: ""
                                             }
                                         }
-                                    ),
+                                    );
+                                    Navigate(Approval_screen),
                                     If(
                                         !IsBlank(
                                             LookUp(
@@ -1019,12 +1020,12 @@
                                                     Picture: ""
                                                 }
                                             }
-                                        )
+                                        );
+                                        Navigate(Approval_screen)
                                     )
                                 ); 
                             );
                             Reset(TextInput1);
-                            Navigate(Approval_screen)
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
                         PaddingRight: =5.21
