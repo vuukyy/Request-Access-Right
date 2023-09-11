@@ -824,39 +824,15 @@
 
         Btn_approval As button:
             Fill: =RGBA(54, 176, 75, 1)
-            OnSelect: |-
-                =If(
-                    !IsBlank(
-                        LookUp(
-                            ReqProcessTest,
-                            User().Email = Approver1.Email
-                        )
-                    ),
-                    Patch(
-                        Request_Test,
-                        LookUp(
-                            Request_Test,
-                            ID = gal_Request_1.Selected.ID
-                        ),
-                        {Status: {Value: "Approver 1 approved"}},
-                        {'Approved Date 1': Now()}
-                    ),
-                    If(
-                        !IsBlank(
-                            LookUp(
-                                ReqProcessTest,
-                                User().Email = Approver2.Email
-                            )
-                        ),
-                        Patch(
-                            Request_Test,
-                            LookUp(
-                                Request_Test,
-                                ID = gal_Request_1.Selected.ID
-                            ),
-                            {Status: {Value: "Approver 2 approved"}},
-                            {'Approved Date 2': Now()}
-                        )
+            OnSelect: |
+                =Patch(
+                    Request_Test,
+                    LookUp(Request_Test, ID = gal_Request_1.Selected.ID),
+                    Switch(
+                        currentUserRole,
+                        User().Email = Approver1.Email, {Status: {Value: "Approver 1 approved"}, 'Approved Date 1': Now()},
+                        User().Email = Approver2.Email, {Status: {Value: "Approver 2 approved"}, 'Approved Date 2': Now()},
+                        {}
                     )
                 );
                 Navigate(Approval_screen)

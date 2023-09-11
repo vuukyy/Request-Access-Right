@@ -20,6 +20,13 @@ App As appinfo:
                     Screen: 'Request Type'
                 }
             )
+        );
+        Set(
+            currentUserRole,
+            LookUp(
+                ReqProcessTest,
+                User().Email = Approver1.Email || User().Email = Approver2.Email
+            )
         )
     StartScreen: =
     Theme: =PowerAppsTheme
