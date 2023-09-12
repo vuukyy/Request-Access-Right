@@ -73,7 +73,7 @@ Approval_screen As screen:
                     !IsBlank(
                         LookUp(
                             ReqProcessTest,
-                            User().Email = Approver1.Email
+                            User().Email = 'Approver 1'.Email
                         )
                     ),
                     SortByColumns(
@@ -88,7 +88,7 @@ Approval_screen As screen:
                         !IsBlank(
                             LookUp(
                                 ReqProcessTest,
-                                User().Email = Approver2.Email
+                                User().Email = 'Approver 2'.Email
                             )
                         ),
                         SortByColumns(
@@ -120,7 +120,7 @@ Approval_screen As screen:
 
             Label15_2 As label:
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.Title
+                Text: =ThisItem.'Tiêu đề'
                 Width: =303
                 X: =56
                 Y: =10
