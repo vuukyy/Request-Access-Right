@@ -15,33 +15,33 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer1_2 As groupContainer.horizontalAutoLayoutContainer:
+        HeaderContainer1_8 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
-            Height: =80
+            Height: =65
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =2
+            ZIndex: =1
 
-            Image3_8 As image:
-                Height: =75
+            Image3_18 As image:
+                Height: =50
                 Image: ='Pizza_Hut_logo.svg'
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
                 PaddingTop: =10
-                Width: =75
+                Width: =50
                 ZIndex: =1
 
-            Container5_8 As groupContainer.verticalAutoLayoutContainer:
+            Container5_18 As groupContainer.verticalAutoLayoutContainer:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 DropShadow: =DropShadow.None
                 Height: =80
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =80
+                LayoutMinHeight: =65
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =0
@@ -50,11 +50,11 @@
                 RadiusTopRight: =0
                 ZIndex: =2
 
-                Container6_8 As groupContainer.horizontalAutoLayoutContainer:
+                Container6_18 As groupContainer.horizontalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DropShadow: =DropShadow.None
                     FillPortions: =0
-                    Height: =75
+                    Height: =65
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.End
                     LayoutMinHeight: =100
@@ -66,25 +66,25 @@
                     RadiusTopRight: =0
                     ZIndex: =1
 
-                    Image4_8 As image:
+                    Image4_18 As image:
                         Height: =75
                         Image: ='Power-Apps-Logo'
-                        LayoutMinHeight: =75
+                        LayoutMinHeight: =50
                         PaddingBottom: =10
                         PaddingLeft: =10
                         PaddingRight: =10
                         PaddingTop: =10
-                        Width: =75
+                        Width: =50
                         ZIndex: =1
 
-                    Container7_8 As groupContainer.verticalAutoLayoutContainer:
+                    Container7_17 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =75
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         PaddingTop: =5
@@ -95,18 +95,22 @@
                         Width: =200
                         ZIndex: =2
 
-                        Label3_9 As label:
+                        Label3_11 As label:
                             FontWeight: =FontWeight.Semibold
                             Height: =20
-                            Size: =14
-                            Text: =getEmail.username
+                            Size: =12
+                            Text: |-
+                                =With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.User)
+                                )
                             ZIndex: =1
 
-                        Container8_8 As groupContainer.horizontalAutoLayoutContainer:
+                        Container8_10 As groupContainer.horizontalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =30
+                            Height: =20
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =20
@@ -117,42 +121,53 @@
                             RadiusTopRight: =0
                             ZIndex: =3
 
-                            Label4_8 As label:
+                            Label4_10 As label:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =20
-                                Size: =11
-                                Text: =getEmail.department
+                                Size: =10
+                                Text: |-
+                                    =With(
+                                        {obj: ParseJSON(getEmail.result)},
+                                        Text(obj.Dept)
+                                    )
                                 Width: =50
                                 ZIndex: =1
 
-                            Label9_8 As label:
-                                Align: =Align.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: ="-"
-                                Width: =20
-                                ZIndex: =2
+        "'Breadcrum ReqProcess_3' As groupContainer.horizontalAutoLayoutContainer":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =30
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =2
 
-                            Label8_7 As label:
-                                AlignInContainer: =AlignInContainer.Center
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =11
-                                Text: =getEmail.role_name
-                                Width: =70
-                                ZIndex: =3
+            Label10_11 As label:
+                OnSelect: =Navigate(Setting,ScreenTransition.CoverRight)
+                Size: =14
+                Text: ="Settings"
+                Underline: =true
+                Width: =80
+                ZIndex: =1
 
-                        Label5_7 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            FillPortions: =1
-                            FontWeight: =FontWeight.Lighter
-                            Height: =20
-                            Italic: =true
-                            LayoutMinHeight: =20
-                            Size: =10
-                            Text: =getEmail.position
-                            ZIndex: =4
+            Label12_16 As label:
+                Align: =Align.Center
+                Size: =14
+                Text: ="/"
+                Width: =20
+                ZIndex: =2
+
+            Label13_16 As label:
+                Size: =14
+                Text: ="Set Approver"
+                Width: =250
+                ZIndex: =3
 
         BottomContainer1_2 As groupContainer.horizontalAutoLayoutContainer:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -174,74 +189,6 @@
             RadiusTopRight: =0
             ZIndex: =3
 
-            SidebarContainer1_2 As groupContainer.verticalAutoLayoutContainer:
-                Fill: =RGBA(255, 255, 255, 1)
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutMinHeight: =100
-                LayoutMinWidth: =200
-                LayoutMode: =LayoutMode.Auto
-                ZIndex: =4
-
-                Button5_5 As button:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderThickness: =0
-                    Height: =60
-                    OnSelect: =Navigate(Home,ScreenTransition.Cover)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Text: ="Home"
-                    ZIndex: =1
-
-                Button5_6 As button:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderThickness: =0
-                    Height: =60
-                    OnSelect: =Navigate(Approval,ScreenTransition.Cover)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Text: ="Approval"
-                    ZIndex: =2
-
-                Button5_7 As button:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderThickness: =0
-                    Height: =60
-                    OnSelect: =Navigate('Request Type',ScreenTransition.Cover)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Text: ="Audit"
-                    ZIndex: =3
-
-                Button5_8 As button:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderThickness: =0
-                    Height: =60
-                    OnSelect: =Navigate(SetApprover,ScreenTransition.Cover);
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Text: ="Setting"
-                    ZIndex: =4
-
-                Button5_9 As button:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderThickness: =0
-                    Height: =60
-                    OnSelect: =Navigate(Login,ScreenTransition.Cover)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Text: ="Log Out"
-                    ZIndex: =5
-
             MainContainer1_2 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =7
@@ -254,7 +201,6 @@
                 Container11_3 As groupContainer.verticalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DropShadow: =DropShadow.None
-                    LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
@@ -264,694 +210,294 @@
                     RadiusTopRight: =0
                     ZIndex: =2
 
-                    Container27_1 As groupContainer.horizontalAutoLayoutContainer:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        DropShadow: =DropShadow.None
+                    Container47 As groupContainer.verticalAutoLayoutContainer:
                         FillPortions: =0
-                        Height: =60
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        ZIndex: =1
-
-                        Gallery4_1 As gallery.galleryHorizontal:
-                            DelayItemLoading: =true
-                            Items: |-
-                                =Table(
-                                    {
-                                        ID: 1,
-                                        Label: "Role"
-                                    },
-                                    {
-                                        ID: 2,
-                                        Label: "Approver"
-                                    }
-                                )
-                            LayoutMinHeight: =60
-                            LayoutMinWidth: =320
-                            LoadingSpinner: =
-                            LoadingSpinnerColor: =
-                            TemplateSize: =160
-                            ZIndex: =1
-
-                            Button4_1 As button:
-                                BorderThickness: =0
-                                Color: |-
-                                    =If(
-                                        varIDTab = ThisItem.ID,
-                                        RGBA(
-                                            51,
-                                            51,
-                                            51,
-                                            1
-                                        ),
-                                        RGBA(
-                                            202,
-                                            202,
-                                            202,
-                                            1
-                                        )
-                                    )
-                                Fill: =If(varIDTab = ThisItem.ID, RGBA(241, 90, 89,10%), Color.Transparent)
-                                FocusedBorderThickness: =0
-                                FontWeight: |-
-                                    =If(
-                                        varIDTab = ThisItem.ID,
-                                        FontWeight.Semibold,
-                                        FontWeight.Normal
-                                    )
-                                Height: =48
-                                HoverColor: =RGBA(51, 51, 51, 1)
-                                HoverFill: =RGBA(241, 90, 89,10%)
-                                OnSelect: =Set(varIDTab, ThisItem.ID)
-                                PressedColor: =RGBA(51, 51, 51, 1)
-                                PressedFill: =RGBA(241, 90, 89,10%)
-                                RadiusBottomLeft: =0
-                                RadiusBottomRight: =0
-                                RadiusTopLeft: =0
-                                RadiusTopRight: =0
-                                Size: =13
-                                Text: =ThisItem.Label
-                                ZIndex: =1
-
-                            Rectangle2_1 As rectangle:
-                                Fill: =If(varIDTab = ThisItem.ID, RGBA(210, 19, 18, 1), Color.Transparent)
-                                Height: =3
-                                Width: =160
-                                Y: =48
-                                ZIndex: =2
-
-                    Container24_1 As groupContainer.horizontalAutoLayoutContainer:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =70
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutJustifyContent: =LayoutJustifyContent.End
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingBottom: =10
-                        PaddingLeft: =10
-                        PaddingRight: =10
-                        PaddingTop: =10
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        ZIndex: =2
-
-                        txt_Search_1 As text:
-                            Default: =""
-                            HintText: ="Search"
-                            OnChange: =
-                            Width: =200
-                            ZIndex: =1
-
-                        Label22_1 As label:
-                            Align: =Align.Center
-                            Text: =CountRows(Gallery8_1.AllItems)
-                            ZIndex: =2
-
-                    Approver_1 As groupContainer.verticalAutoLayoutContainer:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        DropShadow: =DropShadow.None
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Visible: =varIDTab=2
-                        ZIndex: =3
+                        ZIndex: =1
 
-                        Container12_3 As groupContainer.horizontalAutoLayoutContainer:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            DropShadow: =DropShadow.None
-                            FillPortions: =0
-                            Height: =50
-                            LayoutAlignItems: =LayoutAlignItems.Center
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =250
-                            LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
+                        Form3 As form:
+                            DataSource: =Setting_LevelApprove
+                            LayoutMinHeight: =250
+                            LayoutMinWidth: =400
+                            NumberOfColumns: =1
                             ZIndex: =1
 
-                            Label11_19 As label:
-                                FontWeight: =FontWeight.Bold
-                                PaddingLeft: =25
-                                Text: =""
-                                Width: =50
-                                ZIndex: =1
-
-                            Label11_20 As label:
-                                FontWeight: =FontWeight.Bold
-                                PaddingLeft: =25
-                                Text: ="ID Staff"
-                                Width: =200
+                            "'Tiêu đề_DataCard10' As typedDataCard.textualEditCard":
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="Title"
+                                Default: =ThisItem.'Tiêu đề'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: ="Title"
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@Setting_LevelApprove], DataSourceInfo.MaxLength, "Title")
+                                Required: =true
+                                Update: =DataCardValue27.Text
+                                Width: =690
+                                WidthFit: =true
+                                X: =0
+                                Y: =0
                                 ZIndex: =2
 
-                            Label11_21 As label:
-                                FontWeight: =FontWeight.Bold
-                                Text: ="Staff Name"
-                                Width: =250
-                                ZIndex: =3
-
-                            Label11_22 As label:
-                                FontWeight: =FontWeight.Bold
-                                Text: ="Job Title"
-                                Width: =210
-                                ZIndex: =4
-
-                            Label11_23 As label:
-                                FontWeight: =FontWeight.Bold
-                                Text: ="Email"
-                                Width: =170
-                                ZIndex: =5
-
-                            Label11_24 As label:
-                                FontWeight: =FontWeight.Bold
-                                Text: ="Approver 1"
-                                Width: =110
-                                ZIndex: =6
-
-                            Label11_25 As label:
-                                FontWeight: =FontWeight.Bold
-                                Text: ="Approver 2"
-                                Width: =110
-                                ZIndex: =7
-
-                        ApproverList_1 As groupContainer.verticalAutoLayoutContainer:
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =250
-                            LayoutMode: =LayoutMode.Auto
-                            ZIndex: =2
-
-                            Gallery8_1 As gallery.galleryVertical:
-                                DelayItemLoading: =true
-                                Height: =130
-                                Items: |-
-                                    =SortByColumns(
-                                        Filter(
-                                            Search(
-                                                AzureAD.GetGroupMembers("d5bef282-691d-4e96-a0eb-5872194bdf14",{'$top':500}).value,
-                                                txt_Search_1.Text,
-                                                "displayName",
-                                                "jobTitle",
-                                                "mail",
-                                                "id"
-                                            ),displayName
-                                        ),
-                                        "displayName"
-                                    )
-                                Layout: =Layout.Vertical
-                                LayoutMinHeight: =287
-                                LayoutMinWidth: =320
-                                LoadingSpinner: =LoadingSpinner.Data
-                                TemplateSize: =80
-                                ZIndex: =1
-
-                                Label21_4 As label:
-                                    Height: =80
-                                    OnSelect: =Select(Parent)
-                                    PaddingLeft: =25
-                                    Size: =12
-                                    Text: =ThisItem.id
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =178
-                                    X: =45
+                                DataCardKey27 As label:
+                                    AutoHeight: =true
+                                    Height: =34
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
                                     ZIndex: =1
 
-                                Label21_5 As label:
-                                    Height: =80
-                                    OnSelect: =Select(Parent)
-                                    Size: =12
-                                    Text: =ThisItem.displayName
-                                    Width: =230
-                                    X: =247
+                                DataCardValue27 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisplayMode: =Parent.DisplayMode
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey27.Y + DataCardKey27.Height + 5
                                     ZIndex: =2
 
-                                Label21_6 As label:
-                                    Height: =80
-                                    OnSelect: =Select(Parent)
-                                    Size: =12
-                                    Text: =ThisItem.jobTitle
-                                    Width: =200
-                                    X: =493
+                                ErrorMessage27 As label:
+                                    AutoHeight: =true
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue27.Y + DataCardValue27.Height
                                     ZIndex: =3
 
-                                Label21_7 As label:
-                                    Height: =80
-                                    OnSelect: =Select(Parent)
-                                    Size: =12
-                                    Text: =ThisItem.mail
-                                    X: =709
+                                StarVisible27 As label:
+                                    Align: =Align.Center
+                                    Height: =DataCardKey27.Height
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey27.Y
                                     ZIndex: =4
 
-                                cb_Approver1_1 As checkbox:
-                                    CheckboxSize: =30
-                                    DisplayMode: |-
-                                        =If(
-                                            cb_Approver2_1.Value = true,
-                                            DisplayMode.Disabled,
-                                            DisplayMode.Edit
-                                        )
-                                    FocusedBorderThickness: =0
-                                    Height: =30
-                                    OnSelect: =Select(Parent)
-                                    Size: =12
-                                    Text: =""
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =30
-                                    X: =1022
-                                    Y: =25
-                                    ZIndex: =5
-
-                                cb_Approver2_1 As checkbox:
-                                    CheckboxSize: =30
-                                    DisplayMode: |-
-                                        =If(
-                                            cb_Approver1_1.Value = true,
-                                            DisplayMode.Disabled,
-                                            DisplayMode.Edit
-                                        )
-                                    FocusedBorderThickness: =0
-                                    Height: =30
-                                    OnSelect: =Select(Parent)
-                                    Size: =12
-                                    Text: =""
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =30
-                                    X: =910
-                                    Y: =25
-                                    ZIndex: =6
-
-                                Icon3_1 As icon.View:
-                                    Height: =20
-                                    Icon: =Icon.View
-                                    OnSelect: |-
-                                        =Set(
-                                            varIDApprover,
-                                            ThisItem.id
-                                        );
-                                        Set(
-                                            varDepartment,
-                                            NgườidùngOffice365.UserProfileV2(varIDApprover).department
-                                        );
-                                        Navigate(
-                                            Approver_Detail,
-                                            ScreenTransition.Cover
-                                        )
-                                    Width: =20
-                                    X: =25
-                                    Y: =30
-                                    ZIndex: =7
-
-                            Container25_1 As groupContainer.horizontalAutoLayoutContainer:
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =70
-                                LayoutAlignItems: =LayoutAlignItems.Center
-                                LayoutJustifyContent: =LayoutJustifyContent.End
-                                LayoutMinHeight: =20
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =10
-                                PaddingLeft: =10
-                                PaddingRight: =10
-                                PaddingTop: =10
-                                RadiusBottomLeft: =0
-                                RadiusBottomRight: =0
-                                RadiusTopLeft: =0
-                                RadiusTopRight: =0
-                                Visible: |-
-                                    =If(
-                                        cb_Approver1_1.Value = true Or cb_Approver2_1.Value = true,
-                                        true,
-                                        false
-                                    )
+                            IdSetting_DataCard1 As typedDataCard.comboBoxEditCard:
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="IdSetting"
+                                Default: =ThisItem.IdSetting
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: ="Setting Process"
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                Required: =false
+                                Update: =DataCardValue28.Selected
+                                Width: =690
+                                WidthFit: =true
+                                X: =0
+                                Y: =1
                                 ZIndex: =2
 
-                                btn_SetApprover_1 As button:
-                                    RadiusBottomLeft: =5
-                                    RadiusBottomRight: =5
-                                    RadiusTopLeft: =5
-                                    RadiusTopRight: =5
-                                    Size: =13
-                                    Text: ="Set approver"
+                                DataCardKey28 As label:
+                                    AutoHeight: =true
+                                    Height: =34
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
                                     ZIndex: =1
 
-    Rectangle8 As rectangle:
-        Fill: =RGBA(168, 176, 178, 0.3)
-        Height: =768
-        Width: =1366
-        ZIndex: =2
+                                DataCardValue28 As combobox:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    DefaultSelectedItems: =Parent.Default
+                                    DisplayFields: =["Value"]
+                                    DisplayMode: =Parent.DisplayMode
+                                    Items: =Choices([@Setting_LevelApprove].IdSetting)
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    SearchFields: =["Value"]
+                                    SearchItems: =Choices(Setting_LevelApprove.IdSetting,DataCardValue28.SearchText)
+                                    SelectMultiple: =false
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                                    ZIndex: =2
 
-    Rectangle9 As rectangle:
-        BorderColor: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =768
-        Width: =1189
-        X: =177
-        ZIndex: =3
+                                ErrorMessage28 As label:
+                                    AutoHeight: =true
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue28.Y + DataCardValue28.Height
+                                    ZIndex: =3
 
-    Container26 As groupContainer.verticalAutoLayoutContainer:
-        Height: =768
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =1189
-        X: =177
-        ZIndex: =4
+                                StarVisible28 As label:
+                                    Align: =Align.Center
+                                    Height: =DataCardKey28.Height
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey28.Y
+                                    ZIndex: =4
 
-        Container29 As groupContainer.horizontalAutoLayoutContainer:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DropShadow: =DropShadow.None
-            FillPortions: =0
-            Height: =50
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =10
-            PaddingLeft: =20
-            PaddingRight: =10
-            PaddingTop: =20
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            ZIndex: =2
+                            IdLevel_DataCard1 As typedDataCard.comboBoxEditCard:
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="IdLevel"
+                                Default: =ThisItem.IdLevel
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: ="Level Approve"
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                Required: =false
+                                Update: =DataCardValue42.Selected
+                                Width: =690
+                                WidthFit: =true
+                                X: =0
+                                Y: =2
+                                ZIndex: =2
 
-            Label20 As label:
-                FontWeight: =FontWeight.Bold
-                Size: =25
-                Text: ="Set approver"
-                Width: =300
-                ZIndex: =1
+                                DataCardKey42 As label:
+                                    AutoHeight: =true
+                                    Height: =34
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
 
-        Container24_2 As groupContainer.horizontalAutoLayoutContainer:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DropShadow: =DropShadow.None
-            FillPortions: =0
-            Height: =70
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutJustifyContent: =LayoutJustifyContent.End
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            ZIndex: =3
+                                DataCardValue42 As combobox:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    DefaultSelectedItems: =Parent.Default
+                                    DisplayFields: =["Value"]
+                                    DisplayMode: =Parent.DisplayMode
+                                    Items: =Choices([@Setting_LevelApprove].IdLevel)
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    SearchFields: =["Value"]
+                                    SearchItems: =Choices(Setting_LevelApprove.IdLevel,DataCardValue42.SearchText)
+                                    SelectMultiple: =false
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey42.Y + DataCardKey42.Height + 5
+                                    ZIndex: =2
 
-            txt_Search_2 As text:
-                Default: =""
-                HintText: ="Search"
-                OnChange: =
-                Width: =200
-                ZIndex: =1
+                                ErrorMessage34 As label:
+                                    AutoHeight: =true
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue42.Y + DataCardValue42.Height
+                                    ZIndex: =3
 
-            Label22_2 As label:
-                Align: =Align.Center
-                Text: =CountRows(Gallery8_2.AllItems)
-                ZIndex: =2
+                                StarVisible34 As label:
+                                    Align: =Align.Center
+                                    Height: =DataCardKey42.Height
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey42.Y
+                                    ZIndex: =4
 
-        Approver_2 As groupContainer.verticalAutoLayoutContainer:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DropShadow: =DropShadow.None
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Visible: =varIDTab=2
-            ZIndex: =4
+                        Button4 As button:
+                            OnSelect: =SubmitForm(Form3)
+                            Text: ="Submit"
+                            ZIndex: =2
 
-            Container12_4 As groupContainer.horizontalAutoLayoutContainer:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                Height: =50
-                LayoutAlignItems: =LayoutAlignItems.Center
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                ZIndex: =1
-
-                Label11_27 As label:
-                    FontWeight: =FontWeight.Bold
-                    PaddingLeft: =25
-                    Text: ="ID Staff"
-                    Width: =250
-                    ZIndex: =2
-
-                Label11_28 As label:
-                    FontWeight: =FontWeight.Bold
-                    Text: ="Staff Name"
-                    Width: =250
-                    ZIndex: =3
-
-                Label11_29 As label:
-                    FontWeight: =FontWeight.Bold
-                    Text: ="Job Title"
-                    Width: =250
-                    ZIndex: =4
-
-                Label11_30 As label:
-                    FontWeight: =FontWeight.Bold
-                    Text: ="Email"
-                    Width: =200
-                    ZIndex: =5
-
-                Label11_31 As label:
-                    Align: =Align.Center
-                    FontWeight: =FontWeight.Bold
-                    Text: ="Apr. 1"
-                    Width: =110
-                    ZIndex: =6
-
-                Label11_32 As label:
-                    Align: =Align.Center
-                    FontWeight: =FontWeight.Bold
-                    Text: ="Apr. 2"
-                    Width: =110
-                    ZIndex: =7
-
-            ApproverList_2 As groupContainer.verticalAutoLayoutContainer:
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                ZIndex: =2
-
-                Gallery8_2 As gallery.galleryVertical:
-                    DelayItemLoading: =true
-                    Height: =130
-                    Items: |-
-                        =SortByColumns(
-                            Filter(
-                                Search(
-                                    AzureAD.GetGroupMembers("d5bef282-691d-4e96-a0eb-5872194bdf14",{'$top':500}).value,
-                                    txt_Search_2.Text,
-                                    "displayName",
-                                    "jobTitle",
-                                    "mail",
-                                    "id"
-                                ),displayName
-                            ),
-                            "displayName"
-                        )
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =80
-                    ZIndex: =1
-
-                    Label21_8 As label:
-                        Height: =80
-                        OnSelect: =Select(Parent)
-                        PaddingLeft: =25
-                        Size: =12
-                        Text: =ThisItem.id
-                        Width: =246
-                        ZIndex: =1
-
-                    Label21_9 As label:
-                        Height: =80
-                        OnSelect: =Select(Parent)
-                        Size: =12
-                        Text: =ThisItem.displayName
-                        Width: =250
-                        X: =246
+                    Container49 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
                         ZIndex: =2
 
-                    Label21_10 As label:
-                        Height: =80
-                        OnSelect: =Select(Parent)
-                        Size: =12
-                        Text: =ThisItem.jobTitle
-                        Width: =250
-                        X: =496
-                        ZIndex: =3
+                        "Gallery12 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+                            DelayItemLoading: =true
+                            Height: =605
+                            Items: =Setting_LevelApprove
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =0
+                            TemplateSize: =116
+                            Width: =830
+                            ZIndex: =1
 
-                    Label21_11 As label:
-                        Height: =80
-                        OnSelect: =Select(Parent)
-                        Size: =12
-                        Text: =ThisItem.mail
-                        Width: =200
-                        X: =746
-                        ZIndex: =4
+                            Title19 As label:
+                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                Height: =25
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =ThisItem.'Tiêu đề'
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =502
+                                X: =16
+                                Y: =32
+                                ZIndex: =1
 
-                    cb_Approver1_2 As checkbox:
-                        CheckboxSize: =30
-                        DisplayMode: |-
-                            =If(
-                                cb_Approver2_2.Value = true,
-                                DisplayMode.Disabled,
-                                DisplayMode.Edit
-                            )
-                        FocusedBorderThickness: =0
-                        Height: =30
-                        OnSelect: =Select(Parent)
-                        Reset: =varResetCheckbox
-                        Size: =12
-                        Text: =""
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =30
-                        X: =987
-                        Y: =25
-                        ZIndex: =5
+                            Subtitle17 As label:
+                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                Height: =Self.Size * 1.8
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =ThisItem.IdSetting.Value
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Title19.Width
+                                X: =Title19.X
+                                Y: =Title19.Y + Title19.Height
+                                ZIndex: =2
 
-                    cb_Approver2_2 As checkbox:
-                        CheckboxSize: =30
-                        DisplayMode: |-
-                            =If(
-                                cb_Approver1_2.Value = true,
-                                DisplayMode.Disabled,
-                                DisplayMode.Edit
-                            )
-                        FocusedBorderThickness: =0
-                        Height: =30
-                        OnSelect: =Select(Parent)
-                        Reset: =varResetCheckbox
-                        Size: =12
-                        Text: =""
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =30
-                        X: =1100
-                        Y: =25
-                        ZIndex: =6
+                            Body5 As label:
+                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                Height: =Self.Size * 1.8
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =ThisItem.IdLevel.Value
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Title19.Width
+                                X: =Title19.X
+                                Y: =Subtitle17.Y + Subtitle17.Height
+                                ZIndex: =3
 
-                    Rectangle10 As rectangle:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Fill: =RGBA(216, 217, 218, 0.74)
-                        Height: =1
-                        OnSelect: =Select(Parent)
-                        Width: =Parent.Width
-                        Y: =78
-                        ZIndex: =7
-
-                Container25_2 As groupContainer.horizontalAutoLayoutContainer:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    DropShadow: =DropShadow.None
-                    FillPortions: =0
-                    Height: =70
-                    LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutJustifyContent: =LayoutJustifyContent.End
-                    LayoutMinHeight: =20
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Visible: |-
-                        =If(
-                            CountIf(
-                                Gallery8_2.AllItems,
-                                cb_Approver1_2.Value = true Or cb_Approver2_2.Value = true
-                            ) > 0,
-                            true,
-                            false
-                        )
-                    ZIndex: =2
-
-                    btn_SetApprover_3 As button:
-                        OnSelect: |-
-                            =UpdateContext({varResetCheckbox: true});
-                            UpdateContext({varResetCheckbox: false})
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =13
-                        Text: ="Uncheck"
-                        Width: =100
-                        ZIndex: =1
-
-                    btn_SetApprover_2 As button:
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =13
-                        Text: ="Set approver"
-                        Width: =120
-                        ZIndex: =2
-
-    Container30 As groupContainer.verticalAutoLayoutContainer:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DropShadow: =DropShadow.None
-        Height: =768
-        LayoutAlignItems: =LayoutAlignItems.End
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        PaddingBottom: =10
-        PaddingLeft: =10
-        PaddingRight: =10
-        PaddingTop: =10
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Width: =177
-        ZIndex: =5
-
-        Icon8 As icon.CancelBadge:
-            Color: =RGBA(50, 86, 160, 1)
-            FocusedBorderThickness: =0
-            Height: =24
-            Icon: =Icon.Cancel
-            OnSelect: =Back(ScreenTransition.Fade)
-            Width: =24
-            ZIndex: =1
+                            Separator16 As rectangle:
+                                Height: =8
+                                OnSelect: =Select(Parent)
+                                Width: =Parent.TemplateWidth
+                                Y: =Parent.TemplateHeight - Self.Height
+                                ZIndex: =5
 

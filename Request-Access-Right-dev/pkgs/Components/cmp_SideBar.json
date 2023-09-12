@@ -139,7 +139,7 @@
             "NameMapSourceSchema": "?"
           }
         ],
-        "ControlUniqueId": "11",
+        "ControlUniqueId": "5",
         "Children": [
           {
             "AllowAccessToGlobals": true,
@@ -154,7 +154,7 @@
                 "NameMapSourceSchema": "?"
               }
             ],
-            "ControlUniqueId": "12",
+            "ControlUniqueId": "6",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -168,7 +168,7 @@
             "Name": "galleryTemplate1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1085,
+            "PublishOrderIndex": 1096,
             "Rules": [
               {
                 "Category": "Design",
@@ -279,7 +279,7 @@
                 "NameMapSourceSchema": "?"
               }
             ],
-            "ControlUniqueId": "13",
+            "ControlUniqueId": "7",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -293,7 +293,7 @@
             "Name": "Label3_1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1086,
+            "PublishOrderIndex": 1097,
             "Rules": [
               {
                 "Category": "Data",
@@ -651,7 +651,7 @@
               "PaddingBottom",
               "PaddingLeft"
             ],
-            "ControlUniqueId": "14",
+            "ControlUniqueId": "8",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -665,7 +665,7 @@
             "Name": "Label4_1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1087,
+            "PublishOrderIndex": 1098,
             "Rules": [
               {
                 "Category": "Data",
@@ -989,7 +989,7 @@
               "PaddingBottom",
               "PaddingLeft"
             ],
-            "ControlUniqueId": "15",
+            "ControlUniqueId": "9",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -1003,7 +1003,7 @@
             "Name": "Label1_1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1088,
+            "PublishOrderIndex": 1099,
             "Rules": [
               {
                 "Category": "Data",
@@ -1346,7 +1346,7 @@
                 "NameMapSourceSchema": "?"
               }
             ],
-            "ControlUniqueId": "16",
+            "ControlUniqueId": "10",
             "Children": [],
             "HasDynamicProperties": false,
             "Index": 0,
@@ -1360,7 +1360,7 @@
             "Name": "Icon2",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1089,
+            "PublishOrderIndex": 1100,
             "Rules": [
               {
                 "Category": "Design",
@@ -1536,7 +1536,7 @@
         "Name": "Gallery1",
         "Parent": "cmp_SideBar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1084,
+        "PublishOrderIndex": 1095,
         "Rules": [
           {
             "Category": "Data",
@@ -1712,7 +1712,7 @@
         "VariantName": "galleryVertical"
       }
     ],
-    "LastModifiedTimestamp": "638300831245426409",
+    "LastModifiedTimestamp": "638300998784331483",
     "Name": "cmp_SideBar",
     "Rules": [
       {
@@ -1862,7 +1862,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638300831245426409",
+  "LastModifiedTimestamp": "638300998784331483",
   "Name": "adb63a9411484b188e3bfe1570e10aa4",
   "OverridableProperties": {},
   "SourceLibraryId": "846629a0-d373-48d1-ba53-3bdee80a0b7b",
