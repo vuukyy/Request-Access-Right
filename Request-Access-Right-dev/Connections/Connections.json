@@ -201,6 +201,9 @@
           "GroupTest": {
             "tableName": "f4c58015-7067-4d76-9948-3771288bad9b"
           },
+          "LevelApproveTest": {
+            "tableName": "dd7cd97e-921d-4872-b89e-b1b71ef6a046"
+          },
           "PerActionTest": {
             "tableName": "003590cb-8f1f-4cdf-bb55-4d9885a3c063"
           },
@@ -219,11 +222,20 @@
           "RequestTest1": {
             "tableName": "cc975cec-2502-4125-92a1-39c77f936619"
           },
+          "ResourceTest": {
+            "tableName": "1614ffd7-90a1-4a83-af83-bbbd74fb6a12"
+          },
           "RolePermissionTest": {
             "tableName": "fe4a0e85-5bbe-46a3-92aa-979c4c7a2623"
           },
           "RoleTest": {
             "tableName": "6db4c6f5-20a6-43ee-a681-efd5c8fbde27"
+          },
+          "Setting_LevelApprove": {
+            "tableName": "e76cdda1-3baa-4f90-a9af-4b8d0911fc84"
+          },
+          "SettingTest": {
+            "tableName": "0f22df83-74f4-4f09-92aa-f93279a5377b"
           },
           "UserGroupTest": {
             "tableName": "29c2dbcb-87dd-451b-8e00-88d4e0c46983"
@@ -253,7 +265,11 @@
       "ApprovalTest",
       "ReqProcessTest",
       "ReqTypeTest",
-      "Request_Test"
+      "Request_Test",
+      "LevelApproveTest",
+      "ResourceTest",
+      "SettingTest",
+      "Setting_LevelApprove"
     ],
     "dependencies": {},
     "dependents": [
