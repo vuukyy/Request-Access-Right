@@ -817,7 +817,7 @@
                                 "'Approver 4_DataCard1_1' As typedDataCard.comboBoxEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Approver4"
-                                    Default: =ThisItem.'Approver 4'
+                                    Default: =ThisItem.Approver4
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Approver4")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -844,10 +844,10 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@ReqProcessTest].'Approver 4')
+                                        Items: =Choices([@ReqProcessTest].Approver4)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
-                                        SearchItems: =Choices(ReqProcessTest.'Approver 4',DataCardValue30_1.SearchText)
+                                        SearchItems: =Choices(ReqProcessTest.Approver4,DataCardValue30_1.SearchText)
                                         SelectMultiple: =false
                                         Template: =ListItemTemplate.Person
                                         Tooltip: =Parent.DisplayName
@@ -884,7 +884,7 @@
                                 "'Approver 5_DataCard1_1' As typedDataCard.comboBoxEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Approver5"
-                                    Default: =ThisItem.'Approver 5'
+                                    Default: =ThisItem.Approver5
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Approver5")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -911,10 +911,10 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@ReqProcessTest].'Approver 5')
+                                        Items: =Choices([@ReqProcessTest].Approver5)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
-                                        SearchItems: =Choices(ReqProcessTest.'Approver 5',DataCardValue31_1.SearchText)
+                                        SearchItems: =Choices(ReqProcessTest.Approver5,DataCardValue31_1.SearchText)
                                         SelectMultiple: =false
                                         Template: =ListItemTemplate.Person
                                         Tooltip: =Parent.DisplayName

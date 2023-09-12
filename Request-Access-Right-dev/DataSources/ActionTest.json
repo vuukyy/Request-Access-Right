@@ -35,7 +35,6 @@
       "IDAction": "IDAction",
       "IDResource": "IDResource",
       "IDResource#Id": "IDResource Id",
-      "IDResource@odata.type": "IDResource (IDResource@odata.type)",
       "IDResource_x003a__x0020_ID": "IDResource: ID",
       "IDResource_x003a__x0020_ID#Id": "IDResource: ID Id",
       "Modified": "Đã sửa đổi",

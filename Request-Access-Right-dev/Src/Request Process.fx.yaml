@@ -801,14 +801,14 @@
                                 "'Approver 4_DataCard2_1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Approver4"
-                                    Default: =ThisItem.'Approver 4'
+                                    Default: =ThisItem.Approver4
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Approver4")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
                                     Update: =DataCardValue47_1.Selected
-                                    Visible: =If(IsBlank(ThisItem.'Approver 4'),false,true)
+                                    Visible: =If(IsBlank(ThisItem.Approver4),false,true)
                                     Width: =465
                                     X: =0
                                     Y: =3
@@ -830,7 +830,7 @@
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
                                         IsSearchable: =false
-                                        Items: =Choices([@ReqProcessTest].'Approver 4')
+                                        Items: =Choices([@ReqProcessTest].Approver4)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
                                         SearchItems: =[]
@@ -869,14 +869,14 @@
                                 "'Approver 5_DataCard2_1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Approver5"
-                                    Default: =ThisItem.'Approver 5'
+                                    Default: =ThisItem.Approver5
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Approver5")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
                                     Update: =DataCardValue48_1.Selected
-                                    Visible: =If(IsBlank(ThisItem.'Approver 5'),false,true)
+                                    Visible: =If(IsBlank(ThisItem.Approver5),false,true)
                                     Width: =465
                                     X: =1
                                     Y: =3
@@ -898,7 +898,7 @@
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
                                         IsSearchable: =false
-                                        Items: =Choices([@ReqProcessTest].'Approver 5')
+                                        Items: =Choices([@ReqProcessTest].Approver5)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
                                         SearchItems: =[]
