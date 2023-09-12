@@ -1731,7 +1731,7 @@
                                         Items: =Choices([@Request_Test].'Setting Process')
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
-                                        SearchItems: =Choices(Request_Test.'Setting Process',DataCardValue87.SearchText)
+                                        SearchItems: =[]
                                         Template: =ListItemTemplate.Person
                                         Width: =Parent.Width - 60
                                         X: =30
