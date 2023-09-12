@@ -74,6 +74,9 @@
       "ReqType_x003a__x0020_ID#Id": "ReqType: ID Id",
       "RequestPermission": "Request Permission",
       "RequestPermission#Id": "Request Permission Id",
+      "SettingProcess": "Setting Process",
+      "SettingProcess#Claims": "Setting Process Claims",
+      "SettingProcess@odata.type": "SettingProcess (SettingProcess@odata.type)",
       "Status": "Status",
       "Status#Id": "Status Id",
       "Title": "Tiêu đề"
