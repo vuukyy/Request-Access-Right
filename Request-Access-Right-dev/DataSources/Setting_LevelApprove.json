@@ -30,10 +30,14 @@
       "Editor": "Người Sửa đổi",
       "Editor#Claims": "Người Sửa đổi Claims",
       "ID": "ID",
-      "IDRole": "ID Role",
-      "IDRole#Id": "ID Role Id",
-      "IDUser": "ID User",
-      "IDUser#Id": "ID User Id",
+      "IdLevel": "IdLevel",
+      "IdLevel#Id": "IdLevel Id",
+      "IdLevel_x003a__x0020_ID": "IdLevel: ID",
+      "IdLevel_x003a__x0020_ID#Id": "IdLevel: ID Id",
+      "IdSetting": "IdSetting",
+      "IdSetting#Id": "IdSetting Id",
+      "IdSetting_x003a__x0020_ID": "IdSetting: ID",
+      "IdSetting_x003a__x0020_ID#Id": "IdSetting: ID Id",
       "Modified": "Đã sửa đổi",
       "OData__ColorTag": "Thẻ màu",
       "Title": "Tiêu đề"
@@ -42,7 +46,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "UserRoleTest",
+    "Name": "Setting_LevelApprove",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

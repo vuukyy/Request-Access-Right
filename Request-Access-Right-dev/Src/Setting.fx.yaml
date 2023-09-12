@@ -403,12 +403,27 @@
                                     Text: ="Manage Users"
                                     ZIndex: =3
 
-                        Label42_1 As label:
+                        Label42_3 As label:
                             Color: =RGBA(128, 128, 128, 1)
                             FontWeight: =FontWeight.Semibold
-                            OnSelect: =Navigate('Request Type')
+                            OnSelect: |-
+                                =Navigate('Setting Process');
+                                NewForm(Form1);
+                                NewForm(Form2)
                             Size: =16
-                            Text: ="Request Type"
+                            Text: ="Setting Process"
+                            Underline: =true
+                            Width: =350
+                            ZIndex: =2
+
+                        Label42_4 As label:
+                            Color: =RGBA(128, 128, 128, 1)
+                            FontWeight: =FontWeight.Semibold
+                            OnSelect: |-
+                                =Navigate(SetApprover);
+                                NewForm(Form3)
+                            Size: =16
+                            Text: ="Set Approver"
                             Underline: =true
                             Width: =350
                             ZIndex: =3
@@ -422,4 +437,14 @@
                             Underline: =true
                             Width: =350
                             ZIndex: =4
+
+                        Label42_1 As label:
+                            Color: =RGBA(128, 128, 128, 1)
+                            FontWeight: =FontWeight.Semibold
+                            OnSelect: =Navigate('Request Type')
+                            Size: =16
+                            Text: ="Request Type"
+                            Underline: =true
+                            Width: =350
+                            ZIndex: =5
 

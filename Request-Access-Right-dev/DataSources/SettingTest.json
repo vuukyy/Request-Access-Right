@@ -30,10 +30,6 @@
       "Editor": "Người Sửa đổi",
       "Editor#Claims": "Người Sửa đổi Claims",
       "ID": "ID",
-      "IDRole": "ID Role",
-      "IDRole#Id": "ID Role Id",
-      "IDUser": "ID User",
-      "IDUser#Id": "ID User Id",
       "Modified": "Đã sửa đổi",
       "OData__ColorTag": "Thẻ màu",
       "Title": "Tiêu đề"
@@ -42,7 +38,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "UserRoleTest",
+    "Name": "SettingTest",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

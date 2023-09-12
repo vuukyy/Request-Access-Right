@@ -27,13 +27,13 @@
       "Author#Claims": "Người Tạo Claims",
       "ComplianceAssetId": "Id Tài sản Tuân thủ",
       "Created": "Đã tạo",
+      "Description": "Description",
       "Editor": "Người Sửa đổi",
       "Editor#Claims": "Người Sửa đổi Claims",
       "ID": "ID",
-      "IDRole": "ID Role",
-      "IDRole#Id": "ID Role Id",
-      "IDUser": "ID User",
-      "IDUser#Id": "ID User Id",
+      "IdUser": "IdUser",
+      "IdUser#Claims": "IdUser Claims",
+      "MaCode": "MaCode",
       "Modified": "Đã sửa đổi",
       "OData__ColorTag": "Thẻ màu",
       "Title": "Tiêu đề"
@@ -42,7 +42,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "UserRoleTest",
+    "Name": "LevelApproveTest",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
