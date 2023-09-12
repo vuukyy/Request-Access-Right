@@ -163,7 +163,7 @@
                                 "'Tiêu đề_DataCard12' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.'Tiêu đề'
+                                    Default: =ThisItem.Title
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -1727,6 +1727,7 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@Request_Test].'Setting Process')
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
