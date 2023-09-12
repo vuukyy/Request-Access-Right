@@ -367,7 +367,10 @@
 
                                 Button1 As button:
                                     AlignInContainer: =AlignInContainer.Start
-                                    OnSelect: =SubmitForm(Form1)
+                                    OnSelect: |-
+                                        =SubmitForm(Form1);
+                                        Refresh(SettingTest);
+                                        Refresh(Setting_LevelApprove)
                                     Text: ="Submit"
                                     ZIndex: =2
 
@@ -444,6 +447,72 @@
                                     LayoutMinWidth: =400
                                     NumberOfColumns: =1
                                     ZIndex: =1
+
+                                    Level_DataCard1 As typedDataCard.comboBoxEditCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="Level"
+                                        Default: =ThisItem.Level
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@LevelApproveTest],DataSourceInfo.DisplayName,"Level")
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =50
+                                        Required: =false
+                                        Update: =DataCardValue20.Selected
+                                        Width: =645
+                                        X: =0
+                                        Y: =4
+                                        ZIndex: =1
+
+                                        DataCardKey20 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue20 As combobox:
+                                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                            DefaultSelectedItems: =Parent.Default
+                                            DisplayFields: =["Value"]
+                                            DisplayMode: =Parent.DisplayMode
+                                            Items: =Choices([@LevelApproveTest].Level)
+                                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                            SearchFields: =["Value"]
+                                            SearchItems: =Choices(LevelApproveTest.Level,DataCardValue20.SearchText)
+                                            SelectMultiple: =false
+                                            Tooltip: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey20.Y + DataCardKey20.Height + 5
+                                            ZIndex: =2
+
+                                        ErrorMessage12 As label:
+                                            AutoHeight: =true
+                                            Height: =10
+                                            Live: =Live.Assertive
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Error
+                                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardValue20.Y + DataCardValue20.Height
+                                            ZIndex: =3
+
+                                        StarVisible12 As label:
+                                            Align: =Align.Center
+                                            Height: =DataCardKey20.Height
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            Wrap: =false
+                                            Y: =DataCardKey20.Y
+                                            ZIndex: =4
 
                                     "'Tiêu đề_DataCard9' As typedDataCard.textualEditCard":
                                         BorderStyle: =BorderStyle.Solid
@@ -721,7 +790,10 @@
                                             ZIndex: =4
 
                                 Button2 As button:
-                                    OnSelect: =SubmitForm(Form2)
+                                    OnSelect: |-
+                                        =SubmitForm(Form2);
+                                        Refresh(LevelApproveTest);
+                                        Refresh(Setting_LevelApprove)
                                     Text: ="Submit"
                                     ZIndex: =2
 

@@ -522,10 +522,10 @@
 
                                 "'IDUser: UserName_DataCard2' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDUser_x003a__x0020_UserName"
-                                    Default: =ThisItem.IDUser_x003a__x0020_UserName
+                                    DataField: ="IDUser_x003a__x0020_ID"
+                                    Default: =ThisItem.IDUser_x003a__x0020_ID
                                     DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser_x003a__x0020_UserName")
+                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser_x003a__x0020_ID")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
@@ -551,7 +551,7 @@
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
                                         IsSearchable: =false
-                                        Items: =Choices([@UserGroupTest].IDUser_x003a__x0020_UserName)
+                                        Items: =Choices([@UserGroupTest].IDUser_x003a__x0020_ID)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
                                         SearchItems: =[]
