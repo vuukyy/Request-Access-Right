@@ -440,59 +440,68 @@
 
                         "Gallery12 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                             DelayItemLoading: =true
+                            DisplayMode: =DisplayMode.View
                             Height: =605
-                            Items: =Setting_LevelApprove
+                            Items: =GroupBy(AddColumns(Setting_LevelApprove,"IdSettingLevel", IdSetting.Value),"IdSettingLevel","Data")
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
+                            Selectable: =false
+                            ShowScrollbar: =false
                             TemplatePadding: =0
-                            TemplateSize: =116
+                            TemplateSize: =220
                             Width: =830
                             ZIndex: =1
 
                             Title19 As label:
-                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                FontWeight: =FontWeight.Semibold
                                 Height: =25
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
                                 PaddingLeft: =0
                                 PaddingRight: =0
                                 PaddingTop: =0
-                                Text: =ThisItem.'Tiêu đề'
+                                Text: =ThisItem.IdSettingLevel
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =502
                                 X: =16
-                                Y: =32
+                                Y: =20
                                 ZIndex: =1
 
-                            Subtitle17 As label:
-                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                Height: =Self.Size * 1.8
-                                OnSelect: =Select(Parent)
-                                PaddingBottom: =0
-                                PaddingLeft: =0
-                                PaddingRight: =0
-                                PaddingTop: =0
-                                Text: =ThisItem.IdSetting.Value
-                                VerticalAlign: =VerticalAlign.Top
-                                Width: =Title19.Width
-                                X: =Title19.X
-                                Y: =Title19.Y + Title19.Height
-                                ZIndex: =2
+                            "Gallery10 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                DelayItemLoading: =true
+                                DisplayMode: =DisplayMode.View
+                                Height: =155
+                                Items: =ThisItem.Data
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                Selectable: =false
+                                ShowScrollbar: =false
+                                TemplatePadding: =0
+                                TemplateSize: =50
+                                Width: =830
+                                Y: =56
+                                ZIndex: =1
 
-                            Body5 As label:
-                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                Height: =Self.Size * 1.8
-                                OnSelect: =Select(Parent)
-                                PaddingBottom: =0
-                                PaddingLeft: =0
-                                PaddingRight: =0
-                                PaddingTop: =0
-                                Text: =ThisItem.IdLevel.Value
-                                VerticalAlign: =VerticalAlign.Top
-                                Width: =Title19.Width
-                                X: =Title19.X
-                                Y: =Subtitle17.Y + Subtitle17.Height
-                                ZIndex: =3
+                                Title9 As label:
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =ThisItem.IdLevel.Value
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.TemplateWidth - 690
+                                    X: =37
+                                    Y: =12
+                                    ZIndex: =1
+
+                                Separator9 As rectangle:
+                                    Height: =8
+                                    OnSelect: =Select(Parent)
+                                    Width: =Parent.TemplateWidth
+                                    Y: =Parent.TemplateHeight - Self.Height
+                                    ZIndex: =3
 
                             Separator16 As rectangle:
                                 Height: =8

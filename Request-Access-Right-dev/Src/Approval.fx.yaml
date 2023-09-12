@@ -2,7 +2,7 @@
     OnHidden: |
         =ClearCollect(
             colIDUser,
-            getEmail.id
+            getEmail.result
         );
     OnVisible: =
 
