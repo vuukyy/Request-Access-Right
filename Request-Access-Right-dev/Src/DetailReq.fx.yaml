@@ -24,114 +24,6 @@
             LayoutMode: =LayoutMode.Auto
             ZIndex: =1
 
-            Image3_2 As image:
-                Height: =50
-                Image: ='Pizza_Hut_logo.svg'
-                PaddingBottom: =10
-                PaddingLeft: =10
-                PaddingRight: =10
-                PaddingTop: =10
-                Width: =50
-                ZIndex: =1
-
-            Container5_2 As groupContainer.verticalAutoLayoutContainer:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                DropShadow: =DropShadow.None
-                Height: =80
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =65
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                ZIndex: =2
-
-                Container6_2 As groupContainer.horizontalAutoLayoutContainer:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    DropShadow: =DropShadow.None
-                    FillPortions: =0
-                    Height: =65
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.End
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    ZIndex: =1
-
-                    Image4_2 As image:
-                        Height: =75
-                        Image: ='Power-Apps-Logo'
-                        LayoutMinHeight: =50
-                        PaddingBottom: =10
-                        PaddingLeft: =10
-                        PaddingRight: =10
-                        PaddingTop: =10
-                        Width: =50
-                        ZIndex: =1
-
-                    Container7_18 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =50
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingTop: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Width: =200
-                        ZIndex: =2
-
-                        Label3_12 As label:
-                            FontWeight: =FontWeight.Semibold
-                            Height: =20
-                            Size: =12
-                            Text: |-
-                                =With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.User)
-                                )
-                            ZIndex: =1
-
-                        Container8_8 As groupContainer.horizontalAutoLayoutContainer:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            DropShadow: =DropShadow.None
-                            FillPortions: =0
-                            Height: =20
-                            LayoutAlignItems: =LayoutAlignItems.Center
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =20
-                            LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            ZIndex: =3
-
-                            Label4_11 As label:
-                                FontWeight: =FontWeight.Semibold
-                                Height: =20
-                                Size: =10
-                                Text: |-
-                                    =With(
-                                        {obj: ParseJSON(getEmail.result)},
-                                        Text(obj.Dept)
-                                    )
-                                Width: =50
-                                ZIndex: =1
-
         BottomContainer3_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
             Fill: =RGBA(245, 245, 245, 1)
@@ -365,7 +257,7 @@
                     "'Tệp đính kèm_DataCard3' As typedDataCard.attachmentsViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="{Attachments}"
-                        Default: =ThisItem.'Tệp đính kèm'
+                        Default: =ThisItem.Attachments
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"{Attachments}")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -428,7 +320,7 @@
                     "'Người Tạo_DataCard1' As typedDataCard.comboBoxViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Author"
-                        Default: =ThisItem.'Người Tạo'
+                        Default: =ThisItem.'Created By'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Author")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -456,7 +348,7 @@
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
                             IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Người Tạo')
+                            Items: =Choices([@Request_Test].'Created By')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
                             SearchItems: =[]
@@ -495,7 +387,7 @@
                     "'Đã tạo_DataCard2' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Created"
-                        Default: =ThisItem.'Đã tạo'
+                        Default: =ThisItem.Created
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -532,7 +424,7 @@
                     "'Người Sửa đổi_DataCard1' As typedDataCard.comboBoxViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Editor"
-                        Default: =ThisItem.'Người Sửa đổi'
+                        Default: =ThisItem.'Modified By'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Editor")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -560,7 +452,7 @@
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
                             IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Người Sửa đổi')
+                            Items: =Choices([@Request_Test].'Modified By')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
                             SearchItems: =[]
@@ -599,7 +491,7 @@
                     "'Đã sửa đổi_DataCard2' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Modified"
-                        Default: =ThisItem.'Đã sửa đổi'
+                        Default: =ThisItem.Modified
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Modified")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -636,7 +528,7 @@
                     "'Tiêu đề_DataCard8' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.'Tiêu đề'
+                        Default: =ThisItem.Title
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)

@@ -78,7 +78,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Approver 1_DataCard2_1",
-      "ParentIndex": 4,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -238,7 +238,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Approver 2_DataCard2_1",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -398,7 +398,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Approver 3_DataCard2_1",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11151,7 +11151,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Đã sửa đổi_DataCard1_1",
-      "ParentIndex": 9,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11285,7 +11285,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Đã tạo_DataCard1_1",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13774,7 +13774,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "IdSetting_DataCard2",
-      "ParentIndex": 3,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14492,7 +14492,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Incharge Person_DataCard2_1",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
