@@ -478,10 +478,11 @@
                                             DefaultSelectedItems: =Parent.Default
                                             DisplayFields: =["Value"]
                                             DisplayMode: =Parent.DisplayMode
+                                            IsSearchable: =false
                                             Items: =Choices([@LevelApproveTest].Level)
                                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                             SearchFields: =["Value"]
-                                            SearchItems: =Choices(LevelApproveTest.Level,DataCardValue20.SearchText)
+                                            SearchItems: =[]
                                             SelectMultiple: =false
                                             Tooltip: =Parent.DisplayName
                                             Width: =Parent.Width - 60
