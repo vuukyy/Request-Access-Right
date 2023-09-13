@@ -175,46 +175,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewReq.Container14.Container16.Container17.'Edit Form Request'.'Tiêu đề_DataCard7'.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "NewReq.Container14.Container16.Container17.'Edit Form Request'.'Tiêu đề_DataCard7'.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".'Tiêu đề'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "NewReq",
-                "type": "NewReq.Container14.Container16.Container17.'Edit Form Request'.'Tiêu đề_DataCard7'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Tiêu đề"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "SetApprover.ScreenContainer1_2.BottomContainer1_2.MainContainer1_2.Container11_3.Container47.Form3.'Tiêu đề_DataCard10'.Default"
                 }
               ],

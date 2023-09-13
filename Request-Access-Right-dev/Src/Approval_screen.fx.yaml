@@ -68,39 +68,7 @@ Approval_screen As screen:
 
         gal_Request_1 As gallery.galleryVertical:
             DelayItemLoading: =true
-            Items: |-
-                =If(
-                    !IsBlank(
-                        LookUp(
-                            LevelApproveTest,
-                            User().Email = IdUser.Email
-                        )
-                    ),
-                    SortByColumns(
-                        Filter(
-                            Request_Test,
-                            Status.Value = "Created"
-                        ),
-                        "Created",
-                        SortOrder.Descending
-                    ),
-                    If(
-                        !IsBlank(
-                            LookUp(
-                                ReqProcessTest,
-                                User().Email = 'Approver 2'.Email
-                            )
-                        ),
-                        SortByColumns(
-                            Filter(
-                                Request_Test,
-                                Status.Value = "Approver 1 approved"
-                            ),
-                            "Created",
-                            SortOrder.Descending
-                        )
-                    )
-                )
+            Items: =Request_Test
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320

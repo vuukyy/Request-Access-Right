@@ -313,7 +313,7 @@
                     "'Tiêu đề_DataCard7' As typedDataCard.textualEditCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.'Tiêu đề'
+                        Default: =ThisItem.Title
                         DisplayMode: =Parent.DisplayMode
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -764,8 +764,7 @@
                 Button3 As button:
                     BorderThickness: =0
                     Height: =50
-                    OnSelect: |
-                        =SubmitForm([@'Edit Form Request']);
+                    OnSelect: =SubmitForm('Edit Form Request')
                     RadiusBottomLeft: =5
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5
