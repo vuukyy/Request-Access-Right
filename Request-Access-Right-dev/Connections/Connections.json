@@ -265,19 +265,18 @@
       "ApprovalTest",
       "ReqProcessTest",
       "ReqTypeTest",
+      "Request_Test",
       "Setting_LevelApprove",
       "SettingTest",
       "ResourceTest",
-      "LevelApproveTest",
-      "Request_Test"
+      "LevelApproveTest"
     ],
     "dependencies": {},
     "dependents": [
       "44307f3b-3875-4645-a663-5aae40d256c5",
       "ed2aeb22-42f8-4c2c-8844-3f524dccf2c1",
       "6d604169-44a4-4adf-88a9-30db8d78d970",
-      "fd5289da-6e80-418c-ac47-262f41b0428e",
-      "ed00437a-841e-4ab9-94bd-4d3b1169096d"
+      "fd5289da-6e80-418c-ac47-262f41b0428e"
     ],
     "id": "aa162321-87b3-4021-8048-3d725214b6b6"
   },

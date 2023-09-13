@@ -397,7 +397,7 @@
                         Label16_3 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Created By'.DisplayName
+                            Text: =ThisItem.'Người Tạo'.DisplayName
                             Width: =130
                             X: =711
                             Y: =5
