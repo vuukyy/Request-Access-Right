@@ -36,6 +36,10 @@
       "IDGroup#Id": "IDGroup Id",
       "IDRole": "IDRole",
       "IDRole#Id": "IDRole Id",
+      "IDUserGroup": "IDUserGroup",
+      "IDUserGroup#Id": "IDUserGroup Id",
+      "IDUserGroup_x003a__x0020_Ti_x00e": "IDUserGroup: Tiêu đề",
+      "IDUserGroup_x003a__x0020_Ti_x00e#Id": "IDUserGroup: Tiêu đề Id",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Title": "Title"

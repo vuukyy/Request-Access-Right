@@ -1,19 +1,6 @@
 "Home As screen.'autoLayout_Sidebar_ver1.0'":
     OnVisible: |
-        =ClearCollect(
-            colItem,
-            ForAll(
-                Table(ParseJSON(FLowItem.Run().varitem)),
-                {
-                    Title: Text(ThisRecord.Value.Title),
-                    'Request Type': Text(ThisRecord.Value.'Request Type'),
-                    'Request Permission': Text(ThisRecord.Value.'Request Permission'),
-                    Status: Text(ThisRecord.Value.Status),
-                    'Request Reason': Text(ThisRecord.Value.'Request Reason'),
-                    'Request Description': Text(ThisRecord.Value.'Request Description')
-                }
-            )
-        );
+        =//ClearCollect(colItem,ForAll(Table(ParseJSON(FLowItem.Run().varitem)),{Title: Text(ThisRecord.Value.Title),'Request Type': Text(ThisRecord.Value.'Request Type'),'Request Permission': Text(ThisRecord.Value.'Request Permission'),Status: Text(ThisRecord.Value.Status),'Request Reason': Text(ThisRecord.Value.'Request Reason'),'Request Description': Text(ThisRecord.Value.'Request Description')}));
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -381,7 +368,7 @@
 
                     gal_Request As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =colItem
+                        Items: =Request_Test
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -392,7 +379,7 @@
 
                         Label14 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Request Type'
+                            Text: =ThisItem.ReqType.Value
                             Width: =180
                             X: =508
                             Y: =10
@@ -408,7 +395,7 @@
 
                         Label16 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Request Permission'
+                            Text: =ThisItem.ReqPermission.Value
                             X: =708
                             Y: =10
                             ZIndex: =3
@@ -444,8 +431,8 @@
                             Label17 As label:
                                 Align: =Align.Center
                                 OnSelect: =Select(Parent)
-                                Text: =ThisItem.Status
-                                Visible: =If(!IsEmpty(RequestTest1),true)
+                                Text: =ThisItem.Status.Value
+                                Visible: =
                                 Width: =151
                                 X: =858
                                 Y: =10

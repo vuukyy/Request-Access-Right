@@ -36,6 +36,7 @@
       "IDGroup_x003a__x0020_ID#Id": "IDGroup: ID Id",
       "IDUser": "IDUser",
       "IDUser#Id": "IDUser Id",
+      "IDUser@odata.type": "IDUser (IDUser@odata.type)",
       "IDUser_x003a__x0020_ID": "IDUser: ID",
       "IDUser_x003a__x0020_ID#Id": "IDUser: ID Id",
       "Modified": "Modified",

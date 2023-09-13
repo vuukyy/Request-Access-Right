@@ -227,10 +227,11 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@Request_Test].IDReqType)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Choices(Request_Test.IDReqType,DataCardValue47.SearchText)
+                                        SearchItems: =[]
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30
@@ -292,10 +293,11 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@Request_Test].IDReqType_x003a__x0020_Ti_x00ea_)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Choices(Request_Test.IDReqType_x003a__x0020_Ti_x00ea_,DataCardValue50.SearchText)
+                                        SearchItems: =[]
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30
@@ -394,10 +396,11 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@Request_Test].RequestPermission)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Choices(Request_Test.RequestPermission,DataCardValue56.SearchText)
+                                        SearchItems: =[]
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30

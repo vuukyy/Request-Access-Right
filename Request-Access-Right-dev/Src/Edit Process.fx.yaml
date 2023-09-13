@@ -710,10 +710,11 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@ReqProcessTest].'Approver 1')
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
-                                        SearchItems: =Choices(ReqProcessTest.'Approver 1',DataCardValue12_1.SearchText)
+                                        SearchItems: =[]
                                         SelectMultiple: =false
                                         Template: =ListItemTemplate.Person
                                         Tooltip: =Parent.DisplayName
