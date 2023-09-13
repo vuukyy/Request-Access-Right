@@ -371,7 +371,7 @@
                             =SortByColumns(
                                 Filter(
                                     Request_Test,
-                                    ThisRecord.'Created By'.Email = With({obj:ParseJSON(getEmail.result)},Text(obj.Email))
+                                    ThisRecord.'Người Tạo'.Email = With({obj:ParseJSON(getEmail.result)},Text(obj.Email))
                                 ),
                                 "Created",
                                 SortOrder.Descending

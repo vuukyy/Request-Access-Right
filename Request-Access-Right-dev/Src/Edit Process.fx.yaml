@@ -545,7 +545,7 @@
                                 "'Tiêu đề_DataCard3_1' As typedDataCard.textualEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.Title
+                                    Default: =ThisItem.'Tiêu đề'
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -683,7 +683,7 @@
                                 "'Approver 1_DataCard1_1' As typedDataCard.comboBoxEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Approver1"
-                                    Default: =ThisItem.Approver1
+                                    Default: =ThisItem.'Approver 1'
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Approver1")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -710,10 +710,10 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@ReqProcessTest].Approver1)
+                                        Items: =Choices([@ReqProcessTest].'Approver 1')
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
-                                        SearchItems: =Choices(ReqProcessTest.Approver1,DataCardValue12_1.SearchText)
+                                        SearchItems: =Choices(ReqProcessTest.'Approver 1',DataCardValue12_1.SearchText)
                                         SelectMultiple: =false
                                         Template: =ListItemTemplate.Person
                                         Tooltip: =Parent.DisplayName
