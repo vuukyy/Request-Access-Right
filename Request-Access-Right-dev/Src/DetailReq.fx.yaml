@@ -247,288 +247,17 @@
                 ZIndex: =2
 
                 "'Detail Form Request' As formViewer":
-                    DataSource: =Request_Test
+                    DataSource: =colItem
                     Item: =gal_Request.Selected
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =2
                     ZIndex: =1
 
-                    "'Tệp đính kèm_DataCard3' As typedDataCard.attachmentsViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="{Attachments}"
-                        Default: =ThisItem.Attachments
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"{Attachments}")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue111.Attachments
-                        Width: =570
-                        X: =1
-                        Y: =2
-                        ZIndex: =1
-
-                        DataCardKey112 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue111 As attachments:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DisplayMode: =Parent.DisplayMode
-                            IsInDataCard: =true
-                            Items: =Parent.Default
-                            PaddingBottom: =5
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            PaddingRight: =5
-                            PaddingTop: =5
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey112.Y + DataCardKey112.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage79 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue111.Y + DataCardValue111.Height
-                            ZIndex: =3
-
-                        StarVisible78 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey112.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey112.Y
-                            ZIndex: =4
-
-                    "'Người Tạo_DataCard1' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Author"
-                        Default: =ThisItem.'Created By'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Author")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue114.Selected
-                        Width: =570
-                        X: =1
-                        Y: =3
-                        ZIndex: =1
-
-                        DataCardKey115 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue114 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Created By')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey115.Y + DataCardKey115.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage80 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue114.Y + DataCardValue114.Height
-                            ZIndex: =3
-
-                        StarVisible79 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey115.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey115.Y
-                            ZIndex: =4
-
-                    "'Đã tạo_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Created"
-                        Default: =ThisItem.'Đã tạo'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =4
-                        ZIndex: =1
-
-                        DataCardKey113 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue112 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey113.Y + DataCardKey113.Height + 5
-                            ZIndex: =2
-
-                    "'Người Sửa đổi_DataCard1' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Editor"
-                        Default: =ThisItem.'Modified By'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Editor")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue115.Selected
-                        Width: =570
-                        X: =1
-                        Y: =4
-                        ZIndex: =1
-
-                        DataCardKey116 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue115 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Modified By')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey116.Y + DataCardKey116.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage81 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue115.Y + DataCardValue115.Height
-                            ZIndex: =3
-
-                        StarVisible80 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey116.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey116.Y
-                            ZIndex: =4
-
-                    "'Đã sửa đổi_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Modified"
-                        Default: =ThisItem.'Đã sửa đổi'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Modified")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =5
-                        ZIndex: =1
-
-                        DataCardKey114 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue113 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey114.Y + DataCardKey114.Height + 5
-                            ZIndex: =2
-
-                    "'Tiêu đề_DataCard8' As typedDataCard.textualViewCard":
+                    Title_DataCard4 As typedDataCard.textualViewCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.'Tiêu đề'
+                        Default: =ThisItem.Title
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -539,7 +268,7 @@
                         Y: =0
                         ZIndex: =2
 
-                        DataCardKey84 As label:
+                        DataCardKey144 As label:
                             AutoHeight: =true
                             Height: =34
                             Text: =Parent.DisplayName
@@ -549,7 +278,7 @@
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue83 As label:
+                        DataCardValue144 As label:
                             AutoHeight: =true
                             DisplayMode: =Parent.DisplayMode
                             Height: =27
@@ -559,25 +288,24 @@
                             Text: =Parent.Default
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey84.Y + DataCardKey84.Height + 5
+                            Y: =DataCardKey144.Y + DataCardKey144.Height + 5
                             ZIndex: =2
 
-                    ReqType_DataCard2 As typedDataCard.comboBoxViewCard:
+                    Reason_DataCard4 As typedDataCard.textualViewCard:
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="ReqType"
-                        Default: =ThisItem.ReqType
+                        DataField: ="Reason"
+                        Default: =ThisItem.'Request Reason'
                         DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqType")
+                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Reason")
                         Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
+                        Height: =41
                         Required: =false
-                        Update: =DataCardValue94.Selected
                         Width: =570
                         X: =1
                         Y: =0
                         ZIndex: =2
 
-                        DataCardKey95 As label:
+                        DataCardKey147 As label:
                             AutoHeight: =true
                             Height: =34
                             Text: =Parent.DisplayName
@@ -587,23 +315,61 @@
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue94 As combobox:
+                        DataCardValue147 As label:
+                            AutoHeight: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =27
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Default
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey147.Y + DataCardKey147.Height + 5
+                            ZIndex: =2
+
+                    "'Request Permission_DataCard4' As typedDataCard.comboBoxViewCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="RequestPermission"
+                        Default: =
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"RequestPermission")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =DataCardValue148.Selected
+                        Width: =570
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey148 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue148 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
                             IsSearchable: =false
-                            Items: =Choices([@Request_Test].ReqType)
+                            Items: =Parent.Default
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
                             SearchItems: =[]
                             SelectMultiple: =false
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey95.Y + DataCardKey95.Height + 5
+                            Y: =DataCardKey148.Y + DataCardKey148.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage70 As label:
+                        ErrorMessage93 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -615,72 +381,44 @@
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue94.Y + DataCardValue94.Height
+                            Y: =DataCardValue148.Y + DataCardValue148.Height
                             ZIndex: =3
 
-                        StarVisible69 As label:
+                        StarVisible93 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey95.Height
+                            Height: =DataCardKey148.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey95.Y
+                            Y: =DataCardKey148.Y
                             ZIndex: =4
 
-                    ReqDescription_DataCard2 As typedDataCard.textualViewCard:
+                        DataCardKey148_1 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =ThisItem.'Request Permission'
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =40
+                            Y: =40
+                            ZIndex: =5
+
+                    Description_DataCard7 As typedDataCard.textualViewCard:
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="ReqDescription"
-                        Default: =ThisItem.ReqDescription
+                        DataField: ="Description"
+                        Default: =ThisItem.'Request Description'
                         DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqDescription")
+                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Description")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =1
-                        ZIndex: =2
-
-                        DataCardKey97 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue96 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey97.Y + DataCardKey97.Height + 5
-                            ZIndex: =2
-
-                    ReqPermission_DataCard2 As typedDataCard.comboBoxViewCard:
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ReqPermission"
-                        Default: =ThisItem.ReqPermission
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqPermission")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue97.Selected
                         Width: =570
                         X: =1
                         Y: =1
                         ZIndex: =2
 
-                        DataCardKey98 As label:
+                        DataCardKey149 As label:
                             AutoHeight: =true
                             Height: =34
                             Text: =Parent.DisplayName
@@ -690,72 +428,7 @@
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue97 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["Value"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].ReqPermission)
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["Value"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey98.Y + DataCardKey98.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage72 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue97.Y + DataCardValue97.Height
-                            ZIndex: =3
-
-                        StarVisible71 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey98.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey98.Y
-                            ZIndex: =4
-
-                    ReqReason_DataCard2 As typedDataCard.textualViewCard:
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ReqReason"
-                        Default: =ThisItem.ReqReason
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqReason")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =2
-                        ZIndex: =2
-
-                        DataCardKey99 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue98 As label:
+                        DataCardValue149 As label:
                             AutoHeight: =true
                             DisplayMode: =Parent.DisplayMode
                             Height: =27
@@ -765,25 +438,25 @@
                             Text: =Parent.Default
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey99.Y + DataCardKey99.Height + 5
+                            Y: =DataCardKey149.Y + DataCardKey149.Height + 5
                             ZIndex: =2
 
-                    Status_DataCard3 As typedDataCard.comboBoxViewCard:
+                    Status_DataCard5 As typedDataCard.comboBoxViewCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Status"
-                        Default: =ThisItem.Status
+                        Default: =
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Status")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
                         Required: =false
-                        Update: =DataCardValue91.Selected
+                        Update: =DataCardValue152.Selected
                         Width: =570
                         X: =0
-                        Y: =3
+                        Y: =2
                         ZIndex: =2
 
-                        DataCardKey92 As label:
+                        DataCardKey152 As label:
                             AutoHeight: =true
                             Height: =34
                             Text: =Parent.DisplayName
@@ -793,23 +466,23 @@
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue91 As combobox:
+                        DataCardValue152 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
                             IsSearchable: =false
-                            Items: =Choices([@Request_Test].Status)
+                            Items: =Parent.Default
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
                             SearchItems: =[]
                             SelectMultiple: =false
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey92.Y + DataCardKey92.Height + 5
+                            Y: =DataCardKey152.Y + DataCardKey152.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage68 As label:
+                        ErrorMessage96 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -821,746 +494,18 @@
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue91.Y + DataCardValue91.Height
+                            Y: =DataCardValue152.Y + DataCardValue152.Height
                             ZIndex: =3
 
-                        StarVisible67 As label:
+                        StarVisible96 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey92.Height
+                            Height: =DataCardKey152.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey92.Y
+                            Y: =DataCardKey152.Y
                             ZIndex: =4
-
-                    HOD_DataCard2 As typedDataCard.comboBoxViewCard:
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="HOD"
-                        Default: =ThisItem.HOD
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"HOD")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue92.Selected
-                        Width: =570
-                        X: =1
-                        Y: =5
-                        ZIndex: =2
-
-                        DataCardKey93 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue92 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].HOD)
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey93.Y + DataCardKey93.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage69 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue92.Y + DataCardValue92.Height
-                            ZIndex: =3
-
-                        StarVisible68 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey93.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey93.Y
-                            ZIndex: =4
-
-                    "'HOD Approved Date_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="HODApprovedDate"
-                        Default: =ThisItem.'HOD Approved Date'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"HODApprovedDate")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =6
-                        ZIndex: =2
-
-                        DataCardKey94 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue93 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey94.Y + DataCardKey94.Height + 5
-                            ZIndex: =2
-
-                    "'Approver 1_DataCard4' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Approver1"
-                        Default: =ThisItem.'Approver 1'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Approver1")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue99.Selected
-                        Width: =570
-                        X: =1
-                        Y: =6
-                        ZIndex: =2
-
-                        DataCardKey100 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue99 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Approver 1')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey100.Y + DataCardKey100.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage73 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue99.Y + DataCardValue99.Height
-                            ZIndex: =3
-
-                        StarVisible72 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey100.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey100.Y
-                            ZIndex: =4
-
-                    "'Approved Date 1_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ApprovedDate1"
-                        Default: =ThisItem.'Approved Date 1'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ApprovedDate1")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =7
-                        ZIndex: =2
-
-                        DataCardKey101 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue100 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey101.Y + DataCardKey101.Height + 5
-                            ZIndex: =2
-
-                    "'Approver 2_DataCard4' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Approver2"
-                        Default: =ThisItem.'Approver 2'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Approver2")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue101.Selected
-                        Width: =570
-                        X: =1
-                        Y: =7
-                        ZIndex: =2
-
-                        DataCardKey102 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue101 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Approver 2')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey102.Y + DataCardKey102.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage74 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue101.Y + DataCardValue101.Height
-                            ZIndex: =3
-
-                        StarVisible73 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey102.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey102.Y
-                            ZIndex: =4
-
-                    "'Approved Date 2_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ApprovedDate2"
-                        Default: =ThisItem.'Approved Date 2'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ApprovedDate2")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =8
-                        ZIndex: =2
-
-                        DataCardKey103 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue102 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey103.Y + DataCardKey103.Height + 5
-                            ZIndex: =2
-
-                    "'Approver 3_DataCard4' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Approver3"
-                        Default: =ThisItem.'Approver 3'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Approver3")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue103.Selected
-                        Width: =570
-                        X: =1
-                        Y: =8
-                        ZIndex: =2
-
-                        DataCardKey104 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue103 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Approver 3')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey104.Y + DataCardKey104.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage75 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue103.Y + DataCardValue103.Height
-                            ZIndex: =3
-
-                        StarVisible74 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey104.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey104.Y
-                            ZIndex: =4
-
-                    "'Approved Date 3_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ApprovedDate3"
-                        Default: =ThisItem.'Approved Date 3'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ApprovedDate3")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =9
-                        ZIndex: =2
-
-                        DataCardKey105 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue104 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey105.Y + DataCardKey105.Height + 5
-                            ZIndex: =2
-
-                    "'Approver 4_DataCard4' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Approver4"
-                        Default: =ThisItem.'Approver 4'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Approver4")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue105.Selected
-                        Width: =570
-                        X: =1
-                        Y: =9
-                        ZIndex: =2
-
-                        DataCardKey106 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue105 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Approver 4')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey106.Y + DataCardKey106.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage76 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue105.Y + DataCardValue105.Height
-                            ZIndex: =3
-
-                        StarVisible75 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey106.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey106.Y
-                            ZIndex: =4
-
-                    "'Approved Date 4_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ApprovedDate4"
-                        Default: =ThisItem.'Approved Date 4'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ApprovedDate4")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =10
-                        ZIndex: =2
-
-                        DataCardKey107 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue106 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey107.Y + DataCardKey107.Height + 5
-                            ZIndex: =2
-
-                    "'Approver 5_DataCard4' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Approver5"
-                        Default: =ThisItem.'Approver 5'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Approver5")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue107.Selected
-                        Width: =570
-                        X: =1
-                        Y: =10
-                        ZIndex: =2
-
-                        DataCardKey108 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue107 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Approver 5')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey108.Y + DataCardKey108.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage77 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue107.Y + DataCardValue107.Height
-                            ZIndex: =3
-
-                        StarVisible76 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey108.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey108.Y
-                            ZIndex: =4
-
-                    "'Approved Date 5_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ApprovedDate5"
-                        Default: =ThisItem.'Approved Date 5'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ApprovedDate5")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =11
-                        ZIndex: =2
-
-                        DataCardKey109 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue108 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey109.Y + DataCardKey109.Height + 5
-                            ZIndex: =2
-
-                    "'Rejected By_DataCard2' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="RejectedBy"
-                        Default: =ThisItem.'Rejected By'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"RejectedBy")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue109.Selected
-                        Width: =570
-                        X: =1
-                        Y: =11
-                        ZIndex: =2
-
-                        DataCardKey110 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue109 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["DisplayName","Email","Picture"]
-                            DisplayMode: =Parent.DisplayMode
-                            IsSearchable: =false
-                            Items: =Choices([@Request_Test].'Rejected By')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Template: =ListItemTemplate.Person
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey110.Y + DataCardKey110.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage78 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue109.Y + DataCardValue109.Height
-                            ZIndex: =3
-
-                        StarVisible77 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey110.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey110.Y
-                            ZIndex: =4
-
-                    "'Rejected Date_DataCard2' As typedDataCard.textualViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="RejectedDate"
-                        Default: =ThisItem.'Rejected Date'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"RejectedDate")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =40
-                        Required: =false
-                        Width: =570
-                        X: =0
-                        Y: =12
-                        ZIndex: =2
-
-                        DataCardKey111 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue110 As label:
-                            AutoHeight: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =27
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Default
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey111.Y + DataCardKey111.Height + 5
-                            ZIndex: =2
 
             Container15_1 As groupContainer.horizontalAutoLayoutContainer:
                 BorderColor: =RGBA(0, 0, 0, 0)

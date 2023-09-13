@@ -265,8 +265,7 @@
                                 "'IDReqType: Tiêu đề_DataCard1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="IDReqType_x003a__x0020_Ti_x00ea_"
-                                    Default: |-
-                                        =ThisItem.'IDReqType: Tiêu đề'
+                                    Default: =ThisItem.IDReqType_x003a__x0020_Ti_x00ea_
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"IDReqType_x003a__x0020_Ti_x00ea_")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -293,12 +292,10 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: |-
-                                            =Choices([@Request_Test].'IDReqType: Tiêu đề')
+                                        Items: =Choices([@Request_Test].IDReqType_x003a__x0020_Ti_x00ea_)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: |-
-                                            =Choices(Request_Test.'IDReqType: Tiêu đề',DataCardValue50.SearchText)
+                                        SearchItems: =Choices(Request_Test.IDReqType_x003a__x0020_Ti_x00ea_,DataCardValue50.SearchText)
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30
@@ -370,7 +367,7 @@
                                 "'Request Permission_DataCard1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="RequestPermission"
-                                    Default: =ThisItem.'Request Permission'
+                                    Default: =ThisItem.RequestPermission
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"RequestPermission")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -397,10 +394,10 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@Request_Test].'Request Permission')
+                                        Items: =Choices([@Request_Test].RequestPermission)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Choices(Request_Test.'Request Permission',DataCardValue56.SearchText)
+                                        SearchItems: =Choices(Request_Test.RequestPermission,DataCardValue56.SearchText)
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30

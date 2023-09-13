@@ -1,5 +1,19 @@
 "Home As screen.'autoLayout_Sidebar_ver1.0'":
-    OnVisible: =
+    OnVisible: |
+        =ClearCollect(
+            colItem,
+            ForAll(
+                Table(ParseJSON(FLowItem.Run().varitem)),
+                {
+                    Title: Text(ThisRecord.Value.Title),
+                    'Request Type': Text(ThisRecord.Value.'Request Type'),
+                    'Request Permission': Text(ThisRecord.Value.'Request Permission'),
+                    Status: Text(ThisRecord.Value.Status),
+                    'Request Reason': Text(ThisRecord.Value.'Request Reason'),
+                    'Request Description': Text(ThisRecord.Value.'Request Description')
+                }
+            )
+        );
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -367,15 +381,7 @@
 
                     gal_Request As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: |-
-                            =SortByColumns(
-                                Filter(
-                                    Request_Test,
-                                    ThisRecord.'Created By'.Email = With({obj:ParseJSON(getEmail.result)},Text(obj.Email))
-                                ),
-                                "Created",
-                                SortOrder.Descending
-                            )
+                        Items: =colItem
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -386,7 +392,7 @@
 
                         Label14 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.ReqType.Value
+                            Text: =ThisItem.'Request Type'
                             Width: =180
                             X: =508
                             Y: =10
@@ -394,7 +400,7 @@
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Tiêu đề'
+                            Text: =ThisItem.Title
                             Width: =430
                             X: =56
                             Y: =10
@@ -402,7 +408,7 @@
 
                         Label16 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.ReqPermission.Value
+                            Text: =ThisItem.'Request Permission'
                             X: =708
                             Y: =10
                             ZIndex: =3
@@ -411,11 +417,7 @@
                             Height: =34
                             Icon: =Icon.Trash
                             OnSelect: =Select(Parent)
-                            Visible: |-
-                                =If(
-                                    !IsEmpty(RequestTest1) && ThisItem.Status.Value = "Created",
-                                    true
-                                )
+                            Visible: =
                             Width: =24
                             X: =1069
                             Y: =13
@@ -430,56 +432,22 @@
 
                             Rectangle6 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: |-
-                                    =If(
-                                        ThisItem.Status.Value = "Pending",
-                                        RGBA(
-                                            255,
-                                            235,
-                                            192,
-                                            1
-                                        ),
-                                        If(
-                                            ThisItem.Status.Value = "Approved",
-                                            RGBA(
-                                                202,
-                                                240,
-                                                204,
-                                                1
-                                            ),
-                                            If(
-                                                ThisItem.Status.Value = "Rejected",
-                                                RGBA(
-                                                    250,
-                                                    187,
-                                                    195,
-                                                    1
-                                                ),
-                                                RGBA(
-                                                    237,
-                                                    237,
-                                                    237,
-                                                    1
-                                                )
-                                            )
-                                        )
-                                    )
+                                Fill: =
                                 FocusedBorderThickness: =0
                                 Height: =40
                                 OnSelect: =Select(Parent)
-                                Visible: =If(!IsEmpty(RequestTest1),true)
-                                Width: =130
-                                X: =879
+                                Visible: =false
+                                X: =858
                                 Y: =10
                                 ZIndex: =4
 
                             Label17 As label:
                                 Align: =Align.Center
                                 OnSelect: =Select(Parent)
-                                Text: =ThisItem.Status.Value
+                                Text: =ThisItem.Status
                                 Visible: =If(!IsEmpty(RequestTest1),true)
-                                Width: =130
-                                X: =879
+                                Width: =151
+                                X: =858
                                 Y: =10
                                 ZIndex: =5
 
@@ -487,11 +455,6 @@
                             Height: =34
                             Icon: =Icon.Edit
                             OnSelect: =Select(Parent)
-                            Visible: |-
-                                =If(
-                                    !IsEmpty(RequestTest1) && ThisItem.Status.Value = "Created",
-                                    true
-                                )
                             Width: =24
                             X: =1030
                             Y: =13

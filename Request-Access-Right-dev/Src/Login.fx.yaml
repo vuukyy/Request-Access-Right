@@ -111,6 +111,11 @@ Login As screen:
                         getEmail,
                         Login2.Run(txtEmail.Text)
                     );
+                    Set(
+                        getRqItem,
+                        FLowItem.Run()
+                    );
+                    
                     If(
                         txtPass.Text = "admin123",
                         Navigate(
