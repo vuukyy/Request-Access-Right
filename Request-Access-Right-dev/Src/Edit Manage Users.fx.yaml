@@ -320,6 +320,71 @@
                                 NumberOfColumns: =2
                                 ZIndex: =1
 
+                                IDUser_DataCard7 As typedDataCard.comboBoxMultiSelectEditCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="IDUser"
+                                    Default: =ThisItem.IDUser
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser")
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    Required: =false
+                                    Update: =DataCardValue6.SelectedItems
+                                    Width: =665
+                                    X: =0
+                                    Y: =1
+                                    ZIndex: =1
+
+                                    DataCardKey6 As label:
+                                        AutoHeight: =true
+                                        Height: =34
+                                        Text: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        Wrap: =false
+                                        X: =30
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    DataCardValue6 As combobox:
+                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                        DefaultSelectedItems: =Parent.Default
+                                        DisplayFields: =["Value"]
+                                        DisplayMode: =Parent.DisplayMode
+                                        Items: =Choices([@UserGroupTest].IDUser)
+                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                        SearchFields: =["Value"]
+                                        SearchItems: =Choices(UserGroupTest.IDUser,DataCardValue6.SearchText)
+                                        Tooltip: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                                        ZIndex: =2
+
+                                    ErrorMessage4 As label:
+                                        AutoHeight: =true
+                                        Height: =10
+                                        Live: =Live.Assertive
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =Parent.Error
+                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardValue6.Y + DataCardValue6.Height
+                                        ZIndex: =3
+
+                                    StarVisible4 As label:
+                                        Align: =Align.Center
+                                        Height: =DataCardKey6.Height
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        Wrap: =false
+                                        Y: =DataCardKey6.Y
+                                        ZIndex: =4
+
                                 "'IDUser: ID_DataCard1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="IDUser_x003a__x0020_ID"
@@ -384,71 +449,6 @@
                                         Width: =30
                                         Wrap: =false
                                         Y: =DataCardKey12.Y
-                                        ZIndex: =4
-
-                                IDUser_DataCard7 As typedDataCard.comboBoxMultiSelectEditCard:
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDUser"
-                                    Default: =ThisItem.IDUser
-                                    DisplayMode: =Parent.DisplayMode
-                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue6.SelectedItems
-                                    Width: =665
-                                    X: =0
-                                    Y: =1
-                                    ZIndex: =1
-
-                                    DataCardKey6 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue6 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@UserGroupTest].IDUser)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =Choices(UserGroupTest.IDUser,DataCardValue6.SearchText)
-                                        Tooltip: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey6.Y + DataCardKey6.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage4 As label:
-                                        AutoHeight: =true
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue6.Y + DataCardValue6.Height
-                                        ZIndex: =3
-
-                                    StarVisible4 As label:
-                                        Align: =Align.Center
-                                        Height: =DataCardKey6.Height
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey6.Y
                                         ZIndex: =4
 
                                 "'Tiêu đề_DataCard5' As typedDataCard.textualEditCard":
