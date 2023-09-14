@@ -411,7 +411,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
-                                    Update: =DataCardValue4.SelectedItems
+                                    Update: =DataCardValue43.SelectedItems
                                     Width: =465
                                     X: =1
                                     Y: =1

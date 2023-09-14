@@ -14,83 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6.Update"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6.Update",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataCardValue4"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Update",
-                "module": "Manage Users",
-                "type": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataCardValue4"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6.Update"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6.Update",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 14,
-                  "snippet": {
-                    "text": ".SelectedItems"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Update",
-                "module": "Manage Users",
-                "type": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Role.Gallery6.Title11.Text"
                 }
               ],
@@ -245,7 +168,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -285,7 +208,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -402,7 +325,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -443,7 +366,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -483,7 +406,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -600,7 +523,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -641,7 +564,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -681,7 +604,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -762,7 +685,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -802,7 +725,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -919,7 +842,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -960,7 +883,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1000,7 +923,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1033,46 +956,6 @@
           "message": {
             "arguments": [
               "Description"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Manage Users'.ScreenContainer9_1.BottomContainer7_1.MainContainer9_1.Container11_9.Approver_8.Container32_6.'Edit Manage User'.'Tiêu đề_DataCard5'.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Manage Users'.ScreenContainer9_1.BottomContainer7_1.MainContainer9_1.Container11_9.Approver_8.Container32_6.'Edit Manage User'.'Tiêu đề_DataCard5'.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".'Tiêu đề'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "Edit Manage Users",
-                "type": "'Edit Manage Users'.ScreenContainer9_1.BottomContainer7_1.MainContainer9_1.Container11_9.Approver_8.Container32_6.'Edit Manage User'.'Tiêu đề_DataCard5'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Tiêu đề"
             ],
             "id": "issue"
           },
@@ -1157,7 +1040,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1234,7 +1117,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6939,6 +6822,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6.Update",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Manage Users",
+                "type": "'Manage Users'.ScreenContainer9.BottomContainer7.MainContainer9.Container11_8.Approver_5.Container32_5.'Detail Process Form_4'.IDUser_DataCard6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "NewReq.Container14.Container16.Container17.'Edit Form Request'.Item"
                 }
               ],
@@ -7078,20 +6991,6 @@
               }
             },
             {
-              "id": "app-ErrInvalidDot",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid use of '.'"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrColumnDoesNotExist-Name-Similar",
               "messageStrings": {
                 "issue": {
@@ -7110,6 +7009,20 @@
               "messageStrings": {
                 "issue": {
                   "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid use of '.'"
                 }
               },
               "properties": {
