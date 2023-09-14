@@ -313,7 +313,8 @@
                                     PaddingLeft: =0
                                     PaddingRight: =0
                                     PaddingTop: =0
-                                    Text: =ThisItem.CodeRole.Value
+                                    Text: |-
+                                        =ThisItem.'IDRole: CodeRole'.Value
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title4_1.Width
                                     X: =Title4_1.X
@@ -390,6 +391,72 @@
                                 NumberOfColumns: =2
                                 ZIndex: =1
 
+                                "'IDRole: CodeRole_DataCard1' As typedDataCard.comboBoxViewCard":
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="IDRole_x003a__x0020_CodeRole"
+                                    Default: |-
+                                        =ThisItem.'IDRole: CodeRole'
+                                    DisplayMode: =DisplayMode.View
+                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"IDRole_x003a__x0020_CodeRole")
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    Required: =false
+                                    Update: =DataCardValue25.Selected
+                                    Width: =465
+                                    X: =1
+                                    Y: =1
+                                    ZIndex: =1
+
+                                    DataCardKey25 As label:
+                                        AutoHeight: =true
+                                        Height: =34
+                                        Text: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        Wrap: =false
+                                        X: =30
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    DataCardValue25 As combobox:
+                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                        DefaultSelectedItems: =Parent.Default
+                                        DisplayFields: =["Value"]
+                                        DisplayMode: =Parent.DisplayMode
+                                        Items: =Choices([@GroupRoleTest].IDRole_x003a__x0020_CodeRole)
+                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                        SearchFields: =["Value"]
+                                        SearchItems: =Choices(GroupRoleTest.IDRole_x003a__x0020_CodeRole,DataCardValue25.SearchText)
+                                        SelectMultiple: =false
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardKey25.Y + DataCardKey25.Height + 5
+                                        ZIndex: =2
+
+                                    ErrorMessage56 As label:
+                                        AutoHeight: =true
+                                        Height: =10
+                                        Live: =Live.Assertive
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =Parent.Error
+                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardValue25.Y + DataCardValue25.Height
+                                        ZIndex: =3
+
+                                    StarVisible56 As label:
+                                        Align: =Align.Center
+                                        Height: =DataCardKey25.Height
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        Wrap: =false
+                                        Y: =DataCardKey25.Y
+                                        ZIndex: =4
+
                                 "'Tiêu đề_DataCard1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
@@ -430,9 +497,10 @@
                                 IDGroup_DataCard1 As typedDataCard.comboBoxViewCard:
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="IDGroup"
-                                    Default: =ThisItem.IDGroup
+                                    Default: |-
+                                        =ThisItem.'IDUserGroup: Tiêu đề'
                                     DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"IDGroup")
+                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"IDUserGroup")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
@@ -458,7 +526,7 @@
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
                                         IsSearchable: =false
-                                        Items: =Choices([@GroupRoleTest].IDGroup)
+                                        Items: =Choices([@GroupRoleTest].IDUserGroup)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
                                         SearchItems: =[]
@@ -556,72 +624,6 @@
                                         Width: =30
                                         Wrap: =false
                                         Y: =DataCardKey3.Y
-                                        ZIndex: =4
-
-                                CodeRole_DataCard1 As typedDataCard.comboBoxViewCard:
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="CodeRole"
-                                    Default: =ThisItem.CodeRole
-                                    DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"CodeRole")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue4.Selected
-                                    Width: =465
-                                    X: =1
-                                    Y: =1
-                                    ZIndex: =2
-
-                                    DataCardKey4 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue4 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        IsSearchable: =false
-                                        Items: =Choices([@GroupRoleTest].CodeRole)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =[]
-                                        SelectMultiple: =false
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey4.Y + DataCardKey4.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage3 As label:
-                                        AutoHeight: =true
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue4.Y + DataCardValue4.Height
-                                        ZIndex: =3
-
-                                    StarVisible3 As label:
-                                        Align: =Align.Center
-                                        Height: =DataCardKey4.Height
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey4.Y
                                         ZIndex: =4
 
                             Container25_9 As groupContainer.horizontalAutoLayoutContainer:
