@@ -506,6 +506,8 @@
                                     DelayItemLoading: =true
                                     Items: =ResourceTest
                                     Layout: =Layout.Vertical
+                                    LayoutMinHeight: =287
+                                    LayoutMinWidth: =320
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =0
                                     TemplateSize: =90
@@ -560,6 +562,8 @@
                                     DelayItemLoading: =true
                                     Items: =UserGroupTest
                                     Layout: =Layout.Vertical
+                                    LayoutMinHeight: =287
+                                    LayoutMinWidth: =320
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =0
                                     TemplateSize: =80

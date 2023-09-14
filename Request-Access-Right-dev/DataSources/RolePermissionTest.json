@@ -36,6 +36,8 @@
       "IDPermission_x003a__x0020_ID#Id": "IDPermission: ID Id",
       "IDRole": "IDRole",
       "IDRole#Id": "IDRole Id",
+      "IDRole_x003a__x0020_ID": "IDRole: ID",
+      "IDRole_x003a__x0020_ID#Id": "IDRole: ID Id",
       "IDRole_x003a__x0020_RoleName": "IDRole: RoleName",
       "IDRole_x003a__x0020_RoleName#Id": "IDRole: RoleName Id",
       "Modified": "Modified",
