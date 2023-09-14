@@ -33,6 +33,7 @@
       "Editor#Claims": "Người Sửa đổi Claims",
       "ID": "ID",
       "IDAction": "IDAction",
+      "isActive": "isActive",
       "Modified": "Đã sửa đổi",
       "OData__ColorTag": "Thẻ màu",
       "Title": "Tiêu đề"
@@ -41,7 +42,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "PermissionTest_1",
+    "Name": "PermissionTest",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

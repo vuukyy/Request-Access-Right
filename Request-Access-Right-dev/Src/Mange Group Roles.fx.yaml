@@ -457,10 +457,11 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@GroupRoleTest].IDGroup)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Choices(GroupRoleTest.IDGroup,DataCardValue2.SearchText)
+                                        SearchItems: =[]
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30
@@ -587,10 +588,11 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@GroupRoleTest].CodeRole)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Choices(GroupRoleTest.CodeRole,DataCardValue4.SearchText)
+                                        SearchItems: =[]
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30

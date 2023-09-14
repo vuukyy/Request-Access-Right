@@ -208,7 +208,7 @@
             "tableName": "003590cb-8f1f-4cdf-bb55-4d9885a3c063"
           },
           "PermissionTest": {
-            "tableName": "80c7768c-918a-44a1-b8e5-79974afe698e"
+            "tableName": "9f41b861-bbc5-4a97-b3a0-ceed9b1358a9"
           },
           "ReqProcessTest": {
             "tableName": "89929e3a-61da-4916-b702-30a6748071b3"
@@ -221,6 +221,9 @@
           },
           "RequestTest1": {
             "tableName": "cc975cec-2502-4125-92a1-39c77f936619"
+          },
+          "ResourcePermissionTest": {
+            "tableName": "1d114958-0606-4b17-b8c6-bf1ab677d747"
           },
           "ResourceTest": {
             "tableName": "1614ffd7-90a1-4a83-af83-bbbd74fb6a12"
@@ -269,7 +272,8 @@
       "Setting_LevelApprove",
       "SettingTest",
       "ResourceTest",
-      "LevelApproveTest"
+      "LevelApproveTest",
+      "ResourcePermissionTest"
     ],
     "dependencies": {},
     "dependents": [
