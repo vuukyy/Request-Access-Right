@@ -6729,17 +6729,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varApprover"
+                  "fullyQualifiedName": "App.getRqItem"
                 }
               ],
               "properties": {
-                "member": "varApprover",
+                "member": "getRqItem",
                 "module": "App",
                 "type": "App"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.varApprover",
+                  "fullyQualifiedName": "App.getRqItem",
                   "relativeAddress": 0
                 }
               }
@@ -6759,17 +6759,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.getRqItem"
+                  "fullyQualifiedName": "App.varApprover"
                 }
               ],
               "properties": {
-                "member": "getRqItem",
+                "member": "varApprover",
                 "module": "App",
                 "type": "App"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.getRqItem",
+                  "fullyQualifiedName": "App.varApprover",
                   "relativeAddress": 0
                 }
               }
