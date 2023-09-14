@@ -4869,66 +4869,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Setting.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container11_2.Container31.Container34.Container35.Label44.FocusedBorderThickness"
-                }
-              ],
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Setting",
-                "type": "Setting.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container11_2.Container31.Container34.Container35.Label44"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Setting.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container11_2.Container31.Container34.Container35.Label44.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Setting.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container11_2.Container31.Container34.Container35.Label44.TabIndex"
-                }
-              ],
-              "properties": {
-                "member": "TabIndex",
-                "module": "Setting",
-                "type": "Setting.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container11_2.Container31.Container34.Container35.Label44"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Setting.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container11_2.Container31.Container34.Container35.Label44.TabIndex",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Setting.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container11_2.Container31.Label42_3.FocusedBorderThickness"
                 }
               ],
