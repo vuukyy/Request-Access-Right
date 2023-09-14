@@ -339,10 +339,12 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].IDUser_x003a__x0020_Email)
+                            Items: |-
+                                =Choices([@Request_Test].'IDUser: Email')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
-                            SearchItems: =Choices(Request_Test.IDUser_x003a__x0020_Email,DataCardValue43.SearchText)
+                            SearchItems: |-
+                                =Choices(Request_Test.'IDUser: Email',DataCardValue43.SearchText)
                             SelectMultiple: =false
                             Width: =Parent.Width - 60
                             X: =30
@@ -638,10 +640,12 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].ReqType_x003a__x0020_ID)
+                            Items: |-
+                                =Choices([@Request_Test].'ReqType: ID')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
-                            SearchItems: =Choices(Request_Test.ReqType_x003a__x0020_ID,DataCardValue91.SearchText)
+                            SearchItems: |-
+                                =Choices(Request_Test.'ReqType: ID',DataCardValue91.SearchText)
                             SelectMultiple: =false
                             Width: =Parent.Width - 60
                             X: =30
@@ -842,10 +846,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].Approver1)
+                            Items: =Choices([@Request_Test].'Approver 1')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.Approver1,DataCardValue95.SearchText)
+                            SearchItems: =Choices(Request_Test.'Approver 1',DataCardValue95.SearchText)
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -945,10 +949,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].Approver2)
+                            Items: =Choices([@Request_Test].'Approver 2')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.Approver2,DataCardValue97.SearchText)
+                            SearchItems: =Choices(Request_Test.'Approver 2',DataCardValue97.SearchText)
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -1048,10 +1052,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].Approver3)
+                            Items: =Choices([@Request_Test].'Approver 3')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.Approver3,DataCardValue99.SearchText)
+                            SearchItems: =Choices(Request_Test.'Approver 3',DataCardValue99.SearchText)
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -1151,10 +1155,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].Approver4)
+                            Items: =Choices([@Request_Test].'Approver 4')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.Approver4,DataCardValue101.SearchText)
+                            SearchItems: =Choices(Request_Test.'Approver 4',DataCardValue101.SearchText)
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -1254,10 +1258,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].Approver5)
+                            Items: =Choices([@Request_Test].'Approver 5')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.Approver5,DataCardValue103.SearchText)
+                            SearchItems: =Choices(Request_Test.'Approver 5',DataCardValue103.SearchText)
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -1357,10 +1361,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].RejectedBy)
+                            Items: =Choices([@Request_Test].'Rejected By')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.RejectedBy,DataCardValue105.SearchText)
+                            SearchItems: =Choices(Request_Test.'Rejected By',DataCardValue105.SearchText)
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -1497,10 +1501,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].SettingProcess)
+                            Items: =Choices([@Request_Test].'Setting Process')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.SettingProcess,DataCardValue108.SearchText)
+                            SearchItems: =Choices(Request_Test.'Setting Process',DataCardValue108.SearchText)
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
                             X: =30
