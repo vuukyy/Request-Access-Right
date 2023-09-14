@@ -2487,47 +2487,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label9.FocusedBorderThickness"
-                }
-              ],
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label9"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label9.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label8.TabIndex"
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Resource.Gallery8.TabIndex"
                 }
               ],
               "properties": {
                 "member": "TabIndex",
                 "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label8"
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Resource.Gallery8"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label8.TabIndex",
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Resource.Gallery8.TabIndex",
                   "relativeAddress": 0
                 }
               }
@@ -2547,17 +2517,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label8.FocusedBorderThickness"
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Role.Gallery6.AccessibleLabel"
                 }
               ],
               "properties": {
-                "member": "FocusedBorderThickness",
+                "member": "AccessibleLabel",
                 "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label8"
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Role.Gallery6"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label8.FocusedBorderThickness",
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Role.Gallery6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -2569,8 +2539,38 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Role.Gallery6.TabIndex"
+                }
+              ],
+              "properties": {
+                "member": "TabIndex",
+                "module": "Mange Group Roles",
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Role.Gallery6"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Role.Gallery6.TabIndex",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -6416,17 +6416,47 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label9.TabIndex"
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Resource.Gallery8.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Mange Group Roles",
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Resource.Gallery8"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_Resource.Gallery8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_User.Gallery11.TabIndex"
                 }
               ],
               "properties": {
                 "member": "TabIndex",
                 "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label9"
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_User.Gallery11"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label9.TabIndex",
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_User.Gallery11.TabIndex",
                   "relativeAddress": 0
                 }
               }
@@ -6446,17 +6476,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label21.FocusedBorderThickness"
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_User.Gallery11.AccessibleLabel"
                 }
               ],
               "properties": {
-                "member": "FocusedBorderThickness",
+                "member": "AccessibleLabel",
                 "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label21"
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_User.Gallery11"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label21.FocusedBorderThickness",
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.tbl_User.Gallery11.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -6468,38 +6498,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label21.TabIndex"
-                }
-              ],
-              "properties": {
-                "member": "TabIndex",
-                "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label21"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container32_4.Container26.Label21.TabIndex",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -6517,36 +6517,6 @@
               "physicalLocation": {
                 "address": {
                   "fullyQualifiedName": "App.colSidebarMenu",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varCurrentTab"
-                }
-              ],
-              "properties": {
-                "member": "varCurrentTab",
-                "module": "App",
-                "type": "App"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varCurrentTab",
                   "relativeAddress": 0
                 }
               }
@@ -6637,6 +6607,36 @@
               "physicalLocation": {
                 "address": {
                   "fullyQualifiedName": "App.varIDItem",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.createdBy"
+                }
+              ],
+              "properties": {
+                "member": "createdBy",
+                "module": "App",
+                "type": "App"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.createdBy",
                   "relativeAddress": 0
                 }
               }

@@ -416,10 +416,12 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@UserGroupTest].IDUser_x003a__x0020_ID)
+                                        Items: |-
+                                            =Choices([@UserGroupTest].'IDUser: ID')
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Choices(UserGroupTest.IDUser_x003a__x0020_ID,DataCardValue12.SearchText)
+                                        SearchItems: |-
+                                            =Choices(UserGroupTest.'IDUser: ID',DataCardValue12.SearchText)
                                         SelectMultiple: =false
                                         Width: =Parent.Width - 60
                                         X: =30
@@ -454,7 +456,7 @@
                                 "'Tiêu đề_DataCard5' As typedDataCard.textualEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.Title
+                                    Default: =ThisItem.'Tiêu đề'
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
