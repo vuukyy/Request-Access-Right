@@ -298,7 +298,7 @@
                                     PaddingLeft: =0
                                     PaddingRight: =0
                                     PaddingTop: =0
-                                    Text: =ThisItem.'Tiêu đề'
+                                    Text: =ThisItem.Title
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
                                     X: =16
@@ -332,7 +332,7 @@
                                     PaddingRight: =0
                                     PaddingTop: =0
                                     Size: =10
-                                    Text: =Text(ThisItem.'Đã tạo', "dd/mm/yyyy")
+                                    Text: =Text(ThisItem.Created, "dd/mm/yyyy")
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title4_1.Width
                                     X: =Title4_1.X
@@ -460,7 +460,7 @@
                                 "'Tiêu đề_DataCard1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.'Tiêu đề'
+                                    Default: =ThisItem.Title
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
