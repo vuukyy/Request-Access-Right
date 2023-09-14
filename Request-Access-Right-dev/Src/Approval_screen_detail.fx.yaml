@@ -843,8 +843,8 @@
                 =If(
                     !IsBlank(
                         LookUp(
-                            ReqProcessTest,
-                            User().Email = Approver1.Email
+                            LevelApproveTest,
+                            User().Email = IdUser.Email && Level.Value="Approver 1"
                         )
                     ),
                     Patch(
@@ -854,13 +854,23 @@
                             ID = gal_Request_1.Selected.ID
                         ),
                         {Status: {Value: "Approver 1 approved"}},
-                        {'Approved Date 1': Now()}
+                        {'Approved Date 1': Now()},
+                        {'Approver 1': {
+                                    '@odata.type': User().Email,
+                                    Claims: User().Email,
+                                    Department: "",
+                                    DisplayName: User().FullName,
+                                    Email: User().Email,
+                                    JobTitle: "",
+                                    Picture: ""
+                                }
+                        }
                     ),
                     If(
                         !IsBlank(
                             LookUp(
-                                ReqProcessTest,
-                                User().Email = 'Approver 2'.Email
+                                LevelApproveTest,
+                                User().Email = IdUser.Email && Level.Value="Approver 2"
                             )
                         ),
                         Patch(
@@ -870,7 +880,17 @@
                                 ID = gal_Request_1.Selected.ID
                             ),
                             {Status: {Value: "Approver 2 approved"}},
-                            {'Approved Date 2': Now()}
+                            {'Approved Date 2': Now()},
+                            {'Approver 2': {
+                                    '@odata.type': User().Email,
+                                    Claims: User().Email,
+                                    Department: "",
+                                    DisplayName: User().FullName,
+                                    Email: User().Email,
+                                    JobTitle: "",
+                                    Picture: ""
+                                }
+                        }
                         )
                     )
                 );
@@ -967,8 +987,8 @@
                                 If(
                                     !IsBlank(
                                         LookUp(
-                                            ReqProcessTest,
-                                            User().Email = Approver1.Email
+                                            LevelApproveTest,
+                                            User().Email = IdUser.Email && Level.Value="Approver 1"
                                         )
                                     ),
                                     Patch(
@@ -996,8 +1016,8 @@
                                     If(
                                         !IsBlank(
                                             LookUp(
-                                                ReqProcessTest,
-                                                User().Email = 'Approver 2'.Email
+                                                LevelApproveTest,
+                                                User().Email = IdUser.Email && Level.Value="Approver 2"
                                             )
                                         ),
                                         Patch(

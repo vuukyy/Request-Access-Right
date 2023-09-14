@@ -368,7 +368,15 @@
 
                     gal_Request As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =Request_Test
+                        Items: |-
+                            =SortByColumns(
+                                Filter(
+                                    Request_Test,
+                                    'Created By'.Email = User().Email
+                                ),
+                                "Created",
+                                SortOrder.Descending
+                            )
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
