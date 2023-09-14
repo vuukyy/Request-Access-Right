@@ -380,7 +380,7 @@
                                     Color: =RGBA(128, 128, 128, 1)
                                     OnSelect: |-
                                         =Navigate(
-                                            'Manage Roles',
+                                            'Mange Group Roles',
                                             ScreenTransition.Cover
                                         )
                                     Text: ="Manage Group Roles"
@@ -400,6 +400,11 @@
                                 Label44 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     Color: =RGBA(128, 128, 128, 1)
+                                    OnSelect: |-
+                                        =Navigate(
+                                            'Manage Users',
+                                            ScreenTransition.Cover
+                                        )
                                     Text: ="Manage Users"
                                     ZIndex: =3
 

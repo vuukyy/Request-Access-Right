@@ -1,4 +1,5 @@
 "'Mange Group Roles' As screen.'autoLayout_Sidebar_ver1.0'":
+    OnVisible: =Set(varCurrentTab, "ROLE")
 
     ScreenContainer8 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -223,23 +224,6 @@
                                 Width: =250
                                 ZIndex: =1
 
-                            Button6_4 As button:
-                                BorderThickness: =0
-                                OnSelect: |-
-                                    =NewForm('Edit Process Form');
-                                    Navigate(
-                                        'Edit Process',
-                                        ScreenTransition.Fade
-                                    )
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
-                                Size: =13
-                                Text: ="Create Group Role"
-                                Width: =200
-                                ZIndex: =2
-
                     Rectangle12_5 As rectangle:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -275,22 +259,20 @@
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
-                            Width: =400
+                            Width: =250
                             ZIndex: =2
 
                             "galReqProcess_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                                 DelayItemLoading: =true
-                                Items: =GroupRoleTest
+                                Items: =GroupTest
                                 Layout: =Layout.Vertical
-                                LayoutMinHeight: =287
-                                LayoutMinWidth: =320
                                 LoadingSpinner: =LoadingSpinner.Data
                                 ShowScrollbar: =false
                                 TemplatePadding: =0
-                                TemplateSize: =116
+                                TemplateSize: =80
                                 ZIndex: =1
 
-                                Title4_1 As label:
+                                Title10 As label:
                                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                                     Height: =Self.Size * 1.8
                                     OnSelect: =Select(Parent)
@@ -298,76 +280,42 @@
                                     PaddingLeft: =0
                                     PaddingRight: =0
                                     PaddingTop: =0
-                                    Text: =ThisItem.Title
+                                    Text: =ThisItem.CodeGroup
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
                                     X: =16
-                                    Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle4.Size*1.8 + 2 + Body2.Size*1.8)) / 2
+                                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
-                                Subtitle4_1 As label:
-                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                    Height: =Self.Size * 1.8
-                                    OnSelect: =Select(Parent)
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: |-
-                                        =ThisItem.'IDRole: CodeRole'.Value
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =Title4_1.Width
-                                    X: =Title4_1.X
-                                    Y: =Title4_1.Y + Title4_1.Height
-                                    ZIndex: =2
-
-                                Body2_1 As label:
-                                    Color: =RGBA(149, 149, 149, 1)
-                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                    Height: =Self.Size * 1.8
-                                    Italic: =true
-                                    OnSelect: =Select(Parent)
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Size: =10
-                                    Text: =Text(ThisItem.Created, "dd/mm/yyyy")
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =Title4_1.Width
-                                    X: =Title4_1.X
-                                    Y: =Subtitle4_1.Y + Subtitle4_1.Height
-                                    ZIndex: =3
-
-                                NextArrow4_1 As icon.ChevronRight:
+                                NextArrow7 As icon.ChevronRight:
                                     AccessibleLabel: =Self.Tooltip
                                     Color: =RGBA(166, 166, 166, 1)
                                     Height: =50
                                     Icon: =Icon.ChevronRight
                                     OnSelect: =Select(Parent)
-                                    PaddingBottom: =16
-                                    PaddingLeft: =16
-                                    PaddingRight: =16
-                                    PaddingTop: =16
+                                    PaddingBottom: =12
+                                    PaddingLeft: =12
+                                    PaddingRight: =12
+                                    PaddingTop: =12
                                     Tooltip: ="Xem chi tiết mục"
                                     Width: =50
                                     X: =Parent.TemplateWidth - Self.Width - 12
                                     Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                                    ZIndex: =4
+                                    ZIndex: =2
 
-                                Separator4_1 As rectangle:
+                                Separator10 As rectangle:
                                     Height: =8
                                     OnSelect: =Select(Parent)
                                     Width: =Parent.TemplateWidth
                                     Y: =Parent.TemplateHeight - Self.Height
-                                    ZIndex: =5
+                                    ZIndex: =3
 
-                                Rectangle13_1 As rectangle:
-                                    Height: =Parent.TemplateHeight - Separator4_1.Height
+                                Rectangle9 As rectangle:
+                                    Height: =Parent.TemplateHeight - Separator10.Height
                                     OnSelect: =Select(Parent)
                                     Visible: =ThisItem.IsSelected
                                     Width: =4
-                                    ZIndex: =6
+                                    ZIndex: =4
 
                         Container32_4 As groupContainer.verticalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
@@ -383,282 +331,282 @@
                             RadiusTopRight: =0
                             ZIndex: =3
 
-                            "'Detail Process Form_3' As formViewer":
-                                DataSource: =GroupRoleTest
-                                Item: =galReqProcess_1.Selected
-                                LayoutMinHeight: =250
-                                LayoutMinWidth: =400
-                                NumberOfColumns: =2
+                            Container26 As groupContainer.manualLayoutContainer:
+                                Fill: =RGBA(0, 60, 106, 1)
+                                FillPortions: =0
+                                Height: =50
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
                                 ZIndex: =1
 
-                                "'IDRole: CodeRole_DataCard1' As typedDataCard.comboBoxViewCard":
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDRole_x003a__x0020_CodeRole"
-                                    Default: |-
-                                        =ThisItem.'IDRole: CodeRole'
-                                    DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"IDRole_x003a__x0020_CodeRole")
-                                    Fill: =RGBA(0, 0, 0, 0)
+                                btn_User As button:
+                                    BorderThickness: =0
+                                    Fill: =Color.Transparent
                                     Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue25.Selected
-                                    Width: =465
-                                    X: =1
-                                    Y: =1
-                                    ZIndex: =1
+                                    HoverFill: =RGBA(17, 77, 133, 0.70)
+                                    OnSelect: =Set(varCurrentTab, Self.Text)
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =RGBA(17, 77, 133, 0.70)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Text: ="USER"
+                                    X: =160
+                                    ZIndex: =5
 
-                                    DataCardKey25 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue25 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@GroupRoleTest].IDRole_x003a__x0020_CodeRole)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =Choices(GroupRoleTest.IDRole_x003a__x0020_CodeRole,DataCardValue25.SearchText)
-                                        SelectMultiple: =false
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey25.Y + DataCardKey25.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage56 As label:
-                                        AutoHeight: =true
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue25.Y + DataCardValue25.Height
-                                        ZIndex: =3
-
-                                    StarVisible56 As label:
-                                        Align: =Align.Center
-                                        Height: =DataCardKey25.Height
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey25.Y
-                                        ZIndex: =4
-
-                                "'Tiêu đề_DataCard1' As typedDataCard.textualViewCard":
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="Title"
-                                    Default: =ThisItem.Title
-                                    DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"Title")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =40
-                                    Required: =true
-                                    Width: =465
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =2
-
-                                    DataCardKey1 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue1 As label:
-                                        AutoHeight: =true
-                                        DisplayMode: =Parent.DisplayMode
-                                        Height: =27
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Default
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey1.Y + DataCardKey1.Height + 5
-                                        ZIndex: =2
-
-                                IDGroup_DataCard1 As typedDataCard.comboBoxViewCard:
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDGroup"
-                                    Default: |-
-                                        =ThisItem.'IDUserGroup: Tiêu đề'
-                                    DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"IDUserGroup")
-                                    Fill: =RGBA(0, 0, 0, 0)
+                                btn_Resource As button:
+                                    BorderThickness: =0
+                                    Fill: =Color.Transparent
                                     Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue2.Selected
-                                    Width: =465
-                                    X: =1
-                                    Y: =0
-                                    ZIndex: =2
+                                    HoverFill: =RGBA(17, 77, 133, 0.70)
+                                    OnSelect: =Set(varCurrentTab, Self.Text)
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =RGBA(17, 77, 133, 0.70)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Text: ="RESOURCE"
+                                    X: =320
+                                    ZIndex: =6
 
-                                    DataCardKey2 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue2 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        IsSearchable: =false
-                                        Items: =Choices([@GroupRoleTest].IDUserGroup)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =[]
-                                        SelectMultiple: =false
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey2.Y + DataCardKey2.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage1 As label:
-                                        AutoHeight: =true
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue2.Y + DataCardValue2.Height
-                                        ZIndex: =3
-
-                                    StarVisible1 As label:
-                                        Align: =Align.Center
-                                        Height: =DataCardKey2.Height
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey2.Y
-                                        ZIndex: =4
-
-                                IDRole_DataCard1 As typedDataCard.comboBoxViewCard:
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDRole"
-                                    Default: =ThisItem.IDRole
-                                    DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@GroupRoleTest],DataSourceInfo.DisplayName,"IDRole")
-                                    Fill: =RGBA(0, 0, 0, 0)
+                                btn_Role As button:
+                                    BorderThickness: =0
+                                    Fill: =Color.Transparent
                                     Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue3.Selected
-                                    Width: =465
-                                    X: =0
-                                    Y: =1
-                                    ZIndex: =2
+                                    HoverFill: =RGBA(17, 77, 133, 0.70)
+                                    OnSelect: =Set(varCurrentTab, Self.Text)
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =RGBA(17, 77, 133, 0.70)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Text: ="ROLE"
+                                    ZIndex: =7
 
-                                    DataCardKey3 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
+                                Rectangle10 As rectangle:
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Height: =5
+                                    Width: =160
+                                    X: |
+                                        =Switch(
+                                            varCurrentTab,
+                                            "ROLE",
+                                            btn_Role.X,
+                                            "USER",
+                                            btn_User.X,
+                                            "RESOURCE",
+                                            btn_Resource.X
+                                        )
+                                    Y: =45
+                                    ZIndex: =8
 
-                                    DataCardValue3 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@GroupRoleTest].IDRole)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =Choices(GroupRoleTest.IDRole,DataCardValue3.SearchText)
-                                        SelectMultiple: =false
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey3.Y + DataCardKey3.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage2 As label:
-                                        AutoHeight: =true
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue3.Y + DataCardValue3.Height
-                                        ZIndex: =3
-
-                                    StarVisible2 As label:
-                                        Align: =Align.Center
-                                        Height: =DataCardKey3.Height
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey3.Y
-                                        ZIndex: =4
-
-                            Container25_9 As groupContainer.horizontalAutoLayoutContainer:
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =70
-                                LayoutAlignItems: =LayoutAlignItems.Center
-                                LayoutJustifyContent: =LayoutJustifyContent.End
+                            tbl_Role As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
                                 LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =10
-                                PaddingLeft: =10
-                                PaddingRight: =10
-                                PaddingTop: =10
-                                RadiusBottomLeft: =0
-                                RadiusBottomRight: =0
-                                RadiusTopLeft: =0
-                                RadiusTopRight: =0
+                                Visible: =varCurrentTab = "ROLE"
                                 ZIndex: =2
 
-                                btn_SetApprover_11 As button:
-                                    OnSelect: |-
-                                        =EditForm('Edit Process Form');
-                                        Navigate(
-                                            'Edit Process',
-                                            ScreenTransition.Cover
-                                        );
-                                    RadiusBottomLeft: =5
-                                    RadiusBottomRight: =5
-                                    RadiusTopLeft: =5
-                                    RadiusTopRight: =5
-                                    Size: =13
-                                    Text: ="Edit Group Role"
-                                    Width: =150
-                                    ZIndex: =2
+                                "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                                    DelayItemLoading: =true
+                                    Items: =GroupRoleTest
+                                    Layout: =Layout.Vertical
+                                    LayoutMinHeight: =287
+                                    LayoutMinWidth: =320
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =0
+                                    TemplateSize: =104
+                                    ZIndex: =1
+
+                                    Image1 As image:
+                                        Height: =72
+                                        OnSelect: =Select(Parent)
+                                        RadiusBottomLeft: =8
+                                        RadiusBottomRight: =8
+                                        RadiusTopLeft: =8
+                                        RadiusTopRight: =8
+                                        Width: =72
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                        ZIndex: =1
+
+                                    Title11 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.'Tiêu đề'
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 173
+                                        X: =103
+                                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle8.Size * 1.8)) / 2
+                                        ZIndex: =2
+
+                                    Subtitle8 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.ID
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Title11.Width
+                                        X: =Title11.X
+                                        Y: =Title11.Y + Title11.Height
+                                        ZIndex: =3
+
+                                    NextArrow8 As icon.ChevronRight:
+                                        AccessibleLabel: =Self.Tooltip
+                                        Color: =RGBA(166, 166, 166, 1)
+                                        Height: =50
+                                        Icon: =Icon.ChevronRight
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =16
+                                        PaddingLeft: =16
+                                        PaddingRight: =16
+                                        PaddingTop: =16
+                                        Tooltip: ="Xem chi tiết mục"
+                                        Width: =50
+                                        X: =Parent.TemplateWidth - Self.Width - 12
+                                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                        ZIndex: =4
+
+                                    Separator12 As rectangle:
+                                        Height: =8
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.TemplateWidth
+                                        Y: =Parent.TemplateHeight - Self.Height
+                                        ZIndex: =5
+
+                                    Rectangle16 As rectangle:
+                                        Height: =Parent.TemplateHeight - Separator12.Height
+                                        OnSelect: =Select(Parent)
+                                        Visible: =ThisItem.IsSelected
+                                        Width: =4
+                                        ZIndex: =6
+
+                            tbl_Resource As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Visible: =varCurrentTab = "RESOURCE"
+                                ZIndex: =3
+
+                                "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                                    DelayItemLoading: =true
+                                    Items: =ResourceTest
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =0
+                                    TemplateSize: =90
+                                    ZIndex: =1
+
+                                    Title14 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.'Tiêu đề'
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle11.Size * 1.8)) / 2
+                                        ZIndex: =1
+
+                                    Subtitle11 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.Code
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Title14.Width
+                                        X: =Title14.X
+                                        Y: =Title14.Y + Title14.Height
+                                        ZIndex: =2
+
+                                    Separator14 As rectangle:
+                                        Height: =8
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.TemplateWidth
+                                        Y: =Parent.TemplateHeight - Self.Height
+                                        ZIndex: =4
+
+                            tbl_User As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Visible: =varCurrentTab = "USER"
+                                ZIndex: =4
+
+                                "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                    DelayItemLoading: =true
+                                    Items: =UserGroupTest
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =0
+                                    TemplateSize: =80
+                                    ZIndex: =1
+
+                                    Title16 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.'Tiêu đề'
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                        ZIndex: =1
+
+                                    NextArrow12 As icon.ChevronRight:
+                                        AccessibleLabel: =Self.Tooltip
+                                        Color: =RGBA(166, 166, 166, 1)
+                                        Height: =50
+                                        Icon: =Icon.ChevronRight
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =12
+                                        PaddingLeft: =12
+                                        PaddingRight: =12
+                                        PaddingTop: =12
+                                        Tooltip: ="Xem chi tiết mục"
+                                        Width: =50
+                                        X: =Parent.TemplateWidth - Self.Width - 12
+                                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                        ZIndex: =2
+
+                                    Separator17 As rectangle:
+                                        Height: =8
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.TemplateWidth
+                                        Y: =Parent.TemplateHeight - Self.Height
+                                        ZIndex: =3
+
+                                    Rectangle20 As rectangle:
+                                        Height: =Parent.TemplateHeight - Separator17.Height
+                                        OnSelect: =Select(Parent)
+                                        Visible: =ThisItem.IsSelected
+                                        Width: =4
+                                        ZIndex: =4
 

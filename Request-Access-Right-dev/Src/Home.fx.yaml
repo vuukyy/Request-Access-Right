@@ -372,7 +372,7 @@
                             =SortByColumns(
                                 Filter(
                                     Request_Test,
-                                    'Created By'.Email = User().Email
+                                    'Người Tạo'.Email = User().Email
                                 ),
                                 "Created",
                                 SortOrder.Descending

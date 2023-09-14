@@ -325,7 +325,7 @@
                                     PaddingLeft: =0
                                     PaddingRight: =0
                                     PaddingTop: =0
-                                    Text: =ThisItem.Title
+                                    Text: =ThisItem.'Tiêu đề'
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
                                     X: =16
@@ -343,7 +343,7 @@
                                     PaddingRight: =0
                                     PaddingTop: =0
                                     Size: =10
-                                    Text: =Text(ThisItem.Created, "dd/mm/yyyy")
+                                    Text: =Text(ThisItem.'Đã tạo', "dd/mm/yyyy")
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title4_2.Width
                                     X: =16
@@ -402,10 +402,25 @@
                                 NumberOfColumns: =2
                                 ZIndex: =1
 
+                                IDUser_DataCard6 As typedDataCard.comboBoxMultiSelectViewCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="IDUser"
+                                    Default: =ThisItem.IDUser
+                                    DisplayMode: =DisplayMode.View
+                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser")
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    Required: =false
+                                    Update: =DataCardValue4.SelectedItems
+                                    Width: =465
+                                    X: =1
+                                    Y: =1
+                                    ZIndex: =1
+
                                 "'Tiêu đề_DataCard3' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.Title
+                                    Default: =ThisItem.'Tiêu đề'
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -504,71 +519,6 @@
                                         Y: =DataCardKey7.Y
                                         ZIndex: =4
 
-                                IDUser_DataCard1 As typedDataCard.comboBoxViewCard:
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDUser"
-                                    Default: =ThisItem.IDUser
-                                    DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue6.Selected
-                                    Width: =465
-                                    X: =0
-                                    Y: =1
-                                    ZIndex: =2
-
-                                    DataCardKey6 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue6 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@UserGroupTest].IDUser)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =Choices(UserGroupTest.IDUser,DataCardValue6.SearchText)
-                                        SelectMultiple: =false
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey6.Y + DataCardKey6.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage4 As label:
-                                        AutoHeight: =true
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue6.Y + DataCardValue6.Height
-                                        ZIndex: =3
-
-                                    StarVisible4 As label:
-                                        Align: =Align.Center
-                                        Height: =DataCardKey6.Height
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey6.Y
-                                        ZIndex: =4
-
                                 "'IDUser: UserName_DataCard1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="IDUser_x003a__x0020_UserName"
@@ -581,7 +531,7 @@
                                     Required: =false
                                     Update: =DataCardValue8.Selected
                                     Width: =465
-                                    X: =1
+                                    X: =0
                                     Y: =1
                                     ZIndex: =2
 
