@@ -269,8 +269,8 @@
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: |-
                                     =Set(
-                                        varIDGroupUser,
-                                        First(UserGroupTest).'IDGroup: ID'.Id
+                                        varIDGroup,
+                                        ThisItem.ID
                                     )
                                 ShowScrollbar: =false
                                 TemplatePadding: =0
@@ -318,8 +318,11 @@
                             "Gallery13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                                 DelayItemLoading: =true
                                 DisplayMode: =DisplayMode.View
-                                Items: =Filter(UserGroupTest, galUserGroup.Selected.ID = varIDGroupUser)
+                                Items: |-
+                                    =Filter(UserGroupTest, varIDGroup = 'IDGroup: ID'.Id)
                                 Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =200
                                 LoadingSpinner: =LoadingSpinner.Data
                                 Selectable: =false
                                 TemplatePadding: =0
@@ -439,6 +442,8 @@
                                     DelayItemLoading: =true
                                     Items: =GroupRoleTest
                                     Layout: =Layout.Vertical
+                                    LayoutMinHeight: =287
+                                    LayoutMinWidth: =320
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =0
                                     TemplateSize: =90
