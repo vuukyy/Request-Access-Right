@@ -200,9 +200,9 @@
                                 IDReqType_DataCard1 As typedDataCard.comboBoxViewCard:
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="IDReqType"
-                                    Default: =ThisItem.IDReqType
+                                    Default: =ThisItem.ReqType
                                     DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"IDReqType")
+                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqType")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
@@ -228,7 +228,7 @@
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
                                         IsSearchable: =false
-                                        Items: =Choices([@Request_Test].IDReqType)
+                                        Items: =Choices([@Request_Test].ReqType)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
                                         SearchItems: =[]
@@ -263,83 +263,17 @@
                                         Y: =DataCardKey47.Y
                                         ZIndex: =4
 
-                                "'IDReqType: Tiêu đề_DataCard1' As typedDataCard.comboBoxViewCard":
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDReqType_x003a__x0020_Ti_x00ea_"
-                                    Default: =ThisItem.IDReqType_x003a__x0020_Ti_x00ea_
-                                    DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"IDReqType_x003a__x0020_Ti_x00ea_")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue50.Selected
-                                    Width: =497
-                                    X: =0
-                                    Y: =1
-                                    ZIndex: =2
-
-                                    DataCardKey50 As label:
-                                        AutoHeight: =true
-                                        Height: =34
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue50 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        IsSearchable: =false
-                                        Items: =Choices([@Request_Test].IDReqType_x003a__x0020_Ti_x00ea_)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =[]
-                                        SelectMultiple: =false
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey50.Y + DataCardKey50.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage29 As label:
-                                        AutoHeight: =true
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue50.Y + DataCardValue50.Height
-                                        ZIndex: =3
-
-                                    StarVisible29 As label:
-                                        Align: =Align.Center
-                                        Height: =DataCardKey50.Height
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey50.Y
-                                        ZIndex: =4
-
                                 Reason_DataCard1 As typedDataCard.textualViewCard:
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Reason"
-                                    Default: =ThisItem.Reason
+                                    Default: =ThisItem.ReqReason
                                     DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Reason")
+                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqReason")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =1
                                     ZIndex: =2
 
@@ -369,16 +303,16 @@
                                 "'Request Permission_DataCard1' As typedDataCard.comboBoxViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="RequestPermission"
-                                    Default: =ThisItem.RequestPermission
+                                    Default: =ThisItem.ReqPermission
                                     DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"RequestPermission")
+                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqPermission")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
                                     Update: =DataCardValue56.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =2
+                                    X: =1
+                                    Y: =1
                                     ZIndex: =2
 
                                     DataCardKey56 As label:
@@ -397,7 +331,7 @@
                                         DisplayFields: =["Value"]
                                         DisplayMode: =Parent.DisplayMode
                                         IsSearchable: =false
-                                        Items: =Choices([@Request_Test].RequestPermission)
+                                        Items: =Choices([@Request_Test].ReqPermission)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["Value"]
                                         SearchItems: =[]
@@ -435,14 +369,14 @@
                                 Description_DataCard5 As typedDataCard.textualViewCard:
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Description"
-                                    Default: =ThisItem.Description
+                                    Default: =ThisItem.ReqDescription
                                     DisplayMode: =DisplayMode.View
-                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Description")
+                                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqDescription")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =2
                                     ZIndex: =2
 
@@ -480,8 +414,8 @@
                                     Required: =false
                                     Update: =DataCardValue58.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =3
+                                    X: =1
+                                    Y: =2
                                     ZIndex: =2
 
                                     DataCardKey58 As label:
@@ -546,7 +480,7 @@
                                     Required: =false
                                     Update: =DataCardValue59.Selected
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =3
                                     ZIndex: =2
 
@@ -613,8 +547,8 @@
                                     Required: =false
                                     Update: =DataCardValue60.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =4
+                                    X: =1
+                                    Y: =3
                                     ZIndex: =2
 
                                     DataCardKey60 As label:
@@ -678,7 +612,7 @@
                                     Required: =false
                                     Update: =DataCardValue61.Selected
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =4
                                     ZIndex: =2
 
@@ -743,8 +677,8 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =0
-                                    Y: =5
+                                    X: =1
+                                    Y: =4
                                     ZIndex: =2
 
                                     DataCardKey62 As label:
@@ -781,7 +715,7 @@
                                     Required: =false
                                     Update: =DataCardValue63.Selected
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =5
                                     ZIndex: =2
 
@@ -847,8 +781,8 @@
                                     Required: =false
                                     Update: =DataCardValue65.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =6
+                                    X: =1
+                                    Y: =5
                                     ZIndex: =2
 
                                     DataCardKey64 As label:
@@ -913,7 +847,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =6
                                     ZIndex: =2
 
@@ -951,8 +885,8 @@
                                     Required: =false
                                     Update: =DataCardValue70.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =7
+                                    X: =1
+                                    Y: =6
                                     ZIndex: =2
 
                                     DataCardKey70 As label:
@@ -1015,7 +949,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =7
                                     ZIndex: =2
 
@@ -1053,8 +987,8 @@
                                     Required: =false
                                     Update: =DataCardValue72.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =8
+                                    X: =1
+                                    Y: =7
                                     ZIndex: =2
 
                                     DataCardKey72 As label:
@@ -1118,7 +1052,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =8
                                     ZIndex: =2
 
@@ -1156,8 +1090,8 @@
                                     Required: =false
                                     Update: =DataCardValue74.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =9
+                                    X: =1
+                                    Y: =8
                                     ZIndex: =2
 
                                     DataCardKey74 As label:
@@ -1221,7 +1155,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =9
                                     ZIndex: =2
 
@@ -1259,8 +1193,8 @@
                                     Required: =false
                                     Update: =DataCardValue76.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =10
+                                    X: =1
+                                    Y: =9
                                     ZIndex: =2
 
                                     DataCardKey76 As label:
@@ -1324,7 +1258,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =10
                                     ZIndex: =2
 
@@ -1362,8 +1296,8 @@
                                     Required: =false
                                     Update: =DataCardValue78.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =11
+                                    X: =1
+                                    Y: =10
                                     ZIndex: =2
 
                                     DataCardKey78 As label:
@@ -1427,7 +1361,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =11
                                     ZIndex: =2
 
@@ -1465,8 +1399,8 @@
                                     Required: =false
                                     Update: =DataCardValue80.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =12
+                                    X: =1
+                                    Y: =11
                                     ZIndex: =2
 
                                     DataCardKey80 As label:
@@ -1530,7 +1464,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =12
                                     ZIndex: =2
 
@@ -1568,8 +1502,8 @@
                                     Required: =false
                                     Update: =DataCardValue84.Selected
                                     Width: =497
-                                    X: =0
-                                    Y: =13
+                                    X: =1
+                                    Y: =12
                                     ZIndex: =2
 
                                     DataCardKey83 As label:
@@ -1633,7 +1567,7 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =13
                                     ZIndex: =2
 
@@ -1670,8 +1604,8 @@
                                     Height: =40
                                     Required: =false
                                     Width: =497
-                                    X: =0
-                                    Y: =14
+                                    X: =1
+                                    Y: =13
                                     ZIndex: =2
 
                                     DataCardKey86 As label:
@@ -1708,7 +1642,7 @@
                                     Required: =false
                                     Update: =DataCardValue87.SelectedItems
                                     Width: =497
-                                    X: =1
+                                    X: =0
                                     Y: =14
                                     ZIndex: =2
 
