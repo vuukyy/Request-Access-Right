@@ -5533,6 +5533,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varIDGroup"
+                }
+              ],
+              "properties": {
+                "member": "varIDGroup",
+                "module": "App",
+                "type": "App"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varIDGroup",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.createdBy"
                 }
               ],

@@ -7,9 +7,10 @@
         ClearCollect(
             colUserList,
             ForAll(
-                Table(ParseJSON(GetUserfromUserGroupList.Run(varIDGroup).user)),
+                Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user)),
                 {
-                    User: ThisRecord.Value
+                    User: Text(Value.User),
+                    Email: Text(Value.Email)
                 }
             )
         )
@@ -328,21 +329,20 @@
                             Width: =200
                             ZIndex: =2
 
-                            "Gallery14 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                            "Gallery14 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                                 DelayItemLoading: =true
                                 Height: =50
                                 Items: =colUserList
                                 Layout: =Layout.Vertical
-                                LayoutMinHeight: =287
                                 LayoutMinWidth: =200
                                 LoadingSpinner: =LoadingSpinner.Data
                                 ShowScrollbar: =false
                                 TemplatePadding: =0
-                                TemplateSize: =50
+                                TemplateSize: =90
                                 Width: =200
                                 ZIndex: =1
 
-                                Title13 As label:
+                                Title11 As label:
                                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                                     Height: =Self.Size * 1.8
                                     OnSelect: =Select(Parent)
@@ -353,9 +353,31 @@
                                     Text: =ThisItem.User
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
-                                    X: =1
-                                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                    X: =16
+                                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle8.Size * 1.8)) / 2
                                     ZIndex: =1
+
+                                Subtitle8 As label:
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =ThisItem.Email
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Title11.Width
+                                    X: =Title11.X
+                                    Y: =Title11.Y + Title11.Height
+                                    ZIndex: =2
+
+                                Separator12 As rectangle:
+                                    Height: =8
+                                    OnSelect: =Select(Parent)
+                                    Width: =Parent.TemplateWidth
+                                    Y: =Parent.TemplateHeight - Self.Height
+                                    ZIndex: =4
 
                         Container32_4 As groupContainer.verticalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
