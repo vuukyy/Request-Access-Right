@@ -267,6 +267,7 @@
                                 Items: =GroupTest
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
+                                OnSelect: =Set(varIDGroup, ThisItem.ID)
                                 ShowScrollbar: =false
                                 TemplatePadding: =0
                                 TemplateSize: =80
