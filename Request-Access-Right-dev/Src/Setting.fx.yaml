@@ -382,7 +382,7 @@
                                         =Navigate(
                                             'Mange Group Roles',
                                             ScreenTransition.Cover
-                                        )
+                                        );
                                     Text: ="Manage Group Roles"
                                     ZIndex: =1
 

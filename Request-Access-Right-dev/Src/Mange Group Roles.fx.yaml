@@ -1,5 +1,13 @@
 "'Mange Group Roles' As screen.'autoLayout_Sidebar_ver1.0'":
-    OnVisible: =Set(varCurrentTab, "ROLE")
+    OnVisible: |-
+        =Set(
+            varCurrentTab,
+            "ROLE"
+        );
+        Set(
+            userList,
+            GetUserfromUserGroupList.Run(varIDGroup)
+        )
 
     ScreenContainer8 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -318,8 +326,7 @@
                             "Gallery13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                                 DelayItemLoading: =true
                                 DisplayMode: =DisplayMode.View
-                                Items: |-
-                                    =Filter(UserGroupTest, varIDGroup = 'IDGroup: ID'.Id)
+                                Items: =galUserGroup.Selected
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =287
                                 LayoutMinWidth: =200
@@ -329,20 +336,34 @@
                                 TemplateSize: =50
                                 ZIndex: =1
 
-                                Title15 As label:
-                                    Height: =Self.Size * 1.8
-                                    OnSelect: =Select(Parent)
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: |-
-                                        =ThisItem.'IDUser: ID'.Value
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =Parent.TemplateWidth - 86
-                                    X: =16
-                                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                "Gallery14 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                    DelayItemLoading: =true
+                                    Height: =50
+                                    Items: |-
+                                        =Filter(UserGroupTest,'IDGroup: ID'.Id = ThisItem.ID)
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    ShowScrollbar: =false
+                                    TemplatePadding: =0
+                                    TemplateSize: =50
+                                    Width: =200
                                     ZIndex: =1
+
+                                    Title13 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: |-
+                                            =ThisItem.'IDUser: ID'.Value
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                        ZIndex: =1
 
                         Container32_4 As groupContainer.verticalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
