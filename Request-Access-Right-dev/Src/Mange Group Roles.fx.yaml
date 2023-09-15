@@ -334,6 +334,7 @@
                                 Height: =50
                                 Items: =colUserList
                                 Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
                                 LayoutMinWidth: =200
                                 LoadingSpinner: =LoadingSpinner.Data
                                 ShowScrollbar: =false
