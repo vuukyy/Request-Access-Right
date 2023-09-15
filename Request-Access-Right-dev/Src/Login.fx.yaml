@@ -136,10 +136,6 @@ Login As screen:
                     );
                     Reset(txtEmail);
                     Reset(txtPass);
-                    Set(
-                        testEmail,
-                        "lieu.nguyen@jrgvn.com"
-                    )
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
