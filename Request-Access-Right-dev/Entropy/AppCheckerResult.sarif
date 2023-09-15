@@ -1244,17 +1244,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galReqProcess_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galUserGroup.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galReqProcess_1"
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galUserGroup"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galReqProcess_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galUserGroup.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -1274,17 +1274,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galReqProcess_1.TabIndex"
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galUserGroup.TabIndex"
                 }
               ],
               "properties": {
                 "member": "TabIndex",
                 "module": "Mange Group Roles",
-                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galReqProcess_1"
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galUserGroup"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galReqProcess_1.TabIndex",
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.ApproverList_4.galUserGroup.TabIndex",
                   "relativeAddress": 0
                 }
               }
@@ -4843,6 +4843,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container29.Gallery13.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Mange Group Roles",
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container29.Gallery13"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container29.Gallery13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Detail_Req_Approval.ScreenContainer3_2.BottomContainer3_2.MainContainer3_2.Container13_2.Container17_2.Container20.FormViewer4.'Request Permission_DataCard1'.DataCardValue56.AccessibleLabel"
                 }
               ],
@@ -5383,6 +5413,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container29.Gallery13.TabIndex"
+                }
+              ],
+              "properties": {
+                "member": "TabIndex",
+                "module": "Mange Group Roles",
+                "type": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container29.Gallery13"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Mange Group Roles'.ScreenContainer8.BottomContainer6.MainContainer8.Container11_5.Approver_4.Container29.Gallery13.TabIndex",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.colSidebarMenu"
                 }
               ],
@@ -5544,36 +5604,6 @@
               "physicalLocation": {
                 "address": {
                   "fullyQualifiedName": "App.varIDItem",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varIDGroup"
-                }
-              ],
-              "properties": {
-                "member": "varIDGroup",
-                "module": "App",
-                "type": "App"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varIDGroup",
                   "relativeAddress": 0
                 }
               }
