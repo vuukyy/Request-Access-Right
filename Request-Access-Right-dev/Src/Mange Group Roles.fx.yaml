@@ -493,7 +493,7 @@
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
-                                        Text: =ThisItem.'Tiêu đề'
+                                        Text: =ThisItem.Title
                                         VerticalAlign: =VerticalAlign.Top
                                         Width: =Parent.TemplateWidth - 86
                                         X: =16
@@ -572,7 +572,7 @@
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
-                                        Text: =ThisItem.'Tiêu đề'
+                                        Text: =ThisItem.Title
                                         VerticalAlign: =VerticalAlign.Top
                                         Width: =Parent.TemplateWidth - 86
                                         X: =16
@@ -628,7 +628,7 @@
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
-                                        Text: =ThisItem.'Tiêu đề'
+                                        Text: =ThisItem.Title
                                         VerticalAlign: =VerticalAlign.Top
                                         Width: =Parent.TemplateWidth - 86
                                         X: =16
