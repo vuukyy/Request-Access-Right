@@ -1,6 +1,6 @@
-Approval_screen As screen:
+Approval_screen_HOD As screen:
 
-    Container11_10 As groupContainer.verticalAutoLayoutContainer:
+    Container11_13 As groupContainer.verticalAutoLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)
         DropShadow: =DropShadow.None
         Height: =Parent.Height
@@ -13,17 +13,17 @@ Approval_screen As screen:
         Width: =1366
         ZIndex: =1
 
-        Label5 As label:
+        Label5_2 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(56, 96, 178, 1)
             Height: =60
             Size: =18
-            Text: ="Approval Screen"
+            Text: ="HOD Screen"
             Width: =Parent.Width
             ZIndex: =1
 
-        Container12_2 As groupContainer.horizontalAutoLayoutContainer:
+        Container12_3 As groupContainer.horizontalAutoLayoutContainer:
             FillPortions: =0
             Height: =50
             LayoutAlignItems: =LayoutAlignItems.Center
@@ -32,54 +32,54 @@ Approval_screen As screen:
             LayoutMode: =LayoutMode.Auto
             ZIndex: =2
 
-            Label6_1 As label:
+            Label6_2 As label:
                 Text: =""
                 Width: =60
                 ZIndex: =1
 
-            Label11_12 As label:
+            Label11_17 As label:
                 FontWeight: =FontWeight.Bold
                 Text: ="Title"
                 Width: =400
                 ZIndex: =2
 
-            Label11_13 As label:
+            Label11_18 As label:
                 FontWeight: =FontWeight.Bold
                 Text: ="Type"
                 Width: =250
                 ZIndex: =3
 
-            Label11_14 As label:
+            Label11_19 As label:
                 FontWeight: =FontWeight.Bold
                 Text: ="Permission"
                 Width: =200
                 ZIndex: =4
 
-            Label11_15 As label:
+            Label11_20 As label:
                 FontWeight: =FontWeight.Bold
                 Text: ="Status"
                 Width: =200
                 ZIndex: =5
 
-            Label11_16 As label:
+            Label11_21 As label:
                 Text: =""
                 Width: =80
                 ZIndex: =6
 
-        gal_Request_1 As gallery.galleryVertical:
+        gal_Request_2 As gallery.galleryVertical:
             DelayItemLoading: =true
             Items: |-
                 =If(
                     !IsBlank(
                         LookUp(
-                            LevelApproveTest,
-                            User().Email = IdUser.Email && Level.Value = "Approver 1"
+                            Request_Test,
+                            User().Email = HOD.Email
                         )
                     ),
                     SortByColumns(
                         Filter(
                             Request_Test,
-                            Status.Value = "Created" && 'Created By'.Department = "DTS"
+                            Status.Value = "Created"
                         ),
                         "Created",
                         SortOrder.Descending
@@ -88,13 +88,13 @@ Approval_screen As screen:
                         !IsBlank(
                             LookUp(
                                 LevelApproveTest,
-                                User().Email = IdUser.Email && Level.Value = "Approver 2"
+                                User().Email = IdUser.Email && Level.Value = "Approver 3"
                             )
                         ),
                         SortByColumns(
                             Filter(
                                 Request_Test,
-                                Status.Value = "Approver 1 approved" && 'Created By'.Department = "DTS"
+                                Status.Value = "Approver 2 approved" && 'ReqType: ID'.Value = "2"
                             ),
                             "Created",
                             SortOrder.Descending
@@ -109,16 +109,16 @@ Approval_screen As screen:
             TemplateSize: =60
             ZIndex: =3
 
-            Label14_2 As label:
+            Label14_3 As label:
                 Height: =43
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.ReqType.Value
                 Width: =211
-                X: =456
+                X: =419
                 Y: =7
                 ZIndex: =1
 
-            Label15_2 As label:
+            Label15_3 As label:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Title
                 Width: =303
@@ -126,27 +126,26 @@ Approval_screen As screen:
                 Y: =10
                 ZIndex: =2
 
-            Label16_5 As label:
+            Label16_7 As label:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.ReqPermission.Value
-                X: =713
-                Y: =10
+                X: =725
+                Y: =7
                 ZIndex: =3
 
-            icon_EyeHome_1 As icon.View:
+            icon_EyeHome_2 As icon.View:
                 Height: =20
                 Icon: =Icon.View
-                OnSelect: =Navigate(Approval_screen_detail,ScreenTransition.Fade)
+                OnSelect: =Navigate(Approval_screen_HOD_detail,ScreenTransition.Fade)
                 Width: =24
                 X: =18
                 Y: =20
                 ZIndex: =8
 
-            Label16_6 As label:
+            Label16_8 As label:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Status.Value
                 Width: =170
-                X: =909
-                Y: =10
+                X: =917
                 ZIndex: =9
 
