@@ -272,11 +272,10 @@
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: |-
-                                    =
-                                    ClearCollect(
+                                    =ClearCollect(
                                         colUserList,
                                         ForAll(
-                                            Table(ParseJSON(GetUserfromUserGroupList.Run(ThisItem.ID).user)),
+                                            Table(ParseJSON(GetUserfromUserGroupList.Run(ThisItem.ID).user).User),
                                             {
                                                 User: Text(Value.User),
                                                 Email: Text(Value.Email)
@@ -365,7 +364,6 @@
                                     PaddingTop: =0
                                     Text: =ThisItem.Email
                                     VerticalAlign: =VerticalAlign.Top
-                                    Width: =Title11.Width
                                     X: =Title11.X
                                     Y: =Title11.Y + Title11.Height
                                     ZIndex: =2
