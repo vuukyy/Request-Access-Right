@@ -275,7 +275,7 @@
                                     =ClearCollect(
                                         colUserList,
                                         ForAll(
-                                            Table(ParseJSON(GetUserfromUserGroupList.Run(ThisItem.ID).user).User),
+                                            Table(ParseJSON(GetUserfromUserGroupList.Run(ThisItem.ID).user)),
                                             {
                                                 DisplayName: Text(Value.DisplayName),
                                                 Email: Text(Value.Email)
