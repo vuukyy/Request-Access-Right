@@ -4,16 +4,6 @@
             varCurrentTab,
             "ROLE"
         );
-        ClearCollect(
-            colUserList,
-            ForAll(
-                Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user)),
-                {
-                    User: Text(Value.User),
-                    Email: Text(Value.Email)
-                }
-            )
-        )
 
     ScreenContainer8 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -282,9 +272,16 @@
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: |-
-                                    =Set(
-                                        varIDGroup,
-                                        ThisItem.ID
+                                    =
+                                    ClearCollect(
+                                        colUserList,
+                                        ForAll(
+                                            Table(ParseJSON(GetUserfromUserGroupList.Run(ThisItem.ID).user)),
+                                            {
+                                                User: Text(Value.User),
+                                                Email: Text(Value.Email)
+                                            }
+                                        )
                                     )
                                 ShowScrollbar: =false
                                 TemplatePadding: =0
@@ -493,7 +490,7 @@
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
-                                        Text: =ThisItem.Title
+                                        Text: =ThisItem.'Tiêu đề'
                                         VerticalAlign: =VerticalAlign.Top
                                         Width: =Parent.TemplateWidth - 86
                                         X: =16
@@ -572,7 +569,7 @@
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
-                                        Text: =ThisItem.Title
+                                        Text: =ThisItem.'Tiêu đề'
                                         VerticalAlign: =VerticalAlign.Top
                                         Width: =Parent.TemplateWidth - 86
                                         X: =16
@@ -628,7 +625,7 @@
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
-                                        Text: =ThisItem.Title
+                                        Text: =ThisItem.'Tiêu đề'
                                         VerticalAlign: =VerticalAlign.Top
                                         Width: =Parent.TemplateWidth - 86
                                         X: =16
