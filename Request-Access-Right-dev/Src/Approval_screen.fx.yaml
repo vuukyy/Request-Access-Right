@@ -79,7 +79,7 @@ Approval_screen As screen:
                     SortByColumns(
                         Filter(
                             Request_Test,
-                            Status.Value = "Created" && 'Created By'.Department = "DTS"
+                            Status.Value = "Created" && 'Người Tạo'.Department = "DTS"
                         ),
                         "Created",
                         SortOrder.Descending
@@ -94,7 +94,7 @@ Approval_screen As screen:
                         SortByColumns(
                             Filter(
                                 Request_Test,
-                                Status.Value = "Approver 1 approved" && 'Created By'.Department = "DTS"
+                                Status.Value = "Approver 1 approved" && 'Người Tạo'.Department = "DTS"
                             ),
                             "Created",
                             SortOrder.Descending
