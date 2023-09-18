@@ -320,22 +320,22 @@
                                 NumberOfColumns: =1
                                 ZIndex: =1
 
-                                IDUser_DataCard1 As typedDataCard.comboBoxMultiSelectEditCard:
+                                Users_DataCard2 As typedDataCard.comboBoxMultiSelectEditCard:
                                     BorderStyle: =BorderStyle.Solid
-                                    DataField: ="IDUser"
-                                    Default: =ThisItem.IDUser
+                                    DataField: ="Users"
+                                    Default: =ThisItem.Users
                                     DisplayMode: =Parent.DisplayMode
-                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"IDUser")
+                                    DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"Users")
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =50
                                     Required: =false
-                                    Update: =DataCardValue3.SelectedItems
+                                    Update: =DataCardValue2.SelectedItems
                                     Width: =1330
                                     X: =0
                                     Y: =2
                                     ZIndex: =1
 
-                                    DataCardKey3 As label:
+                                    DataCardKey2 As label:
                                         AutoHeight: =true
                                         Height: =34
                                         Text: =Parent.DisplayName
@@ -345,22 +345,23 @@
                                         Y: =10
                                         ZIndex: =1
 
-                                    DataCardValue3 As combobox:
+                                    DataCardValue2 As combobox:
                                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                         DefaultSelectedItems: =Parent.Default
-                                        DisplayFields: =["Value"]
+                                        DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
-                                        Items: =Choices([@UserGroupTest].IDUser)
+                                        Items: =Choices([@UserGroupTest].Users)
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        SearchFields: =["Value"]
-                                        SearchItems: =Choices(UserGroupTest.IDUser,DataCardValue3.SearchText)
+                                        SearchFields: =["DisplayName"]
+                                        SearchItems: =Choices(UserGroupTest.Users,DataCardValue2.SearchText)
+                                        Template: =ListItemTemplate.Person
                                         Tooltip: =Parent.DisplayName
                                         Width: =Parent.Width - 60
                                         X: =30
-                                        Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                                        Y: =DataCardKey2.Y + DataCardKey2.Height + 5
                                         ZIndex: =2
 
-                                    ErrorMessage3 As label:
+                                    ErrorMessage2 As label:
                                         AutoHeight: =true
                                         Height: =10
                                         Live: =Live.Assertive
@@ -372,23 +373,23 @@
                                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                                         Width: =Parent.Width - 60
                                         X: =30
-                                        Y: =DataCardValue3.Y + DataCardValue3.Height
+                                        Y: =DataCardValue2.Y + DataCardValue2.Height
                                         ZIndex: =3
 
-                                    StarVisible3 As label:
+                                    StarVisible2 As label:
                                         Align: =Align.Center
-                                        Height: =DataCardKey3.Height
+                                        Height: =DataCardKey2.Height
                                         Text: ="*"
                                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                         Width: =30
                                         Wrap: =false
-                                        Y: =DataCardKey3.Y
+                                        Y: =DataCardKey2.Y
                                         ZIndex: =4
 
                                 "'Tiêu đề_DataCard5' As typedDataCard.textualEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.Title
+                                    Default: =ThisItem.'Tiêu đề'
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
