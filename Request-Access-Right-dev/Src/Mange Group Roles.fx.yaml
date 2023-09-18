@@ -228,6 +228,15 @@
                                 Width: =250
                                 ZIndex: =1
 
+                            Button5 As button:
+                                OnSelect: |-
+                                    =ClearCollect(
+                                        colTest,
+                                        GetUserfromUserGroupList.Run(galUserGroup.Selected.ID)
+                                    )
+                                Text: ="Nút"
+                                ZIndex: =2
+
                     Rectangle12_5 As rectangle:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
