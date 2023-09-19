@@ -1621,7 +1621,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon8",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1864,7 +1864,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon8_1",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3416,7 +3416,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtEmail",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3693,7 +3693,8 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "OnSelect"
       ],
       "DynamicProperties": [
         {
@@ -3743,7 +3744,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtPass",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3944,6 +3945,11 @@
         {
           "Category": "Design",
           "PropertyName": "FocusedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
         }
       ],
