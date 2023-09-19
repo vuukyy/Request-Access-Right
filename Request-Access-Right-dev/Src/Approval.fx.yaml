@@ -308,12 +308,6 @@
                             Width: =250
                             ZIndex: =2
 
-                        Label11_6 As label:
-                            FontWeight: =FontWeight.Bold
-                            Text: ="Description"
-                            Width: =250
-                            ZIndex: =3
-
                         Label11_7 As label:
                             FontWeight: =FontWeight.Bold
                             Text: ="Created Date"
@@ -390,8 +384,7 @@
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Created
                             Width: =130
-                            X: =563
-                            Y: =5
+                            X: =312
                             ZIndex: =5
 
                         Label16_3 As label:
@@ -399,8 +392,7 @@
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.'Created By'.DisplayName
                             Width: =130
-                            X: =711
-                            Y: =5
+                            X: =458
                             ZIndex: =6
 
                         Group2 As group:
@@ -432,8 +424,7 @@
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Width: =130
-                                X: =861
-                                Y: =5
+                                X: =608
                                 ZIndex: =7
 
                             Label16_4 As label:
@@ -442,7 +433,6 @@
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
                                 Width: =130
-                                X: =861
-                                Y: =5
+                                X: =608
                                 ZIndex: =8
 
