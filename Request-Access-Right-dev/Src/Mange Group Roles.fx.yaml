@@ -284,10 +284,15 @@
                                     =ClearCollect(
                                         colUserList,
                                         ForAll(
-                                            Table(ParseJSON(GetUserfromUserGroupList.Run(ThisItem.ID).user)),
+                                            Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user).Users),
                                             {
+                                                //'@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser";
+                                                //Claims: "i:0#.f|membership|vinh.ho@jrgvn.com";
                                                 DisplayName: Text(Value.DisplayName),
-                                                Email: Text(Value.Email)
+                                                Email: Text(Value.Email),
+                                                //Picture: "https://pizzavietnam.sharepoint.com/sites/TESTSITE/_layouts/15/UserPhoto.aspx?Size=L&AccountName=vinh.ho@jrgvn.com";
+                                                Department: Text(Value.Department),
+                                                JobTitle: Text(Value.JobTitle)
                                             }
                                         )
                                     )

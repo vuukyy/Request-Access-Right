@@ -16,44 +16,6 @@
     "dependents": [],
     "id": "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098"
   },
-  "18063d73-f72e-4c5b-9d53-fe6625e8bfcb": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "aa162321-87b3-4021-8048-3d725214b6b6": {
-          "value": "shared_sharepointonline"
-        },
-        "workflowEntityId": {
-          "value": "2b96115e-7e53-ee11-be6f-6045bd57431a"
-        },
-        "workflowName": {
-          "value": "bd98a021-bf91-fbe2-c26c-9fc59e19295e"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "aa162321-87b3-4021-8048-3d725214b6b6"
-        },
-        "workflowEntityId": {
-          "value": "2b96115e-7e53-ee11-be6f-6045bd57431a"
-        },
-        "workflowName": {
-          "value": "bd98a021-bf91-fbe2-c26c-9fc59e19295e"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "GetUserfromUserGroupList"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "aa162321-87b3-4021-8048-3d725214b6b6"
-    },
-    "dependents": [],
-    "id": "18063d73-f72e-4c5b-9d53-fe6625e8bfcb"
-  },
   "20f7372a-76ff-4b32-b484-3e4123ea1e6a": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -320,7 +282,7 @@
       "6d604169-44a4-4adf-88a9-30db8d78d970",
       "fd5289da-6e80-418c-ac47-262f41b0428e",
       "ed00437a-841e-4ab9-94bd-4d3b1169096d",
-      "18063d73-f72e-4c5b-9d53-fe6625e8bfcb"
+      "d5d0e1ea-5b29-4a58-bafd-28bf3bb267e6"
     ],
     "id": "aa162321-87b3-4021-8048-3d725214b6b6"
   },
@@ -337,6 +299,44 @@
       "20f7372a-76ff-4b32-b484-3e4123ea1e6a"
     ],
     "id": "bf754817-acdc-44b9-ba22-24b4040d6070"
+  },
+  "d5d0e1ea-5b29-4a58-bafd-28bf3bb267e6": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "aa162321-87b3-4021-8048-3d725214b6b6": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "2b96115e-7e53-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "bd98a021-bf91-fbe2-c26c-9fc59e19295e"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "aa162321-87b3-4021-8048-3d725214b6b6"
+        },
+        "workflowEntityId": {
+          "value": "2b96115e-7e53-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "bd98a021-bf91-fbe2-c26c-9fc59e19295e"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "GetUserfromUserGroupList"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "aa162321-87b3-4021-8048-3d725214b6b6"
+    },
+    "dependents": [],
+    "id": "d5d0e1ea-5b29-4a58-bafd-28bf3bb267e6"
   },
   "eb5cc472-1e48-4b46-968f-4d6f8c917975": {
     "connectionRef": {
