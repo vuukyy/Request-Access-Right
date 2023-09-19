@@ -281,18 +281,24 @@
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: |-
-                                    =ClearCollect(
+                                    =Clear(colUserList);
+                                    Clear(colListUser);
+                                    ClearCollect(
                                         colUserList,
                                         ForAll(
-                                            Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user).User),
+                                            Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user)),
                                             {
-                                                DisplayName: Text(Value.DisplayName),
-                                                Email: Text(Value.Email),
-                                                Department: Text(Value.Department),
-                                                JobTitle: Text(Value.JobTitle)
+                                                User: ForAll(
+                                                    ThisRecord.Value.User,
+                                                    {
+                                                        DisplayName: Text(ThisRecord.DisplayName),
+                                                        Email: Text(ThisRecord.Email)
+                                                    }
+                                                )
                                             }
                                         )
-                                    )
+                                    );
+                                    ForAll(colUserList,Collect(colListUser,ThisRecord.User))
                                 ShowScrollbar: =false
                                 TemplatePadding: =0
                                 TemplateSize: =80
@@ -339,7 +345,7 @@
                             "Gallery14 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                                 DelayItemLoading: =true
                                 Height: =50
-                                Items: =colUserList
+                                Items: =colListUser
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =287
                                 LayoutMinWidth: =200

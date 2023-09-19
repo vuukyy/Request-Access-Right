@@ -87,45 +87,9 @@
                     RadiusTopRight: =0
                     ZIndex: =1
 
-                    Button6 As button:
-                        OnSelect: =Set(varResult,GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user)
-                        Text: ="Nút"
-                        ZIndex: =1
-
                 Container23 As groupContainer.horizontalAutoLayoutContainer:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     ZIndex: =2
-
-    DataTable3 As dataTable.datatable:
-        BorderStyle: =BorderStyle.Solid
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =500
-        Items: |-
-            =ForAll(
-                Table(ParseJSON(varResult).User),
-                {
-                    DisplayName: Text(Value.DisplayName)
-                }
-            )
-        Width: =800
-        X: =248
-        Y: =202
-        ZIndex: =2
-
-        Value_Cột1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Value"
-            FieldName: ="Value"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =1
-            Text: =ThisItem.DisplayName
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =6
 
