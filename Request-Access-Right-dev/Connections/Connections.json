@@ -1,22 +1,5 @@
 {
-  "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098": {
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Office 365 Groups",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1654/1.0.1654.3410/office365groups/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365groups",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "Office365Groups"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098"
-  },
-  "18063d73-f72e-4c5b-9d53-fe6625e8bfcb": {
+  "0792fa84-b5cf-40e8-85af-f6b9cfce3220": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
@@ -52,7 +35,24 @@
       "shared_sharepointonline": "aa162321-87b3-4021-8048-3d725214b6b6"
     },
     "dependents": [],
-    "id": "18063d73-f72e-4c5b-9d53-fe6625e8bfcb"
+    "id": "0792fa84-b5cf-40e8-85af-f6b9cfce3220"
+  },
+  "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Groups",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1654/1.0.1654.3410/office365groups/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365groups",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Groups"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098"
   },
   "20f7372a-76ff-4b32-b484-3e4123ea1e6a": {
     "connectionRef": {

@@ -228,15 +228,6 @@
                                 Width: =250
                                 ZIndex: =1
 
-                            Button5 As button:
-                                OnSelect: |-
-                                    =ClearCollect(
-                                        colTest,
-                                        GetUserfromUserGroupList.Run(galUserGroup.Selected.ID)
-                                    )
-                                Text: ="Nút"
-                                ZIndex: =2
-
                     Rectangle12_5 As rectangle:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -281,16 +272,24 @@
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: |-
-                                    =ClearCollect(
+                                    =Clear(colUserList);
+                                    Clear(colListUser);
+                                    ClearCollect(
                                         colUserList,
                                         ForAll(
-                                            Table(ParseJSON(GetUserfromUserGroupList.Run(ThisItem.ID).user)),
+                                            Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user)),
                                             {
-                                                DisplayName: Text(Value.DisplayName),
-                                                Email: Text(Value.Email)
+                                                User: ForAll(
+                                                    ThisRecord.Value.User,
+                                                    {
+                                                        DisplayName: Text(ThisRecord.DisplayName),
+                                                        Email: Text(ThisRecord.Email)
+                                                    }
+                                                )
                                             }
                                         )
-                                    )
+                                    );
+                                    ForAll(colUserList,Collect(colListUser,ThisRecord.User))
                                 ShowScrollbar: =false
                                 TemplatePadding: =0
                                 TemplateSize: =80
@@ -323,65 +322,6 @@
                                     OnSelect: =Select(Parent)
                                     Visible: =ThisItem.IsSelected
                                     Width: =4
-                                    ZIndex: =4
-
-                        Container29 As groupContainer.verticalAutoLayoutContainer:
-                            FillPortions: =0
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =250
-                            LayoutMode: =LayoutMode.Auto
-                            Width: =200
-                            ZIndex: =2
-
-                            "Gallery14 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-                                DelayItemLoading: =true
-                                Height: =50
-                                Items: =colUserList
-                                Layout: =Layout.Vertical
-                                LayoutMinHeight: =287
-                                LayoutMinWidth: =200
-                                LoadingSpinner: =LoadingSpinner.Data
-                                ShowScrollbar: =false
-                                TemplatePadding: =0
-                                TemplateSize: =90
-                                Width: =200
-                                ZIndex: =1
-
-                                Title11 As label:
-                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                    Height: =Self.Size * 1.8
-                                    OnSelect: =Select(Parent)
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: =ThisItem.DisplayName
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =Parent.TemplateWidth - 86
-                                    X: =16
-                                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle8.Size * 1.8)) / 2
-                                    ZIndex: =1
-
-                                Subtitle8 As label:
-                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                    Height: =Self.Size * 1.8
-                                    OnSelect: =Select(Parent)
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: =ThisItem.Email
-                                    VerticalAlign: =VerticalAlign.Top
-                                    X: =Title11.X
-                                    Y: =Title11.Y + Title11.Height
-                                    ZIndex: =2
-
-                                Separator12 As rectangle:
-                                    Height: =8
-                                    OnSelect: =Select(Parent)
-                                    Width: =Parent.TemplateWidth
-                                    Y: =Parent.TemplateHeight - Self.Height
                                     ZIndex: =4
 
                         Container32_4 As groupContainer.verticalAutoLayoutContainer:
@@ -615,57 +555,10 @@
 
                                 "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                                     DelayItemLoading: =true
-                                    Items: =UserGroupTest
+                                    Items: =colListUser
                                     Layout: =Layout.Vertical
-                                    LayoutMinHeight: =287
-                                    LayoutMinWidth: =320
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =0
-                                    TemplateSize: =80
+                                    TemplateSize: =90
                                     ZIndex: =1
-
-                                    Title16 As label:
-                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                        Height: =Self.Size * 1.8
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =ThisItem.Title
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =Parent.TemplateWidth - 86
-                                        X: =16
-                                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                                        ZIndex: =1
-
-                                    NextArrow12 As icon.ChevronRight:
-                                        AccessibleLabel: =Self.Tooltip
-                                        Color: =RGBA(166, 166, 166, 1)
-                                        Height: =50
-                                        Icon: =Icon.ChevronRight
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =12
-                                        PaddingLeft: =12
-                                        PaddingRight: =12
-                                        PaddingTop: =12
-                                        Tooltip: ="Xem chi tiết mục"
-                                        Width: =50
-                                        X: =Parent.TemplateWidth - Self.Width - 12
-                                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                                        ZIndex: =2
-
-                                    Separator17 As rectangle:
-                                        Height: =8
-                                        OnSelect: =Select(Parent)
-                                        Width: =Parent.TemplateWidth
-                                        Y: =Parent.TemplateHeight - Self.Height
-                                        ZIndex: =3
-
-                                    Rectangle20 As rectangle:
-                                        Height: =Parent.TemplateHeight - Separator17.Height
-                                        OnSelect: =Select(Parent)
-                                        Visible: =ThisItem.IsSelected
-                                        Width: =4
-                                        ZIndex: =4
 
