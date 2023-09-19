@@ -105,12 +105,9 @@
         Height: =500
         Items: |-
             =ForAll(
-                Table(ParseJSON(varResult)),
+                Table(ParseJSON(varResult).User),
                 {
-                    Users: ForAll(
-                        ThisRecord.Value.Users,
-                        {DisplayName: Text(Value.DisplayName)}
-                    )
+                    DisplayName: Text(Value.DisplayName)
                 }
             )
         Width: =800
@@ -126,7 +123,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =1
-            Text: =ThisItem.Users
+            Text: =ThisItem.DisplayName
             Width: =100
             X: =0
             Y: =0
