@@ -1,4 +1,5 @@
 "Approval As screen.'autoLayout_Sidebar_ver1.0'":
+    Fill: =
     OnHidden: |
         =ClearCollect(
             colIDUser,
@@ -359,8 +360,7 @@
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && ('ReqType: ID'.Value in ["3","4","5","6","7","8","9","10"])
-                            
+                                        Status.Value = "Created" && 'ReqType: ID'.Value in ["3","4","5","6","7","8","9","10"]
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -375,7 +375,7 @@
                                     SortByColumns(
                                         Filter(
                                             Request_Test,
-                                            Status.Value = "Created" && ('ReqType: ID'.Value in ["1","2"])
+                                            Status.Value = "Created" && 'ReqType: ID'.Value in ["1","2"]
                                         ),
                                         "Created",
                                         SortOrder.Descending
@@ -390,7 +390,7 @@
                                         SortByColumns(
                                             Filter(
                                                 Request_Test,
-                                                Status.Value = "Created" && ('ReqType: ID'.Value in ["12","13","14","15"])
+                                                Status.Value = "Created" && 'ReqType: ID'.Value in ["13","14","15","12"]
                                             ),
                                             "Created",
                                             SortOrder.Descending
@@ -431,7 +431,7 @@
 
                         Label15_1 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Tiêu đề'
+                            Text: =ThisItem.Title
                             Width: =230
                             X: =150
                             Y: =10
@@ -465,7 +465,7 @@
                         Label16_2 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Đã tạo'
+                            Text: =ThisItem.Created
                             Width: =147
                             X: =403
                             ZIndex: =5
@@ -473,7 +473,7 @@
                         Label16_3 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Người Tạo'.DisplayName
+                            Text: =ThisItem.'Created By'.DisplayName
                             Width: =130
                             X: =579
                             ZIndex: =6

@@ -1231,7 +1231,7 @@
                     "'Approver 5_DataCard2' As typedDataCard.comboBoxViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Approver5"
-                        Default: =ThisItem.'Approver 5'
+                        Default: =ThisItem.Approver5
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Approver5")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -1258,10 +1258,11 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].'Approver 5')
+                            IsSearchable: =false
+                            Items: =Choices([@Request_Test].Approver5)
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.'Approver 5',DataCardValue103.SearchText)
+                            SearchItems: =[]
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -1297,7 +1298,7 @@
                     "'Approved Date 5_DataCard2' As typedDataCard.textualViewCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="ApprovedDate5"
-                        Default: =ThisItem.'Approved Date 5'
+                        Default: =ThisItem.ApprovedDate5
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ApprovedDate5")
                         Fill: =RGBA(0, 0, 0, 0)

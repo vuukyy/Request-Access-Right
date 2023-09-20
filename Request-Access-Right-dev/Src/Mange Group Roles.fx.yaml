@@ -272,6 +272,8 @@
                                 DelayItemLoading: =true
                                 Items: =GroupTest
                                 Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: |-
                                     =Clear(colUserList);
@@ -703,115 +705,6 @@
             Visible: =showPopup
             Width: =1366
             ZIndex: =2
-
-        Rectangle7 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =0
-            Height: =212
-            Visible: =showPopup
-            Width: =447
-            X: =459
-            Y: =278
-            ZIndex: =3
-
-        Container46 As groupContainer.verticalAutoLayoutContainer:
-            Height: =212
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMode: =LayoutMode.Auto
-            Visible: =showPopup
-            Width: =447
-            X: =459
-            Y: =278
-            ZIndex: =4
-
-            Label8 As label:
-                Align: =Align.Center
-                AlignInContainer: =AlignInContainer.Stretch
-                FontWeight: =FontWeight.Bold
-                Height: =60
-                Size: =16
-                Text: ="Confirm delete"
-                ZIndex: =1
-
-            Label9 As label:
-                Align: =Align.Center
-                AlignInContainer: =AlignInContainer.Stretch
-                FontWeight: =FontWeight.Semibold
-                Height: =100
-                LayoutMinHeight: =60
-                Text: ="Do you want to delete " & Gallery11.Selected.DisplayName & " ?"
-                Width: =190
-                ZIndex: =2
-
-            Container48 As groupContainer.horizontalAutoLayoutContainer:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                DropShadow: =DropShadow.None
-                LayoutAlignItems: =LayoutAlignItems.Center
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =40
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                ZIndex: =3
-
-                Button6 As button:
-                    BorderThickness: =0
-                    Fill: =RGBA(184, 0, 0, 1)
-                    OnSelect: |-
-                        =Set(
-                            varRemoveUser,
-                            RemoveuserfromUserGroup.Run(
-                                Gallery11.Selected.Email,
-                                galUserGroup.Selected.ID
-                            )
-                        );
-                        If(
-                            varRemoveUser.notideletesuccess = "",
-                            Notify(
-                                "User not found",
-                                NotificationType.Error,
-                                1000
-                            ),
-                            Notify(
-                                "Delete user success",
-                                NotificationType.Success,
-                                1000
-                            )
-                        );
-                        UpdateContext({showPopup:false});
-                        Refresh(UserGroupTest)
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Size: =13
-                    Text: ="Delete"
-                    ZIndex: =1
-
-                Rectangle11 As rectangle:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    LayoutMinHeight: =40
-                    Width: =10
-                    ZIndex: =2
-
-                Button7 As button:
-                    BorderThickness: =0
-                    Color: =RGBA(51, 51, 51, 1)
-                    Fill: =RGBA(202, 202, 202, 1)
-                    OnSelect: |-
-                        =UpdateContext({showPopup:false})
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Size: =13
-                    Text: ="Cancel"
-                    ZIndex: =3
 
     ComfirmMoveUsers As group:
         Height: =5
