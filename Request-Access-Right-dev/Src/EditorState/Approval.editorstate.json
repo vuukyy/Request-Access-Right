@@ -2785,7 +2785,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container5_3",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4623,7 +4623,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image3_3",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5176,7 +5176,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label11_10",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5415,7 +5415,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Align",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Align",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "VerticalAlign",
         "X",
         "Y",
@@ -5490,7 +5497,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label11_11",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5804,7 +5811,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label11_4",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6118,7 +6125,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label11_7",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6357,7 +6364,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Align",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Align",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "VerticalAlign",
         "X",
         "Y",
@@ -6425,7 +6439,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label11_8",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6732,7 +6746,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label11_9",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -999,7 +999,7 @@
                                         ),
                                         {Status: {Value: "Rejected"}},
                                         {'Rejected Date': Now()},
-                                        {Comment: "Approver 1 Comment: " & TextInput1.Text},
+                                        {'Reason Reject': "Approver 1 Comment: " & TextInput1.Text},
                                         {
                                             'Rejected By': {
                                                 '@odata.type': User().Email,
@@ -1028,7 +1028,7 @@
                                             ),
                                             {Status: {Value: "Rejected"}},
                                             {'Rejected Date': Now()},
-                                            {Comment: "Approver 2 Comment: " & TextInput1.Text},
+                                            {'Reason Reject': "Approver 2 Comment: " & TextInput1.Text},
                                             {
                                                 'Rejected By': {
                                                     '@odata.type': User().Email,

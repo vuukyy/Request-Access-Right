@@ -1,4 +1,4 @@
-"Approval As screen.'autoLayout_Sidebar_ver1.0'":
+"HOD As screen.'autoLayout_Sidebar_ver1.0'":
     OnHidden: |
         =ClearCollect(
             colIDUser,
@@ -6,7 +6,7 @@
         );
     OnVisible: =
 
-    ScreenContainer4 As groupContainer.verticalAutoLayoutContainer:
+    ScreenContainer4_1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -20,7 +20,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer4 As groupContainer.horizontalAutoLayoutContainer:
+        HeaderContainer4_1 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =65
@@ -34,7 +34,7 @@
             RadiusTopRight: =8
             ZIndex: =2
 
-            Image3_3 As image:
+            Image3_4 As image:
                 Height: =50
                 Image: ='Pizza_Hut_logo.svg'
                 PaddingBottom: =10
@@ -44,7 +44,7 @@
                 Width: =50
                 ZIndex: =1
 
-            Container5_3 As groupContainer.verticalAutoLayoutContainer:
+            Container5_4 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(0, 0, 0, 0)
                 DropShadow: =DropShadow.None
@@ -60,7 +60,7 @@
                 RadiusTopRight: =0
                 ZIndex: =2
 
-                Container6_3 As groupContainer.horizontalAutoLayoutContainer:
+                Container6_4 As groupContainer.horizontalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DropShadow: =DropShadow.None
                     FillPortions: =0
@@ -76,7 +76,7 @@
                     RadiusTopRight: =0
                     ZIndex: =1
 
-                    Image4_3 As image:
+                    Image4_4 As image:
                         Height: =75
                         Image: ='Power-Apps-Logo'
                         LayoutMinHeight: =50
@@ -87,7 +87,7 @@
                         Width: =50
                         ZIndex: =1
 
-                    Container7_1 As groupContainer.verticalAutoLayoutContainer:
+                    Container7_2 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DropShadow: =DropShadow.None
@@ -105,7 +105,7 @@
                         Width: =200
                         ZIndex: =2
 
-                        Label3_2 As label:
+                        Label3_3 As label:
                             FontWeight: =FontWeight.Semibold
                             Height: =20
                             Size: =12
@@ -116,7 +116,7 @@
                                 )
                             ZIndex: =1
 
-                        Container8_1 As groupContainer.horizontalAutoLayoutContainer:
+                        Container8_2 As groupContainer.horizontalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
@@ -131,7 +131,7 @@
                             RadiusTopRight: =0
                             ZIndex: =3
 
-                            Label4_2 As label:
+                            Label4_3 As label:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =20
                                 Size: =10
@@ -143,7 +143,7 @@
                                 Width: =50
                                 ZIndex: =1
 
-        BottomContainer4 As groupContainer.horizontalAutoLayoutContainer:
+        BottomContainer4_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
             Fill: =RGBA(245, 245, 245, 1)
             LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -158,7 +158,7 @@
             PaddingTop: =2
             ZIndex: =3
 
-            SidebarContainer4 As groupContainer.verticalAutoLayoutContainer:
+            SidebarContainer4_1 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 1)
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -170,7 +170,7 @@
                 RadiusTopRight: =8
                 ZIndex: =4
 
-                Button5_20 As button:
+                Button5_35 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderThickness: =0
                     Color: =RGBA(118, 0, 0, 1)
@@ -186,14 +186,14 @@
                     Text: ="Home"
                     ZIndex: =1
 
-                Button5_21 As button:
+                Button5_36 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderThickness: =0
                     Color: =RGBA(118, 0, 0, 1)
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate(Approval,ScreenTransition.Cover)
+                    OnSelect: =Navigate(HOD,ScreenTransition.Cover)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -202,7 +202,7 @@
                     Text: ="Approval"
                     ZIndex: =2
 
-                Button5_22 As button:
+                Button5_37 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderThickness: =0
                     Color: =RGBA(118, 0, 0, 1)
@@ -217,7 +217,7 @@
                     Text: ="Audit"
                     ZIndex: =3
 
-                Button5_23 As button:
+                Button5_38 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderThickness: =0
                     Color: =RGBA(118, 0, 0, 1)
@@ -245,7 +245,7 @@
                     Text: ="Setting"
                     ZIndex: =4
 
-                Button5_24 As button:
+                Button5_39 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderThickness: =0
                     Color: =RGBA(118, 0, 0, 1)
@@ -261,7 +261,7 @@
                     Text: ="Log Out"
                     ZIndex: =5
 
-            MainContainer4 As groupContainer.verticalAutoLayoutContainer:
+            MainContainer4_1 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =7
                 LayoutDirection: =LayoutDirection.Vertical
@@ -274,7 +274,7 @@
                 RadiusTopRight: =8
                 ZIndex: =5
 
-                Container11_1 As groupContainer.verticalAutoLayoutContainer:
+                Container11_15 As groupContainer.verticalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DropShadow: =DropShadow.None
                     LayoutDirection: =LayoutDirection.Vertical
@@ -287,7 +287,7 @@
                     RadiusTopRight: =0
                     ZIndex: =2
 
-                    Container12_1 As groupContainer.horizontalAutoLayoutContainer:
+                    Container12_4 As groupContainer.horizontalAutoLayoutContainer:
                         FillPortions: =0
                         Height: =50
                         LayoutAlignItems: =LayoutAlignItems.Center
@@ -296,55 +296,54 @@
                         LayoutMode: =LayoutMode.Auto
                         ZIndex: =1
 
-                        Label11_9 As label:
-                            Text: ="Approval"
+                        Label11_26 As label:
+                            Text: ="HOD"
                             Width: =100
                             ZIndex: =1
 
-                        Label11_10 As label:
+                        Label11_22 As label:
                             FontWeight: =FontWeight.Bold
                             Text: =""
                             Width: =60
                             ZIndex: =2
 
-                        Label11_4 As label:
+                        Label11_6 As label:
                             FontWeight: =FontWeight.Bold
                             Text: ="Title"
                             Width: =250
                             ZIndex: =3
 
-                        Label11_7 As label:
+                        Label11_23 As label:
                             FontWeight: =FontWeight.Bold
                             Text: ="Created Date"
                             ZIndex: =4
 
-                        Label11_11 As label:
+                        Label11_24 As label:
                             Align: =Align.Center
                             FontWeight: =FontWeight.Bold
                             Text: ="Created By"
                             ZIndex: =5
 
-                        Label11_8 As label:
+                        Label11_25 As label:
                             Align: =Align.Center
                             FontWeight: =FontWeight.Bold
                             Text: ="Status"
                             ZIndex: =6
 
-                    Gallery7_1 As gallery.galleryVertical:
+                    Gallery7_2 As gallery.galleryVertical:
                         DelayItemLoading: =true
                         Items: |-
                             =If(
                                 !IsBlank(
                                     LookUp(
-                                        LevelApproveTest,
-                                        User().Email = IdUser.Email && MaCode = "APP_Approver1"
+                                        Request_Test,
+                                        User().Email = HOD.Email
                                     )
                                 ),
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && ('ReqType: ID'.Value in ["3","4","5","6","7","8","9","10"])
-                            
+                                        Status.Value = "Created" && HOD.Email = User().Email
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -353,48 +352,16 @@
                                     !IsBlank(
                                         LookUp(
                                             LevelApproveTest,
-                                            User().Email = IdUser.Email && MaCode = "DIG_Approver1"
+                                            User().Email = IdUser.Email && Level.Value = "Approver 3"
                                         )
                                     ),
                                     SortByColumns(
                                         Filter(
                                             Request_Test,
-                                            Status.Value = "Created" && ('ReqType: ID'.Value in ["1","2"])
+                                            Status.Value = "Approver 2 approved" && 'ReqType: ID'.Value = "2"
                                         ),
                                         "Created",
                                         SortOrder.Descending
-                                    ),
-                                    If(
-                                        !IsBlank(
-                                            LookUp(
-                                                LevelApproveTest,
-                                                User().Email = IdUser.Email && MaCode = "IT_Approver1"
-                                            )
-                                        ),
-                                        SortByColumns(
-                                            Filter(
-                                                Request_Test,
-                                                Status.Value = "Created" && ('ReqType: ID'.Value in ["12","13","14","15"])
-                                            ),
-                                            "Created",
-                                            SortOrder.Descending
-                                        ),
-                                        If(
-                                            !IsBlank(
-                                                LookUp(
-                                                    LevelApproveTest,
-                                                    User().Email = IdUser.Email && Level.Value = "Approver 2"
-                                                )
-                                            ),
-                                            SortByColumns(
-                                                Filter(
-                                                    Request_Test,
-                                                    Status.Value = "Approver 1 approved"
-                                                ),
-                                                "Created",
-                                                SortOrder.Descending
-                                            )
-                                        )
                                     )
                                 )
                             )
@@ -405,7 +372,7 @@
                         TemplateSize: =60
                         ZIndex: =1
 
-                        Label14_1 As label:
+                        Label14_4 As label:
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.ReqDescription
                             Width: =230
@@ -413,23 +380,23 @@
                             Y: =10
                             ZIndex: =1
 
-                        Label15_1 As label:
+                        Label15_4 As label:
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Title
                             Width: =230
-                            X: =150
+                            X: =141
                             Y: =10
                             ZIndex: =2
 
-                        Label16_1 As label:
+                        Label16_12 As label:
                             OnSelect: =Select(Parent)
                             Text: =""
                             Width: =100
-                            X: =1003
+                            X: =530
                             Y: =10
                             ZIndex: =3
 
-                        icon_EyeApproval As icon.View:
+                        icon_EyeApproval_1 As icon.View:
                             Height: =20
                             Icon: =Icon.View
                             OnSelect: |-
@@ -438,7 +405,7 @@
                                     ThisItem.'ReqType: ID'
                                 );
                                 Navigate(
-                                    'Detail_Req_Approval_1 and 2',
+                                    'Detail_Req_Approval_3 and HOD',
                                     ScreenTransition.Cover
                                 )
                             Width: =24
@@ -446,30 +413,31 @@
                             Y: =20
                             ZIndex: =4
 
-                        Label16_2 As label:
+                        Label16_9 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Created
-                            Width: =147
-                            X: =403
+                            Width: =145
+                            X: =405
+                            Y: =10
                             ZIndex: =5
 
-                        Label16_3 As label:
+                        Label16_10 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.'Created By'.DisplayName
                             Width: =130
-                            X: =579
+                            X: =585
                             ZIndex: =6
 
-                        Group2 As group:
+                        Group2_1 As group:
                             Height: =5
                             Width: =5
                             X: =40
                             Y: =40
                             ZIndex: =9
 
-                            Rectangle1 As rectangle:
+                            Rectangle1_1 As rectangle:
                                 DisplayMode: =DisplayMode.View
                                 Fill: |-
                                     =If(
@@ -490,16 +458,16 @@
                                 FocusedBorderThickness: =0
                                 Height: =50
                                 OnSelect: =Select(Parent)
-                                Width: =130
-                                X: =720
+                                Width: =121
+                                X: =727
                                 ZIndex: =7
 
-                            Label16_4 As label:
+                            Label16_11 As label:
                                 Align: =Align.Center
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
-                                Width: =130
-                                X: =720
+                                Width: =121
+                                X: =727
                                 ZIndex: =8
 

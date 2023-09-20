@@ -134,7 +134,6 @@
   "ScreenOrder": [
     "Login",
     "Home",
-    "Approval",
     "Approver_Detail",
     "Setting",
     "Request Process",
@@ -150,6 +149,10 @@
     "NewReq",
     "DetailReq",
     "Detail_Req_Approval",
+    "Approval",
+    "HOD",
+    "Detail_Req_Approval_1 and 2",
+    "Detail_Req_Approval_3 and HOD",
     "Screen1",
     "Approval_screen",
     "Approval_screen_detail",

@@ -1597,7 +1597,7 @@
                                 Comment_DataCard1 As typedDataCard.textualViewCard:
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Comment"
-                                    Default: =ThisItem.Comment
+                                    Default: =ThisItem.'Reason Reject'
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Comment")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -1757,15 +1757,12 @@
                         ZIndex: =4
 
                     txtComment As text:
-                        AlignInContainer: =AlignInContainer.Stretch
                         Default: =""
-                        FillPortions: =1
                         Height: =200
                         HintText: ="Enter your comment"
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        LayoutMinWidth: =230
                         Mode: =TextMode.MultiLine
-                        Width: =230
+                        Width: =280
                         ZIndex: =5
 
                 Container15_2 As groupContainer.horizontalAutoLayoutContainer:

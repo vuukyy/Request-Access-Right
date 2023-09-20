@@ -979,7 +979,7 @@ Approval_screen_HOD_detail As screen:
                                         ),
                                         {Status: {Value: "Rejected"}},
                                         {'Rejected Date': Now()},
-                                        {Comment: "HOD Comment: " & TextInput1_1.Text},
+                                        {'Reason Reject': "HOD Comment: " & TextInput1_1.Text},
                                         {
                                             'Rejected By': {
                                                 '@odata.type': User().Email,
@@ -1008,7 +1008,7 @@ Approval_screen_HOD_detail As screen:
                                             ),
                                             {Status: {Value: "Rejected"}},
                                             {'Rejected Date': Now()},
-                                            {Comment: "Approver 3 Comment: " & TextInput1_1.Text},
+                                            {'Reason Reject': "Approver 3 Comment: " & TextInput1_1.Text},
                                             {
                                                 'Rejected By': {
                                                     '@odata.type': User().Email,

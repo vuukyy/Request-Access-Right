@@ -79,7 +79,7 @@ Approval_screen_HOD As screen:
                     SortByColumns(
                         Filter(
                             Request_Test,
-                            Status.Value = "Created"
+                            Status.Value = "Created" && HOD.Email = User().Email
                         ),
                         "Created",
                         SortOrder.Descending

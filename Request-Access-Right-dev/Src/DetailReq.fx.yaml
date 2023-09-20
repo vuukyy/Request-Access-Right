@@ -1437,7 +1437,7 @@
                     Comment_DataCard2 As typedDataCard.textualViewCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Comment"
-                        Default: =ThisItem.Comment
+                        Default: =ThisItem.'Reason Reject'
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Comment")
                         Fill: =RGBA(0, 0, 0, 0)
