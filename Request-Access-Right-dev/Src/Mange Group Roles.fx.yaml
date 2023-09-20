@@ -267,7 +267,6 @@
                             ZIndex: =1
 
                             "galUserGroup As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
-                                AlignInContainer: =AlignInContainer.SetByContainer
                                 DelayItemLoading: =true
                                 Items: =GroupTest
                                 Layout: =Layout.Vertical
@@ -672,9 +671,40 @@
                                     Icon3 As icon.Trash:
                                         Height: =24
                                         Icon: =Icon.Trash
-                                        OnSelect: =Select(Parent)
+                                        OnSelect: |-
+                                            =Set(
+                                                varRemoveUser,
+                                                RemoveuserfromUserGroup.Run(
+                                                    ThisItem.Email,
+                                                    galUserGroup.Selected.ID
+                                                )
+                                            );
+                                            If(
+                                                varRemoveUser.notideletesuccess = "",
+                                                Notify(
+                                                    "User not found",
+                                                    NotificationType.Error,
+                                                    1000
+                                                ),
+                                                Notify(
+                                                    "Delete user success",
+                                                    NotificationType.Success,
+                                                    1000
+                                                )
+                                            );
+                                            Refresh(UserGroupTest)
                                         Width: =24
                                         X: =1098
                                         Y: =33
                                         ZIndex: =5
+
+                                    Icon7 As icon.ArrowsUpDown:
+                                        Height: =24
+                                        Icon: =Icon.Sort
+                                        OnSelect: =Select(Parent)
+                                        Rotation: =90
+                                        Width: =24
+                                        X: =1060
+                                        Y: =33
+                                        ZIndex: =6
 

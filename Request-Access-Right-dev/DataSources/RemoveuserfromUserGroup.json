@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "de464716-e384-462c-b58e-1f63550a230c",
+    "Name": "RemoveuserfromUserGroup",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "edee79a2-8357-ee11-be6f-6045bd558ce2"
+  }
+]
