@@ -389,7 +389,7 @@
                                 "'Tiêu đề_DataCard5' As typedDataCard.textualEditCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.'Tiêu đề'
+                                    Default: =ThisItem.Title
                                     DisplayMode: =Parent.DisplayMode
                                     DisplayName: =DataSourceInfo([@UserGroupTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
