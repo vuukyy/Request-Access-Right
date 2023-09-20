@@ -622,7 +622,7 @@
                                         RadiusBottomRight: =4
                                         RadiusTopLeft: =4
                                         RadiusTopRight: =4
-                                        Text: ="Add New User"
+                                        Text: ="Add User"
                                         ZIndex: =3
 
                                 "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
