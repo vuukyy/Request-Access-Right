@@ -288,7 +288,7 @@
                                     PaddingLeft: =0
                                     PaddingRight: =0
                                     PaddingTop: =0
-                                    Text: =ThisItem.Title
+                                    Text: =ThisItem.'Tiêu đề'
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
                                     X: =16
@@ -321,7 +321,7 @@
                                     PaddingRight: =0
                                     PaddingTop: =0
                                     Size: =10
-                                    Text: =Text(ThisItem.Created, "dd/mm/yyyy")
+                                    Text: =Text(ThisItem.'Đã tạo', "dd/mm/yyyy")
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title4.Width
                                     X: =Title4.X
@@ -449,7 +449,7 @@
                                 "'Đã tạo_DataCard1_1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Created"
-                                    Default: =ThisItem.Created
+                                    Default: =ThisItem.'Đã tạo'
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Created")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -486,7 +486,7 @@
                                 "'Đã sửa đổi_DataCard1_1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Modified"
-                                    Default: =ThisItem.Modified
+                                    Default: =ThisItem.'Đã sửa đổi'
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Modified")
                                     Fill: =RGBA(0, 0, 0, 0)
@@ -523,7 +523,7 @@
                                 "'Tiêu đề_DataCard6_1' As typedDataCard.textualViewCard":
                                     BorderStyle: =BorderStyle.Solid
                                     DataField: ="Title"
-                                    Default: =ThisItem.Title
+                                    Default: =ThisItem.'Tiêu đề'
                                     DisplayMode: =DisplayMode.View
                                     DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Title")
                                     Fill: =RGBA(0, 0, 0, 0)
