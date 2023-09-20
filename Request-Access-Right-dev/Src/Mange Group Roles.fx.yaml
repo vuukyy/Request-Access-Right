@@ -247,7 +247,7 @@
                         RadiusTopRight: =0
                         ZIndex: =3
 
-                        ApproverList_4 As groupContainer.verticalAutoLayoutContainer:
+                        tbl_Group As groupContainer.verticalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
@@ -267,6 +267,7 @@
                             ZIndex: =1
 
                             "galUserGroup As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+                                AlignInContainer: =AlignInContainer.SetByContainer
                                 DelayItemLoading: =true
                                 Items: =GroupTest
                                 Layout: =Layout.Vertical
@@ -553,6 +554,77 @@
                                 Visible: =varCurrentTab = "USER"
                                 ZIndex: =4
 
+                                Container30 As groupContainer.horizontalAutoLayoutContainer:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =50
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingLeft: =10
+                                    PaddingRight: =10
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    ZIndex: =1
+
+                                    ComboBox1 As combobox:
+                                        DisplayFields: =["DisplayName"]
+                                        Items: |-
+                                            =NgườidùngOffice365.SearchUserV2(
+                                                {
+                                                    searchTerm: ComboBox1.SearchText,
+                                                    isSearchTermRequired: false,
+                                                    top: 1000
+                                                }
+                                            ).value
+                                        SearchFields: =["DisplayName"]
+                                        SearchItems: |-
+                                            =Search(NgườidùngOffice365.SearchUserV2(
+                                                {
+                                                    searchTerm: ComboBox1.SearchText,
+                                                    isSearchTermRequired: false,
+                                                    top: 1000
+                                                }
+                                            ).value,ComboBox1.SearchText,"DisplayName")
+                                        ZIndex: =1
+
+                                    Button5 As button:
+                                        BorderThickness: =0
+                                        OnSelect: |-
+                                            =Set(
+                                                newUserGroup,
+                                                InsertUserinUserGroup.Run(
+                                                    ComboBox1.Selected.Id,
+                                                    galUserGroup.Selected.ID
+                                                )
+                                            );
+                                            If(
+                                                newUserGroup.fail = "",
+                                                Notify(
+                                                    "Insert user success!",
+                                                    NotificationType.Success,
+                                                    1000
+                                                ),
+                                                Notify(
+                                                    "User already exists!",
+                                                    NotificationType.Error,
+                                                    1000
+                                                )
+                                            );
+                                            Reset(ComboBox1);
+                                            Refresh(UserGroupTest);
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Text: ="Add New User"
+                                        ZIndex: =3
+
                                 "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                                     DelayItemLoading: =true
                                     Items: =colListUser
@@ -560,7 +632,7 @@
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =0
                                     TemplateSize: =90
-                                    ZIndex: =1
+                                    ZIndex: =2
 
                                     Title2 As label:
                                         Height: =Self.Size * 1.8
@@ -596,4 +668,13 @@
                                         Width: =Parent.TemplateWidth
                                         Y: =Parent.TemplateHeight - Self.Height
                                         ZIndex: =4
+
+                                    Icon3 As icon.Trash:
+                                        Height: =24
+                                        Icon: =Icon.Trash
+                                        OnSelect: =Select(Parent)
+                                        Width: =24
+                                        X: =1098
+                                        Y: =33
+                                        ZIndex: =5
 

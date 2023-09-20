@@ -8,6 +8,13 @@
         <property name="varIdUser_Giátrị" type="string" />
         <property name="varIdGroup_Giátrị" type="integer" />
       </object>
+      <string name="ResponseActionOutput_fail_def" />
+      <string name="ResponseActionOutput_success_def" />
+      <object name="ResponseActionOutput">
+        <property name="fail" type="string" />
+        <property name="success" type="string" />
+      </object>
+      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://asia-001.azure-apim.net/apim/logicflows">
@@ -24,6 +31,9 @@
             <param style="plain" name="varIdGroup_Giátrị" path="/varIdGroup_Giátrị" type="xs:long" required="true" />
           </representation>
         </request>
+        <response>
+          <representation mediaType="application/json" element="service:ResponseActionOutput" />
+        </response>
       </method>
     </resource>
   </resources>
