@@ -553,7 +553,7 @@
                                 Visible: =varCurrentTab = "USER"
                                 ZIndex: =4
 
-                                "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                "Gallery11 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                                     DelayItemLoading: =true
                                     Items: =colListUser
                                     Layout: =Layout.Vertical
@@ -561,4 +561,39 @@
                                     TemplatePadding: =0
                                     TemplateSize: =90
                                     ZIndex: =1
+
+                                    Title2 As label:
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.DisplayName
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+                                        ZIndex: =1
+
+                                    Subtitle2 As label:
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.Email
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Title2.Width
+                                        X: =Title2.X
+                                        Y: =Title2.Y + Title2.Height
+                                        ZIndex: =2
+
+                                    Separator2 As rectangle:
+                                        Height: =8
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.TemplateWidth
+                                        Y: =Parent.TemplateHeight - Self.Height
+                                        ZIndex: =4
 
