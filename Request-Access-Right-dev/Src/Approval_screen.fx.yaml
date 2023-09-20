@@ -73,13 +73,13 @@ Approval_screen As screen:
                     !IsBlank(
                         LookUp(
                             LevelApproveTest,
-                            User().Email = IdUser.Email && Level.Value = "Approver 1"
+                            User().Email = IdUser.Email && MaCode = "APP_Approver1"
                         )
                     ),
                     SortByColumns(
                         Filter(
                             Request_Test,
-                            Status.Value = "Created" && 'Người Tạo'.Department = "DTS"
+                            Status.Value = "Created"
                         ),
                         "Created",
                         SortOrder.Descending
@@ -88,16 +88,48 @@ Approval_screen As screen:
                         !IsBlank(
                             LookUp(
                                 LevelApproveTest,
-                                User().Email = IdUser.Email && Level.Value = "Approver 2"
+                                User().Email = IdUser.Email && MaCode = "DIG_Approver1"
                             )
                         ),
                         SortByColumns(
                             Filter(
                                 Request_Test,
-                                Status.Value = "Approver 1 approved" && 'Người Tạo'.Department = "DTS"
+                                Status.Value = "Created"
                             ),
                             "Created",
                             SortOrder.Descending
+                        ),
+                        If(
+                            !IsBlank(
+                                LookUp(
+                                    LevelApproveTest,
+                                    User().Email = IdUser.Email && MaCode = "IT_Approver1"
+                                )
+                            ),
+                            SortByColumns(
+                                Filter(
+                                    Request_Test,
+                                    Status.Value = "Created"
+                                ),
+                                "Created",
+                                SortOrder.Descending
+                            ),
+                            If(
+                                !IsBlank(
+                                    LookUp(
+                                        LevelApproveTest,
+                                        User().Email = IdUser.Email && Level.Value = "Approver 2"
+                                    )
+                                ),
+                                SortByColumns(
+                                    Filter(
+                                        Request_Test,
+                                        Status.Value = "Approver 1 approved"
+                                    ),
+                                    "Created",
+                                    SortOrder.Descending
+                                )
+                            )
                         )
                     )
                 )
@@ -120,7 +152,7 @@ Approval_screen As screen:
 
             Label15_2 As label:
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.'Tiêu đề'
+                Text: =ThisItem.Title
                 Width: =303
                 X: =56
                 Y: =10
