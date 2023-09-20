@@ -442,8 +442,8 @@
                                 Text: =ThisItem.Status.Value
                                 Visible: =
                                 Width: =151
-                                X: =858
-                                Y: =10
+                                X: =833
+                                Y: =7
                                 ZIndex: =5
 
                         Icon5 As icon.Edit:

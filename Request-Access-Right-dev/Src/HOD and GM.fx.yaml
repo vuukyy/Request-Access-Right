@@ -1,4 +1,4 @@
-"HOD As screen.'autoLayout_Sidebar_ver1.0'":
+"'HOD and GM' As screen.'autoLayout_Sidebar_ver1.0'":
     OnHidden: |
         =ClearCollect(
             colIDUser,
@@ -193,7 +193,7 @@
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate(HOD,ScreenTransition.Cover)
+                    OnSelect: =Navigate(Approval,ScreenTransition.Cover)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -201,6 +201,22 @@
                     Size: =13
                     Text: ="Approval"
                     ZIndex: =2
+
+                Button5_41 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    OnSelect: =Navigate('HOD and GM',ScreenTransition.Cover)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="HOD & GM"
+                    ZIndex: =3
 
                 Button5_37 As button:
                     AlignInContainer: =AlignInContainer.Stretch
@@ -215,7 +231,7 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Audit"
-                    ZIndex: =3
+                    ZIndex: =4
 
                 Button5_38 As button:
                     AlignInContainer: =AlignInContainer.Stretch
@@ -243,7 +259,7 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Setting"
-                    ZIndex: =4
+                    ZIndex: =5
 
                 Button5_39 As button:
                     AlignInContainer: =AlignInContainer.Stretch
@@ -259,7 +275,7 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Log Out"
-                    ZIndex: =5
+                    ZIndex: =6
 
             MainContainer4_1 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 1)
