@@ -4,7 +4,8 @@
             varCurrentTab,
             "ROLE"
         );
-        UpdateContext({showPopup:false})
+        UpdateContext({showPopup: false});
+        UpdateContext({showMoveUser: false})
 
     ScreenContainer8 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -681,26 +682,27 @@
                                     Icon7 As icon.ArrowsUpDown:
                                         Height: =24
                                         Icon: =Icon.Sort
-                                        OnSelect: =Select(Parent)
+                                        OnSelect: |-
+                                            =UpdateContext({showMoveUser:true})
                                         Rotation: =90
                                         Width: =24
                                         X: =1060
                                         Y: =33
                                         ZIndex: =6
 
-    Rectangle5 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0.6)
-        Height: =768
-        Visible: =showPopup
-        Width: =1366
-        ZIndex: =2
-
-    Group3 As group:
+    ConfirmDelete As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =5
+
+        Rectangle5 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =showPopup
+            Width: =1366
+            ZIndex: =2
 
         Rectangle7 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -798,6 +800,188 @@
                     ZIndex: =2
 
                 Button7 As button:
+                    BorderThickness: =0
+                    Color: =RGBA(51, 51, 51, 1)
+                    Fill: =RGBA(202, 202, 202, 1)
+                    OnSelect: |-
+                        =UpdateContext({showPopup:false})
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Cancel"
+                    ZIndex: =3
+
+    ComfirmMoveUsers As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Rectangle5_1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =showMoveUser
+            Width: =1366
+            ZIndex: =5
+
+        Rectangle7_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =0
+            Height: =424
+            Visible: =showMoveUser
+            Width: =707
+            X: =329
+            Y: =172
+            ZIndex: =6
+
+        Container46_1 As groupContainer.verticalAutoLayoutContainer:
+            Height: =424
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Visible: =showMoveUser
+            Width: =707
+            X: =329
+            Y: =172
+            ZIndex: =7
+
+            Label8_1 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =16
+                Text: ="Confirm Move User"
+                ZIndex: =1
+
+            Label9_1 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                LayoutMinHeight: =60
+                Text: ="Do you want to move " & Gallery11.Selected.DisplayName & " to another group?"
+                Width: =190
+                ZIndex: =2
+
+            Container28 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                X: =40
+                Y: =40
+                ZIndex: =3
+
+                "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                    DelayItemLoading: =true
+                    Items: =GroupTest
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =50
+                    ZIndex: =1
+
+                    Title11 As label:
+                        FontWeight: =If(Checkbox1.Value = true, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =ThisItem.CodeGroup
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 86
+                        X: =86
+                        Y: =13
+                        ZIndex: =1
+
+                    Checkbox1 As checkbox:
+                        DisabledFill: |-
+                            =RGBA(
+                                0,
+                                0,
+                                0,
+                                0
+                            )
+                        FocusedBorderThickness: =0
+                        Height: =40
+                        OnSelect: |-
+                            =Set(
+                                varIdGroup,
+                                ThisItem.ID
+                            );
+                            Set(clearIdGroup, Blank())
+                        OnUncheck: =clearIdGroup
+                        Text: =""
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =40
+                        X: =27
+                        Y: =4
+                        ZIndex: =2
+
+            Container48_1 As groupContainer.horizontalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =60
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =10
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =4
+
+                Button6_4 As button:
+                    BorderThickness: =0
+                    Fill: =RGBA(54, 176, 75, 1)
+                    OnSelect: |-
+                        =Set(
+                            varRemoveUser,
+                            RemoveuserfromUserGroup.Run(
+                                Gallery11.Selected.Email,
+                                galUserGroup.Selected.ID
+                            )
+                        );
+                        If(
+                            varRemoveUser.notideletesuccess = "",
+                            Notify(
+                                "User not found",
+                                NotificationType.Error,
+                                1000
+                            ),
+                            Notify(
+                                "Delete user success",
+                                NotificationType.Success,
+                                1000
+                            )
+                        );
+                        UpdateContext({showPopup:false});
+                        Refresh(UserGroupTest)
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Submit"
+                    ZIndex: =1
+
+                Rectangle11_1 As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    LayoutMinHeight: =40
+                    Width: =10
+                    ZIndex: =2
+
+                Button7_1 As button:
                     BorderThickness: =0
                     Color: =RGBA(51, 51, 51, 1)
                     Fill: =RGBA(202, 202, 202, 1)
