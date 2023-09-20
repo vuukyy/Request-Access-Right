@@ -708,3 +708,95 @@
                                         Y: =33
                                         ZIndex: =6
 
+    Rectangle5 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.6)
+        Height: =768
+        Width: =1366
+        ZIndex: =2
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Rectangle7 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =0
+            Height: =212
+            Width: =447
+            X: =459
+            Y: =278
+            ZIndex: =3
+
+        Container46 As groupContainer.verticalAutoLayoutContainer:
+            Height: =212
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =447
+            X: =459
+            Y: =278
+            ZIndex: =4
+
+            Label8 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =16
+                Text: ="Confirm delete"
+                ZIndex: =1
+
+            Label9 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                LayoutMinHeight: =60
+                Text: ="Do you want to delete " & Gallery11.Selected.DisplayName & " ?"
+                Width: =190
+                ZIndex: =2
+
+            Container48 As groupContainer.horizontalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =3
+
+                Button6 As button:
+                    BorderThickness: =0
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Delete"
+                    ZIndex: =1
+
+                Rectangle11 As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    LayoutMinHeight: =40
+                    Width: =10
+                    ZIndex: =2
+
+                Button7 As button:
+                    BorderThickness: =0
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Cancel"
+                    ZIndex: =3
+
