@@ -247,7 +247,7 @@
                         RadiusTopRight: =0
                         ZIndex: =3
 
-                        ApproverList_4 As groupContainer.verticalAutoLayoutContainer:
+                        tbl_Group As groupContainer.verticalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
@@ -265,64 +265,6 @@
                             RadiusTopRight: =0
                             Width: =200
                             ZIndex: =1
-
-                            "galUserGroup As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
-                                DelayItemLoading: =true
-                                Items: =GroupTest
-                                Layout: =Layout.Vertical
-                                LoadingSpinner: =LoadingSpinner.Data
-                                OnSelect: |-
-                                    =Clear(colUserList);
-                                    Clear(colListUser);
-                                    ClearCollect(
-                                        colUserList,
-                                        ForAll(
-                                            Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user)),
-                                            {
-                                                User: ForAll(
-                                                    ThisRecord.Value.User,
-                                                    {
-                                                        DisplayName: Text(ThisRecord.DisplayName),
-                                                        Email: Text(ThisRecord.Email)
-                                                    }
-                                                )
-                                            }
-                                        )
-                                    );
-                                    ForAll(colUserList,Collect(colListUser,ThisRecord.User))
-                                ShowScrollbar: =false
-                                TemplatePadding: =0
-                                TemplateSize: =80
-                                ZIndex: =1
-
-                                Title10 As label:
-                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                    Height: =Self.Size * 1.8
-                                    OnSelect: =Select(Parent)
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: =ThisItem.CodeGroup
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Width: =Parent.TemplateWidth - 86
-                                    X: =16
-                                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                                    ZIndex: =1
-
-                                Separator10 As rectangle:
-                                    Height: =8
-                                    OnSelect: =Select(Parent)
-                                    Width: =Parent.TemplateWidth
-                                    Y: =Parent.TemplateHeight - Self.Height
-                                    ZIndex: =3
-
-                                Rectangle9 As rectangle:
-                                    Height: =Parent.TemplateHeight - Separator10.Height
-                                    OnSelect: =Select(Parent)
-                                    Visible: =ThisItem.IsSelected
-                                    Width: =4
-                                    ZIndex: =4
 
                         Container32_4 As groupContainer.verticalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
@@ -560,5 +502,172 @@
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =0
                                     TemplateSize: =90
-                                    ZIndex: =1
+                                    ZIndex: =2
+
+                                    Title2 As label:
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.DisplayName
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+                                        ZIndex: =1
+
+                                    Subtitle2 As label:
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.Email
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Title2.Width
+                                        X: =Title2.X
+                                        Y: =Title2.Y + Title2.Height
+                                        ZIndex: =2
+
+                                    Separator2 As rectangle:
+                                        Height: =8
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.TemplateWidth
+                                        Y: =Parent.TemplateHeight - Self.Height
+                                        ZIndex: =4
+
+                                    Icon3 As icon.Trash:
+                                        Height: =24
+                                        Icon: =Icon.Trash
+                                        OnSelect: |-
+                                            =Set(
+                                                varRemoveUser,
+                                                RemoveuserfromUserGroup.Run(
+                                                    ThisItem.Email,
+                                                    galUserGroup.Selected.ID
+                                                )
+                                            );
+                                            If(
+                                                varRemoveUser.notideletesuccess = "",
+                                                Notify(
+                                                    "User not found",
+                                                    NotificationType.Error,
+                                                    1000
+                                                ),
+                                                Notify(
+                                                    "Delete user success",
+                                                    NotificationType.Success,
+                                                    1000
+                                                )
+                                            );
+                                            Refresh(UserGroupTest)
+                                        Width: =24
+                                        X: =1098
+                                        Y: =33
+                                        ZIndex: =5
+
+                                    Icon7 As icon.ArrowsUpDown:
+                                        Height: =24
+                                        Icon: =Icon.Sort
+                                        OnSelect: =Select(Parent)
+                                        Rotation: =90
+                                        Width: =24
+                                        X: =1060
+                                        Y: =33
+                                        ZIndex: =6
+
+    Rectangle5 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.6)
+        Height: =768
+        Width: =1366
+        ZIndex: =2
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Rectangle7 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =0
+            Height: =212
+            Width: =447
+            X: =459
+            Y: =278
+            ZIndex: =3
+
+        Container46 As groupContainer.verticalAutoLayoutContainer:
+            Height: =212
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =447
+            X: =459
+            Y: =278
+            ZIndex: =4
+
+            Label8 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =16
+                Text: ="Confirm delete"
+                ZIndex: =1
+
+            Label9 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                LayoutMinHeight: =60
+                Text: ="Do you want to delete " & Gallery11.Selected.DisplayName & " ?"
+                Width: =190
+                ZIndex: =2
+
+            Container48 As groupContainer.horizontalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =3
+
+                Button6 As button:
+                    BorderThickness: =0
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Delete"
+                    ZIndex: =1
+
+                Rectangle11 As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    LayoutMinHeight: =40
+                    Width: =10
+                    ZIndex: =2
+
+                Button7 As button:
+                    BorderThickness: =0
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Cancel"
+                    ZIndex: =3
 
