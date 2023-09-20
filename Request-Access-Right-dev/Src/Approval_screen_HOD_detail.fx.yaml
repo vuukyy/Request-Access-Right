@@ -100,7 +100,7 @@ Approval_screen_HOD_detail As screen:
         Attachments_DataCard1_1 As typedDataCard.attachmentsViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.Attachments
+            Default: =ThisItem.'Tệp đính kèm'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
@@ -165,7 +165,7 @@ Approval_screen_HOD_detail As screen:
         Created_DataCard2_1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Created"
-            Default: =ThisItem.Created
+            Default: =ThisItem.'Đã tạo'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
             Fill: =RGBA(0, 0, 0, 0)
@@ -203,7 +203,7 @@ Approval_screen_HOD_detail As screen:
         Title_DataCard1_1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
-            Default: =ThisItem.Title
+            Default: =ThisItem.'Tiêu đề'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
