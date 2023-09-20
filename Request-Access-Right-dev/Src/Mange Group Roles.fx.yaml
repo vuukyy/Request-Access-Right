@@ -271,6 +271,8 @@
                                 DelayItemLoading: =true
                                 Items: =GroupTest
                                 Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: |-
                                     =Clear(colUserList);

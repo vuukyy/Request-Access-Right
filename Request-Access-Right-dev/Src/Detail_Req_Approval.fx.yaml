@@ -1418,10 +1418,11 @@
                                         DefaultSelectedItems: =Parent.Default
                                         DisplayFields: =["DisplayName","Email","Picture"]
                                         DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
                                         Items: =Choices([@Request_Test].'Approver 5')
                                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                         SearchFields: =["DisplayName"]
-                                        SearchItems: =Choices(Request_Test.'Approver 5',DataCardValue80.SearchText)
+                                        SearchItems: =[]
                                         SelectMultiple: =false
                                         Template: =ListItemTemplate.Person
                                         Width: =Parent.Width - 60
