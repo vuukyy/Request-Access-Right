@@ -359,8 +359,7 @@
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && ('ReqType: ID'.Value in ["3","4","5","6","7","8","9","10"])
-                            
+                                        Status.Value = "Created" && 'ReqType: ID'.Value in ["3","4","5","6", "7","8","9","10"]
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -375,7 +374,7 @@
                                     SortByColumns(
                                         Filter(
                                             Request_Test,
-                                            Status.Value = "Created" && ('ReqType: ID'.Value in ["1","2"])
+                                            Status.Value = "Created" && 'ReqType: ID'.Value in ["1","2"]
                                         ),
                                         "Created",
                                         SortOrder.Descending
@@ -390,7 +389,7 @@
                                         SortByColumns(
                                             Filter(
                                                 Request_Test,
-                                                Status.Value = "Created" && ('ReqType: ID'.Value in ["12","13","14","15"])
+                                                Status.Value = "Created" && 'ReqType: ID'.Value in ["13","14","15","12"]
                                             ),
                                             "Created",
                                             SortOrder.Descending
