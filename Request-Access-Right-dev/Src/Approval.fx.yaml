@@ -360,7 +360,8 @@
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && 'ReqType: ID'.Value in ["3","4","5","6","7","8","9","10"]
+                                        Status.Value = "Created" && ( 'ReqType: ID'.Value = "3" || 'ReqType: ID'.Value = "4" || 'ReqType: ID'.Value = "5" || 'ReqType: ID'.Value = "6" || 'ReqType: ID'.Value = "7" || 'ReqType: ID'.Value = "8" || 'ReqType: ID'.Value = "9" || 'ReqType: ID'.Value = "10" )
+                                       //&& ( 'ReqType: ID'.Value in ["3","4","5","6","7","8","9","10"])
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -375,7 +376,7 @@
                                     SortByColumns(
                                         Filter(
                                             Request_Test,
-                                            Status.Value = "Created" && 'ReqType: ID'.Value in ["1","2"]
+                                            Status.Value = "Created" && ('ReqType: ID'.Value = "1" || 'ReqType: ID'.Value = "2")
                                         ),
                                         "Created",
                                         SortOrder.Descending
@@ -390,7 +391,7 @@
                                         SortByColumns(
                                             Filter(
                                                 Request_Test,
-                                                Status.Value = "Created" && 'ReqType: ID'.Value in ["13","14","15","12"]
+                                                Status.Value = "Created" && ('ReqType: ID'.Value = "12"|| 'ReqType: ID'.Value = "13"|| 'ReqType: ID'.Value = "14" || 'ReqType: ID'.Value = "15")
                                             ),
                                             "Created",
                                             SortOrder.Descending
