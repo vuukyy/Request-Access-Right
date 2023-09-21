@@ -436,7 +436,7 @@
                                 Height: =40
                                 OnSelect: =Select(Parent)
                                 Visible: =false
-                                X: =845
+                                X: =833
                                 Y: =7
                                 ZIndex: =1
 
@@ -585,9 +585,6 @@
                             )
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
-                        PaddingRight: =5.21
-                        PaddingTop: =5.21
-                        Size: =18
                         Text: ="YES"
                         Width: =60
                         X: =62
@@ -595,6 +592,7 @@
                         ZIndex: =1
 
                     Button_Cancel_14 As button:
+                        AlignInContainer: =AlignInContainer.Center
                         OnSelect: |-
                             =Set(
                                 Dialogdelete,
@@ -602,9 +600,6 @@
                             )
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
-                        PaddingRight: =5.21
-                        PaddingTop: =5.21
-                        Size: =18
                         Text: ="NO"
                         Width: =60
                         X: =184
