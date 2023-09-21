@@ -391,7 +391,7 @@
                             Width: =180
                             X: =508
                             Y: =10
-                            ZIndex: =1
+                            ZIndex: =2
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
@@ -399,20 +399,20 @@
                             Width: =430
                             X: =56
                             Y: =10
-                            ZIndex: =2
+                            ZIndex: =3
 
                         Label16 As label:
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.ReqPermission.Value
                             X: =708
                             Y: =10
-                            ZIndex: =3
+                            ZIndex: =4
 
                         Icon4 As icon.Trash:
                             Height: =34
                             Icon: =Icon.Trash
                             OnSelect: =Select(Parent)
-                            Visible: =
+                            Visible: =If(ThisItem.Status.Value="Created",true,false)
                             Width: =24
                             X: =1069
                             Y: =13
@@ -427,17 +427,18 @@
 
                             Rectangle6 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: =
+                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightYellow)
                                 FocusedBorderThickness: =0
                                 Height: =40
                                 OnSelect: =Select(Parent)
                                 Visible: =false
-                                X: =858
-                                Y: =10
-                                ZIndex: =4
+                                X: =845
+                                Y: =7
+                                ZIndex: =1
 
                             Label17 As label:
                                 Align: =Align.Center
+                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightYellow)
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
                                 Visible: =
@@ -449,7 +450,8 @@
                         Icon5 As icon.Edit:
                             Height: =34
                             Icon: =Icon.Edit
-                            OnSelect: =Select(Parent)
+                            OnSelect: =EditForm('Edit Form Request');Navigate(NewReq,ScreenTransition.Fade)
+                            Visible: =If(ThisItem.Status.Value="Created",true,false)
                             Width: =24
                             X: =1030
                             Y: =13

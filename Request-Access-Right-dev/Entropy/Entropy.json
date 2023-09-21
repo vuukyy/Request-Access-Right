@@ -1160,7 +1160,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/21/2023 03:35:35",
+  "HeaderLastSavedDateTimeUTC": "09/21/2023 04:56:45",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/f4b69dea305b4adf8a94afdd8c8dbf96\"",
@@ -1184,13 +1184,11 @@
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
-    "luke-chesser-B_oL3jEt5L4-unsplash": "0001.png",
     "Pizza_Hut_logo.svg": "0002.png",
     "Power-Apps-Logo": "0003.png",
     "ultimate-safaris-namibia-6NVr_r5uosU-unsplash": "0004.jpg"
   },
   "LocalResourceRootPaths": {
-    "luke-chesser-B_oL3jEt5L4-unsplash": "https://docserverpwaprodseas.blob.core.windows.net/0af84891-a36e-477b-a136-22241958d10f-1/resource/Assets0Images00001.png?sv=2018-03-28&sr=b&sig=vpLdwoa3UywAcZhQYBhTx%2Fc8ce2lAr8wRnKS%2BuVXwFM%3D&spr=https&se=2023-09-22T02%3A32%3A03Z&sp=r",
     "Pizza_Hut_logo.svg": "https://docserverpwaprodseas.blob.core.windows.net/0af84891-a36e-477b-a136-22241958d10f-1/resource/Assets0Images00002.png?sv=2018-03-28&sr=b&sig=YDIyHu%2F9A9SQKVCflNcTPm7UA%2B4ofitcSDEt2COun9k%3D&spr=https&se=2023-09-22T02%3A32%3A03Z&sp=r",
     "Power-Apps-Logo": "https://docserverpwaprodseas.blob.core.windows.net/0af84891-a36e-477b-a136-22241958d10f-1/resource/Assets0Images00003.png?sv=2018-03-28&sr=b&sig=akRVxHaNp0GXt4QUDEwTc%2BjSGbb43JAUbo9cSmkQ2ps%3D&spr=https&se=2023-09-22T02%3A32%3A03Z&sp=r",
     "ultimate-safaris-namibia-6NVr_r5uosU-unsplash": "https://docserverpwaprodseas.blob.core.windows.net/0af84891-a36e-477b-a136-22241958d10f-1/resource/Assets0Images00004.jpg?sv=2018-03-28&sr=b&sig=DZudKbO8fcLeN6w8MydBGUslZs7xY%2BHH5AuuAU89Cyk%3D&spr=https&se=2023-09-22T02%3A32%3A03Z&sp=r"
@@ -3595,11 +3593,10 @@
     "txtReasonReject": 333
   },
   "ResourcesJsonIndices": {
-    "Image-luke-chesser-B_oL3jEt5L4-unsplash": 1,
-    "Image-Pizza_Hut_logo.svg": 2,
-    "Image-Power-Apps-Logo": 3,
+    "Image-Pizza_Hut_logo.svg": 1,
+    "Image-Power-Apps-Logo": 2,
     "Image-SampleImage": 0,
-    "Image-ultimate-safaris-namibia-6NVr_r5uosU-unsplash": 4
+    "Image-ultimate-safaris-namibia-6NVr_r5uosU-unsplash": 3
   },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},

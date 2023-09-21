@@ -411,6 +411,7 @@
                             SearchFields: =["Value"]
                             SearchItems: =Choices(Request_Test.Status,DataCardValue83.SearchText)
                             SelectMultiple: =false
+                            Visible: =
                             Width: =Parent.Width - 60
                             X: =30
                             Y: =DataCardKey84.Y + DataCardKey84.Height + 5
@@ -1451,6 +1452,7 @@
                     Height: =50
                     OnSelect: =EditForm('Edit Form Request');Navigate(NewReq,ScreenTransition.Fade)
                     Text: ="Edit"
+                    Visible: =If(DataCardValue83.Selected.Value="Created",true,false)
                     Width: =100
                     ZIndex: =1
 
