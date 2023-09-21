@@ -411,7 +411,7 @@
                         Icon4 As icon.Trash:
                             Height: =34
                             Icon: =Icon.Trash
-                            OnSelect: =Select(Parent)
+                            OnSelect: =Set(Dialogdelete,true)
                             Visible: =If(ThisItem.Status.Value="Created",true,false)
                             Width: =24
                             X: =1069
@@ -465,4 +465,145 @@
                             X: =18
                             Y: =20
                             ZIndex: =8
+
+    Dialog_delete As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Visible: =Dialogdelete
+        Width: =Parent.Width
+        ZIndex: =2
+
+        Container13_6 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(0, 0, 0, 0.46)
+            Height: =768
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =1366
+            ZIndex: =1
+
+            Container42_4 As groupContainer.verticalAutoLayoutContainer:
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                Container42 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    BorderThickness: =2
+                    FillPortions: =0
+                    Height: =195
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =372
+                    ZIndex: =1
+
+                    TextInput1_4 As text:
+                        Align: =Align.Center
+                        Default: ="Are you sure want to delete ?"
+                        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 1)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =Self.BorderThickness
+                        FontWeight: =FontWeight.Semibold
+                        Height: =195
+                        HintText: =""
+                        Mode: =TextMode.MultiLine
+                        PaddingLeft: =5
+                        PaddingTop: =50
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =15
+                        Width: =372
+                        X: =418
+                        Y: =238
+                        ZIndex: =1
+
+                Container28_4 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    BorderThickness: =2
+                    DropShadow: =DropShadow.None
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =40
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =2
+                    RadiusTopLeft: =2
+                    RadiusTopRight: =0
+                    Width: =372
+                    ZIndex: =3
+
+                    Button_OK_12 As button:
+                        OnSelect: |-
+                            =Remove(
+                                Request_Test,
+                                gal_Request.Selected
+                            );
+                            If (
+                                IsEmpty(
+                                    Errors(
+                                        Request_Test,
+                                        gal_Request.Selected
+                                    )
+                                ),
+                                Set(
+                                    Dialogdelete,
+                                    false
+                                )
+                            )
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        PaddingRight: =5.21
+                        PaddingTop: =5.21
+                        Size: =18
+                        Text: ="YES"
+                        Width: =60
+                        X: =62
+                        Y: =195
+                        ZIndex: =1
+
+                    Button_Cancel_14 As button:
+                        OnSelect: |-
+                            =Set(
+                                Dialogdelete,
+                                false
+                            )
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        PaddingRight: =5.21
+                        PaddingTop: =5.21
+                        Size: =18
+                        Text: ="NO"
+                        Width: =60
+                        X: =184
+                        Y: =195
+                        ZIndex: =2
 
