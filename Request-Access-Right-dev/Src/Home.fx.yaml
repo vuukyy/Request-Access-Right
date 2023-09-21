@@ -374,7 +374,7 @@
                                 Filter(
                                     Request_Test,
                                     StartsWith(
-                                        Title,
+                                        'Tiêu đề',
                                         TextSearch.Text
                                     ) && 'Created By'.Email = User().Email
                                 ),

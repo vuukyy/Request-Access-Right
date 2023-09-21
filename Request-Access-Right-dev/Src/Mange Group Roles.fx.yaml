@@ -427,6 +427,60 @@
                                 Visible: =varCurrentTab = "ROLE"
                                 ZIndex: =2
 
+                                Container51 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =50
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    ZIndex: =1
+
+                                Container52 As groupContainer.horizontalAutoLayoutContainer:
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    ZIndex: =2
+
+                                    Container53 As groupContainer.verticalAutoLayoutContainer:
+                                        FillPortions: =0
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        Width: =250
+                                        ZIndex: =1
+
+                                        "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                            DelayItemLoading: =true
+                                            Items: =ResourceTest
+                                            Layout: =Layout.Vertical
+                                            LoadingSpinner: =LoadingSpinner.Data
+                                            TemplatePadding: =0
+                                            TemplateSize: =60
+                                            ZIndex: =1
+
+                                            Title3 As label:
+                                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                                Height: =Self.Size * 1.8
+                                                OnSelect: =Select(Parent)
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Text: =ThisItem.'Tiêu đề'
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Width: =Parent.TemplateWidth - 86
+                                                X: =16
+                                                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                                ZIndex: =1
+
+                                    Container54 As groupContainer.verticalAutoLayoutContainer:
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        ZIndex: =2
+
                             tbl_Resource As groupContainer.verticalAutoLayoutContainer:
                                 LayoutDirection: =LayoutDirection.Vertical
                                 LayoutMinHeight: =100
@@ -492,6 +546,9 @@
                                 ZIndex: =4
 
                                 Container10 As groupContainer.horizontalAutoLayoutContainer:
+                                    BorderColor: =RGBA(219, 219, 219, 1)
+                                    BorderThickness: =1
+                                    DropShadow: =DropShadow.None
                                     FillPortions: =0
                                     Height: =50
                                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -501,6 +558,10 @@
                                     LayoutMode: =LayoutMode.Auto
                                     PaddingLeft: =10
                                     PaddingRight: =10
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
                                     ZIndex: =1
 
                                     ComboBox1 As combobox:
@@ -555,71 +616,90 @@
                                         Text: ="Add User"
                                         ZIndex: =2
 
-                                "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                                    DelayItemLoading: =true
-                                    Items: =colListUser
-                                    Layout: =Layout.Vertical
-                                    LoadingSpinner: =LoadingSpinner.Data
-                                    ShowScrollbar: =false
-                                    TemplatePadding: =0
-                                    TemplateSize: =90
-                                    ZIndex: =2
+                                Container46 As groupContainer.horizontalAutoLayoutContainer:
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    ZIndex: =3
 
-                                    Title2 As label:
-                                        Height: =Self.Size * 1.8
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =ThisItem.DisplayName
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =Parent.TemplateWidth - 86
-                                        X: =16
-                                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+                                    Container50 As groupContainer.verticalAutoLayoutContainer:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        DropShadow: =DropShadow.None
+                                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingBottom: =10
+                                        PaddingLeft: =10
+                                        PaddingRight: =10
+                                        RadiusBottomLeft: =0
+                                        RadiusBottomRight: =0
+                                        RadiusTopLeft: =0
+                                        RadiusTopRight: =0
+                                        Width: =350
                                         ZIndex: =1
 
-                                    Subtitle2 As label:
-                                        Height: =Self.Size * 1.8
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =ThisItem.Email
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =Title2.Width
-                                        X: =Title2.X
-                                        Y: =Title2.Y + Title2.Height
-                                        ZIndex: =2
+                                        "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            DelayItemLoading: =true
+                                            Items: =colListUser
+                                            Layout: =Layout.Vertical
+                                            LoadingSpinner: =LoadingSpinner.Data
+                                            ShowScrollbar: =false
+                                            TemplatePadding: =0
+                                            TemplateSize: =90
+                                            Width: =340
+                                            ZIndex: =1
 
-                                    Separator2 As rectangle:
-                                        Height: =8
-                                        OnSelect: =Select(Parent)
-                                        Width: =Parent.TemplateWidth
-                                        Y: =Parent.TemplateHeight - Self.Height
-                                        ZIndex: =4
+                                            Title2 As label:
+                                                Height: =Self.Size * 1.8
+                                                OnSelect: =Select(Parent)
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Text: =ThisItem.DisplayName
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Width: =Parent.TemplateWidth - 86
+                                                X: =1
+                                                Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+                                                ZIndex: =1
 
-                                    Icon3 As icon.Trash:
-                                        Height: =24
-                                        Icon: =Icon.Trash
-                                        OnSelect: |-
-                                            =UpdateContext({showPopup:true})
-                                        Width: =24
-                                        X: =1098
-                                        Y: =33
-                                        ZIndex: =5
+                                            Subtitle2 As label:
+                                                Height: =Self.Size * 1.8
+                                                OnSelect: =Select(Parent)
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Text: =ThisItem.Email
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Width: =Title2.Width
+                                                X: =1
+                                                Y: =Title2.Y + Title2.Height
+                                                ZIndex: =2
 
-                                    Icon7 As icon.ArrowsUpDown:
-                                        Height: =24
-                                        Icon: =Icon.Sort
-                                        OnSelect: |-
-                                            =UpdateContext({showMoveUser:true})
-                                        Rotation: =90
-                                        Width: =24
-                                        X: =1060
-                                        Y: =33
-                                        ZIndex: =6
+                                            Icon3 As icon.Trash:
+                                                Height: =24
+                                                Icon: =Icon.Trash
+                                                OnSelect: |-
+                                                    =UpdateContext({showPopup:true})
+                                                Width: =24
+                                                X: =1060
+                                                Y: =37
+                                                ZIndex: =5
+
+                                            Icon7 As icon.ArrowsUpDown:
+                                                Height: =24
+                                                Icon: =Icon.Sort
+                                                OnSelect: |-
+                                                    =UpdateContext({showMoveUser:true})
+                                                Rotation: =90
+                                                Width: =24
+                                                X: =1020
+                                                Y: =37
+                                                ZIndex: =6
 
     ComfirmMoveUsers As group:
         Height: =5
