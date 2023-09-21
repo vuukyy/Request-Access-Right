@@ -1,11 +1,11 @@
 "'Mange Group Roles' As screen.'autoLayout_Sidebar_ver1.0'":
-    OnVisible: |-
+    OnVisible: |
         =Set(
             varCurrentTab,
             "ROLE"
         );
         UpdateContext({showPopup: false});
-        UpdateContext({showMoveUser: false})
+        UpdateContext({showMoveUser: false});
 
     ScreenContainer8 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -743,6 +743,8 @@
             Label8_1 As label:
                 Align: =Align.Center
                 AlignInContainer: =AlignInContainer.Stretch
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =2
                 FontWeight: =FontWeight.Bold
                 Height: =60
                 Size: =16
@@ -752,24 +754,67 @@
             Label9_1 As label:
                 Align: =Align.Center
                 AlignInContainer: =AlignInContainer.Stretch
+                Color: =RGBA(255, 0, 0, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =100
                 LayoutMinHeight: =60
+                Size: =16
                 Text: ="Do you want to move " & Gallery11.Selected.DisplayName & " to another group?"
                 Width: =190
                 ZIndex: =2
 
             Container28 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 X: =40
                 Y: =40
                 ZIndex: =3
 
+                Container13 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =30
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =10
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Icon1 As icon.Sync:
+                        Height: =24
+                        Icon: =Icon.Sync
+                        OnSelect: |-
+                            =UpdateContext({resetChecked: true});
+                            UpdateContext({resetChecked: false});
+                            Set(
+                                varIdGroup,
+                                Blank()
+                            )
+                        Width: =24
+                        ZIndex: =1
+
                 "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.Center
                     DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =170
                     Items: =GroupTest
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
@@ -777,7 +822,7 @@
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
                     TemplateSize: =50
-                    ZIndex: =1
+                    ZIndex: =2
 
                     Title11 As label:
                         FontWeight: =If(Checkbox1.Value = true, FontWeight.Semibold, FontWeight.Normal)
@@ -787,7 +832,8 @@
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Text: =ThisItem.CodeGroup
+                        Size: =13
+                        Text: =ThisItem.'Tiêu đề'
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 86
                         X: =86
@@ -795,6 +841,7 @@
                         ZIndex: =1
 
                     Checkbox1 As checkbox:
+                        CheckboxSize: =30
                         DisabledFill: |-
                             =RGBA(
                                 0,
@@ -802,24 +849,30 @@
                                 0,
                                 0
                             )
+                        DisplayMode: |-
+                            =If(
+                                Self.Value || (Value(lblChecked.Text) = 0),
+                                DisplayMode.Edit,
+                                DisplayMode.Disabled
+                            )
                         FocusedBorderThickness: =0
-                        Height: =40
+                        Height: =30
                         OnSelect: |-
                             =Set(
                                 varIdGroup,
                                 ThisItem.ID
-                            );
-                            Set(clearIdGroup, Blank())
-                        OnUncheck: =clearIdGroup
+                            )
+                        Reset: =resetChecked
                         Text: =""
                         VerticalAlign: =VerticalAlign.Top
-                        Width: =40
-                        X: =27
-                        Y: =4
+                        Width: =30
+                        X: =44
+                        Y: =9
                         ZIndex: =2
 
             Container48_1 As groupContainer.horizontalAutoLayoutContainer:
-                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =2
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =60
@@ -839,26 +892,28 @@
                     Fill: =RGBA(54, 176, 75, 1)
                     OnSelect: |-
                         =Set(
-                            varRemoveUser,
-                            RemoveuserfromUserGroup.Run(
-                                Gallery11.Selected.Email,
-                                galUserGroup.Selected.ID
+                            varMoveUser,
+                            MoveusertoanotherUserGroup.Run(
+                                varIdGroup,
+                                Gallery11.Selected.Email
                             )
                         );
                         If(
-                            varRemoveUser.notideletesuccess = "",
+                            varMoveUser.updatesuccess = "",
                             Notify(
-                                "User not found",
+                                "User already exists",
                                 NotificationType.Error,
                                 1000
                             ),
                             Notify(
-                                "Delete user success",
+                                "Move user success",
                                 NotificationType.Success,
                                 1000
                             )
                         );
-                        UpdateContext({showPopup:false});
+                        UpdateContext({showMoveUser: false});
+                        UpdateContext({resetChecked: true});
+                        UpdateContext({resetChecked: false});
                         Refresh(UserGroupTest)
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -881,7 +936,9 @@
                     Color: =RGBA(51, 51, 51, 1)
                     Fill: =RGBA(202, 202, 202, 1)
                     OnSelect: |-
-                        =UpdateContext({showPopup:false})
+                        =UpdateContext({showMoveUser: false});
+                        UpdateContext({resetChecked: true});
+                        UpdateContext({resetChecked: false})
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -889,4 +946,15 @@
                     Size: =13
                     Text: ="Cancel"
                     ZIndex: =3
+
+                lblChecked As label:
+                    Text: |-
+                        =CountRows(
+                            Filter(
+                                Gallery3.AllItems,
+                                Checkbox1.Value = true
+                            )
+                        )
+                    Visible: =false
+                    ZIndex: =4
 

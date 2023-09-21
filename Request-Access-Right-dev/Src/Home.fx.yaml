@@ -395,7 +395,7 @@
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.Title
+                            Text: =ThisItem.'Tiêu đề'
                             Width: =430
                             X: =56
                             Y: =10
