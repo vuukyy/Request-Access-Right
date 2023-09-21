@@ -257,7 +257,7 @@
                     Title_DataCard1 As typedDataCard.textualViewCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.'Tiêu đề'
+                        Default: =ThisItem.Title
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -271,6 +271,7 @@
                         DataCardKey1 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -291,114 +292,6 @@
                             Y: =DataCardKey1.Y + DataCardKey1.Height + 5
                             ZIndex: =2
 
-                    IDUser_DataCard5 As typedDataCard.comboBoxViewCard:
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="IDUser"
-                        Default: =ThisItem.IDUser
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"IDUser")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue30.Selected
-                        Width: =570
-                        X: =1
-                        Y: =0
-                        ZIndex: =2
-
-                        DataCardKey30 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue30 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["Value"]
-                            DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].IDUser)
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["Value"]
-                            SearchItems: =Choices(Request_Test.IDUser,DataCardValue30.SearchText)
-                            SelectMultiple: =false
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey30.Y + DataCardKey30.Height + 5
-                            ZIndex: =2
-
-                    "'IDUser: Email_DataCard2' As typedDataCard.comboBoxViewCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="IDUser_x003a__x0020_Email"
-                        Default: |-
-                            =ThisItem.'IDUser: Email'
-                        DisplayMode: =DisplayMode.View
-                        DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"IDUser_x003a__x0020_Email")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =DataCardValue43.Selected
-                        Width: =570
-                        X: =0
-                        Y: =1
-                        ZIndex: =2
-
-                        DataCardKey43 As label:
-                            AutoHeight: =true
-                            Height: =34
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue43 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["Value"]
-                            DisplayMode: =Parent.DisplayMode
-                            Items: |-
-                                =Choices([@Request_Test].'IDUser: Email')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["Value"]
-                            SearchItems: |-
-                                =Choices(Request_Test.'IDUser: Email',DataCardValue43.SearchText)
-                            SelectMultiple: =false
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey43.Y + DataCardKey43.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage57 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue43.Y + DataCardValue43.Height
-                            ZIndex: =3
-
-                        StarVisible57 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey43.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey43.Y
-                            ZIndex: =4
-
                     Status_DataCard3 As typedDataCard.comboBoxViewCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Status"
@@ -411,12 +304,13 @@
                         Update: =DataCardValue83.Selected
                         Width: =570
                         X: =1
-                        Y: =1
+                        Y: =0
                         ZIndex: =2
 
                         DataCardKey84 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -475,9 +369,10 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue88.Selected
+                        Visible: =If(IsBlank(ThisItem.HOD),false,true)
                         Width: =570
                         X: =0
-                        Y: =2
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey88 As label:
@@ -524,6 +419,7 @@
                         StarVisible59 As label:
                             Align: =Align.Center
                             Height: =DataCardKey88.Height
+                            PaddingLeft: =0
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -540,14 +436,16 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
+                        Visible: =If(IsBlank(ThisItem.'HOD Approved Date'),false,true)
                         Width: =570
                         X: =1
-                        Y: =2
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey89 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -575,17 +473,18 @@
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqType")
                         Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
+                        Height: =84
                         Required: =false
                         Update: =DataCardValue90.Selected
                         Width: =570
                         X: =0
-                        Y: =3
+                        Y: =2
                         ZIndex: =2
 
                         DataCardKey90 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -642,14 +541,16 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
+                        Visible: =true
                         Width: =570
                         X: =1
-                        Y: =3
+                        Y: =2
                         ZIndex: =2
 
                         DataCardKey92 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -682,12 +583,13 @@
                         Update: =DataCardValue93.Selected
                         Width: =570
                         X: =0
-                        Y: =4
+                        Y: =3
                         ZIndex: =2
 
                         DataCardKey93 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -746,12 +648,13 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =4
+                        Y: =3
                         ZIndex: =2
 
                         DataCardKey94 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -784,12 +687,13 @@
                         Update: =DataCardValue95.Selected
                         Width: =570
                         X: =0
-                        Y: =5
+                        Y: =4
                         ZIndex: =2
 
                         DataCardKey95 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -849,12 +753,13 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =5
+                        Y: =4
                         ZIndex: =2
 
                         DataCardKey96 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -887,12 +792,13 @@
                         Update: =DataCardValue97.Selected
                         Width: =570
                         X: =0
-                        Y: =6
+                        Y: =5
                         ZIndex: =2
 
                         DataCardKey97 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -952,12 +858,13 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =6
+                        Y: =5
                         ZIndex: =2
 
                         DataCardKey98 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -990,12 +897,13 @@
                         Update: =DataCardValue99.Selected
                         Width: =570
                         X: =0
-                        Y: =7
+                        Y: =6
                         ZIndex: =2
 
                         DataCardKey99 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1055,12 +963,13 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =7
+                        Y: =6
                         ZIndex: =2
 
                         DataCardKey100 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1093,12 +1002,13 @@
                         Update: =DataCardValue101.Selected
                         Width: =570
                         X: =0
-                        Y: =8
+                        Y: =7
                         ZIndex: =2
 
                         DataCardKey101 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1158,12 +1068,13 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =8
+                        Y: =7
                         ZIndex: =2
 
                         DataCardKey102 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1196,12 +1107,13 @@
                         Update: =DataCardValue105.Selected
                         Width: =570
                         X: =0
-                        Y: =9
+                        Y: =8
                         ZIndex: =2
 
                         DataCardKey105 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1261,12 +1173,13 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =9
+                        Y: =8
                         ZIndex: =2
 
                         DataCardKey106 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1298,12 +1211,13 @@
                         Required: =false
                         Width: =570
                         X: =0
-                        Y: =10
+                        Y: =9
                         ZIndex: =2
 
                         DataCardKey107 As label:
                             AutoHeight: =true
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false

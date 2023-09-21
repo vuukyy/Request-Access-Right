@@ -398,7 +398,7 @@
 
                         Label15_4 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Tiêu đề'
+                            Text: =ThisItem.Title
                             Width: =230
                             X: =141
                             Y: =10
@@ -432,7 +432,7 @@
                         Label16_9 As label:
                             Height: =50
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Đã tạo'
+                            Text: =ThisItem.Created
                             Width: =145
                             X: =405
                             Y: =10

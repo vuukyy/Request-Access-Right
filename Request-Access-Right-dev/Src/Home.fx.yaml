@@ -310,7 +310,7 @@
                         Size: =13
                         Text: ="New Request"
                         Width: =140
-                        ZIndex: =5
+                        ZIndex: =3
 
                 Container11 As groupContainer.verticalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -399,7 +399,7 @@
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Tiêu đề'
+                            Text: =ThisItem.Title
                             Width: =430
                             X: =56
                             Y: =10
