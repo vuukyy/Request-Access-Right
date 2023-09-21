@@ -277,7 +277,8 @@
                     FillPortions: =0
                     Height: =60
                     LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutGap: =10
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
@@ -309,7 +310,7 @@
                         Size: =13
                         Text: ="New Request"
                         Width: =140
-                        ZIndex: =1
+                        ZIndex: =5
 
                 Container11 As groupContainer.verticalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -372,7 +373,10 @@
                             =SortByColumns(
                                 Filter(
                                     Request_Test,
-                                    'Created By'.Email = User().Email
+                                    StartsWith(
+                                        Title,
+                                        TextSearch.Text
+                                    ) && 'Created By'.Email = User().Email
                                 ),
                                 "Created",
                                 SortOrder.Descending
