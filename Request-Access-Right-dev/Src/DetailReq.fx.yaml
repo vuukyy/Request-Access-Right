@@ -257,7 +257,7 @@
                     Title_DataCard1 As typedDataCard.textualViewCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Title"
-                        Default: =ThisItem.'Tiêu đề'
+                        Default: =ThisItem.Title
                         DisplayMode: =DisplayMode.View
                         DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -304,7 +304,7 @@
                         Update: =DataCardValue83.Selected
                         Width: =570
                         X: =1
-                        Y: =1
+                        Y: =0
                         ZIndex: =2
 
                         DataCardKey84 As label:
@@ -372,7 +372,7 @@
                         Visible: =If(IsBlank(ThisItem.HOD),false,true)
                         Width: =570
                         X: =0
-                        Y: =2
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey88 As label:
@@ -439,7 +439,7 @@
                         Visible: =If(IsBlank(ThisItem.'HOD Approved Date'),false,true)
                         Width: =570
                         X: =1
-                        Y: =2
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey89 As label:
@@ -478,7 +478,7 @@
                         Update: =DataCardValue90.Selected
                         Width: =570
                         X: =0
-                        Y: =3
+                        Y: =2
                         ZIndex: =2
 
                         DataCardKey90 As label:
@@ -544,7 +544,7 @@
                         Visible: =true
                         Width: =570
                         X: =1
-                        Y: =3
+                        Y: =2
                         ZIndex: =2
 
                         DataCardKey92 As label:
@@ -583,7 +583,7 @@
                         Update: =DataCardValue93.Selected
                         Width: =570
                         X: =0
-                        Y: =4
+                        Y: =3
                         ZIndex: =2
 
                         DataCardKey93 As label:
@@ -648,7 +648,7 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =4
+                        Y: =3
                         ZIndex: =2
 
                         DataCardKey94 As label:
@@ -687,7 +687,7 @@
                         Update: =DataCardValue95.Selected
                         Width: =570
                         X: =0
-                        Y: =5
+                        Y: =4
                         ZIndex: =2
 
                         DataCardKey95 As label:
@@ -753,7 +753,7 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =5
+                        Y: =4
                         ZIndex: =2
 
                         DataCardKey96 As label:
@@ -792,7 +792,7 @@
                         Update: =DataCardValue97.Selected
                         Width: =570
                         X: =0
-                        Y: =6
+                        Y: =5
                         ZIndex: =2
 
                         DataCardKey97 As label:
@@ -858,7 +858,7 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =6
+                        Y: =5
                         ZIndex: =2
 
                         DataCardKey98 As label:
@@ -897,7 +897,7 @@
                         Update: =DataCardValue99.Selected
                         Width: =570
                         X: =0
-                        Y: =7
+                        Y: =6
                         ZIndex: =2
 
                         DataCardKey99 As label:
@@ -963,7 +963,7 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =7
+                        Y: =6
                         ZIndex: =2
 
                         DataCardKey100 As label:
@@ -1002,7 +1002,7 @@
                         Update: =DataCardValue101.Selected
                         Width: =570
                         X: =0
-                        Y: =8
+                        Y: =7
                         ZIndex: =2
 
                         DataCardKey101 As label:
@@ -1068,7 +1068,7 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =8
+                        Y: =7
                         ZIndex: =2
 
                         DataCardKey102 As label:
@@ -1107,7 +1107,7 @@
                         Update: =DataCardValue105.Selected
                         Width: =570
                         X: =0
-                        Y: =9
+                        Y: =8
                         ZIndex: =2
 
                         DataCardKey105 As label:
@@ -1173,7 +1173,7 @@
                         Required: =false
                         Width: =570
                         X: =1
-                        Y: =9
+                        Y: =8
                         ZIndex: =2
 
                         DataCardKey106 As label:
@@ -1211,7 +1211,7 @@
                         Required: =false
                         Width: =570
                         X: =0
-                        Y: =10
+                        Y: =9
                         ZIndex: =2
 
                         DataCardKey107 As label:

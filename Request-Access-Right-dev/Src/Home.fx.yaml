@@ -292,6 +292,52 @@
                     RadiusTopRight: =0
                     ZIndex: =1
 
+                    Container46 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(56, 96, 178, 1)
+                        BorderThickness: =2
+                        Height: =50
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        ZIndex: =1
+
+                        Icon9 As icon.Search:
+                            Height: =40
+                            Icon: =Icon.Search
+                            Width: =40
+                            ZIndex: =1
+
+                        TextSearch As text:
+                            BorderColor: =
+                            BorderStyle: =
+                            BorderThickness: =0
+                            Default: =""
+                            FillPortions: =1
+                            FocusedBorderColor: =
+                            FocusedBorderThickness: =
+                            HintText: ="Search title"
+                            HoverBorderColor: =
+                            HoverColor: =
+                            HoverFill: =
+                            PressedBorderColor: =
+                            PressedColor: =
+                            PressedFill: =
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Width: =200
+                            ZIndex: =2
+
+                    Rectangle7 As rectangle:
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =1
+                        Height: =60
+                        ZIndex: =2
+
                     btnNewReq As button:
                         BorderThickness: =0
                         Color: =RGBA(118, 0, 0, 1)
@@ -310,7 +356,7 @@
                         Size: =13
                         Text: ="New Request"
                         Width: =140
-                        ZIndex: =5
+                        ZIndex: =3
 
                 Container11 As groupContainer.verticalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -399,7 +445,7 @@
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Tiêu đề'
+                            Text: =ThisItem.Title
                             Width: =430
                             X: =56
                             Y: =10
