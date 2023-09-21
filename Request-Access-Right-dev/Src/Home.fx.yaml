@@ -395,7 +395,7 @@
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Tiêu đề'
+                            Text: =ThisItem.Title
                             Width: =430
                             X: =56
                             Y: =10
@@ -427,7 +427,7 @@
 
                             Rectangle6 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightYellow)
+                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightGoldenRodYellow)
                                 FocusedBorderThickness: =0
                                 Height: =40
                                 OnSelect: =Select(Parent)
@@ -438,7 +438,7 @@
 
                             Label17 As label:
                                 Align: =Align.Center
-                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightYellow)
+                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightGoldenRodYellow)
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
                                 Visible: =

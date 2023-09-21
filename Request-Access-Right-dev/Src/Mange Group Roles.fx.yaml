@@ -833,7 +833,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =13
-                        Text: =ThisItem.'Tiêu đề'
+                        Text: =ThisItem.Title
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 86
                         X: =86
