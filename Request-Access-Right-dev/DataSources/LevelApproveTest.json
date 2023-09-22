@@ -33,6 +33,7 @@
       "ID": "ID",
       "IdUser": "IdUser",
       "IdUser#Claims": "IdUser Claims",
+      "isActive": "isActive",
       "Level": "Level",
       "Level#Id": "Level Id",
       "MaCode": "MaCode",
