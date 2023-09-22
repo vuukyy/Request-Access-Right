@@ -622,6 +622,8 @@
                                     DelayItemLoading: =true
                                     Items: =colListUser
                                     Layout: =Layout.Vertical
+                                    LayoutMinHeight: =287
+                                    LayoutMinWidth: =320
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =0
                                     TemplateSize: =90
