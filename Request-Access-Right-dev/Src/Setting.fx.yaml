@@ -397,17 +397,6 @@
                                     Text: ="Manage Roles"
                                     ZIndex: =2
 
-                                Label44 As label:
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    Color: =RGBA(128, 128, 128, 1)
-                                    OnSelect: |-
-                                        =Navigate(
-                                            'Manage Users',
-                                            ScreenTransition.Cover
-                                        )
-                                    Text: ="Manage Users"
-                                    ZIndex: =3
-
                         Label42_3 As label:
                             Color: =RGBA(128, 128, 128, 1)
                             FontWeight: =FontWeight.Semibold
