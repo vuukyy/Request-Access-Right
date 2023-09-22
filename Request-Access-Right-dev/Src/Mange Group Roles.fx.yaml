@@ -469,7 +469,7 @@
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
-                                                Text: =ThisItem.'Tiêu đề'
+                                                Text: =ThisItem.Title
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Width: =Parent.TemplateWidth - 86
                                                 X: =16
@@ -617,6 +617,16 @@
                                         Size: =13
                                         Text: ="Add User"
                                         ZIndex: =2
+
+    Rectangle7_2 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =0
+        Height: =424
+        Visible: =showPopup
+        Width: =707
+        X: =349
+        Y: =192
+        ZIndex: =8
 
     ComfirmMoveUsers As group:
         Height: =5
@@ -869,16 +879,6 @@
                         )
                     Visible: =false
                     ZIndex: =4
-
-    Rectangle7_2 As rectangle:
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderThickness: =0
-        Height: =424
-        Visible: =showPopup
-        Width: =707
-        X: =349
-        Y: =192
-        ZIndex: =8
 
     Container46_2 As groupContainer.verticalAutoLayoutContainer:
         Height: =424
