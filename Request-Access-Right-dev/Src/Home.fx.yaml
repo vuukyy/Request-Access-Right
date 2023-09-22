@@ -420,9 +420,9 @@
                                 Filter(
                                     Request_Test,
                                     StartsWith(
-                                        'Tiêu đề',
+                                        Title,
                                         TextSearch.Text
-                                    ) && 'Người Tạo'.Email = User().Email
+                                    ) && 'Created By'.Email = User().Email
                                 ),
                                 "Created",
                                 SortOrder.Descending
@@ -445,7 +445,7 @@
 
                         Label15 As label:
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.'Tiêu đề'
+                            Text: =ThisItem.Title
                             Width: =430
                             X: =56
                             Y: =10
