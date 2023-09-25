@@ -111,11 +111,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "609eb129-582c-4933-a55a-df41ee288a61",
-    "Id": "4ba0c179-7463-47d8-be8d-30f142db5b69",
+    "Id": "63b12159-2f51-4dba-aabf-5e569e82f6e9",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "Request+Access+Right.msapp",
+    "Name": "Request Access Right UAT",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
