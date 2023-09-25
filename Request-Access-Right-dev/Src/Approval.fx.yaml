@@ -201,6 +201,15 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Approval"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isApprover)
+                            ) = "True",
+                            true,
+                            false
+                        )
                     ZIndex: =2
 
                 Button5_40 As button:
@@ -217,6 +226,26 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="HOD & GM"
+                    Visible: |-
+                        =If(
+                            IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "Head of",
+                                MatchOptions.Contains
+                            ) || IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
+                            true,
+                            false
+                        )
                     ZIndex: =3
 
                 Button5_22 As button:
