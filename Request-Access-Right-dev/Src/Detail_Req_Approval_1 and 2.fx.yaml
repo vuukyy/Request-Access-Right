@@ -1004,8 +1004,8 @@
                     =If(
                         !IsBlank(
                             LookUp(
-                                LevelApproveTest,
-                                User().Email = IdUser.Email && Level.Value="Approver 1"
+                                Request_Test,
+                                User().Email = 'Approver 1'.Email
                             )
                         ),
                         Patch(
@@ -1015,17 +1015,7 @@
                                 ID = Gallery7_1.Selected.ID
                             ),
                             {Status: {Value: "Approver 1 approved"}},
-                            {'Approved Date 1': Now()},
-                            {'Approver 1': {
-                                        '@odata.type': User().Email,
-                                        Claims: User().Email,
-                                        Department: "",
-                                        DisplayName: User().FullName,
-                                        Email: User().Email,
-                                        JobTitle: "",
-                                        Picture: ""
-                                    }
-                            }
+                            {'Approved Date 1': Now()}
                         ),
                         If(
                             !IsBlank(

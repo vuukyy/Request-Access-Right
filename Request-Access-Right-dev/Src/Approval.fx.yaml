@@ -353,15 +353,14 @@
                             =If(
                                 !IsBlank(
                                     LookUp(
-                                        LevelApproveTest,
-                                        User().Email = IdUser.Email && MaCode = "APP_Approver1"
+                                        Request_Test,
+                                        User().Email = 'Approver 1'.Email
                                     )
                                 ),
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && ( 'ReqType: ID'.Value = "3" || 'ReqType: ID'.Value = "4" || 'ReqType: ID'.Value = "5" || 'ReqType: ID'.Value = "6" || 'ReqType: ID'.Value = "7" || 'ReqType: ID'.Value = "8" || 'ReqType: ID'.Value = "9" || 'ReqType: ID'.Value = "10" )
-                                       //&& ( 'ReqType: ID'.Value in ["3","4","5","6","7","8","9","10"])
+                                        Status.Value = "Created" && User().Email = 'Approver 1'.Email
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -370,48 +369,16 @@
                                     !IsBlank(
                                         LookUp(
                                             LevelApproveTest,
-                                            User().Email = IdUser.Email && MaCode = "DIG_Approver1"
+                                            User().Email = IdUser.Email && Level.Value="Approver 2"
                                         )
                                     ),
                                     SortByColumns(
                                         Filter(
                                             Request_Test,
-                                            Status.Value = "Created" && ('ReqType: ID'.Value = "1" || 'ReqType: ID'.Value = "2")
+                                            Status.Value = "Approver 1 approved"
                                         ),
                                         "Created",
                                         SortOrder.Descending
-                                    ),
-                                    If(
-                                        !IsBlank(
-                                            LookUp(
-                                                LevelApproveTest,
-                                                User().Email = IdUser.Email && MaCode = "IT_Approver1"
-                                            )
-                                        ),
-                                        SortByColumns(
-                                            Filter(
-                                                Request_Test,
-                                                Status.Value = "Created" && ('ReqType: ID'.Value = "12"|| 'ReqType: ID'.Value = "13"|| 'ReqType: ID'.Value = "14" || 'ReqType: ID'.Value = "15")
-                                            ),
-                                            "Created",
-                                            SortOrder.Descending
-                                        ),
-                                        If(
-                                            !IsBlank(
-                                                LookUp(
-                                                    LevelApproveTest,
-                                                    User().Email = IdUser.Email && Level.Value = "Approver 2"
-                                                )
-                                            ),
-                                            SortByColumns(
-                                                Filter(
-                                                    Request_Test,
-                                                    Status.Value = "Approver 1 approved"
-                                                ),
-                                                "Created",
-                                                SortOrder.Descending
-                                            )
-                                        )
                                     )
                                 )
                             )

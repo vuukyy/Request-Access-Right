@@ -801,7 +801,7 @@
                                     JobTitle: "",
                                     Picture: ""
                                 }
-                            }
+                            } 
                         )
                     RadiusBottomLeft: =5
                     RadiusBottomRight: =5
