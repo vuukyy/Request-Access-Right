@@ -395,7 +395,7 @@
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =250
+                            Height: =180
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -418,7 +418,6 @@
                             Container35 As groupContainer.verticalAutoLayoutContainer:
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 DropShadow: =DropShadow.None
-                                FillPortions: =0
                                 LayoutDirection: =LayoutDirection.Vertical
                                 LayoutMinHeight: =50
                                 LayoutMinWidth: =250
