@@ -150,15 +150,12 @@
     "dependents": [],
     "id": "44307f3b-3875-4645-a663-5aae40d256c5"
   },
-  "48bf1811-17ba-4c62-8ea1-bffd86dd1ad6": {
+  "50d62729-e4c8-4f9d-aa56-41bf91c08288": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "5b74cc55-98b3-461d-ab62-9036c61f92d4": {
-          "value": "shared_office365users"
-        },
         "workflowEntityId": {
           "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
         },
@@ -167,9 +164,6 @@
         }
       },
       "parameterHintsV2": {
-        "shared_office365users": {
-          "value": "5b74cc55-98b3-461d-ab62-9036c61f92d4"
-        },
         "workflowEntityId": {
           "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
         },
@@ -183,24 +177,10 @@
       "Login2"
     ],
     "dependencies": {
-      "shared_office365users": "5b74cc55-98b3-461d-ab62-9036c61f92d4"
+      "shared_office365users": "b751182b-5a6f-465a-9943-5667c29402cf"
     },
     "dependents": [],
-    "id": "48bf1811-17ba-4c62-8ea1-bffd86dd1ad6"
-  },
-  "5b74cc55-98b3-461d-ab62-9036c61f92d4": {
-    "connectionRef": {
-      "displayName": "Người dùng Office 365",
-      "iconUri": "https://connectoricons-prod.azureedge.net/master/1.0.1653.3400/office365users/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "48bf1811-17ba-4c62-8ea1-bffd86dd1ad6"
-    ],
-    "id": "5b74cc55-98b3-461d-ab62-9036c61f92d4"
+    "id": "50d62729-e4c8-4f9d-aa56-41bf91c08288"
   },
   "6d604169-44a4-4adf-88a9-30db8d78d970": {
     "connectionRef": {
@@ -400,6 +380,20 @@
       "cae9f992-35b3-42b2-889a-95a173955e6c"
     ],
     "id": "aa162321-87b3-4021-8048-3d725214b6b6"
+  },
+  "b751182b-5a6f-465a-9943-5667c29402cf": {
+    "connectionRef": {
+      "displayName": "Người dùng Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/master/1.0.1653.3400/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "50d62729-e4c8-4f9d-aa56-41bf91c08288"
+    ],
+    "id": "b751182b-5a6f-465a-9943-5667c29402cf"
   },
   "cae9f992-35b3-42b2-889a-95a173955e6c": {
     "connectionRef": {
