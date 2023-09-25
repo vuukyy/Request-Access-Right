@@ -952,8 +952,8 @@
             Height: =424
             Visible: =showPopup
             Width: =707
-            X: =349
-            Y: =192
+            X: =329
+            Y: =189
             ZIndex: =6
 
         Container46_2 As groupContainer.verticalAutoLayoutContainer:
@@ -962,8 +962,8 @@
             LayoutMode: =LayoutMode.Auto
             Visible: =showPopup
             Width: =707
-            X: =349
-            Y: =192
+            X: =329
+            Y: =189
             ZIndex: =7
 
             Label5 As label:
