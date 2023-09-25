@@ -197,7 +197,14 @@
                             With(
                                 {obj: ParseJSON(getEmail.result)},
                                 Text(obj.isApprover)
-                            ) = "True",
+                            ) = "True" && !IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
                             true,
                             false
                         )
@@ -226,6 +233,12 @@
                                 ),
                                 "Head of",
                                 MatchOptions.Contains
+                            ) && !IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Dept)
+                                ),
+                                "DTS"
                             ) || IsMatch(
                                 With(
                                     {obj: ParseJSON(getEmail.result)},
