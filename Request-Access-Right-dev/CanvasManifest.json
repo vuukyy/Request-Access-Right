@@ -132,7 +132,6 @@
     "UserLocale": "vi-VN"
   },
   "ScreenOrder": [
-    "RandomPassword",
     "Login",
     "Home",
     "Approver_Detail",
