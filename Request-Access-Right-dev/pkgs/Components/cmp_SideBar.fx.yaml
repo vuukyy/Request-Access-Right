@@ -1,0 +1,74 @@
+cmp_SideBar As CanvasComponent:
+    Color: =RGBA(44, 51, 51, 1)
+    CurrentIndicatorColor: =RGBA(210, 19, 18, 1)
+    Default: ="Item 1"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    HoverFill: =RGBA(241, 90, 89,10%)
+    Items: |-
+        =Table(
+            {Value: "Item 1", Icon: Icon.AddDocument, Screen: App.ActiveScreen},
+            {Value: "Item 2", Icon: Icon.History, Screen: App.ActiveScreen},
+            {Value: "Item 3", Icon: Icon.History, Screen: App.ActiveScreen}
+         )
+    SelectedFill: =RGBA(241, 90, 89,10%)
+    Width: =200
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =Parent.Height
+        Items: =cmp_SideBar.Items
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Parent.Height/8
+        Width: =200
+        ZIndex: =1
+
+        Icon2 As icon.Document:
+            Color: =cmp_SideBar.Color
+            Height: =24
+            Icon: =ThisItem.Icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =23
+            Y: =25
+            ZIndex: =1
+
+        Label1_1 As label:
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Value
+            Width: =127
+            X: =65
+            Y: =11
+            ZIndex: =2
+
+        Label3_1 As label:
+            Fill: =cmp_SideBar.CurrentIndicatorColor
+            Height: |
+                =80
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =""
+            Visible: =ThisItem.Value = cmp_SideBar.Default
+            Width: =5
+            ZIndex: =3
+
+        Label4_1 As label:
+            Fill: =If(ThisItem.Value = cmp_SideBar.Default, cmp_SideBar.SelectedFill, Color.Transparent)
+            Height: =Parent.TemplateHeight
+            HoverFill: =cmp_SideBar.HoverFill
+            OnSelect: =Navigate(ThisItem.Screen)
+            PressedFill: =cmp_SideBar.SelectedFill
+            Size: =21
+            Text: =""
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+

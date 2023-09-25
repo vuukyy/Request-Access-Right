@@ -1,0 +1,22 @@
+[
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 0,
+    "LibraryId": "846629a0-d373-48d1-ba53-3bdee80a0b7b",
+    "LibraryLogicalName": "pizzahut_cmpsidebar_30397",
+    "LibraryVersion": "2023-08-15T09:34:16Z",
+    "OriginalComponentDefinitionTemplateId": "3d9aea47fad84ea8860f213ffa2dcacb",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2023-08-15T09:34:22.922+00:00"
+  },
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 0,
+    "LibraryId": "a8037299-8692-46fc-8d16-44b57c86e507",
+    "LibraryLogicalName": "pizzahut_cmptab_babfd",
+    "LibraryVersion": "2023-08-24T09:06:02Z",
+    "OriginalComponentDefinitionTemplateId": "b45787c1affb48b89c3b2708e1ef8552",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2023-08-24T09:06:09.683+00:00"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "e652e9fd-0276-46bd-a004-6f970b364bf3",
+    "Name": "InsertUserinUserGroup",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "322b921b-b053-ee11-be6f-6045bd558ce2"
+  }
+]

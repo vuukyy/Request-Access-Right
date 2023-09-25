@@ -1,0 +1,77 @@
+cmp_Tab As CanvasComponent:
+    Color: =RGBA(44, 51, 51, 1)
+    CurrentIndicatorColor: =RGBA(210, 19, 18, 1)
+    Default: ="Item 1"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =60
+    HoverFill: =RGBA(241, 90, 89,10%)
+    Item: |-
+        =Table(
+            {
+                Value: "Item 1",
+                Icon: Icon.AddDocument,
+                Screen: App.ActiveScreen
+            },
+            {
+                Value: "Item 2",
+                Icon: Icon.History,
+                Screen: App.ActiveScreen
+            },
+            {
+                Value: "Item 3",
+                Icon: Icon.History,
+                Screen: App.ActiveScreen
+            }
+        )
+    SelectedFill: =RGBA(241, 90, 89,10%)
+    Width: =700
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery1_1 As gallery.galleryHorizontal:
+        DelayItemLoading: =true
+        Height: =60
+        Items: =cmp_Tab.Item
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =180
+        Width: =700
+        ZIndex: =1
+
+        Label1_2 As label:
+            Fill: |-
+                =If(
+                    ThisItem.Value = cmp_Tab.Default,
+                    cmp_Tab.SelectedFill,
+                    Color.Transparent
+                )
+            Height: =50
+            HoverFill: =cmp_Tab.HoverFill
+            OnSelect: =Navigate(ThisItem.Screen)
+            PressedFill: =cmp_Tab.SelectedFill
+            Size: =21
+            Text: =""
+            Width: =180
+            ZIndex: =1
+
+        Label2_2 As label:
+            Fill: =cmp_Tab.CurrentIndicatorColor
+            Height: =2
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =""
+            Visible: =ThisItem.Value = cmp_Tab.Default
+            Width: =180
+            Y: =48
+            ZIndex: =2
+
+        Label3_8 As label:
+            Align: =Align.Center
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Value
+            Width: =180
+            Y: =10
+            ZIndex: =3
+

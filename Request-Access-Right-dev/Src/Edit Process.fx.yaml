@@ -1,0 +1,748 @@
+"'Edit Process' As screen.'autoLayout_Sidebar_ver1.0'":
+    OnVisible: =Set(varCurrentTab, "Role")
+
+    ScreenContainer1_5 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer1_3 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =65
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Image3_9 As image:
+                Height: =50
+                Image: ='Pizza_Hut_logo.svg'
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =50
+                ZIndex: =1
+
+            Container5_9 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                Height: =80
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =65
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =2
+
+                Container6_9 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =65
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Image4_9 As image:
+                        Height: =75
+                        Image: ='Power-Apps-Logo'
+                        LayoutMinHeight: =50
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =50
+                        ZIndex: =1
+
+                    Container7_9 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =200
+                        ZIndex: =2
+
+                        Label3_10 As label:
+                            FontWeight: =FontWeight.Semibold
+                            Height: =20
+                            Size: =12
+                            Text: |-
+                                =With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.User)
+                                )
+                            ZIndex: =1
+
+                        Container8_9 As groupContainer.horizontalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =20
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =20
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =3
+
+                            Label4_9 As label:
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                Size: =10
+                                Text: |-
+                                    =With(
+                                        {obj: ParseJSON(getEmail.result)},
+                                        Text(obj.Dept)
+                                    )
+                                Width: =50
+                                ZIndex: =1
+
+        "'Breadcrum ReqProcess_1' As groupContainer.horizontalAutoLayoutContainer":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =30
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =2
+
+            Label10_3 As label:
+                Color: =RGBA(149, 149, 149, 1)
+                OnSelect: =Navigate(Setting,ScreenTransition.CoverRight)
+                Size: =14
+                Text: ="Settings"
+                Width: =80
+                ZIndex: =1
+
+            Label12_3 As label:
+                Align: =Align.Center
+                Color: =RGBA(149, 149, 149, 1)
+                Size: =14
+                Text: ="/"
+                Width: =20
+                ZIndex: =2
+
+            Label13_3 As label:
+                Color: =RGBA(149, 149, 149, 1)
+                OnSelect: =Navigate('Request Process',ScreenTransition.CoverRight)
+                Size: =14
+                Text: ="Request Process"
+                Width: =160
+                ZIndex: =3
+
+            Label12_4 As label:
+                Align: =Align.Center
+                Color: =RGBA(149, 149, 149, 1)
+                Size: =14
+                Text: ="/"
+                Visible: =If('Edit Process Form'.Mode = FormMode.New, false, true)
+                Width: =20
+                ZIndex: =4
+
+            Label13_4 As label:
+                Size: =14
+                Text: ="Edit Process"
+                Visible: =If('Edit Process Form'.Mode = FormMode.New, false, true)
+                Width: =120
+                ZIndex: =5
+
+            Label12_5 As label:
+                Align: =Align.Center
+                Color: =RGBA(149, 149, 149, 1)
+                Size: =14
+                Text: ="/"
+                Visible: =If('Edit Process Form'.Mode = FormMode.Edit, false, true)
+                Width: =20
+                ZIndex: =6
+
+            Label13_5 As label:
+                Size: =14
+                Text: ="Create Process"
+                Visible: =If('Edit Process Form'.Mode = FormMode.Edit, false, true)
+                Width: =140
+                ZIndex: =7
+
+        BottomContainer1_5 As groupContainer.horizontalAutoLayoutContainer:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(245, 245, 245, 1)
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =16
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =3
+
+            MainContainer1_5 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =7
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                Container11_6 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =2
+
+                    Container27_4 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =60
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =1
+
+                        Container24_7 As groupContainer.horizontalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                            LayoutMinHeight: =20
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            Label24_2 As label:
+                                Font: =Font.Lato
+                                FontWeight: =FontWeight.Semibold
+                                Size: =18
+                                Text: ="Edit Process"
+                                Visible: =If('Edit Process Form'.Mode = FormMode.New, false, true)
+                                Width: =250
+                                ZIndex: =1
+
+                            Label24_3 As label:
+                                Font: =Font.Lato
+                                FontWeight: =FontWeight.Semibold
+                                Size: =18
+                                Text: ="Create Process"
+                                Visible: =If('Edit Process Form'.Mode = FormMode.Edit, false, true)
+                                Width: =250
+                                ZIndex: =2
+
+                            Container33 As groupContainer.horizontalAutoLayoutContainer:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutJustifyContent: =LayoutJustifyContent.End
+                                LayoutMinHeight: =20
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                ZIndex: =4
+
+                                Rectangle15_1 As rectangle:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    LayoutMinHeight: =20
+                                    Width: =10
+                                    ZIndex: =1
+
+                                Button4_2 As button:
+                                    BorderThickness: =0
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Size: =13
+                                    Text: ="Cancel"
+                                    Visible: =If('Edit Process Form'.Mode = FormMode.Edit, false, true)
+                                    Width: =80
+                                    ZIndex: =2
+
+                                btnDelete As button:
+                                    BorderThickness: =0
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Size: =13
+                                    Text: ="Delete"
+                                    Visible: =If('Edit Process Form'.Mode = FormMode.New, false, true)
+                                    Width: =80
+                                    ZIndex: =3
+
+                                Rectangle15 As rectangle:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    LayoutMinHeight: =20
+                                    Width: =10
+                                    ZIndex: =4
+
+                                btn_SetApprover_7 As button:
+                                    BorderThickness: =0
+                                    OnSelect: |-
+                                        =SubmitForm('Edit Process Form');
+                                        Navigate(
+                                            'Request Process',
+                                            ScreenTransition.Cover
+                                        );
+                                        ResetForm('Edit Process Form')
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Size: =13
+                                    Text: ="Save"
+                                    Width: =80
+                                    ZIndex: =5
+
+                    Rectangle12_1 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =20
+                        ZIndex: =2
+
+                    Approver_6 As groupContainer.verticalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =3
+
+                        Container32_1 As groupContainer.verticalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =3
+
+                            "'Edit Process Form' As form":
+                                DataSource: =ReqProcessTest
+                                Item: =galReqProcess.Selected
+                                LayoutMinHeight: =250
+                                LayoutMinWidth: =400
+                                NumberOfColumns: =2
+                                ZIndex: =1
+
+                                IDReqType_DataCard1_1 As typedDataCard.comboBoxMultiSelectEditCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="IDReqType"
+                                    Default: =ThisItem.IDReqType
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"IDReqType")
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    Required: =false
+                                    Update: =DataCardValue34_1.SelectedItems
+                                    Width: =665
+                                    X: =1
+                                    Y: =0
+                                    ZIndex: =1
+
+                                    DataCardKey34_1 As label:
+                                        AutoHeight: =true
+                                        Height: =34
+                                        Text: ="Request Type"
+                                        Width: =Parent.Width - 60
+                                        Wrap: =false
+                                        X: =30
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    DataCardValue34_1 As combobox:
+                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                        DefaultSelectedItems: =Parent.Default
+                                        DisplayFields: =["Value","Value"]
+                                        DisplayMode: =Parent.DisplayMode
+                                        Items: =Choices([@ReqProcessTest].IDReqType)
+                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                        SearchFields: =["Value"]
+                                        SearchItems: =Choices(ReqProcessTest.IDReqType,DataCardValue34_1.SearchText)
+                                        Tooltip: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardKey34_1.Y + DataCardKey34_1.Height + 5
+                                        ZIndex: =2
+
+                                    ErrorMessage20_1 As label:
+                                        AutoHeight: =true
+                                        Height: =10
+                                        Live: =Live.Assertive
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =Parent.Error
+                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardValue34_1.Y + DataCardValue34_1.Height
+                                        ZIndex: =3
+
+                                    StarVisible19_1 As label:
+                                        Align: =Align.Center
+                                        Height: =DataCardKey34_1.Height
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        Wrap: =false
+                                        Y: =DataCardKey34_1.Y
+                                        ZIndex: =4
+
+                                IdSetting_DataCard3 As typedDataCard.comboBoxEditCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="IdSetting"
+                                    Default: =ThisItem.IdSetting
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: ="Seting Process Request"
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    Required: =false
+                                    Update: =DataCardValue46.Selected
+                                    Width: =665
+                                    X: =1
+                                    Y: =1
+                                    ZIndex: =1
+
+                                    DataCardKey46 As label:
+                                        AutoHeight: =true
+                                        Height: =34
+                                        Text: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        Wrap: =false
+                                        X: =30
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    DataCardValue46 As combobox:
+                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                        DefaultSelectedItems: =Parent.Default
+                                        DisplayFields: =["Value"]
+                                        DisplayMode: =Parent.DisplayMode
+                                        IsSearchable: =false
+                                        Items: =Choices([@ReqProcessTest].IdSetting)
+                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                        SearchFields: =["Value"]
+                                        SearchItems: =[]
+                                        SelectMultiple: =false
+                                        Tooltip: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardKey46.Y + DataCardKey46.Height + 5
+                                        ZIndex: =2
+
+                                    ErrorMessage38 As label:
+                                        AutoHeight: =true
+                                        Height: =10
+                                        Live: =Live.Assertive
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =Parent.Error
+                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardValue46.Y + DataCardValue46.Height
+                                        ZIndex: =3
+
+                                    StarVisible38 As label:
+                                        Align: =Align.Center
+                                        Height: =DataCardKey46.Height
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        Wrap: =false
+                                        Y: =DataCardKey46.Y
+                                        ZIndex: =4
+
+                                "'Tiêu đề_DataCard3_1' As typedDataCard.textualEditCard":
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="Title"
+                                    Default: =ThisItem.Title
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Title")
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    MaxLength: =DataSourceInfo([@ReqProcessTest], DataSourceInfo.MaxLength, "Title")
+                                    Required: =true
+                                    Update: =DataCardValue10_1.Text
+                                    Width: =665
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                    DataCardKey10_1 As label:
+                                        AutoHeight: =true
+                                        Height: =34
+                                        Text: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        Wrap: =false
+                                        X: =30
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    DataCardValue10_1 As text:
+                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                        Default: =Parent.Default
+                                        DelayOutput: =true
+                                        DisplayMode: =Parent.DisplayMode
+                                        MaxLength: =Parent.MaxLength
+                                        PaddingLeft: =5
+                                        RadiusBottomLeft: =0
+                                        RadiusBottomRight: =0
+                                        RadiusTopLeft: =0
+                                        RadiusTopRight: =0
+                                        Tooltip: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardKey10_1.Y + DataCardKey10_1.Height + 5
+                                        ZIndex: =2
+
+                                    ErrorMessage9_1 As label:
+                                        AutoHeight: =true
+                                        Height: =10
+                                        Live: =Live.Assertive
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =Parent.Error
+                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardValue10_1.Y + DataCardValue10_1.Height
+                                        ZIndex: =3
+
+                                    StarVisible7_1 As label:
+                                        Align: =Align.Center
+                                        Height: =DataCardKey10_1.Height
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        Wrap: =false
+                                        Y: =DataCardKey10_1.Y
+                                        ZIndex: =4
+
+                                Description_DataCard3_1 As typedDataCard.textualEditCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="Description"
+                                    Default: =ThisItem.Description
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"Description")
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    MaxLength: =DataSourceInfo([@ReqProcessTest], DataSourceInfo.MaxLength, "Description")
+                                    Required: =false
+                                    Update: =DataCardValue11_1.Text
+                                    Width: =665
+                                    X: =0
+                                    Y: =1
+                                    ZIndex: =2
+
+                                    DataCardKey11_1 As label:
+                                        AutoHeight: =true
+                                        Height: =34
+                                        Text: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        Wrap: =false
+                                        X: =30
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    DataCardValue11_1 As text:
+                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                        Default: =Parent.Default
+                                        DelayOutput: =true
+                                        DisplayMode: =Parent.DisplayMode
+                                        Height: =100
+                                        MaxLength: =Parent.MaxLength
+                                        Mode: =TextMode.MultiLine
+                                        PaddingLeft: =5
+                                        RadiusBottomLeft: =0
+                                        RadiusBottomRight: =0
+                                        RadiusTopLeft: =0
+                                        RadiusTopRight: =0
+                                        Tooltip: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardKey11_1.Y + DataCardKey11_1.Height + 5
+                                        ZIndex: =2
+
+                                    ErrorMessage10_1 As label:
+                                        AutoHeight: =true
+                                        Height: =10
+                                        Live: =Live.Assertive
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =Parent.Error
+                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardValue11_1.Y + DataCardValue11_1.Height
+                                        ZIndex: =3
+
+                                    StarVisible9_1 As label:
+                                        Align: =Align.Center
+                                        Height: =DataCardKey11_1.Height
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        Wrap: =false
+                                        Y: =DataCardKey11_1.Y
+                                        ZIndex: =4
+
+                                "'Incharge Person_DataCard1_1' As typedDataCard.comboBoxMultiSelectEditCard":
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="InchargePerson"
+                                    Default: =ThisItem.'Incharge Person'
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: =DataSourceInfo([@ReqProcessTest],DataSourceInfo.DisplayName,"InchargePerson")
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =50
+                                    Required: =false
+                                    Update: =DataCardValue32_1.SelectedItems
+                                    Width: =665
+                                    X: =0
+                                    Y: =2
+                                    ZIndex: =2
+
+                                    DataCardKey32_1 As label:
+                                        AutoHeight: =true
+                                        Height: =34
+                                        Text: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        Wrap: =false
+                                        X: =30
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    DataCardValue32_1 As combobox:
+                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                        DefaultSelectedItems: =Parent.Default
+                                        DisplayFields: =["DisplayName","Email","Picture"]
+                                        DisplayMode: =Parent.DisplayMode
+                                        Items: =Choices([@ReqProcessTest].'Incharge Person')
+                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                        SearchFields: =["DisplayName"]
+                                        SearchItems: =Choices(ReqProcessTest.'Incharge Person',DataCardValue32_1.SearchText)
+                                        Template: =ListItemTemplate.Person
+                                        Tooltip: =Parent.DisplayName
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardKey32_1.Y + DataCardKey32_1.Height + 5
+                                        ZIndex: =2
+
+                                    ErrorMessage17_1 As label:
+                                        AutoHeight: =true
+                                        Height: =10
+                                        Live: =Live.Assertive
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =Parent.Error
+                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                        Width: =Parent.Width - 60
+                                        X: =30
+                                        Y: =DataCardValue32_1.Y + DataCardValue32_1.Height
+                                        ZIndex: =3
+
+                                    StarVisible16_1 As label:
+                                        Align: =Align.Center
+                                        Height: =DataCardKey32_1.Height
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        Wrap: =false
+                                        Y: =DataCardKey32_1.Y
+                                        ZIndex: =4
+

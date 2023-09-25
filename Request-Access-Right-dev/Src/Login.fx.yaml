@@ -1,0 +1,190 @@
+Login As screen:
+    OnVisible: =
+
+    Container1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =768
+        LayoutMode: =LayoutMode.Auto
+        Width: =1366
+        ZIndex: =1
+
+        Image2 As image:
+            AlignInContainer: =AlignInContainer.Stretch
+            Image: ='ultimate-safaris-namibia-6NVr_r5uosU-unsplash'
+            ImagePosition: =ImagePosition.Fill
+            Width: =650
+            ZIndex: =1
+
+        Container2 As groupContainer.verticalAutoLayoutContainer:
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Label1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Size: =25
+                Text: ="Welcome Hutter !"
+                ZIndex: =1
+
+            Container3 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =2
+
+                Container4 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =80
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Label2 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Email"
+                        Width: =100
+                        ZIndex: =1
+
+                    txtEmail As text:
+                        AccessibleLabel: ="Textbox Email"
+                        Default: =""
+                        HintText: ="Enter your email"
+                        Width: =360
+                        ZIndex: =2
+
+                Container4_1 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =2
+
+                    Label2_1 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Password"
+                        Width: =100
+                        ZIndex: =1
+
+                    Container29 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        BorderThickness: =2
+                        FillPortions: =0
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Width: =360
+                        ZIndex: =4
+
+                        txtPass As text:
+                            AccessibleLabel: ="Textbox Password"
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderThickness: =0
+                            Default: =""
+                            FocusedBorderColor: =
+                            FocusedBorderThickness: =
+                            HintText: ="Enter your password"
+                            HoverBorderColor: =
+                            HoverFill: =
+                            Mode: =If( locShowPassword, TextMode.SingleLine, TextMode.Password )
+                            OnSelect: =
+                            PaddingBottom: =0
+                            PaddingLeft: =5
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                        Icon8 As icon.Hide:
+                            AlignInContainer: =AlignInContainer.Center
+                            Height: =40
+                            Icon: =If( locShowPassword, Icon.Hide, Icon.View )
+                            OnSelect: |-
+                                =UpdateContext({locShowPassword: !locShowPassword})
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            Width: =40
+                            ZIndex: =2
+
+            btnLogin As button:
+                AlignInContainer: =AlignInContainer.Center
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =50
+                OnSelect: |-
+                    =Set(
+                        getEmail,
+                        Login2.Run(txtEmail.Text)
+                    );
+                    Set(
+                        getRqItem,
+                        FLowItem.Run()
+                    );
+                    If(
+                        txtPass.Text = "admin123",
+                        Navigate(
+                            Home,
+                            ScreenTransition.Cover
+                        ),
+                        Notify(
+                            "Incorrect password!",
+                            NotificationType.Error,
+                            1000
+                        )
+                    );
+                    Set(
+                        varApprover,
+                        RequestListapproval.Run(
+                            ParseJSON(getEmail.result),
+                            getEmail.message_1
+                        ).approver
+                    );
+                    Reset(txtEmail);
+                    Reset(txtPass);
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Text: ="Login"
+                ZIndex: =3
+

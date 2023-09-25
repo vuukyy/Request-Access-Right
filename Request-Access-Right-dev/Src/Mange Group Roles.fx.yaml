@@ -1,0 +1,1055 @@
+"'Mange Group Roles' As screen.'autoLayout_Sidebar_ver1.0'":
+    OnVisible: |
+        =Set(
+            varCurrentTab,
+            "ROLE"
+        );
+        UpdateContext({showPopup: false});
+        UpdateContext({showMoveUser: false});
+
+    ScreenContainer8 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer6 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =65
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Image3_14 As image:
+                Height: =50
+                Image: ='Pizza_Hut_logo.svg'
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =50
+                ZIndex: =1
+
+            Container5_14 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                Height: =80
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =65
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =2
+
+                Container6_14 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =65
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Image4_14 As image:
+                        Height: =75
+                        Image: ='Power-Apps-Logo'
+                        LayoutMinHeight: =50
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =50
+                        ZIndex: =1
+
+                    Container7_13 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =200
+                        ZIndex: =2
+
+                        Label3_15 As label:
+                            FontWeight: =FontWeight.Semibold
+                            Height: =20
+                            Size: =12
+                            Text: |-
+                                =With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.User)
+                                )
+                            ZIndex: =1
+
+        "'Breadcrum Group Roles' As groupContainer.horizontalAutoLayoutContainer":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =30
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =2
+
+            Label10_7 As label:
+                OnSelect: =Navigate(Setting,ScreenTransition.CoverRight)
+                Size: =14
+                Text: ="Settings"
+                Underline: =true
+                Width: =80
+                ZIndex: =1
+
+            Label12_11 As label:
+                Align: =Align.Center
+                Size: =14
+                Text: ="/"
+                Width: =20
+                ZIndex: =2
+
+            Label13_11 As label:
+                Size: =14
+                Text: ="Manage Group Roles"
+                Width: =250
+                ZIndex: =3
+
+        BottomContainer6 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(245, 245, 245, 1)
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =16
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            ZIndex: =3
+
+            MainContainer8 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =7
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =5
+
+                Container11_5 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Container27_7 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =60
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =1
+
+                        Container24_11 As groupContainer.horizontalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                            LayoutMinHeight: =20
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            Label24_8 As label:
+                                Font: =Font.Lato
+                                FontWeight: =FontWeight.Semibold
+                                Size: =18
+                                Text: ="Group Roles"
+                                Width: =250
+                                ZIndex: =1
+
+                    Rectangle12_5 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =20
+                        ZIndex: =2
+
+                    Approver_4 As groupContainer.verticalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =3
+
+                        tbl_Group As groupContainer.verticalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =5
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Width: =200
+                            ZIndex: =1
+
+                            "galUserGroup As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                DelayItemLoading: =true
+                                Items: =GroupTest
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =200
+                                LoadingSpinner: =LoadingSpinner.Data
+                                OnSelect: |-
+                                    =Clear(colUserList);
+                                    Clear(colListUser);
+                                    ClearCollect(
+                                        colUserList,
+                                        ForAll(
+                                            Table(ParseJSON(GetUserfromUserGroupList.Run(galUserGroup.Selected.ID).user)),
+                                            {
+                                                User: ForAll(
+                                                    ThisRecord.Value.User,
+                                                    {
+                                                        DisplayName: Text(ThisRecord.DisplayName),
+                                                        Email: Text(ThisRecord.Email)
+                                                    }
+                                                )
+                                            }
+                                        )
+                                    );
+                                    ForAll(
+                                        colUserList,
+                                        Collect(
+                                            colListUser,
+                                            ThisRecord.User
+                                        )
+                                    )
+                                TemplatePadding: =0
+                                TemplateSize: =80
+                                ZIndex: =1
+
+                                Title6 As label:
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =ThisItem.NameGroup
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.TemplateWidth - 86
+                                    X: =16
+                                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                    ZIndex: =1
+
+                                Separator6 As rectangle:
+                                    Height: =8
+                                    OnSelect: =Select(Parent)
+                                    Width: =Parent.TemplateWidth
+                                    Y: =Parent.TemplateHeight - Self.Height
+                                    ZIndex: =3
+
+                                Rectangle16 As rectangle:
+                                    Height: =Parent.TemplateHeight - Separator6.Height
+                                    OnSelect: =Select(Parent)
+                                    Visible: =ThisItem.IsSelected
+                                    Width: =4
+                                    ZIndex: =4
+
+                        Container32_4 As groupContainer.verticalAutoLayoutContainer:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DropShadow: =DropShadow.None
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =3
+
+                            Container26 As groupContainer.manualLayoutContainer:
+                                Fill: =RGBA(0, 60, 106, 1)
+                                FillPortions: =0
+                                Height: =50
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                ZIndex: =1
+
+                                btn_User As button:
+                                    BorderThickness: =0
+                                    Fill: =Color.Transparent
+                                    Height: =50
+                                    HoverFill: =RGBA(17, 77, 133, 0.70)
+                                    OnSelect: =Set(varCurrentTab, Self.Text)
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =RGBA(17, 77, 133, 0.70)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Text: ="USER"
+                                    X: =160
+                                    ZIndex: =5
+
+                                btn_Resource As button:
+                                    BorderThickness: =0
+                                    Fill: =Color.Transparent
+                                    Height: =50
+                                    HoverFill: =RGBA(17, 77, 133, 0.70)
+                                    OnSelect: =Set(varCurrentTab, Self.Text)
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =RGBA(17, 77, 133, 0.70)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Text: ="RESOURCE"
+                                    X: =320
+                                    ZIndex: =6
+
+                                btn_Role As button:
+                                    BorderThickness: =0
+                                    Fill: =Color.Transparent
+                                    Height: =50
+                                    HoverFill: =RGBA(17, 77, 133, 0.70)
+                                    OnSelect: =Set(varCurrentTab, Self.Text)
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =RGBA(17, 77, 133, 0.70)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Text: ="ROLE"
+                                    ZIndex: =7
+
+                                Rectangle10 As rectangle:
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Height: =5
+                                    Width: =160
+                                    X: |
+                                        =Switch(
+                                            varCurrentTab,
+                                            "ROLE",
+                                            btn_Role.X,
+                                            "USER",
+                                            btn_User.X,
+                                            "RESOURCE",
+                                            btn_Resource.X
+                                        )
+                                    Y: =45
+                                    ZIndex: =8
+
+                            tbl_Role As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Visible: =varCurrentTab = "ROLE"
+                                ZIndex: =2
+
+                                Container51 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =50
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    ZIndex: =1
+
+                                Container52 As groupContainer.horizontalAutoLayoutContainer:
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    ZIndex: =2
+
+                                    Container53 As groupContainer.verticalAutoLayoutContainer:
+                                        FillPortions: =0
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        Width: =250
+                                        ZIndex: =1
+
+                                        "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                            DelayItemLoading: =true
+                                            Items: =ResourceTest
+                                            Layout: =Layout.Vertical
+                                            LayoutMinHeight: =287
+                                            LayoutMinWidth: =320
+                                            LoadingSpinner: =LoadingSpinner.Data
+                                            TemplatePadding: =0
+                                            TemplateSize: =60
+                                            ZIndex: =1
+
+                                            Title3 As label:
+                                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                                Height: =Self.Size * 1.8
+                                                OnSelect: =Select(Parent)
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Text: =ThisItem.Title
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Width: =Parent.TemplateWidth - 86
+                                                X: =16
+                                                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                                ZIndex: =1
+
+                                    Container54 As groupContainer.verticalAutoLayoutContainer:
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        ZIndex: =2
+
+                            tbl_Resource As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Visible: =varCurrentTab = "RESOURCE"
+                                ZIndex: =3
+
+                                "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                                    DelayItemLoading: =true
+                                    Items: =ResourceTest
+                                    Layout: =Layout.Vertical
+                                    LayoutMinHeight: =287
+                                    LayoutMinWidth: =320
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =0
+                                    TemplateSize: =90
+                                    ZIndex: =1
+
+                                    Title14 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.Title
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle11.Size * 1.8)) / 2
+                                        ZIndex: =1
+
+                                    Subtitle11 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.Code
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Title14.Width
+                                        X: =Title14.X
+                                        Y: =Title14.Y + Title14.Height
+                                        ZIndex: =2
+
+                                    Separator14 As rectangle:
+                                        Height: =8
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.TemplateWidth
+                                        Y: =Parent.TemplateHeight - Self.Height
+                                        ZIndex: =4
+
+                            tbl_User As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Visible: =varCurrentTab = "USER"
+                                ZIndex: =4
+
+                                Container10 As groupContainer.horizontalAutoLayoutContainer:
+                                    BorderColor: =RGBA(219, 219, 219, 1)
+                                    BorderThickness: =1
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =50
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingLeft: =10
+                                    PaddingRight: =10
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    ZIndex: =1
+
+                                    ComboBox1 As combobox:
+                                        DisplayFields: =["DisplayName"]
+                                        Items: |-
+                                            =NgườidùngOffice365.SearchUserV2(
+                                                {
+                                                    searchTerm: ComboBox1.SearchText,
+                                                    isSearchTermRequired: false
+                                                }
+                                            ).value
+                                        SearchFields: =["DisplayName"]
+                                        SearchItems: |-
+                                            =Search(NgườidùngOffice365.SearchUserV2(
+                                                {
+                                                    searchTerm: ComboBox1.SearchText,
+                                                    isSearchTermRequired: false
+                                                }
+                                            ).value,ComboBox1.SearchText,"DisplayName")
+                                        ZIndex: =1
+
+                                    Button5 As button:
+                                        BorderThickness: =0
+                                        OnSelect: |-
+                                            =Set(
+                                                newUserGroup,
+                                                InsertUserinUserGroup.Run(
+                                                    ComboBox1.Selected.Id,
+                                                    galUserGroup.Selected.ID
+                                                )
+                                            );
+                                            If(
+                                                newUserGroup.fail = "",
+                                                Notify(
+                                                    "Insert user success",
+                                                    NotificationType.Success,
+                                                    1000
+                                                ),
+                                                Notify(
+                                                    "User already exists",
+                                                    NotificationType.Warning,
+                                                    1000
+                                                )
+                                            );
+                                            Reset(ComboBox1);
+                                            Refresh(UserGroupTest)
+                                        RadiusBottomLeft: =5
+                                        RadiusBottomRight: =5
+                                        RadiusTopLeft: =5
+                                        RadiusTopRight: =5
+                                        Size: =13
+                                        Text: ="Add User"
+                                        ZIndex: =2
+
+                                "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                                    DelayItemLoading: =true
+                                    Items: =colListUser
+                                    Layout: =Layout.Vertical
+                                    LayoutMinHeight: =287
+                                    LayoutMinWidth: =320
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =0
+                                    TemplateSize: =90
+                                    ZIndex: =1
+
+                                    Title2 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.DisplayName
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =16
+                                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+                                        ZIndex: =1
+
+                                    Subtitle2 As label:
+                                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.Email
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Title2.Width
+                                        X: =Title2.X
+                                        Y: =Title2.Y + Title2.Height
+                                        ZIndex: =2
+
+                                    Icon7 As icon.ArrowsUpDown:
+                                        Height: =24
+                                        Icon: =Icon.Sort
+                                        OnSelect: |-
+                                            =UpdateContext({showMoveUser:true})
+                                        Rotation: =90
+                                        Width: =24
+                                        X: =1025
+                                        Y: =29
+                                        ZIndex: =3
+
+                                    Icon9 As icon.Trash:
+                                        Height: =24
+                                        Icon: =Icon.Trash
+                                        OnSelect: |-
+                                            =UpdateContext({showPopup:true})
+                                        Width: =24
+                                        X: =1074
+                                        Y: =29
+                                        ZIndex: =4
+
+    ComfirmMoveUsers As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Rectangle5_1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =showMoveUser
+            Width: =1366
+            ZIndex: =2
+
+        Rectangle7_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =0
+            Height: =424
+            Visible: =showMoveUser
+            Width: =707
+            X: =329
+            Y: =172
+            ZIndex: =3
+
+        Container46_1 As groupContainer.verticalAutoLayoutContainer:
+            Height: =424
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Visible: =showMoveUser
+            Width: =707
+            X: =329
+            Y: =172
+            ZIndex: =4
+
+            Label8_1 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =2
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =16
+                Text: ="Confirm Move User"
+                ZIndex: =1
+
+            Label9_1 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =RGBA(255, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                LayoutMinHeight: =60
+                Size: =16
+                Text: ="Do you want to move " & Gallery5.Selected.DisplayName & " to another group?"
+                Width: =190
+                ZIndex: =2
+
+            Container28 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                X: =40
+                Y: =40
+                ZIndex: =3
+
+                Container13 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =30
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =10
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Icon1 As icon.Sync:
+                        Height: =24
+                        Icon: =Icon.Sync
+                        OnSelect: |-
+                            =UpdateContext({resetChecked: true});
+                            UpdateContext({resetChecked: false});
+                            Set(
+                                varIdGroup,
+                                Blank()
+                            )
+                        Width: =24
+                        ZIndex: =1
+
+                "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.Center
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =170
+                    Items: =GroupTest
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =50
+                    ZIndex: =2
+
+                    Title11 As label:
+                        FontWeight: =If(Checkbox1.Value = true, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =ThisItem.Title
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 86
+                        X: =86
+                        Y: =13
+                        ZIndex: =1
+
+                    Checkbox1 As checkbox:
+                        CheckboxSize: =30
+                        DisabledFill: |-
+                            =RGBA(
+                                0,
+                                0,
+                                0,
+                                0
+                            )
+                        DisplayMode: |-
+                            =If(
+                                Self.Value || (Value(lblChecked.Text) = 0),
+                                DisplayMode.Edit,
+                                DisplayMode.Disabled
+                            )
+                        FocusedBorderThickness: =0
+                        Height: =30
+                        OnSelect: |-
+                            =Set(
+                                varIdGroup,
+                                ThisItem.ID
+                            )
+                        Reset: =resetChecked
+                        Text: =""
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =30
+                        X: =44
+                        Y: =9
+                        ZIndex: =2
+
+            Container48_1 As groupContainer.horizontalAutoLayoutContainer:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =2
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =60
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =10
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =4
+
+                Button6_4 As button:
+                    BorderThickness: =0
+                    Fill: =RGBA(54, 176, 75, 1)
+                    OnSelect: |-
+                        =Set(
+                            varMoveUser,
+                            MoveusertoanotherUserGroup.Run(
+                                varIdGroup,
+                                Gallery5.Selected.Email
+                            )
+                        );
+                        If(
+                            varMoveUser.updatesuccess = "",
+                            Notify(
+                                "User already exists",
+                                NotificationType.Error,
+                                1000
+                            ),
+                            Notify(
+                                "Move user success",
+                                NotificationType.Success,
+                                1000
+                            )
+                        );
+                        UpdateContext({showMoveUser: false});
+                        UpdateContext({resetChecked: true});
+                        UpdateContext({resetChecked: false});
+                        Refresh(UserGroupTest)
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Submit"
+                    ZIndex: =1
+
+                Rectangle11_1 As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    LayoutMinHeight: =40
+                    Width: =10
+                    ZIndex: =2
+
+                Button7_1 As button:
+                    BorderThickness: =0
+                    Color: =RGBA(51, 51, 51, 1)
+                    Fill: =RGBA(202, 202, 202, 1)
+                    OnSelect: |-
+                        =UpdateContext({showMoveUser: false});
+                        UpdateContext({resetChecked: true});
+                        UpdateContext({resetChecked: false})
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Cancel"
+                    ZIndex: =3
+
+                lblChecked As label:
+                    Text: |-
+                        =CountRows(
+                            Filter(
+                                Gallery3.AllItems,
+                                Checkbox1.Value = true
+                            )
+                        )
+                    Visible: =false
+                    ZIndex: =4
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Rectangle5_2 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =showPopup
+            Width: =1366
+            ZIndex: =5
+
+        Rectangle7_2 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =0
+            Height: =424
+            Visible: =showPopup
+            Width: =707
+            X: =329
+            Y: =189
+            ZIndex: =6
+
+        Container46_2 As groupContainer.verticalAutoLayoutContainer:
+            Height: =424
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Visible: =showPopup
+            Width: =707
+            X: =329
+            Y: =189
+            ZIndex: =7
+
+            Label5 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                PaddingBottom: =10
+                PaddingTop: =10
+                Size: =20
+                Text: ="Confirm Delete"
+                ZIndex: =1
+
+            Label8 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: ="Do you want to delete " & Gallery5.Selected.DisplayName & " ?"
+                ZIndex: =2
+
+            Container48 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =80
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                Button6 As button:
+                    BorderThickness: =0
+                    Fill: =RGBA(184, 0, 0, 1)
+                    Height: =50
+                    OnSelect: |-
+                        =Set(
+                            varRemoveUser,
+                            RemoveuserfromUserGroup.Run(
+                                Gallery5.Selected.Email,
+                                galUserGroup.Selected.ID
+                            )
+                        );
+                        If(
+                            varRemoveUser.notideletesuccess = "",
+                            Notify(
+                                "User not found",
+                                NotificationType.Error,
+                                1000
+                            ),
+                            Notify(
+                                "Delete user success",
+                                NotificationType.Success,
+                                1000
+                            )
+                        );
+                        UpdateContext({showPopup: false});
+                        Refresh(UserGroupTest)
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Delete"
+                    ZIndex: =1
+
+                Rectangle11 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =80
+                    Width: =10
+                    ZIndex: =2
+
+                Button7 As button:
+                    BorderThickness: =0
+                    Color: =RGBA(51, 51, 51, 1)
+                    Fill: =RGBA(202, 202, 202, 1)
+                    Height: =50
+                    OnSelect: |-
+                        =UpdateContext({showPopup:false})
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =13
+                    Text: ="Cancel"
+                    ZIndex: =3
+
