@@ -455,7 +455,7 @@
                                             Items: =ResourceTest
                                             Layout: =Layout.Vertical
                                             LayoutMinHeight: =287
-                                            LayoutMinWidth: =320
+                                            LayoutMinWidth: =250
                                             LoadingSpinner: =LoadingSpinner.Data
                                             TemplatePadding: =0
                                             TemplateSize: =60
@@ -692,7 +692,7 @@
             Height: =768
             Visible: =showMoveUser
             Width: =1366
-            ZIndex: =5
+            ZIndex: =2
 
         Rectangle7_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -702,7 +702,7 @@
             Width: =707
             X: =329
             Y: =172
-            ZIndex: =6
+            ZIndex: =3
 
         Container46_1 As groupContainer.verticalAutoLayoutContainer:
             Height: =424
@@ -712,7 +712,7 @@
             Width: =707
             X: =329
             Y: =172
-            ZIndex: =7
+            ZIndex: =4
 
             Label8_1 As label:
                 Align: =Align.Center
@@ -937,7 +937,14 @@
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =10
+        ZIndex: =8
+
+        Rectangle5_2 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =showPopup
+            Width: =1366
+            ZIndex: =5
 
         Rectangle7_2 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -945,9 +952,9 @@
             Height: =424
             Visible: =showPopup
             Width: =707
-            X: =349
-            Y: =192
-            ZIndex: =8
+            X: =329
+            Y: =189
+            ZIndex: =6
 
         Container46_2 As groupContainer.verticalAutoLayoutContainer:
             Height: =424
@@ -955,9 +962,9 @@
             LayoutMode: =LayoutMode.Auto
             Visible: =showPopup
             Width: =707
-            X: =349
-            Y: =192
-            ZIndex: =9
+            X: =329
+            Y: =189
+            ZIndex: =7
 
             Label5 As label:
                 Align: =Align.Center

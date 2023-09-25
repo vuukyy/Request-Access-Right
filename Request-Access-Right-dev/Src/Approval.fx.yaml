@@ -201,6 +201,15 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Approval"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isApprover)
+                            ) = "True",
+                            true,
+                            false
+                        )
                     ZIndex: =2
 
                 Button5_40 As button:
@@ -217,6 +226,26 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="HOD & GM"
+                    Visible: |-
+                        =If(
+                            IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "Head of",
+                                MatchOptions.Contains
+                            ) || IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
+                            true,
+                            false
+                        )
                     ZIndex: =3
 
                 Button5_22 As button:
@@ -242,15 +271,7 @@
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
                     OnSelect: |-
-                        =ClearCollect(
-                            colApprover,
-                            GroupBy(
-                                ApprovalTest,
-                                "Title",
-                                "LevelApprover"
-                            )
-                        );
-                        Navigate(
+                        =Navigate(
                             Setting,
                             ScreenTransition.Cover
                         )
@@ -260,6 +281,15 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Setting"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isAdmin)
+                            ) = "True",
+                            true,
+                            false
+                        )
                     ZIndex: =5
 
                 Button5_24 As button:
@@ -269,7 +299,16 @@
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate(Login,ScreenTransition.Cover)
+                    OnSelect: |
+                        =Navigate(Login);
+                        Set(
+                            getEmail,
+                            Blank()
+                        );
+                        Set(
+                            getPassword,
+                            Blank()
+                        );
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
