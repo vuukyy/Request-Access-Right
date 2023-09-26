@@ -1031,7 +1031,18 @@
                                     ID = Gallery7_2.Selected.ID
                                 ),
                                 {Status: {Value: "Approver 3 approved"}},
-                                {'Approved Date 3': Now()}
+                                {'Approved Date 3': Now()},
+                                {
+                                    'Approver 3': {
+                                        '@odata.type': User().Email,
+                                        Claims: User().Email,
+                                        Department: "",
+                                        DisplayName: User().FullName,
+                                        Email: User().Email,
+                                        JobTitle: "",
+                                        Picture: ""
+                                    }
+                                }
                             )
                         )
                     );

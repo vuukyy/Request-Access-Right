@@ -393,7 +393,7 @@
                                 !IsBlank(
                                     LookUp(
                                         Request_Test,
-                                        User().Email = 'Approver 1'.Email
+                                        'Approver 1'.Email = User().Email
                                     )
                                 ),
                                 SortByColumns(
