@@ -198,8 +198,9 @@
                     Height: =50
                     Required: =false
                     Update: =DataCardValue51_2.Selected
+                    Visible: =false
                     Width: =455
-                    X: =0
+                    X: =2
                     Y: =0
                     ZIndex: =1
 
@@ -265,7 +266,7 @@
                     Required: =false
                     Update: =DataCardValue52_3.Attachments
                     Width: =455
-                    X: =0
+                    X: =2
                     Y: =2
                     ZIndex: =1
 
@@ -329,8 +330,8 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =2
-                    Y: =4
+                    X: =0
+                    Y: =0
                     ZIndex: =1
 
                     DataCardKey55_2 As label:
@@ -357,6 +358,73 @@
                         Y: =DataCardKey55_2.Y + DataCardKey55_2.Height + 5
                         ZIndex: =2
 
+                "'Created By_DataCard2' As typedDataCard.comboBoxViewCard":
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Author"
+                    Default: =ThisItem.'Created By'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Author")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =DataCardValue5.Selected
+                    Width: =455
+                    X: =1
+                    Y: =0
+                    ZIndex: =1
+
+                    DataCardKey5 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue5 As combobox:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DefaultSelectedItems: =Parent.Default
+                        DisplayFields: =["DisplayName","Email","Picture"]
+                        DisplayMode: =Parent.DisplayMode
+                        Items: =Choices([@Request_Test].Author)
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        SearchFields: =["DisplayName"]
+                        SearchItems: =Choices(Request_Test.Author,DataCardValue5.SearchText)
+                        SelectMultiple: =false
+                        Template: =ListItemTemplate.Person
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage3 As label:
+                        AutoHeight: =true
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue5.Y + DataCardValue5.Height
+                        ZIndex: =3
+
+                    StarVisible3 As label:
+                        Align: =Align.Center
+                        Height: =DataCardKey5.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey5.Y
+                        ZIndex: =4
+
                 Title_DataCard1_2 As typedDataCard.textualViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Title"
@@ -364,11 +432,11 @@
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
+                    Height: =49
                     Required: =true
                     Width: =455
-                    X: =1
-                    Y: =0
+                    X: =0
+                    Y: =1
                     ZIndex: =3
 
                     DataCardKey13_2 As label:
@@ -405,8 +473,8 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =2
-                    Y: =0
+                    X: =1
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey31_2 As label:
@@ -444,7 +512,7 @@
                     Required: =false
                     Update: =DataCardValue32_3.Selected
                     Width: =455
-                    X: =0
+                    X: =2
                     Y: =1
                     ZIndex: =3
 
@@ -575,8 +643,8 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =2
-                    Y: =1
+                    X: =0
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey34_3 As label:
@@ -615,7 +683,7 @@
                     Update: =DataCardValue26_2.Selected
                     Width: =455
                     X: =1
-                    Y: =2
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey26_2 As label:
@@ -681,7 +749,7 @@
                     Update: =DataCardValue38_2.Selected
                     Width: =455
                     X: =2
-                    Y: =2
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey38_2 As label:
@@ -747,7 +815,7 @@
                     Required: =false
                     Width: =455
                     X: =0
-                    Y: =3
+                    Y: =4
                     ZIndex: =3
 
                     DataCardKey39_2 As label:
@@ -786,7 +854,7 @@
                     Update: =DataCardValue40_2.Selected
                     Width: =455
                     X: =1
-                    Y: =3
+                    Y: =4
                     ZIndex: =3
 
                     DataCardKey40_2 As label:
@@ -852,7 +920,7 @@
                     Required: =false
                     Width: =455
                     X: =2
-                    Y: =3
+                    Y: =4
                     ZIndex: =3
 
                     DataCardKey41_2 As label:
@@ -889,9 +957,10 @@
                     Height: =50
                     Required: =false
                     Update: =DataCardValue48_2.Selected
+                    Visible: =false
                     Width: =455
                     X: =0
-                    Y: =4
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey48_2 As label:
@@ -955,9 +1024,10 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
+                    Visible: =false
                     Width: =455
-                    X: =1
-                    Y: =4
+                    X: =0
+                    Y: =5
                     ZIndex: =3
 
                     DataCardKey49_3 As label:
@@ -1004,8 +1074,8 @@
                     =If(
                         !IsBlank(
                             LookUp(
-                                Request_Test,
-                                User().Email = 'Approver 1'.Email
+                                LevelApproveTest,
+                                IdUser.Email = User().Email && Level.Value="Approver 1"
                             )
                         ),
                         Patch(
@@ -1150,7 +1220,7 @@
                                         ),
                                         {Status: {Value: "Rejected"}},
                                         {'Rejected Date': Now()},
-                                        {'Reason Reject': "Approver 1 Comment: " & TextInput1_2.Text},
+                                        {'Reason Reject':  User().FullName & " is the Approver 1 comment: " & TextInput1_2.Text},
                                         {
                                             'Rejected By': {
                                                 '@odata.type': User().Email,
@@ -1179,7 +1249,7 @@
                                             ),
                                             {Status: {Value: "Rejected"}},
                                             {'Rejected Date': Now()},
-                                            {'Reason Reject': "Approver 2 Comment: " & TextInput1_2.Text},
+                                            {'Reason Reject': User().FullName & " is the Approver 2 comment: " & TextInput1_2.Text},
                                             {
                                                 'Rejected By': {
                                                     '@odata.type': User().Email,
