@@ -865,18 +865,6 @@
                                 Text(obj.User)
                             )
                         );
-                        Set(
-                            createdBy,
-                            {
-                                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
-                                Department: "",
-                                Claims: varEmailUser,
-                                DisplayName: NgườidùngOffice365.UserProfileV2(varEmailUser).displayName,
-                                Email: varEmailUser,
-                                JobTitle: "",
-                                Picture: ""
-                            }
-                        );
                         SubmitForm('Edit Form Request');
                         Patch(
                             Request_Test,
