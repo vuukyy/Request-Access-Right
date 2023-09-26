@@ -188,6 +188,73 @@
                 Y: =80
                 ZIndex: =1
 
+                "'Created By_DataCard3' As typedDataCard.comboBoxViewCard":
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Author"
+                    Default: =ThisItem.'Created By'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Author")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =DataCardValue6.Selected
+                    Width: =455
+                    X: =2
+                    Y: =0
+                    ZIndex: =1
+
+                    DataCardKey6 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue6 As combobox:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DefaultSelectedItems: =Parent.Default
+                        DisplayFields: =["DisplayName","Email","Picture"]
+                        DisplayMode: =Parent.DisplayMode
+                        Items: =Choices([@Request_Test].Author)
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        SearchFields: =["DisplayName"]
+                        SearchItems: =Choices(Request_Test.Author,DataCardValue6.SearchText)
+                        SelectMultiple: =false
+                        Template: =ListItemTemplate.Person
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage4 As label:
+                        AutoHeight: =true
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue6.Y + DataCardValue6.Height
+                        ZIndex: =3
+
+                    StarVisible4 As label:
+                        Align: =Align.Center
+                        Height: =DataCardKey6.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey6.Y
+                        ZIndex: =4
+
                 IDUser_DataCard4_3 As typedDataCard.comboBoxViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="IDUser"
@@ -266,7 +333,7 @@
                     Required: =false
                     Update: =DataCardValue52_4.Attachments
                     Width: =455
-                    X: =1
+                    X: =2
                     Y: =2
                     ZIndex: =1
 
@@ -368,8 +435,8 @@
                     Height: =40
                     Required: =true
                     Width: =455
-                    X: =2
-                    Y: =0
+                    X: =0
+                    Y: =1
                     ZIndex: =3
 
                     DataCardKey13_3 As label:
@@ -406,7 +473,7 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =0
+                    X: =1
                     Y: =2
                     ZIndex: =3
 
@@ -445,7 +512,7 @@
                     Required: =false
                     Update: =DataCardValue32_4.Selected
                     Width: =455
-                    X: =1
+                    X: =2
                     Y: =1
                     ZIndex: =3
 
@@ -511,7 +578,7 @@
                     Required: =false
                     Update: =DataCardValue29_3.Selected
                     Width: =455
-                    X: =0
+                    X: =1
                     Y: =1
                     ZIndex: =3
 
@@ -576,8 +643,8 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =2
-                    Y: =1
+                    X: =0
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey34_4 As label:
@@ -615,8 +682,8 @@
                     Required: =false
                     Update: =DataCardValue26_3.Selected
                     Width: =455
-                    X: =2
-                    Y: =2
+                    X: =0
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey26_3 As label:
@@ -681,7 +748,7 @@
                     Required: =false
                     Update: =DataCardValue38_3.Selected
                     Width: =455
-                    X: =0
+                    X: =1
                     Y: =3
                     ZIndex: =3
 
@@ -747,7 +814,7 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =1
+                    X: =2
                     Y: =3
                     ZIndex: =3
 
@@ -786,8 +853,8 @@
                     Required: =false
                     Update: =DataCardValue40_3.Selected
                     Width: =455
-                    X: =2
-                    Y: =3
+                    X: =0
+                    Y: =4
                     ZIndex: =3
 
                     DataCardKey40_3 As label:
@@ -852,7 +919,7 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =0
+                    X: =1
                     Y: =4
                     ZIndex: =3
 
@@ -892,7 +959,7 @@
                     Update: =DataCardValue48_3.Selected
                     Visible: =false
                     Width: =455
-                    X: =1
+                    X: =2
                     Y: =4
                     ZIndex: =3
 
@@ -959,8 +1026,8 @@
                     Required: =false
                     Visible: =false
                     Width: =455
-                    X: =2
-                    Y: =4
+                    X: =0
+                    Y: =5
                     ZIndex: =3
 
                     DataCardKey49_4 As label:
