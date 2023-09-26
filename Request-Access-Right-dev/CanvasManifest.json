@@ -129,7 +129,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "vi-VN"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Login",
