@@ -437,6 +437,17 @@
                                             'Mange Group Roles',
                                             ScreenTransition.Cover
                                         );
+                                        Set(
+                                            arrIdPermission,
+                                            Getpermissionofusers.Run(
+                                                galUserGroup.Selected.ID,
+                                                Gallery2.Selected.ID
+                                            )
+                                        );
+                                        Set(
+                                            varIdPer,
+                                            ParseJSON(arrIdPermission.arridgroup)
+                                        )
                                     Text: ="Manage Group Roles"
                                     ZIndex: =1
 

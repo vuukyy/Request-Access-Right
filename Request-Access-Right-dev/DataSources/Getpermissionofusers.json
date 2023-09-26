@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "a1b923cf-79d5-4e91-aadc-254e7e360899",
+    "Name": "Getpermissionofusers",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "507c43c3-385c-ee11-be6f-6045bd57431a"
+  }
+]
