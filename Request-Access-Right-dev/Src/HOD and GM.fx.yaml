@@ -241,15 +241,7 @@
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
                     OnSelect: |-
-                        =ClearCollect(
-                            colApprover,
-                            GroupBy(
-                                ApprovalTest,
-                                "Title",
-                                "LevelApprover"
-                            )
-                        );
-                        Navigate(
+                        =Navigate(
                             Setting,
                             ScreenTransition.Cover
                         )
@@ -259,6 +251,15 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Setting"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isAdmin)
+                            ) = "True",
+                            true,
+                            false
+                        )
                     ZIndex: =5
 
                 Button5_39 As button:
@@ -268,7 +269,16 @@
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate(Login,ScreenTransition.Cover)
+                    OnSelect: |
+                        =Navigate(Login);
+                        Set(
+                            getEmail,
+                            Blank()
+                        );
+                        Set(
+                            getPassword,
+                            Blank()
+                        );
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0

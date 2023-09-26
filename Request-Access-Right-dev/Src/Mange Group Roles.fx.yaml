@@ -455,7 +455,7 @@
                                             Items: =ResourceTest
                                             Layout: =Layout.Vertical
                                             LayoutMinHeight: =287
-                                            LayoutMinWidth: =320
+                                            LayoutMinWidth: =250
                                             LoadingSpinner: =LoadingSpinner.Data
                                             TemplatePadding: =0
                                             TemplateSize: =60

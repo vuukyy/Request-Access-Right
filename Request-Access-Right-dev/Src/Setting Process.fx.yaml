@@ -1,4 +1,5 @@
 "'Setting Process' As screen.'autoLayout_Sidebar_ver1.0'":
+    OnVisible: =
 
     ScreenContainer10 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)

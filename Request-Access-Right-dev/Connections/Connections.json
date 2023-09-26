@@ -1,4 +1,18 @@
 {
+  "0995473f-1733-4309-8416-6027b1182899": {
+    "connectionRef": {
+      "displayName": "Người dùng Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/master/1.0.1653.3400/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "3c65b360-fa02-4083-8c2e-2d0b40c79f54"
+    ],
+    "id": "0995473f-1733-4309-8416-6027b1182899"
+  },
   "0d6a5ef9-e9a5-4f3a-be7f-898ec4a1e098": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -47,6 +61,44 @@
     "dependencies": {},
     "dependents": [],
     "id": "3701849e-97b7-4aef-93c9-7cf99f01646c"
+  },
+  "3c65b360-fa02-4083-8c2e-2d0b40c79f54": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "0995473f-1733-4309-8416-6027b1182899": {
+          "value": "shared_office365users"
+        },
+        "workflowEntityId": {
+          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365users": {
+          "value": "0995473f-1733-4309-8416-6027b1182899"
+        },
+        "workflowEntityId": {
+          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+        },
+        "workflowName": {
+          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Login2"
+    ],
+    "dependencies": {
+      "shared_office365users": "0995473f-1733-4309-8416-6027b1182899"
+    },
+    "dependents": [],
+    "id": "3c65b360-fa02-4083-8c2e-2d0b40c79f54"
   },
   "4249774f-8830-4219-80e8-0fdd6ae58fd9": {
     "connectionRef": {
@@ -150,57 +202,35 @@
     "dependents": [],
     "id": "44307f3b-3875-4645-a663-5aae40d256c5"
   },
-  "48bf1811-17ba-4c62-8ea1-bffd86dd1ad6": {
+  "52675ec9-d3dd-4bac-8636-8e1f40cac232": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "5b74cc55-98b3-461d-ab62-9036c61f92d4": {
-          "value": "shared_office365users"
-        },
         "workflowEntityId": {
-          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+          "value": "5635befb-795b-ee11-be6f-6045bd57431a"
         },
         "workflowName": {
-          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+          "value": "c9a0ab27-7aac-bc4b-d2a1-3b7578b4b685"
         }
       },
       "parameterHintsV2": {
-        "shared_office365users": {
-          "value": "5b74cc55-98b3-461d-ab62-9036c61f92d4"
-        },
         "workflowEntityId": {
-          "value": "3cb0eb4c-f04d-ee11-be6f-6045bd57431a"
+          "value": "5635befb-795b-ee11-be6f-6045bd57431a"
         },
         "workflowName": {
-          "value": "b344e347-bfff-7a29-ef20-959b6a6e9c53"
+          "value": "c9a0ab27-7aac-bc4b-d2a1-3b7578b4b685"
         }
       }
     },
     "datasets": {},
     "dataSources": [
-      "Login2"
+      "Getrandompasswords"
     ],
-    "dependencies": {
-      "shared_office365users": "5b74cc55-98b3-461d-ab62-9036c61f92d4"
-    },
-    "dependents": [],
-    "id": "48bf1811-17ba-4c62-8ea1-bffd86dd1ad6"
-  },
-  "5b74cc55-98b3-461d-ab62-9036c61f92d4": {
-    "connectionRef": {
-      "displayName": "Người dùng Office 365",
-      "iconUri": "https://connectoricons-prod.azureedge.net/master/1.0.1653.3400/office365users/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
-    },
-    "datasets": {},
-    "dataSources": [],
     "dependencies": {},
-    "dependents": [
-      "48bf1811-17ba-4c62-8ea1-bffd86dd1ad6"
-    ],
-    "id": "5b74cc55-98b3-461d-ab62-9036c61f92d4"
+    "dependents": [],
+    "id": "52675ec9-d3dd-4bac-8636-8e1f40cac232"
   },
   "6d604169-44a4-4adf-88a9-30db8d78d970": {
     "connectionRef": {

@@ -191,7 +191,52 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Approval"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isApprover)
+                            ) = "True",
+                            true,
+                            false
+                        )
                     ZIndex: =2
+
+                Button5_43 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    OnSelect: =Navigate('HOD and GM',ScreenTransition.Cover)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="HOD & GM"
+                    Visible: |-
+                        =If(
+                            IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "Head of",
+                                MatchOptions.Contains
+                            ) || IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
+                            true,
+                            false
+                        )
+                    ZIndex: =3
 
                 Button5_17 As button:
                     AlignInContainer: =AlignInContainer.Stretch
@@ -206,7 +251,7 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Audit"
-                    ZIndex: =3
+                    ZIndex: =4
 
                 Button5_18 As button:
                     AlignInContainer: =AlignInContainer.Stretch
@@ -216,15 +261,7 @@
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
                     OnSelect: |-
-                        =ClearCollect(
-                            colApprover,
-                            GroupBy(
-                                ApprovalTest,
-                                "Title",
-                                "LevelApprover"
-                            )
-                        );
-                        Navigate(
+                        =Navigate(
                             Setting,
                             ScreenTransition.Cover
                         )
@@ -234,7 +271,16 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Setting"
-                    ZIndex: =4
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isAdmin)
+                            ) = "True",
+                            true,
+                            false
+                        )
+                    ZIndex: =5
 
                 Button5_19 As button:
                     AlignInContainer: =AlignInContainer.Stretch
@@ -243,14 +289,23 @@
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate(Login,ScreenTransition.Cover)
+                    OnSelect: |
+                        =Navigate(Login);
+                        Set(
+                            getEmail,
+                            Blank()
+                        );
+                        Set(
+                            getPassword,
+                            Blank()
+                        );
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Log Out"
-                    ZIndex: =5
+                    ZIndex: =6
 
             MainContainer1_1 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 1)
@@ -340,7 +395,7 @@
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =250
+                            Height: =180
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -363,7 +418,6 @@
                             Container35 As groupContainer.verticalAutoLayoutContainer:
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 DropShadow: =DropShadow.None
-                                FillPortions: =0
                                 LayoutDirection: =LayoutDirection.Vertical
                                 LayoutMinHeight: =50
                                 LayoutMinWidth: =250
