@@ -392,8 +392,8 @@
                             =If(
                                 !IsBlank(
                                     LookUp(
-                                        Request_Test,
-                                        'Approver 1'.Email = User().Email
+                                        LevelApproveTest,
+                                        IdUser.Email = User().Email && Level.Value="Approver 1"
                                     )
                                 ),
                                 SortByColumns(
@@ -408,7 +408,7 @@
                                     !IsBlank(
                                         LookUp(
                                             LevelApproveTest,
-                                            User().Email = IdUser.Email && Level.Value="Approver 2"
+                                            User().Email = IdUser.Email && Level.Value = "Approver 2"
                                         )
                                     ),
                                     SortByColumns(

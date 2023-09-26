@@ -1004,8 +1004,8 @@
                     =If(
                         !IsBlank(
                             LookUp(
-                                Request_Test,
-                                User().Email = 'Approver 1'.Email
+                                LevelApproveTest,
+                                IdUser.Email = User().Email && Level.Value="Approver 1"
                             )
                         ),
                         Patch(
