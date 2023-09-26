@@ -1150,7 +1150,7 @@
                                         ),
                                         {Status: {Value: "Rejected"}},
                                         {'Rejected Date': Now()},
-                                        {'Reason Reject': "Approver 1 Comment: " & TextInput1_2.Text},
+                                        {'Reason Reject':  User().FullName & " is the Approver 1 comment: " & TextInput1_2.Text},
                                         {
                                             'Rejected By': {
                                                 '@odata.type': User().Email,
@@ -1179,7 +1179,7 @@
                                             ),
                                             {Status: {Value: "Rejected"}},
                                             {'Rejected Date': Now()},
-                                            {'Reason Reject': "Approver 2 Comment: " & TextInput1_2.Text},
+                                            {'Reason Reject': User().FullName & " is the Approver 2 comment: " & TextInput1_2.Text},
                                             {
                                                 'Rejected By': {
                                                     '@odata.type': User().Email,
