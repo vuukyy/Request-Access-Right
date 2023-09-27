@@ -286,10 +286,10 @@
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["DisplayName","Email","Picture"]
                         DisplayMode: =Parent.DisplayMode
-                        Items: =Choices([@Request_Test].Author)
+                        Items: =Choices([@Request_Test].'Created By')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["DisplayName"]
-                        SearchItems: =Choices(Request_Test.Author,DataCardValue6.SearchText)
+                        SearchItems: =Choices(Request_Test.'Created By',DataCardValue6.SearchText)
                         SelectMultiple: =false
                         Template: =ListItemTemplate.Person
                         Width: =Parent.Width - 60

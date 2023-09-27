@@ -399,7 +399,7 @@
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && User().Email = 'Approver 1'.Email
+                                        Status.Value = "Created" && User().Email = 'Approver 1'.Email || Status.Value = "HOD approved" && User().Email = 'Approver 1'.Email
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -513,7 +513,7 @@
                                 FocusedBorderThickness: =0
                                 Height: =50
                                 OnSelect: =Select(Parent)
-                                Width: =130
+                                Width: =145
                                 X: =720
                                 ZIndex: =7
 
@@ -522,7 +522,7 @@
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
-                                Width: =130
+                                Width: =145
                                 X: =720
                                 ZIndex: =8
 
