@@ -500,7 +500,7 @@
                                         ThisItem.Status.Value,
                                         "Done", Color.Green,
                                         "Rejected", Color.Red,
-                                        Color.LightGoldenRodYellow
+                                        Color.CadetBlue
                                     )
                                 FocusedBorderThickness: =0
                                 Height: =50
@@ -517,7 +517,7 @@
                                         ThisItem.Status.Value,
                                         "Done", Color.Green,
                                         "Rejected", Color.Red,
-                                        Color.LightGoldenRodYellow
+                                        Color.CadetBlue
                                     )
                                 Height: =50
                                 OnSelect: =Select(Parent)

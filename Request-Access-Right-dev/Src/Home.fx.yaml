@@ -524,7 +524,7 @@
                             OnSelect: =Set(Dialogdelete,true)
                             Visible: =If(ThisItem.Status.Value="Created",true,false)
                             Width: =24
-                            X: =1069
+                            X: =1089
                             Y: =13
                             ZIndex: =6
 
@@ -542,7 +542,7 @@
                                         ThisItem.Status.Value,
                                         "Done", Color.Green,
                                         "Rejected", Color.Red,
-                                        Color.LightGoldenRodYellow
+                                        Color.CadetBlue
                                     )
                                 FocusedBorderThickness: =0
                                 Height: =40
@@ -560,7 +560,7 @@
                                         ThisItem.Status.Value,
                                         "Done", Color.Green,
                                         "Rejected", Color.Red,
-                                        Color.LightGoldenRodYellow
+                                        Color.CadetBlue
                                     )
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
@@ -576,7 +576,7 @@
                             OnSelect: =EditForm('Edit Form Request');Navigate(NewReq,ScreenTransition.Fade)
                             Visible: =If(ThisItem.Status.Value="Created",true,false)
                             Width: =24
-                            X: =1030
+                            X: =1050
                             Y: =13
                             ZIndex: =7
 

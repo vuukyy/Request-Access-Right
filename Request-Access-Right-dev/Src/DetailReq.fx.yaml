@@ -644,7 +644,7 @@
                                     ThisItem.Status.Value,
                                     "Done", Color.Green,
                                     "Rejected", Color.Red,
-                                    Color.LightGoldenRodYellow
+                                    Color.CadetBlue
                                 )
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
