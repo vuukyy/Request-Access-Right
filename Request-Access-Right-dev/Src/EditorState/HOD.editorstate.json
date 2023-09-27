@@ -1190,7 +1190,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_37",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1557,7 +1557,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_38",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1928,7 +1928,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_39",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2237,7 +2237,8 @@
           "InvariantPropertyName": "OnSelect",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Visible"
       ],
       "DynamicProperties": [
         {
@@ -2294,12 +2295,17 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_41",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Data",
           "PropertyName": "Text",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         },
         {
