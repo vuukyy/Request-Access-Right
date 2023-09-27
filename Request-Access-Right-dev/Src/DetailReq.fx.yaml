@@ -415,7 +415,9 @@
 
                         DataCardKey2 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -453,7 +455,9 @@
 
                         DataCardKey3 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -466,10 +470,10 @@
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["DisplayName","Email","Picture"]
                             DisplayMode: =Parent.DisplayMode
-                            Items: =Choices([@Request_Test].Author)
+                            Items: =Choices([@Request_Test].'Created By')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["DisplayName"]
-                            SearchItems: =Choices(Request_Test.Author,DataCardValue3.SearchText)
+                            SearchItems: =Choices(Request_Test.'Created By',DataCardValue3.SearchText)
                             SelectMultiple: =false
                             Template: =ListItemTemplate.Person
                             Width: =Parent.Width - 60
@@ -518,6 +522,7 @@
 
                         DataCardKey1 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -557,7 +562,9 @@
 
                         DataCardKey4 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -575,7 +582,7 @@
                             PaddingRight: =5
                             PaddingTop: =5
                             Width: =Parent.Width - 60
-                            X: =30
+                            X: =18
                             Y: =DataCardKey4.Y + DataCardKey4.Height + 5
                             ZIndex: =2
 
@@ -620,6 +627,7 @@
 
                         DataCardKey84 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -631,9 +639,17 @@
 
                         DataCardValue83 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Color: |
+                                =Switch(
+                                    ThisItem.Status.Value,
+                                    "Done", Color.Green,
+                                    "Rejected", Color.Red,
+                                    Color.CadetBlue
+                                )
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
+                            FontWeight: =FontWeight.Bold
                             Items: =Choices([@Request_Test].Status)
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
@@ -687,6 +703,7 @@
 
                         DataCardKey90 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -753,6 +770,7 @@
 
                         DataCardKey93 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -818,6 +836,7 @@
 
                         DataCardKey94 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -897,7 +916,9 @@
 
                         DataCardKey88 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
+                            PaddingLeft: =0
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -964,6 +985,7 @@
 
                         DataCardKey89 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1003,6 +1025,7 @@
 
                         DataCardKey95 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1069,6 +1092,7 @@
 
                         DataCardKey96 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1101,6 +1125,7 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue97.Selected
+                        Visible: =If(IsBlank(DataCardValue97.SelectedItems),false,true)
                         Width: =570
                         X: =0
                         Y: =6
@@ -1108,6 +1133,7 @@
 
                         DataCardKey97 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1167,6 +1193,7 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
+                        Visible: =If(IsBlank(DataCardValue98.Text),false,true)
                         Width: =570
                         X: =1
                         Y: =6
@@ -1174,6 +1201,7 @@
 
                         DataCardKey98 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1206,6 +1234,7 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue99.Selected
+                        Visible: =If(IsBlank(DataCardValue99.SelectedItems),false,true)
                         Width: =570
                         X: =0
                         Y: =7
@@ -1213,6 +1242,7 @@
 
                         DataCardKey99 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1272,6 +1302,7 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
+                        Visible: =If(IsBlank(DataCardValue99.SelectedItems),false,true)
                         Width: =570
                         X: =1
                         Y: =7
@@ -1279,6 +1310,7 @@
 
                         DataCardKey100 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1311,6 +1343,7 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue101.Selected
+                        Visible: =false
                         Width: =570
                         X: =0
                         Y: =8
@@ -1377,6 +1410,7 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
+                        Visible: =false
                         Width: =570
                         X: =1
                         Y: =8
@@ -1416,6 +1450,7 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue105.Selected
+                        Visible: =If(IsBlank(DataCardValue105.SelectedItems),false,true)
                         Width: =570
                         X: =0
                         Y: =9
@@ -1423,6 +1458,7 @@
 
                         DataCardKey105 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1482,6 +1518,7 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
+                        Visible: =If(IsBlank(DataCardValue106.Text),false,true)
                         Width: =570
                         X: =1
                         Y: =9
@@ -1489,6 +1526,7 @@
 
                         DataCardKey106 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
@@ -1520,6 +1558,7 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =40
                         Required: =false
+                        Visible: =If(IsBlank(DataCardValue107.Text),false,true)
                         Width: =570
                         X: =0
                         Y: =10
@@ -1527,6 +1566,7 @@
 
                         DataCardKey107 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
                             Text: =Parent.DisplayName
