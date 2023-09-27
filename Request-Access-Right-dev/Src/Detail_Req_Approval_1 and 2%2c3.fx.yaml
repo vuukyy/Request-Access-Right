@@ -901,7 +901,7 @@
                         !IsBlank(
                             LookUp(
                                 LevelApproveTest,
-                                IdUser.Email = User().Email && Level.Value="Approver 1"
+                                IdUser.Email = varEmailUser && Level.Value = "Approver 1"
                             )
                         ),
                         Patch(
@@ -917,7 +917,7 @@
                             !IsBlank(
                                 LookUp(
                                     LevelApproveTest,
-                                    User().Email = IdUser.Email && Level.Value="Approver 2"
+                                    varEmailUser = IdUser.Email && Level.Value = "Approver 2"
                                 )
                             ),
                             Patch(
@@ -928,16 +928,45 @@
                                 ),
                                 {Status: {Value: "Approver 2 approved"}},
                                 {'Approved Date 2': Now()},
-                                {'Approver 2': {
-                                        '@odata.type': User().Email,
-                                        Claims: User().Email,
+                                {
+                                    'Approver 2': {
+                                        '@odata.type': varEmailUser,
+                                        Claims: varEmailUser,
                                         Department: "",
-                                        DisplayName: User().FullName,
-                                        Email: User().Email,
+                                        DisplayName: varNameUser,
+                                        Email: varEmailUser,
                                         JobTitle: "",
                                         Picture: ""
                                     }
-                            }
+                                }
+                            ),
+                            If(
+                                !IsBlank(
+                                    LookUp(
+                                        LevelApproveTest,
+                                        varEmailUser = IdUser.Email && Level.Value = "Approver 3"
+                                    )
+                                ),
+                                Patch(
+                                    Request_Test,
+                                    LookUp(
+                                        Request_Test,
+                                        ID = Gallery7_1.Selected.ID
+                                    ),
+                                    {Status: {Value: "Approver 3 approved"}},
+                                    {'Approved Date 3': Now()},
+                                    {
+                                        'Approver 3': {
+                                            '@odata.type': varEmailUser,
+                                            Claims: varEmailUser,
+                                            Department: "",
+                                            DisplayName: varNameUser,
+                                            Email: varEmailUser,
+                                            JobTitle: "",
+                                            Picture: ""
+                                        }
+                                    }
+                                )
                             )
                         )
                     );
@@ -1035,7 +1064,7 @@
                                     !IsBlank(
                                         LookUp(
                                             LevelApproveTest,
-                                            User().Email = IdUser.Email && Level.Value="Approver 1"
+                                            varEmailUser = IdUser.Email && Level.Value = "Approver 1"
                                         )
                                     ),
                                     Patch(
@@ -1046,14 +1075,14 @@
                                         ),
                                         {Status: {Value: "Rejected"}},
                                         {'Rejected Date': Now()},
-                                        {'Reason Reject':  User().FullName & " is the Approver 1 comment: " & TextInput1_2.Text},
+                                        {'Reason Reject': varNameUser & " is the Approver 1 comment: " & TextInput1_2.Text},
                                         {
                                             'Rejected By': {
-                                                '@odata.type': User().Email,
-                                                Claims: User().Email,
+                                                '@odata.type': varEmailUser,
+                                                Claims: varEmailUser,
                                                 Department: "",
-                                                DisplayName: User().FullName,
-                                                Email: User().Email,
+                                                DisplayName: varNameUser,
+                                                Email: varEmailUser,
                                                 JobTitle: "",
                                                 Picture: ""
                                             }
@@ -1064,7 +1093,7 @@
                                         !IsBlank(
                                             LookUp(
                                                 LevelApproveTest,
-                                                User().Email = IdUser.Email && Level.Value="Approver 2"
+                                                varEmailUser = IdUser.Email && Level.Value = "Approver 2"
                                             )
                                         ),
                                         Patch(
@@ -1075,35 +1104,76 @@
                                             ),
                                             {Status: {Value: "Rejected"}},
                                             {'Rejected Date': Now()},
-                                            {'Reason Reject': User().FullName & " is the Approver 2 comment: " & TextInput1_2.Text},
+                                            {'Reason Reject': varNameUser & " is the Approver 2 comment: " & TextInput1_2.Text},
                                             {
                                                 'Rejected By': {
-                                                    '@odata.type': User().Email,
-                                                    Claims: User().Email,
+                                                    '@odata.type': varEmailUser,
+                                                    Claims: varEmailUser,
                                                     Department: "",
-                                                    DisplayName: User().FullName,
-                                                    Email: User().Email,
+                                                    DisplayName: varNameUser,
+                                                    Email: varEmailUser,
                                                     JobTitle: "",
                                                     Picture: ""
                                                 }
                                             },
                                             {
-                                            'Approver 2': {
-                                                '@odata.type': User().Email,
-                                                Claims: User().Email,
-                                                Department: "",
-                                                DisplayName: User().FullName,
-                                                Email: User().Email,
-                                                JobTitle: "",
-                                                Picture: ""
+                                                'Approver 2': {
+                                                    '@odata.type': varEmailUser,
+                                                    Claims: varEmailUser,
+                                                    Department: "",
+                                                    DisplayName: varNameUser,
+                                                    Email: varEmailUser,
+                                                    JobTitle: "",
+                                                    Picture: ""
+                                                }
                                             }
-                                        }
                                         );
-                                        Navigate(Approval)
+                                        Navigate(Approval),
+                                        If(
+                                            !IsBlank(
+                                                LookUp(
+                                                    LevelApproveTest,
+                                                    varEmailUser = IdUser.Email && Level.Value = "Approver 3"
+                                                )
+                                            ),
+                                            Patch(
+                                                Request_Test,
+                                                LookUp(
+                                                    Request_Test,
+                                                    ID = Gallery7_1.Selected.ID
+                                                ),
+                                                {Status: {Value: "Rejected"}},
+                                                {'Rejected Date': Now()},
+                                                {'Reason Reject': varNameUser & " is the Approver 3 comment: " & TextInput1_2.Text},
+                                                {
+                                                    'Rejected By': {
+                                                        '@odata.type': varEmailUser,
+                                                        Claims: varEmailUser,
+                                                        Department: "",
+                                                        DisplayName: varNameUser,
+                                                        Email: varEmailUser,
+                                                        JobTitle: "",
+                                                        Picture: ""
+                                                    }
+                                                },
+                                                {
+                                                    'Approver 3': {
+                                                        '@odata.type': varEmailUser,
+                                                        Claims: varEmailUser,
+                                                        Department: "",
+                                                        DisplayName: varNameUser,
+                                                        Email: varEmailUser,
+                                                        JobTitle: "",
+                                                        Picture: ""
+                                                    }
+                                                }
+                                            );
+                                            Navigate(Approval)
+                                        )
                                     )
-                                ); 
+                                )
                             );
-                            Reset(TextInput1_2);
+                            Reset(TextInput1_2)
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
                         PaddingRight: =5.21

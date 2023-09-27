@@ -901,7 +901,7 @@
                         !IsBlank(
                             LookUp(
                                 Request_Test,
-                                User().Email = HOD.Email
+                                varEmailUser = HOD.Email
                             )
                         ),
                         Patch(
@@ -912,34 +912,6 @@
                             ),
                             {Status: {Value: "HOD approved"}},
                             {'HOD Approved Date': Now()}
-                        ),
-                        If(
-                            !IsBlank(
-                                LookUp(
-                                    LevelApproveTest,
-                                    User().Email = IdUser.Email && Level.Value = "Approver 3"
-                                )
-                            ),
-                            Patch(
-                                Request_Test,
-                                LookUp(
-                                    Request_Test,
-                                    ID = Gallery7_2.Selected.ID
-                                ),
-                                {Status: {Value: "Approver 3 approved"}},
-                                {'Approved Date 3': Now()},
-                                {
-                                    'Approver 3': {
-                                        '@odata.type': User().Email,
-                                        Claims: User().Email,
-                                        Department: "",
-                                        DisplayName: User().FullName,
-                                        Email: User().Email,
-                                        JobTitle: "",
-                                        Picture: ""
-                                    }
-                                }
-                            )
                         )
                     );
                     Navigate(HOD)
@@ -1036,7 +1008,7 @@
                                     !IsBlank(
                                         LookUp(
                                             Request_Test,
-                                            User().Email = HOD.Email
+                                            varEmailUser = HOD.Email
                                         )
                                     ),
                                     Patch(
@@ -1047,62 +1019,21 @@
                                         ),
                                         {Status: {Value: "Rejected"}},
                                         {'Rejected Date': Now()},
-                                        {'Reason Reject': User().FullName & " is the HOD Comment: " & TextInput1_3.Text},
+                                        {'Reason Reject': varNameUser & " is the HOD Comment: " & TextInput1_3.Text},
                                         {
                                             'Rejected By': {
-                                                '@odata.type': User().Email,
-                                                Claims: User().Email,
+                                                '@odata.type': varEmailUser,
+                                                Claims: varEmailUser,
                                                 Department: "",
-                                                DisplayName: User().FullName,
-                                                Email: User().Email,
+                                                DisplayName: varNameUser,
+                                                Email: varEmailUser,
                                                 JobTitle: "",
                                                 Picture: ""
                                             }
                                         }
                                     );
-                                    Navigate(HOD),
-                                    If(
-                                        !IsBlank(
-                                            LookUp(
-                                                LevelApproveTest,
-                                                User().Email = IdUser.Email && Level.Value = "Approver 3"
-                                            )
-                                        ),
-                                        Patch(
-                                            Request_Test,
-                                            LookUp(
-                                                Request_Test,
-                                                ID = Gallery7_2.Selected.ID
-                                            ),
-                                            {Status: {Value: "Rejected"}},
-                                            {'Rejected Date': Now()},
-                                            {'Reason Reject': User().FullName & " is the Approver 3 comment: " & TextInput1_3.Text},
-                                            {
-                                                'Rejected By': {
-                                                    '@odata.type': User().Email,
-                                                    Claims: User().Email,
-                                                    Department: "",
-                                                    DisplayName: User().FullName,
-                                                    Email: User().Email,
-                                                    JobTitle: "",
-                                                    Picture: ""
-                                                }
-                                            },
-                                            {
-                                            'Approver 3': {
-                                                '@odata.type': User().Email,
-                                                Claims: User().Email,
-                                                Department: "",
-                                                DisplayName: User().FullName,
-                                                Email: User().Email,
-                                                JobTitle: "",
-                                                Picture: ""
-                                            }
-                                        }
-                                        );
-                                        Navigate(HOD)
+                                    Navigate(HOD)
                                     )
-                                )
                             );
                             Reset(TextInput1_3)
                         PaddingBottom: =5.00

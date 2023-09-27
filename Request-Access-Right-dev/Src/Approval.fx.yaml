@@ -367,7 +367,7 @@
                         Label11_4 As label:
                             FontWeight: =FontWeight.Bold
                             Text: ="Title"
-                            Width: =250
+                            Width: =400
                             ZIndex: =3
 
                         Label11_7 As label:
@@ -443,7 +443,6 @@
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =60
-                        Transition: =Transition.Pop
                         ZIndex: =1
 
                         Label14_1 As label:
@@ -457,7 +456,7 @@
                         Label15_1 As label:
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Title
-                            Width: =230
+                            Width: =383
                             X: =150
                             Y: =10
                             ZIndex: =2
@@ -492,7 +491,7 @@
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Created
                             Width: =147
-                            X: =403
+                            X: =560
                             ZIndex: =5
 
                         Label16_3 As label:
@@ -500,7 +499,7 @@
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.'Created By'.DisplayName
                             Width: =130
-                            X: =579
+                            X: =734
                             ZIndex: =6
 
                         Group2 As group:
@@ -523,7 +522,7 @@
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Width: =145
-                                X: =720
+                                X: =912
                                 ZIndex: =7
 
                             Label16_4 As label:
@@ -540,6 +539,6 @@
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
                                 Width: =145
-                                X: =720
+                                X: =912
                                 ZIndex: =8
 
