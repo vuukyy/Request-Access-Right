@@ -2201,6 +2201,7 @@
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
+<<<<<<< HEAD
     "Button5_40": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
@@ -2582,6 +2583,8 @@
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
+=======
+>>>>>>> dev
     "Container11_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
@@ -4183,14 +4186,7 @@
           "NameMapSourceSchema": "?"
         },
         "Layout",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Transition",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Transition",
         "DelayItemLoading",
         "LoadingSpinner",
         "LoadingSpinnerColor",
@@ -7063,14 +7059,7 @@
         "HoverFill",
         "Font",
         "FontWeight",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Align",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Align",
         "VerticalAlign",
         "X",
         "Y",
@@ -8750,14 +8739,7 @@
           "NameMapSourceSchema": "?"
         },
         "Role",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Color",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Color",
         "DisabledColor",
         "PressedColor",
         "HoverColor",
@@ -8767,14 +8749,7 @@
         "HoverBorderColor",
         "BorderStyle",
         "FocusedBorderColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
-          "InvariantPropertyName": "Fill",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Fill",
         "DisabledFill",
         "PressedFill",
         "HoverFill",

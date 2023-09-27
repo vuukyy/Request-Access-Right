@@ -32,10 +32,10 @@
       "disablecdsfileandlargeimage": false,
       "dynamicschema": false,
       "enableappembeddingux": false,
-      "enablechatbotfeature": true,
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
       "enablecopilotcontrol": false,
+      "enablechatbotfeature": true,
       "enabledataverseoffline": false,
       "enableeditcacherefreshfrequency": false,
       "enableexcelonlinebusinessv2connector": true,
@@ -102,6 +102,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "BindingErrorCount": 0,
 =======
     "BindingErrorCount": 1,
@@ -115,6 +116,9 @@
 =======
     "BindingErrorCount": 0,
 >>>>>>> parent of f206514... Commit
+=======
+    "BindingErrorCount": 19,
+>>>>>>> dev
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -145,7 +149,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "en-US"
+    "UserLocale": "vi-VN"
   },
   "ScreenOrder": [
     "Login",
@@ -164,7 +168,7 @@
     "DetailReq",
     "Detail_Req_Approval",
     "Approval",
-    "HOD and GM",
+    "HOD",
     "Detail_Req_Approval_1 and 2",
     "Detail_Req_Approval_3 and HOD",
     "Screen1"
