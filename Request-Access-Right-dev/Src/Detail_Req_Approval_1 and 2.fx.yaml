@@ -255,44 +255,6 @@
                         Y: =DataCardKey5.Y
                         ZIndex: =4
 
-                Created_DataCard2_2 As typedDataCard.textualViewCard:
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Created"
-                    Default: =ThisItem.Created
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Width: =455
-                    X: =1
-                    Y: =0
-                    ZIndex: =1
-
-                    DataCardKey55_2 As label:
-                        AutoHeight: =true
-                        FontWeight: =FontWeight.Bold
-                        Height: =34
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue55_2 As label:
-                        AutoHeight: =true
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =27
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Default
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey55_2.Y + DataCardKey55_2.Height + 5
-                        ZIndex: =2
-
                 Attachments_DataCard1_2 As typedDataCard.attachmentsViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="{Attachments}"
@@ -358,6 +320,44 @@
                         Y: =DataCardKey52_3.Y
                         ZIndex: =4
 
+                Created_DataCard2_2 As typedDataCard.textualViewCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Created"
+                    Default: =ThisItem.Created
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Created")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =455
+                    X: =1
+                    Y: =0
+                    ZIndex: =1
+
+                    DataCardKey55_2 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue55_2 As label:
+                        AutoHeight: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Default
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey55_2.Y + DataCardKey55_2.Height + 5
+                        ZIndex: =2
+
                 Title_DataCard1_2 As typedDataCard.textualViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Title"
@@ -394,6 +394,44 @@
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey13_2.Y + DataCardKey13_2.Height + 5
+                        ZIndex: =2
+
+                ReqDescription_DataCard3_2 As typedDataCard.textualViewCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="ReqDescription"
+                    Default: =ThisItem.ReqDescription
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqDescription")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =455
+                    X: =2
+                    Y: =3
+                    ZIndex: =3
+
+                    DataCardKey31_2 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: ="Description"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue31_2 As label:
+                        AutoHeight: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Default
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey31_2.Y + DataCardKey31_2.Height + 5
                         ZIndex: =2
 
                 ReqPermission_DataCard3_2 As typedDataCard.comboBoxViewCard:
@@ -840,44 +878,6 @@
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey41_2.Y + DataCardKey41_2.Height + 5
-                        ZIndex: =2
-
-                ReqDescription_DataCard3_2 As typedDataCard.textualViewCard:
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="ReqDescription"
-                    Default: =ThisItem.ReqDescription
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"ReqDescription")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Width: =455
-                    X: =2
-                    Y: =3
-                    ZIndex: =3
-
-                    DataCardKey31_2 As label:
-                        AutoHeight: =true
-                        FontWeight: =FontWeight.Bold
-                        Height: =34
-                        Text: ="Description"
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue31_2 As label:
-                        AutoHeight: =true
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =27
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Default
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey31_2.Y + DataCardKey31_2.Height + 5
                         ZIndex: =2
 
         Container10_2 As groupContainer.horizontalAutoLayoutContainer:

@@ -204,7 +204,7 @@
                             With(
                                 {obj: ParseJSON(getEmail.result)},
                                 Text(obj.isApprover)
-                            ) = "True" && !IsMatch(
+                            ) = "True" && IsMatch(
                                 With(
                                     {obj: ParseJSON(getEmail.result)},
                                     Text(obj.Title)
