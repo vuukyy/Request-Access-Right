@@ -1087,7 +1087,18 @@
                                                     JobTitle: "",
                                                     Picture: ""
                                                 }
+                                            },
+                                            {
+                                            'Approver 3': {
+                                                '@odata.type': User().Email,
+                                                Claims: User().Email,
+                                                Department: "",
+                                                DisplayName: User().FullName,
+                                                Email: User().Email,
+                                                JobTitle: "",
+                                                Picture: ""
                                             }
+                                        }
                                         );
                                         Navigate('HOD and GM')
                                     )
