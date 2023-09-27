@@ -130,7 +130,7 @@ Login As screen:
                             HintText: ="Enter your password"
                             HoverBorderColor: =
                             HoverFill: =
-                            Mode: =If( locShowPassword, TextMode.SingleLine, TextMode.Password )
+                            Mode: =If( locShowPassword, TextMode.Password, TextMode.SingleLine )
                             OnSelect: =
                             PaddingBottom: =0
                             PaddingLeft: =5
@@ -145,7 +145,7 @@ Login As screen:
                         Icon8 As icon.Hide:
                             AlignInContainer: =AlignInContainer.Center
                             Height: =40
-                            Icon: =If( locShowPassword, Icon.Hide, Icon.View )
+                            Icon: =If( locShowPassword, Icon.View, Icon.Hide )
                             OnSelect: |-
                                 =UpdateContext({locShowPassword: !locShowPassword})
                             PaddingLeft: =5
@@ -161,10 +161,6 @@ Login As screen:
                     =Set(
                         getEmail,
                         Login2.Run(txtEmail.Text)
-                    );
-                    Set(
-                        getRqItem,
-                        FLowItem.Run()
                     );
                     If(
                         txtPass.Text = getPassword.password,

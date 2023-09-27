@@ -353,6 +353,7 @@
                         ZIndex: =1
 
                         Label11_9 As label:
+                            Align: =Align.Center
                             Text: ="Approval"
                             Width: =100
                             ZIndex: =1
@@ -392,14 +393,14 @@
                             =If(
                                 !IsBlank(
                                     LookUp(
-                                        Request_Test,
-                                        'Approver 1'.Email = User().Email
+                                        LevelApproveTest,
+                                        IdUser.Email = User().Email && Level.Value="Approver 1"
                                     )
                                 ),
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && User().Email = 'Approver 1'.Email
+                                        Status.Value = "Created" && User().Email = 'Approver 1'.Email || Status.Value = "HOD approved" && User().Email = 'Approver 1'.Email
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -408,7 +409,7 @@
                                     !IsBlank(
                                         LookUp(
                                             LevelApproveTest,
-                                            User().Email = IdUser.Email && Level.Value="Approver 2"
+                                            User().Email = IdUser.Email && Level.Value = "Approver 2"
                                         )
                                     ),
                                     SortByColumns(
@@ -426,6 +427,7 @@
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =60
+                        Transition: =Transition.Pop
                         ZIndex: =1
 
                         Label14_1 As label:
@@ -494,35 +496,34 @@
 
                             Rectangle1 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: |-
-                                    =If(
-                                        ThisItem.Status.Value = "Created",
-                                        RGBA(
-                                            255,
-                                            235,
-                                            192,
-                                            1
-                                        ),
-                                        RGBA(
-                                            237,
-                                            237,
-                                            237,
-                                            1
-                                        )
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.CadetBlue
                                     )
                                 FocusedBorderThickness: =0
                                 Height: =50
                                 OnSelect: =Select(Parent)
-                                Width: =130
+                                Width: =145
                                 X: =720
                                 ZIndex: =7
 
                             Label16_4 As label:
                                 Align: =Align.Center
+                                Color: =RGBA(255, 255, 255, 1)
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.CadetBlue
+                                    )
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
-                                Width: =130
+                                Width: =145
                                 X: =720
                                 ZIndex: =8
 

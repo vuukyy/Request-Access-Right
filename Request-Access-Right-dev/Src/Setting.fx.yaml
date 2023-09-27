@@ -437,6 +437,7 @@
                                             'Mange Group Roles',
                                             ScreenTransition.Cover
                                         );
+                                        Set(getResult, Getpermissionofusers.Run(varGroupRole));
                                     Text: ="Manage Group Roles"
                                     ZIndex: =1
 

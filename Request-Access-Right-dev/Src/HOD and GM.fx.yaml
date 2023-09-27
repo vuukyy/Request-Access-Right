@@ -396,6 +396,7 @@
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =60
+                        Transition: =Transition.Pop
                         ZIndex: =1
 
                         Label14_4 As label:
@@ -465,35 +466,34 @@
 
                             Rectangle1_1 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: |-
-                                    =If(
-                                        ThisItem.Status.Value = "Created",
-                                        RGBA(
-                                            255,
-                                            235,
-                                            192,
-                                            1
-                                        ),
-                                        RGBA(
-                                            237,
-                                            237,
-                                            237,
-                                            1
-                                        )
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.CadetBlue
                                     )
                                 FocusedBorderThickness: =0
                                 Height: =50
                                 OnSelect: =Select(Parent)
-                                Width: =121
+                                Width: =137
                                 X: =727
                                 ZIndex: =7
 
                             Label16_11 As label:
                                 Align: =Align.Center
+                                Color: =RGBA(255, 255, 255, 1)
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.CadetBlue
+                                    )
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
-                                Width: =121
+                                Width: =137
                                 X: =727
                                 ZIndex: =8
 

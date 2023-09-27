@@ -463,6 +463,7 @@
                             ZIndex: =4
 
                         Label11_3 As label:
+                            Align: =Align.Center
                             FontWeight: =FontWeight.Bold
                             Text: ="Status"
                             ZIndex: =5
@@ -492,6 +493,7 @@
                         LoadingSpinner: =LoadingSpinner.Data
                         ShowScrollbar: =false
                         TemplateSize: =60
+                        Transition: =Transition.Pop
                         ZIndex: =1
 
                         Label14 As label:
@@ -523,7 +525,7 @@
                             OnSelect: =Set(Dialogdelete,true)
                             Visible: =If(ThisItem.Status.Value="Created",true,false)
                             Width: =24
-                            X: =1069
+                            X: =1089
                             Y: =13
                             ZIndex: =6
 
@@ -536,24 +538,37 @@
 
                             Rectangle6 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightGoldenRodYellow)
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.CadetBlue
+                                    )
                                 FocusedBorderThickness: =0
                                 Height: =40
                                 OnSelect: =Select(Parent)
                                 Visible: =false
-                                X: =833
-                                Y: =7
+                                X: =879
+                                Y: =10
                                 ZIndex: =1
 
                             Label17 As label:
                                 Align: =Align.Center
-                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightGoldenRodYellow)
+                                Color: =RGBA(255, 255, 255, 1)
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.CadetBlue
+                                    )
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
                                 Visible: =
                                 Width: =151
-                                X: =833
-                                Y: =7
+                                X: =879
+                                Y: =10
                                 ZIndex: =5
 
                         Icon5 As icon.Edit:
@@ -562,7 +577,7 @@
                             OnSelect: =EditForm('Edit Form Request');Navigate(NewReq,ScreenTransition.Fade)
                             Visible: =If(ThisItem.Status.Value="Created",true,false)
                             Width: =24
-                            X: =1030
+                            X: =1050
                             Y: =13
                             ZIndex: =7
 
