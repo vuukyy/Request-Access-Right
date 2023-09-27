@@ -844,6 +844,8 @@
                     ZIndex: =1
 
                     Button3_2 As button:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(153, 207, 236, 1)
                         Height: =50
                         OnSelect: =Navigate(Home,ScreenTransition.Fade);ResetForm('Edit Form Request')
                         RadiusBottomLeft: =5

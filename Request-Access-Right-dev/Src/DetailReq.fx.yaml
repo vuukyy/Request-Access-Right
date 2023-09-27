@@ -706,7 +706,7 @@
                             FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
-                            Text: =Parent.DisplayName
+                            Text: ="Type Request"
                             Width: =Parent.Width - 60
                             Wrap: =false
                             X: =30
@@ -773,7 +773,7 @@
                             FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
-                            Text: =Parent.DisplayName
+                            Text: ="Permission Request"
                             Width: =Parent.Width - 60
                             Wrap: =false
                             X: =30
@@ -839,7 +839,7 @@
                             FontWeight: =FontWeight.Bold
                             Height: =34
                             PaddingLeft: =0
-                            Text: =Parent.DisplayName
+                            Text: ="Reason Request"
                             Width: =Parent.Width - 60
                             Wrap: =false
                             X: =30
