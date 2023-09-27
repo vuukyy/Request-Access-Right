@@ -93,3 +93,7 @@
                     LayoutMode: =LayoutMode.Auto
                     ZIndex: =2
 
+                    Label9 As label:
+                        Text: =varEmailUser
+                        ZIndex: =1
+
