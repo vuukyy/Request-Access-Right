@@ -1,6 +1,13 @@
 "Home As screen.'autoLayout_Sidebar_ver1.0'":
-    OnVisible: |
+    OnVisible: |-
         =//ClearCollect(colItem,ForAll(Table(ParseJSON(FLowItem.Run().varitem)),{Title: Text(ThisRecord.Value.Title),'Request Type': Text(ThisRecord.Value.'Request Type'),'Request Permission': Text(ThisRecord.Value.'Request Permission'),Status: Text(ThisRecord.Value.Status),'Request Reason': Text(ThisRecord.Value.'Request Reason'),'Request Description': Text(ThisRecord.Value.'Request Description')}));
+        Set(
+            varEmailUser,
+            With(
+                {obj: ParseJSON(getEmail.result)},
+                Text(obj.Email)
+            )
+        );
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -482,7 +489,7 @@
                                     StartsWith(
                                         Title,
                                         TextSearch.Text
-                                    ) && 'Created By'.Email = User().Email
+                                    ) && 'Approver 4'.Email = varEmailUser
                                 ),
                                 "Created",
                                 SortOrder.Descending
