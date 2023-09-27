@@ -396,6 +396,7 @@
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =60
+                        Transition: =Transition.Pop
                         ZIndex: =1
 
                         Label14_4 As label:

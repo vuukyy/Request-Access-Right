@@ -4069,7 +4069,14 @@
           "NameMapSourceSchema": "?"
         },
         "Layout",
-        "Transition",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Transition",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DelayItemLoading",
         "LoadingSpinner",
         "LoadingSpinnerColor",
