@@ -206,11 +206,47 @@
                             With(
                                 {obj: ParseJSON(getEmail.result)},
                                 Text(obj.isApprover)
-                            ) = "True",
+                            ) = "True" || IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
                             true,
                             false
                         )
                     ZIndex: =2
+
+                Button5_40 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderThickness: =0
+                    Color: =RGBA(118, 0, 0, 1)
+                    Fill: =RGBA(238, 204, 204, 1)
+                    Height: =60
+                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
+                    OnSelect: =Navigate(HOD,ScreenTransition.Cover)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Text: ="HOD"
+                    Visible: |-
+                        =If(
+                            IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "Head of",
+                                MatchOptions.Contains
+                            ),
+                            true,
+                            false
+                        )
+                    ZIndex: =3
 
                 Button5_22 As button:
                     AlignInContainer: =AlignInContainer.Stretch
@@ -331,7 +367,7 @@
                         Label11_4 As label:
                             FontWeight: =FontWeight.Bold
                             Text: ="Title"
-                            Width: =250
+                            Width: =400
                             ZIndex: =3
 
                         Label11_7 As label:
@@ -407,7 +443,6 @@
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =60
-                        Transition: =Transition.Pop
                         ZIndex: =1
 
                         Label14_1 As label:
@@ -421,7 +456,7 @@
                         Label15_1 As label:
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Title
-                            Width: =230
+                            Width: =383
                             X: =150
                             Y: =10
                             ZIndex: =2
@@ -443,7 +478,7 @@
                                     ThisItem.'ReqType: ID'
                                 );
                                 Navigate(
-                                    'Detail_Req_Approval_1 and 2',
+                                    'Detail_Req_Approval_1 and 2,3',
                                     ScreenTransition.Cover
                                 )
                             Width: =24
@@ -456,7 +491,7 @@
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Created
                             Width: =147
-                            X: =403
+                            X: =560
                             ZIndex: =5
 
                         Label16_3 As label:
@@ -464,7 +499,7 @@
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.'Created By'.DisplayName
                             Width: =130
-                            X: =579
+                            X: =734
                             ZIndex: =6
 
                         Group2 As group:
@@ -487,7 +522,7 @@
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Width: =145
-                                X: =720
+                                X: =912
                                 ZIndex: =7
 
                             Label16_4 As label:
@@ -504,6 +539,6 @@
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
                                 Width: =145
-                                X: =720
+                                X: =912
                                 ZIndex: =8
 

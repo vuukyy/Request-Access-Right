@@ -1,6 +1,6 @@
-"'Detail_Req_Approval_3 and HOD' As screen.'autoLayout_Sidebar_ver1.0'":
+"'Detail_Req_Approval_1 and 2,3' As screen.'autoLayout_Sidebar_ver1.0'":
 
-    ScreenContainer3_5 As groupContainer.verticalAutoLayoutContainer:
+    ScreenContainer3_4 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -14,7 +14,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer1_12 As groupContainer.horizontalAutoLayoutContainer:
+        HeaderContainer1_11 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =65
@@ -24,7 +24,7 @@
             LayoutMode: =LayoutMode.Auto
             ZIndex: =1
 
-            Image3_8 As image:
+            Image3_5 As image:
                 Height: =50
                 Image: ='Pizza_Hut_logo.svg'
                 PaddingBottom: =10
@@ -34,7 +34,7 @@
                 Width: =50
                 ZIndex: =1
 
-            Container5_8 As groupContainer.verticalAutoLayoutContainer:
+            Container5_5 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(0, 0, 0, 0)
                 DropShadow: =DropShadow.None
@@ -50,7 +50,7 @@
                 RadiusTopRight: =0
                 ZIndex: =2
 
-                Container6_8 As groupContainer.horizontalAutoLayoutContainer:
+                Container6_5 As groupContainer.horizontalAutoLayoutContainer:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DropShadow: =DropShadow.None
                     FillPortions: =0
@@ -66,7 +66,7 @@
                     RadiusTopRight: =0
                     ZIndex: =1
 
-                    Image4_8 As image:
+                    Image4_5 As image:
                         Height: =75
                         Image: ='Power-Apps-Logo'
                         LayoutMinHeight: =50
@@ -77,7 +77,7 @@
                         Width: =50
                         ZIndex: =1
 
-                    Container7_5 As groupContainer.verticalAutoLayoutContainer:
+                    Container7_4 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DropShadow: =DropShadow.None
@@ -95,7 +95,7 @@
                         Width: =200
                         ZIndex: =2
 
-                        Label3_6 As label:
+                        Label3_5 As label:
                             FontWeight: =FontWeight.Semibold
                             Height: =20
                             Size: =12
@@ -106,7 +106,7 @@
                                 )
                             ZIndex: =1
 
-                        Container8_4 As groupContainer.horizontalAutoLayoutContainer:
+                        Container8_3 As groupContainer.horizontalAutoLayoutContainer:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
@@ -121,7 +121,7 @@
                             RadiusTopRight: =0
                             ZIndex: =3
 
-                            Label4_6 As label:
+                            Label4_5 As label:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =20
                                 Size: =10
@@ -133,7 +133,7 @@
                                 Width: =50
                                 ZIndex: =1
 
-        Container21_3 As groupContainer.horizontalAutoLayoutContainer:
+        Container21_2 As groupContainer.horizontalAutoLayoutContainer:
             BorderColor: =RGBA(0, 0, 0, 0)
             DropShadow: =DropShadow.None
             FillPortions: =0
@@ -148,47 +148,47 @@
             RadiusTopRight: =0
             ZIndex: =2
 
-            Label10_13 As label:
+            Label10_12 As label:
                 OnSelect: =Back(ScreenTransition.CoverRight)
                 Size: =14
-                Text: ="HOD & GM"
+                Text: ="Approval"
                 Underline: =true
-                Width: =120
+                Width: =90
                 ZIndex: =1
 
-            Label12_18 As label:
+            Label12_17 As label:
                 Align: =Align.Center
                 Size: =14
                 Text: ="/"
                 Width: =20
                 ZIndex: =2
 
-            Label13_18 As label:
+            Label13_17 As label:
                 Size: =14
                 Text: ="Approval Detail"
                 ZIndex: =3
 
-        Container30_1 As groupContainer.verticalAutoLayoutContainer:
+        Container30 As groupContainer.verticalAutoLayoutContainer:
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             ZIndex: =3
 
-            FormViewer1_3 As formViewer:
+            FormViewer1_2 As formViewer:
                 AlignInContainer: =AlignInContainer.Center
                 DataSource: =Request_Test
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =0
                 Height: =550
-                Item: =Gallery7_2.Selected
+                Item: =Gallery7_1.Selected
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 Width: =1366
                 Y: =80
                 ZIndex: =1
 
-                "'Created By_DataCard3' As typedDataCard.comboBoxViewCard":
+                "'Created By_DataCard2' As typedDataCard.comboBoxViewCard":
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Author"
                     Default: =ThisItem.'Created By'
@@ -197,13 +197,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue6.Selected
+                    Update: =DataCardValue5.Selected
                     Width: =455
                     X: =0
                     Y: =0
                     ZIndex: =1
 
-                    DataCardKey6 As label:
+                    DataCardKey5 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -214,7 +214,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue6 As combobox:
+                    DataCardValue5 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["DisplayName","Email","Picture"]
@@ -222,15 +222,15 @@
                         Items: =Choices([@Request_Test].'Created By')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["DisplayName"]
-                        SearchItems: =Choices(Request_Test.'Created By',DataCardValue6.SearchText)
+                        SearchItems: =Choices(Request_Test.'Created By',DataCardValue5.SearchText)
                         SelectMultiple: =false
                         Template: =ListItemTemplate.Person
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                        Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage4 As label:
+                    ErrorMessage3 As label:
                         AutoHeight: =true
                         Height: =10
                         Live: =Live.Assertive
@@ -242,20 +242,20 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue6.Y + DataCardValue6.Height
+                        Y: =DataCardValue5.Y + DataCardValue5.Height
                         ZIndex: =3
 
-                    StarVisible4 As label:
+                    StarVisible3 As label:
                         Align: =Align.Center
-                        Height: =DataCardKey6.Height
+                        Height: =DataCardKey5.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey6.Y
+                        Y: =DataCardKey5.Y
                         ZIndex: =4
 
-                Created_DataCard2_3 As typedDataCard.textualViewCard:
+                Created_DataCard2_2 As typedDataCard.textualViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Created"
                     Default: =ThisItem.Created
@@ -269,7 +269,7 @@
                     Y: =0
                     ZIndex: =1
 
-                    DataCardKey55_3 As label:
+                    DataCardKey55_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -280,7 +280,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue55_3 As label:
+                    DataCardValue55_2 As label:
                         AutoHeight: =true
                         DisplayMode: =Parent.DisplayMode
                         Height: =27
@@ -290,10 +290,10 @@
                         Text: =Parent.Default
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey55_3.Y + DataCardKey55_3.Height + 5
+                        Y: =DataCardKey55_2.Y + DataCardKey55_2.Height + 5
                         ZIndex: =2
 
-                Attachments_DataCard1_3 As typedDataCard.attachmentsViewCard:
+                Attachments_DataCard1_2 As typedDataCard.attachmentsViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="{Attachments}"
                     Default: =ThisItem.Attachments
@@ -302,13 +302,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =99
                     Required: =false
-                    Update: =DataCardValue52_4.Attachments
+                    Update: =DataCardValue52_3.Attachments
                     Width: =455
                     X: =0
                     Y: =4
                     ZIndex: =1
 
-                    DataCardKey52_4 As label:
+                    DataCardKey52_3 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -319,7 +319,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue52_4 As attachments:
+                    DataCardValue52_3 As attachments:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DisplayMode: =Parent.DisplayMode
                         Height: =70
@@ -331,10 +331,10 @@
                         PaddingTop: =5
                         Width: =Parent.Width - 60
                         X: =20
-                        Y: =DataCardKey52_4.Y + DataCardKey52_4.Height + 5
+                        Y: =44
                         ZIndex: =2
 
-                    ErrorMessage32_3 As label:
+                    ErrorMessage32_2 As label:
                         AutoHeight: =true
                         Height: =10
                         PaddingBottom: =0
@@ -345,34 +345,34 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue52_4.Y + DataCardValue52_4.Height
+                        Y: =DataCardValue52_3.Y + DataCardValue52_3.Height
                         ZIndex: =3
 
-                    StarVisible33_3 As label:
+                    StarVisible33_2 As label:
                         Align: =Align.Center
-                        Height: =DataCardKey52_4.Height
+                        Height: =DataCardKey52_3.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey52_4.Y
+                        Y: =DataCardKey52_3.Y
                         ZIndex: =4
 
-                Title_DataCard1_3 As typedDataCard.textualViewCard:
+                Title_DataCard1_2 As typedDataCard.textualViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Title"
                     Default: =ThisItem.Title
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"Title")
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
+                    Height: =49
                     Required: =true
                     Width: =455
                     X: =2
                     Y: =0
                     ZIndex: =3
 
-                    DataCardKey13_3 As label:
+                    DataCardKey13_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -383,7 +383,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue13_3 As label:
+                    DataCardValue13_2 As label:
                         AutoHeight: =true
                         DisplayMode: =Parent.DisplayMode
                         Height: =27
@@ -393,10 +393,10 @@
                         Text: =Parent.Default
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey13_3.Y + DataCardKey13_3.Height + 5
+                        Y: =DataCardKey13_2.Y + DataCardKey13_2.Height + 5
                         ZIndex: =2
 
-                ReqPermission_DataCard3_3 As typedDataCard.comboBoxViewCard:
+                ReqPermission_DataCard3_2 As typedDataCard.comboBoxViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ReqPermission"
                     Default: =ThisItem.ReqPermission
@@ -405,13 +405,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue32_4.Selected
+                    Update: =DataCardValue32_3.Selected
                     Width: =455
                     X: =0
                     Y: =1
                     ZIndex: =3
 
-                    DataCardKey32_4 As label:
+                    DataCardKey32_3 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -422,7 +422,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue32_4 As combobox:
+                    DataCardValue32_3 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["Value"]
@@ -430,14 +430,14 @@
                         Items: =Choices([@Request_Test].ReqPermission)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["Value"]
-                        SearchItems: =Choices(Request_Test.ReqPermission,DataCardValue32_4.SearchText)
+                        SearchItems: =Choices(Request_Test.ReqPermission,DataCardValue32_3.SearchText)
                         SelectMultiple: =false
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey32_4.Y + DataCardKey32_4.Height + 5
+                        Y: =DataCardKey32_3.Y + DataCardKey32_3.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage24_3 As label:
+                    ErrorMessage24_2 As label:
                         AutoHeight: =true
                         Height: =10
                         Live: =Live.Assertive
@@ -449,20 +449,20 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue32_4.Y + DataCardValue32_4.Height
+                        Y: =DataCardValue32_3.Y + DataCardValue32_3.Height
                         ZIndex: =3
 
-                    StarVisible24_3 As label:
+                    StarVisible24_1 As label:
                         Align: =Align.Center
-                        Height: =DataCardKey32_4.Height
+                        Height: =DataCardKey32_3.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey32_4.Y
+                        Y: =DataCardKey32_3.Y
                         ZIndex: =4
 
-                ReqType_DataCard3_3 As typedDataCard.comboBoxViewCard:
+                ReqType_DataCard3_2 As typedDataCard.comboBoxViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ReqType"
                     Default: =ThisItem.ReqType
@@ -471,13 +471,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue29_3.Selected
+                    Update: =DataCardValue29_2.Selected
                     Width: =455
                     X: =1
                     Y: =1
                     ZIndex: =3
 
-                    DataCardKey29_3 As label:
+                    DataCardKey29_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -488,7 +488,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue29_3 As combobox:
+                    DataCardValue29_2 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["Value"]
@@ -496,14 +496,14 @@
                         Items: =Choices([@Request_Test].ReqType)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["Value"]
-                        SearchItems: =Choices(Request_Test.ReqType,DataCardValue29_3.SearchText)
+                        SearchItems: =Choices(Request_Test.ReqType,DataCardValue29_2.SearchText)
                         SelectMultiple: =false
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey29_3.Y + DataCardKey29_3.Height + 5
+                        Y: =DataCardKey29_2.Y + DataCardKey29_2.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage18_3 As label:
+                    ErrorMessage18_2 As label:
                         AutoHeight: =true
                         Height: =10
                         Live: =Live.Assertive
@@ -515,20 +515,20 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue29_3.Y + DataCardValue29_3.Height
+                        Y: =DataCardValue29_2.Y + DataCardValue29_2.Height
                         ZIndex: =3
 
-                    StarVisible19_4 As label:
+                    StarVisible19_3 As label:
                         Align: =Align.Center
-                        Height: =DataCardKey29_3.Height
+                        Height: =DataCardKey29_2.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey29_3.Y
+                        Y: =DataCardKey29_2.Y
                         ZIndex: =4
 
-                ReqReason_DataCard3_3 As typedDataCard.textualViewCard:
+                ReqReason_DataCard3_2 As typedDataCard.textualViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ReqReason"
                     Default: =ThisItem.ReqReason
@@ -542,7 +542,7 @@
                     Y: =1
                     ZIndex: =3
 
-                    DataCardKey34_4 As label:
+                    DataCardKey34_3 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -553,7 +553,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue34_4 As label:
+                    DataCardValue34_3 As label:
                         AutoHeight: =true
                         DisplayMode: =Parent.DisplayMode
                         Height: =27
@@ -563,10 +563,10 @@
                         Text: =Parent.Default
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey34_4.Y + DataCardKey34_4.Height + 5
+                        Y: =DataCardKey34_3.Y + DataCardKey34_3.Height + 5
                         ZIndex: =2
 
-                Status_DataCard1_3 As typedDataCard.comboBoxViewCard:
+                Status_DataCard1_2 As typedDataCard.comboBoxViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Status"
                     Default: =ThisItem.Status
@@ -575,13 +575,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue26_3.Selected
+                    Update: =DataCardValue26_2.Selected
                     Width: =455
                     X: =0
                     Y: =2
                     ZIndex: =3
 
-                    DataCardKey26_3 As label:
+                    DataCardKey26_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -592,7 +592,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue26_3 As combobox:
+                    DataCardValue26_2 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["Value"]
@@ -600,14 +600,14 @@
                         Items: =Choices([@Request_Test].Status)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["Value"]
-                        SearchItems: =Choices(Request_Test.Status,DataCardValue26_3.SearchText)
+                        SearchItems: =Choices(Request_Test.Status,DataCardValue26_2.SearchText)
                         SelectMultiple: =false
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey26_3.Y + DataCardKey26_3.Height + 5
+                        Y: =DataCardKey26_2.Y + DataCardKey26_2.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage16_3 As label:
+                    ErrorMessage16_2 As label:
                         AutoHeight: =true
                         Height: =10
                         Live: =Live.Assertive
@@ -619,20 +619,20 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue26_3.Y + DataCardValue26_3.Height
+                        Y: =DataCardValue26_2.Y + DataCardValue26_2.Height
                         ZIndex: =3
 
-                    StarVisible16_4 As label:
+                    StarVisible16_3 As label:
                         Align: =Align.Center
-                        Height: =DataCardKey26_3.Height
+                        Height: =DataCardKey26_2.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey26_3.Y
+                        Y: =DataCardKey26_2.Y
                         ZIndex: =4
 
-                "'Approver 1_DataCard1_4' As typedDataCard.comboBoxViewCard":
+                "'Approver 1_DataCard1_3' As typedDataCard.comboBoxViewCard":
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Approver1"
                     Default: =ThisItem.'Approver 1'
@@ -641,13 +641,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue38_3.Selected
+                    Update: =DataCardValue38_2.Selected
                     Width: =455
                     X: =1
                     Y: =2
                     ZIndex: =3
 
-                    DataCardKey38_3 As label:
+                    DataCardKey38_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -658,7 +658,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue38_3 As combobox:
+                    DataCardValue38_2 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["DisplayName","Email","Picture"]
@@ -666,15 +666,15 @@
                         Items: =Choices([@Request_Test].'Approver 1')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["DisplayName"]
-                        SearchItems: =Choices(Request_Test.'Approver 1',DataCardValue38_3.SearchText)
+                        SearchItems: =Choices(Request_Test.'Approver 1',DataCardValue38_2.SearchText)
                         SelectMultiple: =false
                         Template: =ListItemTemplate.Person
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey38_3.Y + DataCardKey38_3.Height + 5
+                        Y: =DataCardKey38_2.Y + DataCardKey38_2.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage25_3 As label:
+                    ErrorMessage25_1 As label:
                         AutoHeight: =true
                         Height: =10
                         Live: =Live.Assertive
@@ -686,20 +686,20 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue38_3.Y + DataCardValue38_3.Height
+                        Y: =DataCardValue38_2.Y + DataCardValue38_2.Height
                         ZIndex: =3
 
-                    StarVisible25_3 As label:
+                    StarVisible25_1 As label:
                         Align: =Align.Center
-                        Height: =DataCardKey38_3.Height
+                        Height: =DataCardKey38_2.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey38_3.Y
+                        Y: =DataCardKey38_2.Y
                         ZIndex: =4
 
-                "'Approved Date 1_DataCard1_3' As typedDataCard.textualViewCard":
+                "'Approved Date 1_DataCard1_2' As typedDataCard.textualViewCard":
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ApprovedDate1"
                     Default: =ThisItem.'Approved Date 1'
@@ -713,7 +713,7 @@
                     Y: =2
                     ZIndex: =3
 
-                    DataCardKey39_3 As label:
+                    DataCardKey39_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -724,7 +724,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue39_3 As label:
+                    DataCardValue39_2 As label:
                         AutoHeight: =true
                         DisplayMode: =Parent.DisplayMode
                         Height: =27
@@ -734,10 +734,10 @@
                         Text: =Parent.Default
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey39_3.Y + DataCardKey39_3.Height + 5
+                        Y: =DataCardKey39_2.Y + DataCardKey39_2.Height + 5
                         ZIndex: =2
 
-                "'Approver 2_DataCard1_4' As typedDataCard.comboBoxViewCard":
+                "'Approver 2_DataCard1_3' As typedDataCard.comboBoxViewCard":
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Approver2"
                     Default: =ThisItem.'Approver 2'
@@ -746,13 +746,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue40_3.Selected
+                    Update: =DataCardValue40_2.Selected
                     Width: =455
                     X: =0
                     Y: =3
                     ZIndex: =3
 
-                    DataCardKey40_3 As label:
+                    DataCardKey40_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -763,7 +763,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue40_3 As combobox:
+                    DataCardValue40_2 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["DisplayName","Email","Picture"]
@@ -771,15 +771,15 @@
                         Items: =Choices([@Request_Test].'Approver 2')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["DisplayName"]
-                        SearchItems: =Choices(Request_Test.'Approver 2',DataCardValue40_3.SearchText)
+                        SearchItems: =Choices(Request_Test.'Approver 2',DataCardValue40_2.SearchText)
                         SelectMultiple: =false
                         Template: =ListItemTemplate.Person
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey40_3.Y + DataCardKey40_3.Height + 5
+                        Y: =DataCardKey40_2.Y + DataCardKey40_2.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage26_3 As label:
+                    ErrorMessage26_1 As label:
                         AutoHeight: =true
                         Height: =10
                         Live: =Live.Assertive
@@ -791,20 +791,20 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue40_3.Y + DataCardValue40_3.Height
+                        Y: =DataCardValue40_2.Y + DataCardValue40_2.Height
                         ZIndex: =3
 
-                    StarVisible26_3 As label:
+                    StarVisible26_1 As label:
                         Align: =Align.Center
-                        Height: =DataCardKey40_3.Height
+                        Height: =DataCardKey40_2.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey40_3.Y
+                        Y: =DataCardKey40_2.Y
                         ZIndex: =4
 
-                "'Approved Date 2_DataCard1_3' As typedDataCard.textualViewCard":
+                "'Approved Date 2_DataCard1_2' As typedDataCard.textualViewCard":
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ApprovedDate2"
                     Default: =ThisItem.'Approved Date 2'
@@ -818,7 +818,7 @@
                     Y: =3
                     ZIndex: =3
 
-                    DataCardKey41_3 As label:
+                    DataCardKey41_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -829,7 +829,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue41_3 As label:
+                    DataCardValue41_2 As label:
                         AutoHeight: =true
                         DisplayMode: =Parent.DisplayMode
                         Height: =27
@@ -839,10 +839,10 @@
                         Text: =Parent.Default
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey41_3.Y + DataCardKey41_3.Height + 5
+                        Y: =DataCardKey41_2.Y + DataCardKey41_2.Height + 5
                         ZIndex: =2
 
-                ReqDescription_DataCard3_3 As typedDataCard.textualViewCard:
+                ReqDescription_DataCard3_2 As typedDataCard.textualViewCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ReqDescription"
                     Default: =ThisItem.ReqDescription
@@ -856,7 +856,7 @@
                     Y: =3
                     ZIndex: =3
 
-                    DataCardKey31_3 As label:
+                    DataCardKey31_2 As label:
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
@@ -867,7 +867,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue31_3 As label:
+                    DataCardValue31_2 As label:
                         AutoHeight: =true
                         DisplayMode: =Parent.DisplayMode
                         Height: =27
@@ -877,10 +877,10 @@
                         Text: =Parent.Default
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey31_3.Y + DataCardKey31_3.Height + 5
+                        Y: =DataCardKey31_2.Y + DataCardKey31_2.Height + 5
                         ZIndex: =2
 
-        Container10_3 As groupContainer.horizontalAutoLayoutContainer:
+        Container10_2 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =60
@@ -894,69 +894,97 @@
             Y: =708
             ZIndex: =5
 
-            Btn_approval_3 As button:
+            Btn_approval_2 As button:
                 Fill: =RGBA(54, 176, 75, 1)
                 OnSelect: |-
                     =If(
                         !IsBlank(
                             LookUp(
-                                Request_Test,
-                                User().Email = HOD.Email
+                                LevelApproveTest,
+                                IdUser.Email = varEmailUser && Level.Value = "Approver 1"
                             )
                         ),
                         Patch(
                             Request_Test,
                             LookUp(
                                 Request_Test,
-                                ID = Gallery7_2.Selected.ID
+                                ID = Gallery7_1.Selected.ID
                             ),
-                            {Status: {Value: "HOD approved"}},
-                            {'HOD Approved Date': Now()}
+                            {Status: {Value: "Approver 1 approved"}},
+                            {'Approved Date 1': Now()}
                         ),
                         If(
                             !IsBlank(
                                 LookUp(
                                     LevelApproveTest,
-                                    User().Email = IdUser.Email && Level.Value = "Approver 3"
+                                    varEmailUser = IdUser.Email && Level.Value = "Approver 2"
                                 )
                             ),
                             Patch(
                                 Request_Test,
                                 LookUp(
                                     Request_Test,
-                                    ID = Gallery7_2.Selected.ID
+                                    ID = Gallery7_1.Selected.ID
                                 ),
-                                {Status: {Value: "Approver 3 approved"}},
-                                {'Approved Date 3': Now()},
+                                {Status: {Value: "Approver 2 approved"}},
+                                {'Approved Date 2': Now()},
                                 {
-                                    'Approver 3': {
-                                        '@odata.type': User().Email,
-                                        Claims: User().Email,
+                                    'Approver 2': {
+                                        '@odata.type': varEmailUser,
+                                        Claims: varEmailUser,
                                         Department: "",
-                                        DisplayName: User().FullName,
-                                        Email: User().Email,
+                                        DisplayName: varNameUser,
+                                        Email: varEmailUser,
                                         JobTitle: "",
                                         Picture: ""
                                     }
                                 }
+                            ),
+                            If(
+                                !IsBlank(
+                                    LookUp(
+                                        LevelApproveTest,
+                                        varEmailUser = IdUser.Email && Level.Value = "Approver 3"
+                                    )
+                                ),
+                                Patch(
+                                    Request_Test,
+                                    LookUp(
+                                        Request_Test,
+                                        ID = Gallery7_1.Selected.ID
+                                    ),
+                                    {Status: {Value: "Approver 3 approved"}},
+                                    {'Approved Date 3': Now()},
+                                    {
+                                        'Approver 3': {
+                                            '@odata.type': varEmailUser,
+                                            Claims: varEmailUser,
+                                            Department: "",
+                                            DisplayName: varNameUser,
+                                            Email: varEmailUser,
+                                            JobTitle: "",
+                                            Picture: ""
+                                        }
+                                    }
+                                )
                             )
                         )
                     );
-                    Navigate(HOD)
+                    Navigate(Approval)
                 Text: ="Approval"
                 ZIndex: =1
 
-            Btn_reject_3 As button:
+            Btn_reject_2 As button:
                 Fill: =RGBA(255, 0, 0, 1)
                 OnSelect: |-
                     =Set(
-                        DialogComment1,
+                        DialogComment,
                         true
                     );
                 Text: ="Reject"
                 ZIndex: =2
 
-    Dialog_comment_3 As groupContainer.manualLayoutContainer:
+    Dialog_comment_2 As groupContainer.manualLayoutContainer:
         Height: =Parent.Height
         PaddingBottom: =0.00
         PaddingLeft: =0.00
@@ -966,11 +994,11 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Visible: =DialogComment1
+        Visible: =DialogComment
         Width: =Parent.Width
         ZIndex: =2
 
-        Container13_5 As groupContainer.verticalAutoLayoutContainer:
+        Container13_4 As groupContainer.verticalAutoLayoutContainer:
             Fill: =RGBA(0, 0, 0, 0.46)
             Height: =768
             LayoutDirection: =LayoutDirection.Vertical
@@ -978,7 +1006,7 @@
             Width: =1366
             ZIndex: =1
 
-            Container42_3 As groupContainer.verticalAutoLayoutContainer:
+            Container42_2 As groupContainer.verticalAutoLayoutContainer:
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -987,7 +1015,7 @@
                 LayoutMode: =LayoutMode.Auto
                 ZIndex: =5
 
-                TextInput1_3 As text:
+                TextInput1_2 As text:
                     Default: =""
                     FocusedBorderThickness: =Self.BorderThickness
                     Height: =195
@@ -1002,7 +1030,7 @@
                     Y: =238
                     ZIndex: =1
 
-                Container28_3 As groupContainer.horizontalAutoLayoutContainer:
+                Container28_2 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(0, 18, 107, 1)
                     BorderThickness: =2
@@ -1024,10 +1052,10 @@
                     Width: =372
                     ZIndex: =2
 
-                    Button_OK_11 As button:
+                    Button_OK_10 As button:
                         OnSelect: |-
                             =If(
-                                Len(TextInput1_3.Text) = 0,
+                                Len(TextInput1_2.Text) = 0,
                                 Notify(
                                     "Please enter the reason for the reject",
                                     NotificationType.Error
@@ -1035,76 +1063,117 @@
                                 If(
                                     !IsBlank(
                                         LookUp(
-                                            Request_Test,
-                                            User().Email = HOD.Email
+                                            LevelApproveTest,
+                                            varEmailUser = IdUser.Email && Level.Value = "Approver 1"
                                         )
                                     ),
                                     Patch(
                                         Request_Test,
                                         LookUp(
                                             Request_Test,
-                                            ID = Gallery7_2.Selected.ID
+                                            ID = Gallery7_1.Selected.ID
                                         ),
                                         {Status: {Value: "Rejected"}},
                                         {'Rejected Date': Now()},
-                                        {'Reason Reject': User().FullName & " is the HOD Comment: " & TextInput1_3.Text},
+                                        {'Reason Reject': varNameUser & " is the Approver 1 comment: " & TextInput1_2.Text},
                                         {
                                             'Rejected By': {
-                                                '@odata.type': User().Email,
-                                                Claims: User().Email,
+                                                '@odata.type': varEmailUser,
+                                                Claims: varEmailUser,
                                                 Department: "",
-                                                DisplayName: User().FullName,
-                                                Email: User().Email,
+                                                DisplayName: varNameUser,
+                                                Email: varEmailUser,
                                                 JobTitle: "",
                                                 Picture: ""
                                             }
                                         }
                                     );
-                                    Navigate(HOD),
+                                    Navigate(Approval),
                                     If(
                                         !IsBlank(
                                             LookUp(
                                                 LevelApproveTest,
-                                                User().Email = IdUser.Email && Level.Value = "Approver 3"
+                                                varEmailUser = IdUser.Email && Level.Value = "Approver 2"
                                             )
                                         ),
                                         Patch(
                                             Request_Test,
                                             LookUp(
                                                 Request_Test,
-                                                ID = Gallery7_2.Selected.ID
+                                                ID = Gallery7_1.Selected.ID
                                             ),
                                             {Status: {Value: "Rejected"}},
                                             {'Rejected Date': Now()},
-                                            {'Reason Reject': User().FullName & " is the Approver 3 comment: " & TextInput1_3.Text},
+                                            {'Reason Reject': varNameUser & " is the Approver 2 comment: " & TextInput1_2.Text},
                                             {
                                                 'Rejected By': {
-                                                    '@odata.type': User().Email,
-                                                    Claims: User().Email,
+                                                    '@odata.type': varEmailUser,
+                                                    Claims: varEmailUser,
                                                     Department: "",
-                                                    DisplayName: User().FullName,
-                                                    Email: User().Email,
+                                                    DisplayName: varNameUser,
+                                                    Email: varEmailUser,
                                                     JobTitle: "",
                                                     Picture: ""
                                                 }
                                             },
                                             {
-                                            'Approver 3': {
-                                                '@odata.type': User().Email,
-                                                Claims: User().Email,
-                                                Department: "",
-                                                DisplayName: User().FullName,
-                                                Email: User().Email,
-                                                JobTitle: "",
-                                                Picture: ""
+                                                'Approver 2': {
+                                                    '@odata.type': varEmailUser,
+                                                    Claims: varEmailUser,
+                                                    Department: "",
+                                                    DisplayName: varNameUser,
+                                                    Email: varEmailUser,
+                                                    JobTitle: "",
+                                                    Picture: ""
+                                                }
                                             }
-                                        }
                                         );
-                                        Navigate(HOD)
+                                        Navigate(Approval),
+                                        If(
+                                            !IsBlank(
+                                                LookUp(
+                                                    LevelApproveTest,
+                                                    varEmailUser = IdUser.Email && Level.Value = "Approver 3"
+                                                )
+                                            ),
+                                            Patch(
+                                                Request_Test,
+                                                LookUp(
+                                                    Request_Test,
+                                                    ID = Gallery7_1.Selected.ID
+                                                ),
+                                                {Status: {Value: "Rejected"}},
+                                                {'Rejected Date': Now()},
+                                                {'Reason Reject': varNameUser & " is the Approver 3 comment: " & TextInput1_2.Text},
+                                                {
+                                                    'Rejected By': {
+                                                        '@odata.type': varEmailUser,
+                                                        Claims: varEmailUser,
+                                                        Department: "",
+                                                        DisplayName: varNameUser,
+                                                        Email: varEmailUser,
+                                                        JobTitle: "",
+                                                        Picture: ""
+                                                    }
+                                                },
+                                                {
+                                                    'Approver 3': {
+                                                        '@odata.type': varEmailUser,
+                                                        Claims: varEmailUser,
+                                                        Department: "",
+                                                        DisplayName: varNameUser,
+                                                        Email: varEmailUser,
+                                                        JobTitle: "",
+                                                        Picture: ""
+                                                    }
+                                                }
+                                            );
+                                            Navigate(Approval)
+                                        )
                                     )
                                 )
                             );
-                            Reset(TextInput1_3)
+                            Reset(TextInput1_2)
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
                         PaddingRight: =5.21
@@ -1116,13 +1185,13 @@
                         Y: =195
                         ZIndex: =1
 
-                    Button_Cancel_13 As button:
+                    Button_Cancel_12 As button:
                         OnSelect: |-
                             =Set(
-                                DialogComment1,
+                                DialogComment,
                                 false
                             );
-                            Reset(TextInput1_3);
+                            Reset(TextInput1_2);
                         PaddingBottom: =5.00
                         PaddingLeft: =5.00
                         PaddingRight: =5.21
