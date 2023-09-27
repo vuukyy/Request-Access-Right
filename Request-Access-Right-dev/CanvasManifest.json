@@ -101,6 +101,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "BindingErrorCount": 0,
 =======
     "BindingErrorCount": 1,
@@ -111,6 +112,9 @@
 =======
     "BindingErrorCount": 1,
 >>>>>>> parent of 57a5552... Commit
+=======
+    "BindingErrorCount": 0,
+>>>>>>> parent of f206514... Commit
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
