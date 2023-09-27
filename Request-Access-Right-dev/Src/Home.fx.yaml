@@ -224,13 +224,13 @@
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate('HOD and GM',ScreenTransition.Cover)
+                    OnSelect: =Navigate(HOD,ScreenTransition.Cover)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Text: ="HOD & GM"
+                    Text: ="HOD"
                     Visible: |-
                         =If(
                             IsMatch(
@@ -500,7 +500,6 @@
                         LoadingSpinner: =LoadingSpinner.Data
                         ShowScrollbar: =false
                         TemplateSize: =60
-                        Transition: =Transition.Pop
                         ZIndex: =1
 
                         Label14 As label:

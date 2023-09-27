@@ -212,42 +212,6 @@
                         )
                     ZIndex: =2
 
-                Button5_40 As button:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderThickness: =0
-                    Color: =RGBA(118, 0, 0, 1)
-                    Fill: =RGBA(238, 204, 204, 1)
-                    Height: =60
-                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate('HOD and GM',ScreenTransition.Cover)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =13
-                    Text: ="HOD & GM"
-                    Visible: |-
-                        =If(
-                            IsMatch(
-                                With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.Title)
-                                ),
-                                "Head of",
-                                MatchOptions.Contains
-                            ) || IsMatch(
-                                With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.Title)
-                                ),
-                                "General Manager",
-                                MatchOptions.Complete
-                            ),
-                            true,
-                            false
-                        )
-                    ZIndex: =3
-
                 Button5_22 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderThickness: =0
@@ -394,13 +358,13 @@
                                 !IsBlank(
                                     LookUp(
                                         LevelApproveTest,
-                                        IdUser.Email = User().Email && Level.Value="Approver 1"
+                                        IdUser.Email = varEmailUser && Level.Value = "Approver 1"
                                     )
                                 ),
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && User().Email = 'Approver 1'.Email || Status.Value = "HOD approved" && User().Email = 'Approver 1'.Email
+                                        Status.Value = "Created" && varEmailUser = 'Approver 1'.Email || Status.Value = "HOD approved" && varEmailUser = 'Approver 1'.Email
                                     ),
                                     "Created",
                                     SortOrder.Descending
@@ -409,7 +373,7 @@
                                     !IsBlank(
                                         LookUp(
                                             LevelApproveTest,
-                                            User().Email = IdUser.Email && Level.Value = "Approver 2"
+                                            varEmailUser = IdUser.Email && Level.Value = "Approver 2"
                                         )
                                     ),
                                     SortByColumns(
@@ -419,6 +383,22 @@
                                         ),
                                         "Created",
                                         SortOrder.Descending
+                                    ),
+                                    If(
+                                        !IsBlank(
+                                            LookUp(
+                                                LevelApproveTest,
+                                                varEmailUser = IdUser.Email && Level.Value = "Approver 3"
+                                            )
+                                        ),
+                                        SortByColumns(
+                                            Filter(
+                                                Request_Test,
+                                                Status.Value = "Approver 2 approved" && 'ReqType: ID'.Value = "2"
+                                            ),
+                                            "Created",
+                                            SortOrder.Descending
+                                        )
                                     )
                                 )
                             )
