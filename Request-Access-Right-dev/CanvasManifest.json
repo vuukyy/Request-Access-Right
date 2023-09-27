@@ -98,7 +98,11 @@
       "zeroalltabindexes": false
     },
     "Author": "",
+<<<<<<< HEAD
     "BindingErrorCount": 0,
+=======
+    "BindingErrorCount": 1,
+>>>>>>> parent of 57a5552... Commit
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
