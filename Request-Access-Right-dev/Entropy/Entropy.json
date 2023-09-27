@@ -1222,12 +1222,12 @@
     "ultimate-safaris-namibia-6NVr_r5uosU-unsplash": "https://docserverpwaprodeas.blob.core.windows.net/4d0814f9-2142-40b9-8def-4ba7ac8087bb-1/resource/Assets0Images00003.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-09-27T08%3A03%3A58Z&ske=2023-09-28T08%3A18%3A58Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-09-28T08%3A18%3A58Z&sr=b&sp=r&sig=gqLuxyUeh6ghuHPXBU31SU9thWKGZCeoFABqOpQ51Rs%3D"
   },
   "OrderComponentMetadata": {
-    "adb63a9411484b188e3bfe1570e10aa4": 0,
-    "af37e29a586248a089a2c112d7a27f25": 1
+    "adb63a9411484b188e3bfe1570e10aa4": 1,
+    "af37e29a586248a089a2c112d7a27f25": 0
   },
   "OrderComponentTemplate": {
-    "adb63a9411484b188e3bfe1570e10aa4": 0,
-    "af37e29a586248a089a2c112d7a27f25": 1
+    "adb63a9411484b188e3bfe1570e10aa4": 1,
+    "af37e29a586248a089a2c112d7a27f25": 0
   },
   "OrderDataSource": {
     "ApprovalTest": 15,
@@ -1307,7 +1307,7 @@
     "formViewer": 12,
     "gallery": 8,
     "groupContainer": 0,
-    "icon": 9,
+    "icon": 8,
     "image": 1,
     "label": 2,
     "rectangle": 4,
