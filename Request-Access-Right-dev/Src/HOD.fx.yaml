@@ -1,4 +1,4 @@
-"'HOD and GM' As screen.'autoLayout_Sidebar_ver1.0'":
+"HOD As screen.'autoLayout_Sidebar_ver1.0'":
     OnHidden: |
         =ClearCollect(
             colIDUser,
@@ -200,6 +200,22 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Approval"
+                    Visible: |-
+                        =If(
+                            With(
+                                {obj: ParseJSON(getEmail.result)},
+                                Text(obj.isApprover)
+                            ) = "True" && IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
+                            true,
+                            false
+                        )
                     ZIndex: =2
 
                 Button5_41 As button:
@@ -209,13 +225,26 @@
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate('HOD and GM',ScreenTransition.Cover)
+                    OnSelect: =Navigate('HOD',ScreenTransition.Cover)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Text: ="HOD & GM"
+                    Text: ="HOD"
+                    Visible: |-
+                        =If(
+                            IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "Head of",
+                                MatchOptions.Contains
+                            ),
+                            true,
+                            false
+                        )
                     ZIndex: =3
 
                 Button5_37 As button:
@@ -363,32 +392,16 @@
                                 !IsBlank(
                                     LookUp(
                                         Request_Test,
-                                        User().Email = HOD.Email
+                                        varEmailUser = HOD.Email
                                     )
                                 ),
                                 SortByColumns(
                                     Filter(
                                         Request_Test,
-                                        Status.Value = "Created" && HOD.Email = User().Email
+                                        Status.Value = "Created" && HOD.Email = varEmailUser
                                     ),
                                     "Created",
                                     SortOrder.Descending
-                                ),
-                                If(
-                                    !IsBlank(
-                                        LookUp(
-                                            LevelApproveTest,
-                                            User().Email = IdUser.Email && Level.Value = "Approver 3"
-                                        )
-                                    ),
-                                    SortByColumns(
-                                        Filter(
-                                            Request_Test,
-                                            Status.Value = "Approver 2 approved" && 'ReqType: ID'.Value = "2"
-                                        ),
-                                        "Created",
-                                        SortOrder.Descending
-                                    )
                                 )
                             )
                         Layout: =Layout.Vertical
@@ -432,7 +445,7 @@
                                     ThisItem.'ReqType: ID'
                                 );
                                 Navigate(
-                                    'Detail_Req_Approval_3 and HOD',
+                                    Detail_Req_HOD,
                                     ScreenTransition.Cover
                                 )
                             Width: =24

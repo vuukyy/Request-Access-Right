@@ -1,6 +1,13 @@
 "Home As screen.'autoLayout_Sidebar_ver1.0'":
-    OnVisible: |
+    OnVisible: |-
         =//ClearCollect(colItem,ForAll(Table(ParseJSON(FLowItem.Run().varitem)),{Title: Text(ThisRecord.Value.Title),'Request Type': Text(ThisRecord.Value.'Request Type'),'Request Permission': Text(ThisRecord.Value.'Request Permission'),Status: Text(ThisRecord.Value.Status),'Request Reason': Text(ThisRecord.Value.'Request Reason'),'Request Description': Text(ThisRecord.Value.'Request Description')}));
+        Set(
+            varEmailUser,
+            With(
+                {obj: ParseJSON(getEmail.result)},
+                Text(obj.Email)
+            )
+        )
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -197,7 +204,7 @@
                             With(
                                 {obj: ParseJSON(getEmail.result)},
                                 Text(obj.isApprover)
-                            ) = "True" && !IsMatch(
+                            ) = "True" && IsMatch(
                                 With(
                                     {obj: ParseJSON(getEmail.result)},
                                     Text(obj.Title)
@@ -217,13 +224,13 @@
                     Fill: =RGBA(238, 204, 204, 1)
                     Height: =60
                     HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    OnSelect: =Navigate('HOD and GM',ScreenTransition.Cover)
+                    OnSelect: =Navigate(HOD,ScreenTransition.Cover)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Text: ="HOD & GM"
+                    Text: ="HOD"
                     Visible: |-
                         =If(
                             IsMatch(
@@ -233,19 +240,6 @@
                                 ),
                                 "Head of",
                                 MatchOptions.Contains
-                            ) && !IsMatch(
-                                With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.Dept)
-                                ),
-                                "DTS"
-                            ) || IsMatch(
-                                With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.Title)
-                                ),
-                                "General Manager",
-                                MatchOptions.Complete
                             ),
                             true,
                             false
@@ -265,6 +259,19 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Audit"
+                    Visible: |-
+                        =If(
+                          IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
+                            true,
+                            false
+                        )
                     ZIndex: =4
 
                 Button5_13 As button:
@@ -482,7 +489,7 @@
                                     StartsWith(
                                         Title,
                                         TextSearch.Text
-                                    ) && 'Created By'.Email = User().Email
+                                    ) && 'Approver 4'.Email = varEmailUser
                                 ),
                                 "Created",
                                 SortOrder.Descending

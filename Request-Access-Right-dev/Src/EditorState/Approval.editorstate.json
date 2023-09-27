@@ -849,7 +849,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(\n    With(\n        {obj: ParseJSON(getEmail.result)},\n        Text(obj.isApprover)\n    ) = \"True\",\n    true,\n    false\n)",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -906,7 +913,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_21",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1270,7 +1277,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_22",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1637,7 +1644,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_23",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2318,7 +2325,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(\n    IsMatch(\n        With(\n            {obj: ParseJSON(getEmail.result)},\n            Text(obj.Title)\n        ),\n        \"Head of\",\n        MatchOptions.Contains\n    ) || IsMatch(\n        With(\n            {obj: ParseJSON(getEmail.result)},\n            Text(obj.Title)\n        ),\n        \"General Manager\",\n        MatchOptions.Complete\n    ),\n    true,\n    false\n)",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -2375,7 +2389,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_40",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3169,7 +3183,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container5_3",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5007,7 +5021,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image3_3",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
