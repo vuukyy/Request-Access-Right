@@ -415,7 +415,7 @@
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: ="Permission Request"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -481,7 +481,7 @@
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: ="Type Request"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -546,7 +546,7 @@
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: ="Reason Request"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -860,7 +860,7 @@
                         AutoHeight: =true
                         FontWeight: =FontWeight.Bold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: ="Description"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30

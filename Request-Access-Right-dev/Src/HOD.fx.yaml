@@ -1,0 +1,8 @@
+"HOD As screen.'autoLayout_Sidebar_ver1.0'":
+    OnHidden: |
+        =ClearCollect(
+            colIDUser,
+            getEmail.result
+        );
+    OnVisible: =
+
