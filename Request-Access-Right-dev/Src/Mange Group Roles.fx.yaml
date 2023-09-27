@@ -299,6 +299,10 @@
                                             colListUser,
                                             ThisRecord.User
                                         )
+                                    );
+                                    Set(
+                                        varGroupRole,
+                                        galUserGroup.Selected.ID
                                     )
                                 TemplatePadding: =0
                                 TemplateSize: =80
