@@ -14,7 +14,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer1_10 As groupContainer.horizontalAutoLayoutContainer:
+        HeaderContainer1_6 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =65
@@ -37,7 +37,7 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            ZIndex: =2
+            ZIndex: =3
 
             Label10 As label:
                 OnSelect: =Back(ScreenTransition.CoverRight)
@@ -72,7 +72,7 @@
             PaddingLeft: =2
             PaddingRight: =2
             PaddingTop: =2
-            ZIndex: =3
+            ZIndex: =4
 
             MainContainer3_2 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 1)

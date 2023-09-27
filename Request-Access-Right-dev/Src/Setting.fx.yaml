@@ -432,18 +432,12 @@
                                 Label43_1 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     Color: =RGBA(128, 128, 128, 1)
-                                    OnSelect: |
+                                    OnSelect: |-
                                         =Navigate(
                                             'Mange Group Roles',
                                             ScreenTransition.Cover
                                         );
-                                        ClearCollect(
-                                            colIDPer,
-                                            ForAll(
-                                                Table(ParseJSON(Getpermissionofusers.Run(Gallery2.Selected.ID).varidper)),
-                                                {IDPer: Value(ThisRecord.Value.IDPer)}
-                                            )
-                                        );
+                                        Set(getResult, Getpermissionofusers.Run(varGroupRole));
                                     Text: ="Manage Group Roles"
                                     ZIndex: =1
 

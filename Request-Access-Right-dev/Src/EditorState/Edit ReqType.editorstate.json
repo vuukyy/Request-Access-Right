@@ -7865,7 +7865,7 @@
       "StyleName": "criticalErrorLabelStyle",
       "Type": "ControlInfo"
     },
-    "HeaderContainer1_6": {
+    "HeaderContainer1_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -7953,7 +7953,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "HeaderContainer1_6",
+      "Name": "HeaderContainer1_5",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

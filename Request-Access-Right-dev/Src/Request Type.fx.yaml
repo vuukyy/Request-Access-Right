@@ -14,7 +14,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer1_5 As groupContainer.horizontalAutoLayoutContainer:
+        HeaderContainer1_4 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =65
@@ -23,76 +23,6 @@
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             ZIndex: =1
-
-            Image3_11 As image:
-                Height: =50
-                Image: ='Pizza_Hut_logo.svg'
-                PaddingBottom: =10
-                PaddingLeft: =10
-                PaddingRight: =10
-                PaddingTop: =10
-                Width: =50
-                ZIndex: =1
-
-            Container5_11 As groupContainer.verticalAutoLayoutContainer:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                DropShadow: =DropShadow.None
-                Height: =80
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =65
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                ZIndex: =2
-
-                Container6_11 As groupContainer.horizontalAutoLayoutContainer:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    DropShadow: =DropShadow.None
-                    FillPortions: =0
-                    Height: =65
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.End
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    ZIndex: =1
-
-                    Image4_11 As image:
-                        Height: =75
-                        Image: ='Power-Apps-Logo'
-                        LayoutMinHeight: =50
-                        PaddingBottom: =10
-                        PaddingLeft: =10
-                        PaddingRight: =10
-                        PaddingTop: =10
-                        Width: =50
-                        ZIndex: =1
-
-                    Container7_10 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =50
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingTop: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Width: =200
-                        ZIndex: =2
 
         "'Breadcrum ReqType' As groupContainer.horizontalAutoLayoutContainer":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -107,7 +37,7 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            ZIndex: =2
+            ZIndex: =3
 
             Label10_4 As label:
                 OnSelect: =Navigate(Setting,ScreenTransition.CoverRight)
@@ -142,7 +72,7 @@
             PaddingLeft: =2
             PaddingRight: =2
             PaddingTop: =2
-            ZIndex: =3
+            ZIndex: =4
 
             MainContainer2 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 1)
