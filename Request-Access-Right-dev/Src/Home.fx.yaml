@@ -8,6 +8,13 @@
                 Text(obj.Email)
             )
         );
+        Set(
+            varNameUser,
+            With(
+                {obj: ParseJSON(getEmail.result)},
+                Text(obj.User)
+            )
+        )
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
@@ -204,7 +211,7 @@
                             With(
                                 {obj: ParseJSON(getEmail.result)},
                                 Text(obj.isApprover)
-                            ) = "True" && !IsMatch(
+                            ) = "True" || IsMatch(
                                 With(
                                     {obj: ParseJSON(getEmail.result)},
                                     Text(obj.Title)
@@ -240,19 +247,6 @@
                                 ),
                                 "Head of",
                                 MatchOptions.Contains
-                            ) && !IsMatch(
-                                With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.Dept)
-                                ),
-                                "DTS"
-                            ) || IsMatch(
-                                With(
-                                    {obj: ParseJSON(getEmail.result)},
-                                    Text(obj.Title)
-                                ),
-                                "General Manager",
-                                MatchOptions.Complete
                             ),
                             true,
                             false
@@ -272,6 +266,19 @@
                     RadiusTopRight: =0
                     Size: =13
                     Text: ="Audit"
+                    Visible: |-
+                        =If(
+                          IsMatch(
+                                With(
+                                    {obj: ParseJSON(getEmail.result)},
+                                    Text(obj.Title)
+                                ),
+                                "General Manager",
+                                MatchOptions.Complete
+                            ),
+                            true,
+                            false
+                        )
                     ZIndex: =4
 
                 Button5_13 As button:
