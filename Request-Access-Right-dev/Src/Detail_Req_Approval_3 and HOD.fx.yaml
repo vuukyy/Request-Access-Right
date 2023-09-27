@@ -188,73 +188,6 @@
                 Y: =80
                 ZIndex: =1
 
-                IDUser_DataCard4_3 As typedDataCard.comboBoxViewCard:
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="IDUser"
-                    Default: =ThisItem.IDUser
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"IDUser")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =DataCardValue51_3.Selected
-                    Visible: =false
-                    Width: =455
-                    X: =0
-                    Y: =0
-                    ZIndex: =1
-
-                    DataCardKey51_3 As label:
-                        AutoHeight: =true
-                        FontWeight: =FontWeight.Bold
-                        Height: =34
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue51_3 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultSelectedItems: =Parent.Default
-                        DisplayFields: =["Value"]
-                        DisplayMode: =Parent.DisplayMode
-                        Items: =Choices([@Request_Test].IDUser)
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        SearchFields: =["Value"]
-                        SearchItems: =Choices(Request_Test.IDUser,DataCardValue51_3.SearchText)
-                        SelectMultiple: =false
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey51_3.Y + DataCardKey51_3.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage31_4 As label:
-                        AutoHeight: =true
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue51_3.Y + DataCardValue51_3.Height
-                        ZIndex: =3
-
-                    StarVisible31_3 As label:
-                        Align: =Align.Center
-                        Height: =DataCardKey51_3.Height
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey51_3.Y
-                        ZIndex: =4
-
                 "'Created By_DataCard3' As typedDataCard.comboBoxViewCard":
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Author"
@@ -266,7 +199,7 @@
                     Required: =false
                     Update: =DataCardValue6.Selected
                     Width: =455
-                    X: =2
+                    X: =0
                     Y: =0
                     ZIndex: =1
 
@@ -333,8 +266,8 @@
                     Required: =false
                     Update: =DataCardValue52_4.Attachments
                     Width: =455
-                    X: =2
-                    Y: =2
+                    X: =0
+                    Y: =4
                     ZIndex: =1
 
                     DataCardKey52_4 As label:
@@ -359,7 +292,7 @@
                         PaddingRight: =5
                         PaddingTop: =5
                         Width: =Parent.Width - 60
-                        X: =30
+                        X: =20
                         Y: =DataCardKey52_4.Y + DataCardKey52_4.Height + 5
                         ZIndex: =2
 
@@ -435,8 +368,8 @@
                     Height: =40
                     Required: =true
                     Width: =455
-                    X: =0
-                    Y: =1
+                    X: =2
+                    Y: =0
                     ZIndex: =3
 
                     DataCardKey13_3 As label:
@@ -473,8 +406,8 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =1
-                    Y: =2
+                    X: =2
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey31_3 As label:
@@ -512,7 +445,7 @@
                     Required: =false
                     Update: =DataCardValue32_4.Selected
                     Width: =455
-                    X: =2
+                    X: =0
                     Y: =1
                     ZIndex: =3
 
@@ -643,8 +576,8 @@
                     Height: =40
                     Required: =false
                     Width: =455
-                    X: =0
-                    Y: =2
+                    X: =2
+                    Y: =1
                     ZIndex: =3
 
                     DataCardKey34_4 As label:
@@ -683,7 +616,7 @@
                     Update: =DataCardValue26_3.Selected
                     Width: =455
                     X: =0
-                    Y: =3
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey26_3 As label:
@@ -749,7 +682,7 @@
                     Update: =DataCardValue38_3.Selected
                     Width: =455
                     X: =1
-                    Y: =3
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey38_3 As label:
@@ -815,7 +748,7 @@
                     Required: =false
                     Width: =455
                     X: =2
-                    Y: =3
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey39_3 As label:
@@ -854,7 +787,7 @@
                     Update: =DataCardValue40_3.Selected
                     Width: =455
                     X: =0
-                    Y: =4
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey40_3 As label:
@@ -920,7 +853,7 @@
                     Required: =false
                     Width: =455
                     X: =1
-                    Y: =4
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey41_3 As label:
@@ -945,113 +878,6 @@
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey41_3.Y + DataCardKey41_3.Height + 5
-                        ZIndex: =2
-
-                "'Rejected By_DataCard1_3' As typedDataCard.comboBoxViewCard":
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="RejectedBy"
-                    Default: =ThisItem.'Rejected By'
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"RejectedBy")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =DataCardValue48_3.Selected
-                    Visible: =false
-                    Width: =455
-                    X: =2
-                    Y: =4
-                    ZIndex: =3
-
-                    DataCardKey48_3 As label:
-                        AutoHeight: =true
-                        FontWeight: =FontWeight.Bold
-                        Height: =34
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue48_3 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultSelectedItems: =Parent.Default
-                        DisplayFields: =["DisplayName","Email","Picture"]
-                        DisplayMode: =Parent.DisplayMode
-                        Items: =Choices([@Request_Test].'Rejected By')
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        SearchFields: =["DisplayName"]
-                        SearchItems: =Choices(Request_Test.'Rejected By',DataCardValue48_3.SearchText)
-                        SelectMultiple: =false
-                        Template: =ListItemTemplate.Person
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey48_3.Y + DataCardKey48_3.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage30_4 As label:
-                        AutoHeight: =true
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue48_3.Y + DataCardValue48_3.Height
-                        ZIndex: =3
-
-                    StarVisible30_4 As label:
-                        Align: =Align.Center
-                        Height: =DataCardKey48_3.Height
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey48_3.Y
-                        ZIndex: =4
-
-                "'Rejected Date_DataCard1_3' As typedDataCard.textualViewCard":
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="RejectedDate"
-                    Default: =ThisItem.'Rejected Date'
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Request_Test],DataSourceInfo.DisplayName,"RejectedDate")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Visible: =false
-                    Width: =455
-                    X: =0
-                    Y: =5
-                    ZIndex: =3
-
-                    DataCardKey49_4 As label:
-                        AutoHeight: =true
-                        FontWeight: =FontWeight.Bold
-                        Height: =34
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue49_4 As label:
-                        AutoHeight: =true
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =27
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Default
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey49_4.Y + DataCardKey49_4.Height + 5
                         ZIndex: =2
 
         Container10_3 As groupContainer.horizontalAutoLayoutContainer:

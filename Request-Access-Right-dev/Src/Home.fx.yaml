@@ -463,6 +463,7 @@
                             ZIndex: =4
 
                         Label11_3 As label:
+                            Align: =Align.Center
                             FontWeight: =FontWeight.Bold
                             Text: ="Status"
                             ZIndex: =5
@@ -536,24 +537,37 @@
 
                             Rectangle6 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightGoldenRodYellow)
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.LightGoldenRodYellow
+                                    )
                                 FocusedBorderThickness: =0
                                 Height: =40
                                 OnSelect: =Select(Parent)
                                 Visible: =false
-                                X: =833
-                                Y: =7
+                                X: =879
+                                Y: =10
                                 ZIndex: =1
 
                             Label17 As label:
                                 Align: =Align.Center
-                                Fill: =If(ThisItem.Status.Value="Done",Color.LightGreen,Color.LightGoldenRodYellow)
+                                Color: =RGBA(255, 255, 255, 1)
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.LightGoldenRodYellow
+                                    )
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
                                 Visible: =
                                 Width: =151
-                                X: =833
-                                Y: =7
+                                X: =879
+                                Y: =10
                                 ZIndex: =5
 
                         Icon5 As icon.Edit:
