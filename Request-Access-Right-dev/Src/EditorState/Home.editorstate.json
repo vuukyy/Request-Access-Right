@@ -1856,7 +1856,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(\n    With(\n        {obj: ParseJSON(getEmail.result)},\n        Text(obj.isApprover)\n    ) = \"True\" && !IsMatch(\n        With(\n            {obj: ParseJSON(getEmail.result)},\n            Text(obj.Title)\n        ),\n        \"General Manager\",\n        MatchOptions.Complete\n    ),\n    true,\n    false\n)",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -2277,7 +2284,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_12",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2644,7 +2651,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_13",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5399,7 +5406,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container5",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7852,7 +7859,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8493,7 +8500,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image3",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14224,7 +14231,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextSearch",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
