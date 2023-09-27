@@ -162,10 +162,6 @@ Login As screen:
                         getEmail,
                         Login2.Run(txtEmail.Text)
                     );
-                    Set(
-                        getRqItem,
-                        FLowItem.Run()
-                    );
                     If(
                         txtPass.Text = getPassword.password,
                         Navigate(
