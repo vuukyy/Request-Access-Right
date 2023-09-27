@@ -465,21 +465,12 @@
 
                             Rectangle1_1 As rectangle:
                                 DisplayMode: =DisplayMode.View
-                                Fill: |-
-                                    =If(
-                                        ThisItem.Status.Value = "Created",
-                                        RGBA(
-                                            255,
-                                            235,
-                                            192,
-                                            1
-                                        ),
-                                        RGBA(
-                                            237,
-                                            237,
-                                            237,
-                                            1
-                                        )
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.LightGoldenRodYellow
                                     )
                                 FocusedBorderThickness: =0
                                 Height: =50
@@ -490,6 +481,14 @@
 
                             Label16_11 As label:
                                 Align: =Align.Center
+                                Color: =RGBA(255, 255, 255, 1)
+                                Fill: |
+                                    =Switch(
+                                        ThisItem.Status.Value,
+                                        "Done", Color.Green,
+                                        "Rejected", Color.Red,
+                                        Color.LightGoldenRodYellow
+                                    )
                                 Height: =50
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Status.Value
