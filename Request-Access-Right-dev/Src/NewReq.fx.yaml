@@ -405,6 +405,7 @@
                     NumberOfColumns: =2
                     OnSuccess: |-
                         =Notify( "Save Successfully", NotificationType.Success);
+                        Set(statusError,"1");
                         ResetForm('Edit Form Request')
                     ZIndex: =1
 

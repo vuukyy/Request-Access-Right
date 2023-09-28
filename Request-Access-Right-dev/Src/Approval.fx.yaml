@@ -445,14 +445,6 @@
                         TemplateSize: =60
                         ZIndex: =1
 
-                        Label14_1 As label:
-                            OnSelect: =Select(Parent)
-                            Text: =ThisItem.ReqDescription
-                            Width: =230
-                            X: =303
-                            Y: =10
-                            ZIndex: =1
-
                         Label15_1 As label:
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Title

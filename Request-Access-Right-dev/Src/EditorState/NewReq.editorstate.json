@@ -2004,7 +2004,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_27",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2371,7 +2371,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_28",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9418,7 +9418,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "OnSuccess"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Notify( \"Save Successfully\", NotificationType.Success);\nResetForm('Edit Form Request')",
+          "InvariantPropertyName": "OnSuccess",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
