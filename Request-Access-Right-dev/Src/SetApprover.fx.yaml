@@ -442,7 +442,16 @@
                             DelayItemLoading: =true
                             DisplayMode: =DisplayMode.View
                             Height: =605
-                            Items: =GroupBy(AddColumns(Setting_LevelApprove,"IdSettingLevel", IdSetting.Value),"IdSettingLevel","Data")
+                            Items: |-
+                                =GroupBy(
+                                    AddColumns(
+                                        Setting_LevelApprove,
+                                        "IdSettingLevel",
+                                        IdSetting.Value
+                                    ),
+                                    "IdSettingLevel",
+                                    "Data"
+                                )
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             Selectable: =false
@@ -491,7 +500,7 @@
                                     PaddingTop: =0
                                     Text: =ThisItem.IdLevel.Value
                                     VerticalAlign: =VerticalAlign.Top
-                                    Width: =Parent.TemplateWidth - 690
+                                    Width: =250
                                     X: =37
                                     Y: =12
                                     ZIndex: =1

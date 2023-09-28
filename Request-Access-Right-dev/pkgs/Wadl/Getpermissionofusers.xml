@@ -3,14 +3,14 @@
   <grammars>
     <jsonTypes targetNamespace="https://asia-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <integer name="ManualTriggerInput_varIdGroup_Value_def" />
-      <integer name="ManualTriggerInput_varIdResource_Value_def" />
       <object name="ManualTriggerInput">
         <property name="varIdGroup_Value" type="integer" />
-        <property name="varIdResource_Value" type="integer" />
       </object>
-      <string name="ResponseActionOutput_arridgroup_def" />
+      <string name="ResponseActionOutput_resultroleper_def" />
+      <string name="ResponseActionOutput_resultroleperresource_def" />
       <object name="ResponseActionOutput">
-        <property name="arridgroup" type="string" />
+        <property name="resultroleper" type="string" />
+        <property name="resultroleperresource" type="string" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>
@@ -26,7 +26,6 @@
           </param>
           <representation mediaType="application/json">
             <param style="plain" name="varIdGroup_Value" path="/varIdGroup_Value" type="xs:long" required="true" />
-            <param style="plain" name="varIdResource_Value" path="/varIdResource_Value" type="xs:long" required="true" />
           </representation>
         </request>
         <response>

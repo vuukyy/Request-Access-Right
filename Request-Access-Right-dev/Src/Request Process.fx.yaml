@@ -379,6 +379,7 @@
 
                                     DataCardKey45 As label:
                                         AutoHeight: =true
+                                        FontWeight: =FontWeight.Semibold
                                         Height: =34
                                         Text: =Parent.DisplayName
                                         Width: =Parent.Width - 60
@@ -444,6 +445,7 @@
 
                                     DataCardKey52_1 As label:
                                         AutoHeight: =true
+                                        FontWeight: =FontWeight.Semibold
                                         Height: =34
                                         Text: =Parent.DisplayName
                                         Width: =Parent.Width - 60
@@ -481,6 +483,7 @@
 
                                     DataCardKey53_1 As label:
                                         AutoHeight: =true
+                                        FontWeight: =FontWeight.Semibold
                                         Height: =34
                                         Text: =Parent.DisplayName
                                         Width: =Parent.Width - 60
@@ -518,6 +521,7 @@
 
                                     DataCardKey42_1 As label:
                                         AutoHeight: =true
+                                        FontWeight: =FontWeight.Semibold
                                         Height: =34
                                         Text: =Parent.DisplayName
                                         Width: =Parent.Width - 60
@@ -555,6 +559,7 @@
 
                                     DataCardKey43_1 As label:
                                         AutoHeight: =true
+                                        FontWeight: =FontWeight.Semibold
                                         Height: =34
                                         Text: =Parent.DisplayName
                                         Width: =Parent.Width - 60
@@ -593,6 +598,7 @@
 
                                     DataCardKey50_1 As label:
                                         AutoHeight: =true
+                                        FontWeight: =FontWeight.Semibold
                                         Height: =34
                                         Text: ="Request Type"
                                         Width: =Parent.Width - 60
@@ -659,6 +665,7 @@
 
                                     DataCardKey49_1 As label:
                                         AutoHeight: =true
+                                        FontWeight: =FontWeight.Semibold
                                         Height: =34
                                         Text: =Parent.DisplayName
                                         Width: =Parent.Width - 60

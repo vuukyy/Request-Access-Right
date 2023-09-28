@@ -238,21 +238,6 @@
                         )
                     ZIndex: =3
 
-                Button5_17 As button:
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderThickness: =0
-                    Color: =RGBA(118, 0, 0, 1)
-                    Fill: =RGBA(238, 204, 204, 1)
-                    Height: =60
-                    HoverFill: =ColorFade(RGBA(203, 102, 102, 1), -20%)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =13
-                    Text: ="Audit"
-                    ZIndex: =4
-
                 Button5_18 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderThickness: =0
@@ -395,7 +380,7 @@
                             BorderColor: =RGBA(0, 0, 0, 0)
                             DropShadow: =DropShadow.None
                             FillPortions: =0
-                            Height: =180
+                            Height: =150
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -465,6 +450,16 @@
                             Width: =350
                             ZIndex: =2
 
+                        Label42_1 As label:
+                            Color: =RGBA(128, 128, 128, 1)
+                            FontWeight: =FontWeight.Semibold
+                            OnSelect: =Navigate('Request Type')
+                            Size: =16
+                            Text: ="Request Type"
+                            Underline: =true
+                            Width: =350
+                            ZIndex: =3
+
                         Label42_4 As label:
                             Color: =RGBA(128, 128, 128, 1)
                             FontWeight: =FontWeight.Semibold
@@ -475,7 +470,7 @@
                             Text: ="Set Approver"
                             Underline: =true
                             Width: =350
-                            ZIndex: =3
+                            ZIndex: =4
 
                         Label42_2 As label:
                             Color: =RGBA(128, 128, 128, 1)
@@ -483,16 +478,6 @@
                             OnSelect: =Navigate('Request Process')
                             Size: =16
                             Text: ="Process Request"
-                            Underline: =true
-                            Width: =350
-                            ZIndex: =4
-
-                        Label42_1 As label:
-                            Color: =RGBA(128, 128, 128, 1)
-                            FontWeight: =FontWeight.Semibold
-                            OnSelect: =Navigate('Request Type')
-                            Size: =16
-                            Text: ="Request Type"
                             Underline: =true
                             Width: =350
                             ZIndex: =5
